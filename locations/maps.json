@@ -1,0 +1,306 @@
+[
+  {
+    "name": "Tallon Map",
+    "children": [
+      {
+        "name": "Alcove",
+        "sections": [
+          { "ref": "Tallon Overworld/Alcove/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 315,
+            "y": 177
+          },
+          {
+            "map": "World Map",
+            "x": 879,
+            "y": 263
+          }
+        ]
+      },
+      {
+        "name": "Artifact Temple",
+        "sections": [
+          {
+            "name": "Center",
+            "ref": "Tallon Overworld/Artifact Temple/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 287,
+            "y": 471
+          },
+          {
+            "map": "World Map",
+            "x": 880,
+            "y": 372
+          }
+        ]
+      },
+      {
+        "name": "Arbor Chamber",
+        "sections": [
+          { "ref": "Tallon Overworld/Arbor Chamber/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 28,
+            "y": 259
+          }
+        ]
+      },
+      {
+        "name": "Biohazard Containment",
+        "sections": [
+          {
+            "name": "Cordite locker",
+            "ref": "Tallon Overworld/Biohazard Containment/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 452,
+            "y": 321
+          },
+          {
+            "map": "World Map",
+            "x": 979,
+            "y": 346
+          }
+        ]
+      },
+      {
+        "name": "Cargo Freight Lift to Deck Gamma",
+        "sections": [
+          { "ref": "Tallon Overworld/Cargo Freight Lift to Deck Gamma/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 534,
+            "y": 240
+          },
+          {
+            "map": "World Map",
+            "x": 979,
+            "y": 315
+          }
+        ]
+      },
+      {
+        "name": "Frigate Crash Site",
+        "sections": [
+          {
+            "name": "Tangled roots",
+            "ref": "Tallon Overworld/Frigate Crash Site/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 453,
+            "y": 160
+          },
+          {
+            "map": "World Map",
+            "x": 979,
+            "y": 271
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Chamber",
+        "sections": [
+          { "name": "Tallon Overworld/Great Tree Chamber/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 613,
+            "y": 394
+          },
+          {
+            "map": "World Map",
+            "x": 1028,
+            "y": 336
+          }
+        ]
+      },
+      {
+        "name": "Hydro Access Tunnel",
+        "sections": [
+          {
+            "name": "Underwater bomb puzzle",
+            "ref": "Tallon Overworld/Hydro Access Tunnel/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 512,
+            "y": 404
+          },
+          {
+            "map": "World Map",
+            "x": 979,
+            "y": 386
+          }
+        ]
+      },
+      {
+        "name": "Landing Site",
+        "sections": [
+          {
+            "name": "Morph Ball tunnel",
+            "ref": "Tallon Overworld/Landing Site/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 288,
+            "y": 205
+          },
+          {
+            "map": "World Map",
+            "x": 879,
+            "y": 297
+          }
+        ]
+      },
+      {
+        "name": "Life Grove Tunnel",
+        "sections": [
+          {
+            "name": "Boost loop",
+            "ref": "Tallon Overworld/Life Grove Tunnel/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 571,
+            "y": 455
+          }
+        ]
+      },
+      {
+        "name": "Life Grove",
+        "sections": [
+          { "ref": "Tallon Overworld/Life Grove/Start" },
+          { "ref": "Tallon Overworld/Life Grove/Underwater Spinner" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 571,
+            "y": 495
+          }
+        ]
+      },
+      {
+        "name": "Overgrown Cavern",
+        "sections": [
+          { "ref": "Tallon Overworld/Overgrown Cavern/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 478,
+            "y": 77
+          },
+          {
+            "map": "World Map",
+            "x": 977,
+            "y": 232
+          }
+        ]
+      },
+      {
+        "name": "Root Cave",
+        "sections": [
+          {
+            "name": "Behind vines",
+            "ref": "Tallon Overworld/Root Cave/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 76,
+            "y": 275
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel B",
+        "sections": [
+          {
+            "name": "Under the bridge",
+            "ref": "Tallon Overworld/Transport Tunnel B/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 78,
+            "y": 320
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "World Map",
+    "children": [
+      {
+        "name": "Life Grove",
+        "sections": [
+          {
+            "name": "Tunnel",
+            "ref": "Tallon Overworld/Life Grove Tunnel/"
+          },
+          { "ref": "Tallon Overworld/Life Grove/Start" },
+          { "ref": "Tallon Overworld/Life Grove/Underwater Spinner" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 1028,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "name": "Root area",
+        "sections": [
+          {
+            "name": "Root Cave",
+            "ref": "Tallon Overworld/Root Cave/"
+          },
+          {
+            "name": "Arbor Chamber",
+            "ref": "Tallon Overworld/Arbor Chamber/"
+          },
+          {
+            "name": "Transport Tunnel B",
+            "ref": "Tallon Overworld/Transport Tunnel B/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 732,
+            "y": 311
+          }
+        ]
+      }
+    ]
+  }
+]
