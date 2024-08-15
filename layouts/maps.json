@@ -1,0 +1,96 @@
+{
+  "maps": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "World Map",
+        "content": {
+          "type": "map",
+          "maps": [
+            "World Map"
+          ]
+        }
+      },
+      {
+        "title": "Tallon Overworld",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Tallon Overworld"
+          ]
+        }
+      },
+      {
+        "title": "Chozo Ruins",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Chozo Ruins"
+          ]
+        }
+      },
+      {
+        "title": "Magmoor Caverns",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Magmoor Caverns"
+          ]
+        }
+      },
+      {
+        "title": "Phendrana Drifts",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Phendrana Drifts"
+          ]
+        }
+      },
+      {
+        "title": "Phazon Mines",
+        "content": {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Combined",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Phazon Mines"
+                ]
+              }
+            },
+            {
+              "title": "Surface",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Mines Surface"
+                ]
+              }
+            },
+            {
+              "title": "Sublevel 1",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Mines Sublevel 1"
+                ]
+              }
+            },
+            {
+              "title": "Sublevel 2",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Mines Sublevel 2"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

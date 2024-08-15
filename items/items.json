@@ -1,0 +1,221 @@
+[
+  {
+    "name": "Energy Tank",
+    "codes": "EnergyTank",
+    "img": "images/items/energytank.png",
+    "type": "consumable",
+    "max_quantity": 12
+  },
+  {
+    "name": "Missile Launcher",
+    "codes": "MissileLauncher",
+    "img": "images/items/missilelauncher.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Missile Expansion",
+    "codes": "MissileExpansion",
+    "img": "images/items/missilelauncher.png",
+    "type": "consumable",
+    "max_quantity": 50
+  },
+  {
+    "name": "Power Beam",
+    "codes": "PowerBeam",
+    "img": "images/items/powerbeam.png",
+    "type": "static"
+  },
+  {
+    "name": "Wave Beam",
+    "codes": "WaveBeam",
+    "img": "images/items/wavebeam.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Ice Beam",
+    "codes": "IceBeam",
+    "img": "images/items/icebeam.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Plasma Beam",
+    "codes": "PlasmaBeam",
+    "img": "images/items/plasmabeam.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Charge Beam",
+    "codes": "ChargeBeam",
+    "img": "images/items/chargebeam.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Super Missile",
+    "codes": "SuperMissile",
+    "img": "images/items/supermissile.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Wavebuster",
+    "codes": "Wavebuster",
+    "img": "images/items/wavebuster.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Ice Spreader",
+    "codes": "IceSpreader",
+    "img": "images/items/icespreader.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Flamethrower",
+    "codes": "Flamethrower",
+    "img": "images/items/flamethrower.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Power Beam",
+    "codes": "ProgressivePowerBeam",
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/powerbeam.png"},
+      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/supermissile.png"}
+    ],
+    "allow_disabled": false
+  },
+  {
+    "name": "Progressive Wave Beam",
+    "codes": "ProgressiveWaveBeam",
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/wavebeam.png"},
+      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/wavebuster.png"}
+    ]
+  },
+  {
+    "name": "Progressive Ice Beam",
+    "codes": "ProgressiveIceBeam",
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/icebeam.png"},
+      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/icespreader.png"}
+    ]
+  },
+  {
+    "name": "Progressive Plasma Beam",
+    "codes": "ProgressivePlasmaBeam",
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/plasmabeam.png"},
+      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/flamethrower.png"}
+    ]
+  },
+  {
+    "name": "Grapple Beam",
+    "codes": "GrappleBeam",
+    "img": "images/items/grapplebeam.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Morph Ball",
+    "codes": "MorphBall",
+    "img": "images/items/morphball.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Boost Ball",
+    "codes": "BoostBall",
+    "img": "images/items/boostball.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Spider Ball",
+    "codes": "SpiderBall",
+    "img": "images/items/spiderball.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Morph Ball Bombs",
+    "codes": "Bombs",
+    "img": "images/items/bombs.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Power Bomb",
+    "codes": "PowerBomb",
+    "img": "images/items/powerbomb.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Power Bomb Expansion",
+    "codes": "PowerBombExpansion",
+    "img": "images/items/powerbomb.png",
+    "type": "consumable",
+    "max_quantity": 4
+  },
+  {
+    "name": "Combat Visor",
+    "codes": "CombatVisor",
+    "img": "images/items/combatvisor.png",
+    "type": "static"
+  },
+  {
+    "name": "Scan Visor",
+    "codes": "ScanVisor",
+    "img": "images/items/scanvisor.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Thermal Visor",
+    "codes": "ThermalVisor",
+    "img": "images/items/thermalvisor.png",
+    "type": "toggle"
+  },
+  {
+    "name": "X-Ray Visor",
+    "codes": "XRayVisor",
+    "img": "images/items/xrayvisor.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Space Jump Boots",
+    "codes": "SpaceJump",
+    "img": "images/items/spacejumpboots.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Power Suit",
+    "codes": "PowerSuit",
+    "img": "images/items/powersuit.png",
+    "type": "static"
+  },
+  {
+    "name": "Varia Suit",
+    "codes": "VariaSuit",
+    "img": "images/items/variasuit.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Gravity Suit",
+    "codes": "GravitySuit",
+    "img": "images/items/gravitysuit.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Phazon Suit",
+    "codes": "PhazonSuit",
+    "img": "images/items/phazonsuit.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Artifacts",
+    "codes": "Artifacts",
+    "img": "images/items/artifacts0.png",
+    "type": "consumable",
+    "max_quantity": 12
+  }
+]

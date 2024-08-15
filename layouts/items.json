@@ -1,0 +1,43 @@
+{
+  "items": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "6, 6",
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_margin": "4, 4",
+        "margin": "0, 0",
+        "h_alignment": "stretch",
+        "rows": [
+          [ "PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam", "ChargeBeam" ],
+          [ "SuperMissile", "Wavebuster", "IceSpreader", "Flamethrower", "MissileLauncher" ],
+          [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
+          [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
+          [ "PowerSuit", "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump" ],
+          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "", "Artifacts" ]
+        ]
+      }
+    ]
+  },
+  "items_progressivebeams": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "6, 6",
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_margin": "4, 4",
+        "margin": "0, 0",
+        "h_alignment": "stretch",
+        "rows": [
+          [ "ProgressivePowerBeam", "ProgressiveWaveBeam", "ProgressiveIceBeam", "ProgressivePlasmaBeam", "MissileLauncher" ],
+          [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
+          [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
+          [ "PowerSuit", "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump" ],
+          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "", "Artifacts" ]
+        ]
+      }
+    ]
+  }
+}

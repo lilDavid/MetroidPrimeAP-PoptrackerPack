@@ -1,0 +1,25 @@
+{
+    "name": "Metroid Prime - Archipelago",
+    "game_name": "Metroid Prime",
+    "package_version": "0.1",
+    "package_uid": "MetroidPrime-Archipelago-lilDavid",
+    "author": "lil David",
+    "variants": {
+      "standard": {
+        "display_name": "Standard - Map Tracker",
+        "flags": ["ap"]
+      },
+      "var_progressivebeams": {
+        "display_name": "Progressive Beams - Map Tracker",
+        "flags": ["ap"]
+      },
+      "var_itemsonly": {
+        "display_name": "Standard - Items Only",
+        "flags": ["ap"]
+      },
+      "var_progressivebeams_itemsonly": {
+        "display_name": "Progressive Beams - Items Only",
+        "flags": ["ap"]
+      }
+    }
+  }

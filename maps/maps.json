@@ -1,0 +1,56 @@
+[
+  {
+    "name": "World Map",
+    "location_size": 16,
+    "location_border_thickness": 4,
+    "img": "images/maps/world_map.jpg"
+  },
+  {
+    "name": "Tallon Overworld",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/tallon.jpg"
+  },
+  {
+    "name": "Chozo Ruins",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/chozo.jpg"
+  },
+  {
+    "name": "Magmoor Caverns",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/magmoor.jpg"
+  },
+  {
+    "name": "Phendrana Drifts",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phendrana.jpg"
+  },
+  {
+    "name": "Phazon Mines",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phazon.jpg"
+  },
+  {
+    "name": "Mines Surface",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phazon_0.jpg"
+  },
+  {
+    "name": "Mines Sublevel 2",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phazon_1.jpg"
+  },
+  {
+    "name": "Mines Sublevel 2",
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phazon_2.jpg"
+  }
+]

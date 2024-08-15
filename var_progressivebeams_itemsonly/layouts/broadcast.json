@@ -1,0 +1,12 @@
+{
+  "tracker_broadcast": {
+    "type": "container",
+    "background": "#000000",
+    "content": [
+      {
+        "type": "layout",
+        "key": "items_progressivebeams"
+      }
+    ]
+  }
+}
