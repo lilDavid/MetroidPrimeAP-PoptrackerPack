@@ -257,6 +257,478 @@
     ]
   },
   {
+    "name": "Chozo Map",
+    "children": [
+      {
+        "name": "Antechamber",
+        "sections": [
+          { "ref": "Chozo Ruins/Antechamber/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 665,
+            "y": 452
+          },
+          {
+            "map": "World Map",
+            "x": 683,
+            "y": 198
+          }
+        ]
+      },
+      {
+        "name": "Crossway",
+        "sections": [
+          {
+            "name": "Morph Ball elevator",
+            "ref": "Chozo Ruins/Crossway/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 632,
+            "y": 308
+          },
+          {
+            "map": "World Map",
+            "x": 681,
+            "y": 133
+          }
+        ]
+      },
+      {
+        "name": "Dynamo",
+        "sections": [
+          { "ref": "Chozo Ruins/Dynamo/Lower" },
+          { "ref": "Chozo Ruins/Dynamo/Spider Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 437,
+            "y": 292
+          },
+          {
+            "map": "World Map",
+            "x": 584,
+            "y": 144
+          }
+        ]
+      },
+      {
+        "name": "Elder Chamber",
+        "sections": [
+          {
+            "name": "Plasma Beam bomb slot",
+            "ref": "Chozo Ruins/Elder Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 661,
+            "y": 383
+          }
+        ]
+      },
+      {
+        "name": "Furnace",
+        "sections": [
+          { "ref": "Chozo Ruins/Furnace/Spider Tracks" },
+          { "ref": "Chozo Ruins/Furnace/Inside Furnace" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 584,
+            "y": 368
+          },
+          {
+            "map": "World Map",
+            "x": 634,
+            "y": 179
+          }
+        ]
+      },
+      {
+        "name": "Hall of the Elders",
+        "sections": [
+          {
+            "name": "Ice Beam bomb slot",
+            "ref": "Chozo Ruins/Hall of the Elders/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 629,
+            "y": 355
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem",
+        "sections": [
+          {
+            "name": "Hive Mecha",
+            "ref": "Chozo Ruins/Hive Totem/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 187,
+            "y": 42
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall",
+        "sections": [
+          {
+            "name": "Sandstone wall",
+            "ref": "Chozo Ruins/Gathering Hall/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 412,
+            "y": 319
+          },
+          {
+            "map": "World Map",
+            "x": 536,
+            "y": 165
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool",
+        "sections": [
+          {
+            "name": "Bendezium wall",
+            "ref": "Chozo Ruins/Magma Pool/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 248,
+            "y": 400
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          { "ref": "Chozo Ruins/Main Plaza/Half-Pipe" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 204,
+            "y": 262
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          { "ref": "Chozo Ruins/Main Plaza/Grapple Ledge" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 179,
+            "y": 276
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          { "ref": "Chozo Ruins/Main Plaza/Tree" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 205,
+            "y": 232
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          { "ref": "Chozo Ruins/Main Plaza/Locked Door" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 221,
+            "y": 194
+          }
+        ]
+      },
+      {
+        "name": "Ruined Fountain",
+        "sections": [
+          {
+            "name": "Spider tracks",
+            "ref": "Chozo Ruins/Ruined Fountain/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 283,
+            "y": 282
+          },
+          {
+            "map": "World Map",
+            "x": 435,
+            "y": 175
+          }
+        ]
+      },
+      {
+        "name": "Ruined Gallery",
+        "sections": [
+          { "ref": "Chozo Ruins/Ruined Gallery/Missile Wall" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 117,
+            "y": 101
+          }
+        ]
+      },
+      {
+        "name": "Ruined Gallery",
+        "sections": [
+          { "ref": "Chozo Ruins/Ruined Gallery/Tunnel" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 144,
+            "y": 114
+          }
+        ]
+      },
+      {
+        "name": "Ruined Nursery",
+        "sections": [
+          { "ref": "Chozo Ruins/Ruined Nursery" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 106,
+            "y": 175
+          },
+          {
+            "map": "World Map",
+            "x": 337,
+            "y": 108
+          }
+        ]
+      },
+      {
+        "name": "Ruined Shrine",
+        "sections": [
+          { "ref": "Chozo Ruins/Ruined Shrine/Plated Beetle" },
+          { "ref": "Chozo Ruins/Ruined Shrine/Half-Pipe" },
+          { "ref": "Chozo Ruins/Ruined Shrine/Lower Tunnel" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 85,
+            "y": 250
+          },
+          {
+            "map": "World Map",
+            "x": 339,
+            "y": 142
+          }
+        ]
+      },
+      {
+        "name": "Sunchamber",
+        "sections": [
+          { "ref": "Chozo Ruins/Sunchamber/Flaaghra" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 314,
+            "y": 126
+          }
+        ]
+      },
+      {
+        "name": "Sunchamber",
+        "sections": [
+          { "ref": "Chozo Ruins/Sunchamber/Ghosts" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 314,
+            "y": 159
+          }
+        ]
+      },
+      {
+        "name": "Tower Chamber",
+        "sections": [
+          {
+            "ref": "Chozo Ruins/Tower Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 30,
+            "y": 324
+          }
+        ]
+      },
+      {
+        "name": "Tower of Light",
+        "sections": [
+          {
+            "name": "Weakened columns",
+            "ref": "Chozo Ruins/Tower of Light/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 30,
+            "y": 278
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber",
+        "sections": [
+          {
+            "name": "Hidden spider track",
+            "ref": "Chozo Ruins/Training Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 220,
+            "y": 363
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber Access",
+        "sections": [
+          {
+            "name": "Hidden tunnel",
+            "ref": "Chozo Ruins/Training Chamber Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 205,
+            "y": 385
+          }
+        ]
+      },
+      {
+        "name": "Transport Access North",
+        "sections": [
+          {
+            "name": "Behind Hive Mecha",
+            "ref": "Chozo Ruins/Transport Access North/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 187,
+            "y": 21
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall",
+        "sections": [
+          { "ref": "Chozo Ruins/Watery Hall/Scan puzzle" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 437,
+            "y": 244
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall",
+        "sections": [
+          { "ref": "Chozo Ruins/Watery Hall/Underwater" }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 419,
+            "y": 192
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall Access",
+        "sections": [
+          {
+            "name": "Missile wall",
+            "ref": "Chozo Ruins/Watery Hall Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 390,
+            "y": 272
+          }
+        ]
+      },
+      {
+        "name": "Vault",
+        "sections": [
+          {
+            "name": "Open the locks",
+            "ref": "Chozo Ruins/Vault/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 244,
+            "y": 135
+          },
+          {
+            "map": "World Map",
+            "x": 435,
+            "y": 95
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "World Map",
     "children": [
       {
@@ -298,6 +770,167 @@
             "map": "World Map",
             "x": 732,
             "y": 311
+          }
+        ]
+      },
+
+      {
+        "name": "Burn Dome",
+        "sections": [
+          { "ref": "Chozo Ruins/Burn Dome/Missile" },
+          { "ref": "Chozo Ruins/Burn Dome/Incinerator Drone" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 635,
+            "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool and Training Chamber",
+        "sections": [
+          {
+            "name": "Magma Pool",
+            "ref": "Chozo Ruins/Magma Pool/"
+          },
+          {
+            "name": "Training Chamber Access",
+            "ref": "Chozo Ruins/Training Chamber Access/"
+          },
+          {
+            "name": "Training Chamber",
+            "ref": "Chozo Ruins/Training Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 437,
+            "y": 211
+          }
+        ]
+      },
+      {
+        "name": "Hall of the Elders",
+        "sections": [
+          {
+            "name": "Ice Beam bomb slot",
+            "ref": "Chozo Ruins/Hall of the Elders/"
+          },
+          {
+            "name": "Plasma Beam bomb slot",
+            "ref": "Chozo Ruins/Elder Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 683,
+            "y": 165
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem",
+        "sections": [
+          {
+            "name": "Hive Mecha",
+            "ref": "Chozo Ruins/Hive Totem/"
+          },
+          {
+            "name": "Transport Access North",
+            "ref": "Chozo Ruins/Transport Access North/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 386,
+            "y": 58
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          { "ref": "Chozo Ruins/Main Plaza/Half-Pipe" },
+          { "ref": "Chozo Ruins/Main Plaza/Grapple Ledge" },
+          { "ref": "Chozo Ruins/Main Plaza/Tree" },
+          { "ref": "Chozo Ruins/Main Plaza/Locked Door" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 387,
+            "y": 125
+          }
+        ]
+      },
+      {
+        "name": "Ruined Gallery",
+        "sections": [
+          { "ref": "Chozo Ruins/Ruined Gallery/Missile Wall" },
+          { "ref": "Chozo Ruins/Ruined Gallery/Tunnel" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 386,
+            "y": 92
+          }
+        ]
+      },
+      {
+        "name": "Sunchamber",
+        "sections": [
+          { "ref": "Chozo Ruins/Sunchamber/Flaaghra" },
+          { "ref": "Chozo Ruins/Sunchamber/Ghosts" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 486,
+            "y": 102
+          }
+        ]
+      },
+      {
+        "name": "Tower of Light",
+        "sections": [
+          {
+            "name": "Weakened columns",
+            "ref": "Chozo Ruins/Tower of Light/"
+          },
+          {
+            "name": "Tower Chamber",
+            "ref": "Chozo Ruins/Tower Chamber/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 288,
+            "y": 147
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall",
+        "sections": [
+          { "ref": "Chozo Ruins/Watery Hall/Scan Puzzle" },
+          { "ref": "Chozo Ruins/Watery Hall/Underwater" },
+          {
+            "name": "Watery Hall Access",
+            "ref": "Chozo Ruins/Watery Hall Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 535,
+            "y": 127
           }
         ]
       }
