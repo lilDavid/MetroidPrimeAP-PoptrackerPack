@@ -1,0 +1,184 @@
+[
+  {
+    "name": "Tallon Overworld",
+    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_opened_img": "images/checked.png",
+    "children": [
+      {
+        "name": "Alcove",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/spacejumpboots.png"
+          }
+        ]
+      },
+      {
+        "name": "Arbor Chamber",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Artifact Temple",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Biohazard Containment",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Canyon Cavern"
+      },
+      {
+        "name": "Cargo Freight Lift to Deck Gamma",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Frigate Crash Site",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Chamber",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Hall"
+      },
+      {
+        "name": "Gully"
+      },
+      {
+        "name": "Hydro Access Tunnel",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Landing Site",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Life Grove Tunnel",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Life Grove",
+        "sections": [
+          {
+            "name": "Start",
+            "chest_unopened_img": "images/items/xrayvisor.png"
+          },
+          {
+            "name": "Underwater Spinner",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Overgrown Cavern",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Root Cave",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Root Tunnel"
+      },
+      {
+        "name": "Tallon Canyon"
+      },
+      {
+        "name": "Temple Hall"
+      },
+      {
+        "name": "Temple Lobby"
+      },
+      {
+        "name": "Temple Security Station"
+      },
+      {
+        "name": "Transport to Chozo Ruins East"
+      },
+      {
+        "name": "Transport to Chozo Ruins South"
+      },
+      {
+        "name": "Transport to Chozo Ruins West"
+      },
+      {
+        "name": "Transport to Magmoor Caverns East"
+      },
+      {
+        "name": "Transport to Phazon Mines East"
+      },
+      {
+        "name": "Transport Tunnel A"
+      },
+      {
+        "name": "Transport Tunnel B",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel C"
+      },
+      {
+        "name": "Transport Tunnel D"
+      },
+      {
+        "name": "Transport Tunnel E"
+      },
+      {
+        "name": "Waterfall Cavern"
+      }
+    ]
+  }
+]

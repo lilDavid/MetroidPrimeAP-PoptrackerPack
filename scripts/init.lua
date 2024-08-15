@@ -8,7 +8,11 @@ Tracker:AddItems("items/items.json")
 
 Tracker:AddMaps("maps/maps.json")
 
-Tracker:AddLocations("locations/locations.json")
+Tracker:AddLocations("locations/chozo.json")
+Tracker:AddLocations("locations/phen.json")
+Tracker:AddLocations("locations/tallon.json")
+Tracker:AddLocations("locations/mines.json")
+Tracker:AddLocations("locations/magmoor.json")
 
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/maps.json")

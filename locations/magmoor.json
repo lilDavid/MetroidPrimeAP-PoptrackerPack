@@ -1,0 +1,151 @@
+[
+  {
+    "name": "Magmoor Caverns",
+    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_opened_img": "images/checked.png",
+    "children": [
+      {
+        "name": "Burning Trail"
+      },
+      {
+        "name": "Fiery Shores",
+        "sections": [
+          {
+            "name": "Morph Track"
+          },
+          {
+            "name": "Warrior Shrine Tunnel",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Geothermal Core"
+      },
+      {
+        "name": "Lake Tunnel"
+      },
+      {
+        "name": "Lava Lake",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Monitor Station"
+      },
+      {
+        "name": "Monitor Tunnel"
+      },
+      {
+        "name": "North Core Tunnel"
+      },
+      {
+        "name": "Pit Tunnel"
+      },
+      {
+        "name": "Plasma Processing",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/plasmabeam.png"
+          }
+        ]
+      },
+      {
+        "name": "Save Station Magmoor A"
+      },
+      {
+        "name": "Save Station Magmoor B"
+      },
+      {
+        "name": "Shore Tunnel",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/icespreader.png"
+          }
+        ]
+      },
+      {
+        "name": "South Core Tunnel"
+      },
+      {
+        "name": "Storage Cavern",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Transport to Chozo Ruins North"
+      },
+      {
+        "name": "Transport to Phazon Mines West"
+      },
+      {
+        "name": "Transport to Phendrana Drifts North"
+      },
+      {
+        "name": "Transport to Phendrana Drifts South"
+      },
+      {
+        "name": "Transport to Tallon Overworld West"
+      },
+      {
+        "name": "Transport Tunnel A",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel B"
+      },
+      {
+        "name": "Transport Tunnel C"
+      },
+      {
+        "name": "Triclops Pit",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Twin Fires Tunnel"
+      },
+      {
+        "name": "Twin Fires"
+      },
+      {
+        "name": "Warrior Shrine",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/powerbomb.png"
+          }
+        ]
+      },
+      {
+        "name": "Workstation Tunnel"
+      }
+    ]
+  }
+]

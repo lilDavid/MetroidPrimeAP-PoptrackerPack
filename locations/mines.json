@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Phazon Mines",
+    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_opened_img": "images/checked.png",
+    "children": [
+      {
+        "name": "Central Dynamo",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/powerbomb.png"
+          }
+        ]
+      },
+      {
+        "name": "Dynamo Access"
+      },
+      {
+        "name": "Elevator A"
+      },
+      {
+        "name": "Elevator Access A"
+      },
+      {
+        "name": "Elevator Access B"
+      },
+      {
+        "name": "Elevator B"
+      },
+      {
+        "name": "Elite Control Access",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Elite Control"
+      },
+      {
+        "name": "Elite Quarters Access"
+      },
+      {
+        "name": "Elite Quarters",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/phazonsuit.png"
+          }
+        ]
+      },
+      {
+        "name": "Elite Research",
+        "sections": [
+          {
+            "name": "Phazon Elite",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          },
+          {
+            "name": "Laser"
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall A"
+      },
+      {
+        "name": "Fungal Hall Access",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall B",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Maintenance Tunnel"
+      },
+      {
+        "name": "Map Station Mines"
+      },
+      {
+        "name": "Metroid Quarantine A",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine B",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Mine Security Station"
+      },
+      {
+        "name": "Missile Station Mines"
+      },
+      {
+        "name": "Omega Research"
+      },
+      {
+        "name": "Ore Processing"
+      },
+      {
+        "name": "Phazon Mining Tunnel",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Phazon Processing Center",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Processing Center Access",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Access A"
+      },
+      {
+        "name": "Quarantine Access B"
+      },
+      {
+        "name": "Quarry Access"
+      },
+      {
+        "name": "Research Access"
+      },
+      {
+        "name": "Save Station Mines A"
+      },
+      {
+        "name": "Save Station Mines B"
+      },
+      {
+        "name": "Save Station Mines C"
+      },
+      {
+        "name": "Security Access A",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Security Access B"
+      },
+      {
+        "name": "Storage Depot A",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/flamethrower.png"
+          }
+        ]
+      },
+      {
+        "name": "Storage Depot B",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/grapplebeam.png"
+          }
+        ]
+      },
+      {
+        "name": "Transport Access"
+      },
+      {
+        "name": "Transport to Magmoor Caverns South"
+      },
+      {
+        "name": "Transport to Tallon Overworld South"
+      },
+      {
+        "name": "Ventilation Shaft",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Waste Disposal"
+      }
+    ]
+  }
+]

@@ -1,0 +1,298 @@
+[
+  {
+    "name": "Phendrana Drifts",
+    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_opened_img": "images/checked.png",
+    "children": [
+      {
+        "name": "Aether Lab Entryway"
+      },
+      {
+        "name": "Canyon Entryway"
+      },
+      {
+        "name": "Chamber Access"
+      },
+      {
+        "name": "Chapel of the Elders",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/wavebeam.png"
+          }
+        ]
+      },
+      {
+        "name": "Chapel Tunnel"
+      },
+      {
+        "name": "Chozo Ice Temple",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Control Tower",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Courtyard Entryway"
+      },
+      {
+        "name": "East Tower"
+      },
+      {
+        "name": "Frost Cave Access"
+      },
+      {
+        "name": "Frost Cave",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Frozen Pike"
+      },
+      {
+        "name": "Gravity Chamber",
+        "sections": [
+          {
+            "name": "Underwater",
+            "chest_unopened_img": "images/items/gravitysuit.png"
+          },
+          {
+            "name": "Grapple Ledge"
+          }
+        ]
+      },
+      {
+        "name": "Hunter Cave Access"
+      },
+      {
+        "name": "Hunter Cave"
+      },
+      {
+        "name": "Hydra Lab Entryway"
+      },
+      {
+        "name": "Ice Ruins Access"
+      },
+      {
+        "name": "Ice Ruins East",
+        "sections": [
+          {
+            "name": "Behind Ice"
+          },
+          {
+            "name": "Spider Track"
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins West",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/powerbomb.png"
+          }
+        ]
+      },
+      {
+        "name": "Lake Tunnel"
+      },
+      {
+        "name": "Lower Edge Tunnel"
+      },
+      {
+        "name": "Map Station"
+      },
+      {
+        "name": "North Quarantine Tunnel"
+      },
+      {
+        "name": "Observatory Access"
+      },
+      {
+        "name": "Observatory",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/supermissile.png"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Canyon",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/boostball.png"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines",
+        "sections": [
+          {
+            "name": "Behind Ice"
+          },
+          {
+            "name": "Spider Track"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana's Edge"
+      },
+      {
+        "name": "Pike Access"
+      },
+      {
+        "name": "Plaza Walkway"
+      },
+      {
+        "name": "Quarantine Access"
+      },
+      {
+        "name": "Quarantine Cave",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/spiderball.png"
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Monitor",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Research Core Access"
+      },
+      {
+        "name": "Research Core",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/thermalvisor.png"
+          }
+        ]
+      },
+      {
+        "name": "Research Entrance"
+      },
+      {
+        "name": "Research Lab Aether",
+        "sections": [
+          {
+            "name": "Tank",
+            "chest_unopened_img": "images/items/energytank.png"
+          },
+          {
+            "name": "Morph Track"
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Hydra",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Ruined Courtyard",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Ruins Entryway"
+      },
+      {
+        "name": "Save Station A"
+      },
+      {
+        "name": "Save Station B"
+      },
+      {
+        "name": "Save Station C"
+      },
+      {
+        "name": "Save Station D"
+      },
+      {
+        "name": "Security Cave",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/powerbomb.png"
+          }
+        ]
+      },
+      {
+        "name": "Shoreline Entrance"
+      },
+      {
+        "name": "South Quarantine Tunnel"
+      },
+      {
+        "name": "Specimen Storage"
+      },
+      {
+        "name": "Storage Cave",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Temple Entryway"
+      },
+      {
+        "name": "Transport Access",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Transport to Magmoor Caverns South"
+      },
+      {
+        "name": "Transport to Magmoor Caverns West"
+      },
+      {
+        "name": "Upper Edge Tunnel"
+      },
+      {
+        "name": "West Tower Entrance"
+      },
+      {
+        "name": "West Tower"
+      }
+    ]
+  }
+]

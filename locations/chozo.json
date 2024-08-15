@@ -1,0 +1,375 @@
+[
+  {
+    "name": "Chozo Ruins",
+    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_opened_img": "images/checked.png",
+    "children": [
+      {
+        "name": "Antechamber",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/icebeam.png"
+          }
+        ]
+      },
+      {
+        "name": "Arboretum Access"
+      },
+      {
+        "name": "Arboretum"
+      },
+      {
+        "name": "Burn Dome Access"
+      },
+      {
+        "name": "Burn Dome",
+        "sections": [
+          {
+            "name": "Missile"
+          },
+          {
+            "name": "Incinerator Drone",
+            "chest_unopened_img": "images/items/bombs.png"
+          }
+        ]
+      },
+      {
+        "name": "Crossway Access South"
+      },
+      {
+        "name": "Crossway Access West"
+      },
+      {
+        "name": "Crossway",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Dynamo Access"
+      },
+      {
+        "name": "Dynamo",
+        "sections": [
+          {
+            "name": "Lower"
+          },
+          {
+            "name": "Spider Track"
+          }
+        ]
+      },
+      {
+        "name": "East Atrium"
+      },
+      {
+        "name": "East Furnace Access"
+      },
+      {
+        "name": "Elder Chamber",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Elder Hall Access"
+      },
+      {
+        "name": "Energy Core Access"
+      },
+      {
+        "name": "Energy Core"
+      },
+      {
+        "name": "Eyon Tunnel"
+      },
+      {
+        "name": "Furnace",
+        "sections": [
+          {
+            "name": "Spider Tracks"
+          },
+          {
+            "name": "Inside Furnace",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall Access"
+      },
+      {
+        "name": "Gathering Hall",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Hall of the Elders",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/missilelauncher.png"
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/powerbomb.png"
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza",
+        "sections": [
+          {
+            "name": "Half-Pipe"
+          },
+          {
+            "name": "Grapple Ledge"
+          },
+          {
+            "name": "Tree"
+          },
+          {
+            "name": "Locked Door",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Map Station"
+      },
+      {
+        "name": "Meditation Fountain"
+      },
+      {
+        "name": "North Atrium"
+      },
+      {
+        "name": "Nursery Access"
+      },
+      {
+        "name": "Piston Tunnel"
+      },
+      {
+        "name": "Plaza Access"
+      },
+      {
+        "name": "Reflecting Pool Access"
+      },
+      {
+        "name": "Reflecting Pool"
+      },
+      {
+        "name": "Ruined Fountain Access"
+      },
+      {
+        "name": "Ruined Fountain",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Ruined Gallery",
+        "sections": [
+          {
+            "name": "Missile Wall"
+          },
+          {
+            "name": "Tunnel"
+          }
+        ]
+      },
+      {
+        "name": "Ruined Nursery",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Ruined Shrine Access"
+      },
+      {
+        "name": "Ruined Shrine",
+        "sections": [
+          {
+            "name": "Plated Beetle",
+            "chest_unopened_img": "images/items/morphball.png"
+          },
+          {
+            "name": "Half-Pipe"
+          },
+          {
+            "name": "Lower Tunnel"
+          }
+        ]
+      },
+      {
+        "name": "Ruins Entrance"
+      },
+      {
+        "name": "Save Station 1"
+      },
+      {
+        "name": "Save Station 2"
+      },
+      {
+        "name": "Save Station 3"
+      },
+      {
+        "name": "Sun Tower"
+      },
+      {
+        "name": "Sun Tower Access"
+      },
+      {
+        "name": "Sunchamber Access"
+      },
+      {
+        "name": "Sunchamber Lobby"
+      },
+      {
+        "name": "Sunchamber",
+        "sections": [
+          {
+            "name": "Flaaghra",
+            "chest_unopened_img": "images/items/variasuit.png"
+          },
+          {
+            "name": "Ghosts",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Totem Access"
+      },
+      {
+        "name": "Tower Chamber",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/artifacts0.png"
+          }
+        ]
+      },
+      {
+        "name": "Tower of Light Access"
+      },
+      {
+        "name": "Tower of Light",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/wavebuster.png"
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber Access",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Transport Access North",
+        "sections": [
+          {
+            "name": "",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      },
+      {
+        "name": "Transport Access South"
+      },
+      {
+        "name": "Transport to Magmoor Caverns North"
+      },
+      {
+        "name": "Transport to Tallon Overworld East"
+      },
+      {
+        "name": "Transport to Tallon Overworld North"
+      },
+      {
+        "name": "Transport to Tallon Overworld South"
+      },
+      {
+        "name": "Vault Access"
+      },
+      {
+        "name": "Vault",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall Access",
+        "sections": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall",
+        "sections": [
+          {
+            "name": "Scan Puzzle"
+          },
+          {
+            "name": "Underwater"
+          }
+        ]
+      },
+      {
+        "name": "West Furnace Access",
+        "sections": [
+          {
+            "name": "Inside Furnace",
+            "chest_unopened_img": "images/items/energytank.png"
+          }
+        ]
+      }
+    ]
+  }
+]
