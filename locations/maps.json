@@ -1301,6 +1301,411 @@
     ]
   },
   {
+    "name": "Mines Map",
+    "children": [
+      {
+        "name": "Central Dynamo",
+        "sections": [
+          {
+            "name": "Morph Ball maze",
+            "ref": "Phazon Mines/Central Dynamo/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 644,
+            "y": 706,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 522,
+            "y": 269
+          },
+          {
+            "map": "World Map",
+            "x": 734,
+            "y": 558,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
+          }
+        ]
+      },
+      {
+        "name": "Elite Control Access",
+        "sections": [
+          {
+            "name": "Explosive crate",
+            "ref": "Phazon Mines/Elite Control Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 240,
+            "y": 487,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 113,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Elite Quarters",
+        "sections": [
+          {
+            "name": "Omega Pirate",
+            "ref": "Phazon Mines/Elite Quarters/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 277,
+            "y": 1310
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 260,
+            "y": 428
+          },
+          {
+            "map": "World Map",
+            "x": 636,
+            "y": 586
+          }
+        ]
+      },
+      {
+        "name": "Elite Research",
+        "sections": [
+          { "ref": "Phazon Mines/Elite Research/Phazon Elite" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 234,
+            "y": 248
+          },
+          {
+            "map": "Mines Surface",
+            "x": 91,
+            "y": 236
+          }
+        ]
+      },
+      {
+        "name": "Elite Research",
+        "sections": [
+          { "ref": "Phazon Mines/Elite Research/Laser" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 182,
+            "y": 172
+          },
+          {
+            "map": "Mines Surface",
+            "x": 40,
+            "y": 160
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall Access",
+        "sections": [
+          {
+            "name": "Under a mushroom",
+            "ref": "Phazon Mines/Fungal Hall Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 216,
+            "y": 980
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 196,
+            "y": 96
+          },
+          {
+            "map": "World Map",
+            "x": 783,
+            "y": 454
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall B",
+        "sections": [
+          {
+            "name": "Sandstone floor",
+            "ref": "Phazon Mines/Fungal Hall B/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 530,
+            "y": 1310
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 510,
+            "y": 430
+          },
+          {
+            "map": "World Map",
+            "x": 734,
+            "y": 615
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry",
+        "sections": [
+          {
+            "name": "Crane",
+            "ref": "Phazon Mines/Main Quarry/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 539,
+            "y": 229
+          },
+          {
+            "map": "Mines Surface",
+            "x": 388,
+            "y": 214
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine A",
+        "sections": [
+          {
+            "name": "Bendezium cave",
+            "ref": "Phazon Mines/Metroid Quarantine A/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 372,
+            "y": 495,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 248,
+            "y": 48
+          },
+          {
+            "map": "World Map",
+            "x": 783,
+            "y": 493,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine B",
+        "sections": [
+          {
+            "name": "Sandstone floor",
+            "ref": "Phazon Mines/Metroid Quarantine B/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 486,
+            "y": 1325
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 463,
+            "y": 435
+          },
+          {
+            "map": "World Map",
+            "x": 685,
+            "y": 617
+          }
+        ]
+      },
+      {
+        "name": "Phazon Mining Tunnel",
+        "sections": [
+          {
+            "name": "Phazon maze",
+            "ref": "Phazon Mines/Phazon Mining Tunnel/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 456,
+            "y": 1100
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 436,
+            "y": 217
+          },
+          {
+            "map": "World Map",
+            "x": 783,
+            "y": 582
+          }
+        ]
+      },
+      {
+        "name": "Phazon Processing Center",
+        "sections": [
+          {
+            "name": "Bendezium wall",
+            "ref": "Phazon Mines/Phazon Processing Center/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 271,
+            "y": 1087
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 254,
+            "y": 203
+          }
+        ]
+      },
+      {
+        "name": "Processing Center Access",
+        "sections": [
+          { "ref": "Phazon Mines/Processing Center Access/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 172,
+            "y": 1206
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 154,
+            "y": 323
+          }
+        ]
+      },
+      {
+        "name": "Security Access A",
+        "sections": [
+          {
+            "name": "Bendezium gate",
+            "ref": "Phazon Mines/Security Access A/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 600,
+            "y": 310
+          },
+          {
+            "map": "Mines Surface",
+            "x": 457,
+            "y": 295
+          }
+        ]
+      },
+      {
+        "name": "Storage Depot A",
+        "sections": [
+          { "ref": "Phazon Mines/Storage Depot A/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 356,
+            "y": 316
+          },
+          {
+            "map": "Mines Surface",
+            "x": 213,
+            "y": 304
+          }
+        ]
+      },
+      {
+        "name": "Storage Depot B",
+        "sections": [
+          { "ref": "Phazon Mines/Storage Depot B/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 315,
+            "y": 80
+          },
+          {
+            "map": "Mines Surface",
+            "x": 171,
+            "y": 66
+          },
+          {
+            "map": "World Map",
+            "x": 733,
+            "y": 463
+          }
+        ]
+      },
+      {
+        "name": "Ventilation Shaft",
+        "sections": [
+          {
+            "name": "Turn on the system",
+            "ref": "Phazon Mines/Ventilation Shaft/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 406,
+            "y": 726,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 113,
+            "y": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "World Map",
     "children": [
       {
@@ -1595,6 +2000,88 @@
             "map": "World Map",
             "x": 293,
             "y": 713
+          }
+        ]
+      },
+
+      {
+        "name": "Elite Control",
+        "sections": [
+          {
+            "name": "Elite Control Access",
+            "ref": "Phazon Mines/Elite Control Access/"
+          },
+          {
+            "name": "Ventilation Shaft",
+            "ref": "Phazon Mines/Ventilation Shaft/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 684,
+            "y": 528,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
+          }
+        ]
+      },
+      {
+        "name": "Elite Research",
+        "sections": [
+          { "ref": "Phazon Mines/Elite Research/Phazon Elite" },
+          { "ref": "Phazon Mines/Elite Research/Laser" },
+          {
+            "name": "Storage Depot A",
+            "ref": "Phazon Mines/Storage Depot A/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 684,
+            "y": 479
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry",
+        "sections": [
+          {
+            "name": "Crane",
+            "ref": "Phazon Mines/Main Quarry/"
+          },
+          {
+            "name": "Storage Access A",
+            "ref": "Phazon Mines/Storage Access A/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 733,
+            "y": 497
+          }
+        ]
+      },
+      {
+        "name": "Phazon Processing Center",
+        "sections": [
+          {
+            "name": "Bendezium wall",
+            "ref": "Phazon Mines/Phazon Processing Center/"
+          },
+          {
+            "name": "Processing Center Access",
+            "ref": "Phazon Mines/Processing Center Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 635,
+            "y": 525
           }
         ]
       }
