@@ -102,9 +102,9 @@ item_images = {
     'Phazon Mines: Phazon Mining Tunnel': ItemImage.ArtifactNewborn,
     'Magmoor Caverns: Lava Lake': ItemImage.ArtifactNature,
     'Magmoor Caverns: Transport Tunnel A': ItemImage.EnergyTank,
-    'Magmoor Caverns: Warrior Shrine': ItemImage.PowerBombExpansion,
+    'Magmoor Caverns: Warrior Shrine': ItemImage.ArtifactStrength,
     'Magmoor Caverns: Shore Tunnel': ItemImage.IceSpreader,
-    'Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel': ItemImage.ArtifactStrength,
+    'Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel': ItemImage.PowerBombExpansion,
     'Magmoor Caverns: Plasma Processing': ItemImage.PlasmaBeam,
     'Magmoor Caverns: Magmoor Workstation': ItemImage.EnergyTank,
 }

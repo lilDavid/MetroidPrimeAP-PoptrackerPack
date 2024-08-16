@@ -729,6 +729,177 @@
     ]
   },
   {
+    "name": "Magmoor Map",
+    "children": [
+      {
+        "name": "Fiery Shores",
+        "sections": [
+          { "ref": "Magmoor Caverns/Fiery Shores/Morph Track" },
+          { "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel" }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 414,
+            "y": 482
+          }
+        ]
+      },
+      {
+        "name": "Lava Lake",
+        "sections": [
+          {
+            "name": "Shatter the column",
+            "ref": "Magmoor Caverns/Fiery Shores/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 133,
+            "y": 266
+          },
+          {
+            "map": "World Map",
+            "x": 289,
+            "y": 234
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation",
+        "sections": [
+          {
+            "name": "Channel door puzzle",
+            "ref": "Magmoor Caverns/Magmoor Workstation/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 467,
+            "y": 881
+          },
+          {
+            "map": "World Map",
+            "x": 488,
+            "y": 555
+          }
+        ]
+      },
+      {
+        "name": "Plasma Processing",
+        "sections": [
+          { "ref": "Magmoor Caverns/Plasma Processing/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 420,
+            "y": 767
+          },
+          {
+            "map": "World Map",
+            "x": 439,
+            "y": 486
+          }
+        ]
+      },
+      {
+        "name": "Shore Tunnel",
+        "sections": [
+          {
+            "name": "Bendezium tunnel",
+            "ref": "Magmoor Caverns/Shore Tunnel/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 366,
+            "y": 464
+          }
+        ]
+      },
+      {
+        "name": "Storage Cavern",
+        "sections": [
+          {
+            "name": "Through the pit",
+            "ref": "Magmoor Caverns/Storage Cavern/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 140,
+            "y": 443
+          },
+          {
+            "map": "World Map",
+            "x": 291,
+            "y": 355
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel A",
+        "sections": [
+          {
+            "name": "Bomb jump puzzle",
+            "ref": "Magmoor Caverns/Transport Tunnel A/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 244,
+            "y": 444
+          },
+          {
+            "map": "World Map",
+            "x": 339,
+            "y": 372
+          }
+        ]
+      },
+      {
+        "name": "Triclops Pit",
+        "sections": [
+          {
+            "name": "Weakened column",
+            "ref": "Magmoor Caverns/Triclops Pit/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 227,
+            "y": 380
+          },
+          {
+            "map": "World Map",
+            "x": 340,
+            "y": 338
+          }
+        ]
+      },
+      {
+        "name": "Warrior Shrine",
+        "sections": [
+          { "ref": "Magmoor Caverns/Warrior Shrine/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 378,
+            "y": 455
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "World Map",
     "children": [
       {
@@ -931,6 +1102,36 @@
             "map": "World Map",
             "x": 535,
             "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Fiery Shores",
+        "sections": [
+          {
+            "name": "Fiery Shores Morph Track",
+            "ref": "Magmoor Caverns/Fiery Shores/Morph Track"
+          },
+          { "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel" },
+          {
+            "name": "Warrior Shrine",
+            "ref": "Magmoor Caverns/Warrior Shrine/"
+          },
+          {
+            "name": "Shore Tunnel",
+            "ref": "Magmoor Caverns/Shore Tunnel/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 414,
+            "y": 482
+          },
+          {
+            "map": "World Map",
+            "x": 437,
+            "y": 371
           }
         ]
       }

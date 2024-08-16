@@ -15,7 +15,7 @@
           },
           {
             "name": "Warrior Shrine Tunnel",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/powerbomb.png"
           }
         ]
       },
@@ -139,7 +139,7 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/artifacts0.png"
           }
         ]
       },
