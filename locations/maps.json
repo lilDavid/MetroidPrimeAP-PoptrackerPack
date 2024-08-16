@@ -24,7 +24,7 @@
         "name": "Artifact Temple",
         "sections": [
           {
-            "name": "Center",
+            "name": "Truly seek it",
             "ref": "Tallon Overworld/Artifact Temple/"
           }
         ],
@@ -900,6 +900,407 @@
     ]
   },
   {
+    "name": "Phen Map",
+    "children": [
+      {
+        "name": "Chapel of the Elders",
+        "sections": [
+          {
+            "name": "Sheegoth",
+            "ref": "Phendrana Drifts/Chapel of the Elders/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 53,
+            "y": 181
+          },
+          {
+            "map": "World Map",
+            "x": 44,
+            "y": 408
+          }
+        ]
+      },
+      {
+        "name": "Chozo Ice Temple",
+        "sections": [
+          {
+            "name": "Thaw the frozen waters",
+            "ref": "Phendrana Drifts/Chozo Ice Temple/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 163,
+            "y": 179
+          },
+          {
+            "map": "World Map",
+            "x": 94,
+            "y": 388
+          }
+        ]
+      },
+      {
+        "name": "Control Tower",
+        "sections": [
+          {
+            "name": "Collapse the tower",
+            "ref": "Phendrana Drifts/Control Tower/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 315,
+            "y": 607
+          },
+          {
+            "map": "World Map",
+            "x": 194,
+            "y": 515
+          }
+        ]
+      },
+      {
+        "name": "Frost Cave",
+        "sections": [
+          {
+            "name": "Under the ice",
+            "ref": "Phendrana Drifts/Frost Cave/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 417,
+            "y": 891
+          },
+          {
+            "map": "World Map",
+            "x": 241,
+            "y": 669
+          }
+        ]
+      },
+      {
+        "name": "Gravity Chamber",
+        "sections": [
+          { "ref": "Phendrana Drifts/Gravity Chamber/Underwater" },
+          { "ref": "Phendrana Drifts/Gravity Chamber/Grapple Ledge" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 573,
+            "y": 836
+          },
+          {
+            "map": "World Map",
+            "x": 343,
+            "y": 678
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins East",
+        "sections": [
+          { "ref": "Phendrana Drifts/Ice Ruins East/Behind Ice" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 436,
+            "y": 195
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins East",
+        "sections": [
+          { "ref": "Phendrana Drifts/Ice Ruins East/Spider Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 389,
+            "y": 211
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins West",
+        "sections": [
+          {
+            "name": "Below ice",
+            "ref": "Phendrana Drifts/Ice Ruins West/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 312,
+            "y": 256
+          },
+          {
+            "map": "World Map",
+            "x": 190,
+            "y": 450
+          }
+        ]
+      },
+      {
+        "name": "Observatory",
+        "sections": [
+          {
+            "name": "Above hologram",
+            "ref": "Phendrana Drifts/Observatory/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 279,
+            "y": 661
+          },
+          {
+            "map": "World Map",
+            "x": 145,
+            "y": 581
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Canyon",
+        "sections": [
+          {
+            "name": "In the tower",
+            "ref": "Phendrana Drifts/Phendrana Canyon/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 124,
+            "y": 333
+          },
+          {
+            "map": "World Map",
+            "x": 95,
+            "y": 460
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines",
+        "sections": [
+          { "ref": "Phendrana Drifts/Phendrana Shorelines/Behind Ice" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 282,
+            "y": 143
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines",
+        "sections": [
+          { "ref": "Phendrana Drifts/Phendrana Shorelines/Spider Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 300,
+            "y": 186
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Cave",
+        "sections": [
+          {
+            "name": "Thardus",
+            "ref": "Phendrana Drifts/Quarantine Cave/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 472,
+            "y": 484
+          },
+          {
+            "map": "World Map",
+            "x": 290,
+            "y": 510
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Monitor",
+        "sections": [
+          { "ref": "Phendrana Drifts/Quarantine Monitor/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 540,
+            "y": 467
+          },
+          {
+            "map": "World Map",
+            "x": 340,
+            "y": 493
+          }
+        ]
+      },
+      {
+        "name": "Research Core",
+        "sections": [
+          {
+            "name": "Deactivate the field",
+            "ref": "Phendrana Drifts/Research Core/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 361,
+            "y": 727
+          },
+          {
+            "map": "World Map",
+            "x": 243,
+            "y": 581
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Aether",
+        "sections": [
+          { "ref": "Phendrana Drifts/Research Lab Aether/Tank" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 365,
+            "y": 650
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Aether",
+        "sections": [
+          { "ref": "Phendrana Drifts/Research Lab Aether/Morph Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 341,
+            "y": 664
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Hydra",
+        "sections": [
+          {
+            "name": "Cordite column",
+            "ref": "Phendrana Drifts/Research Lab Hydra/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 328,
+            "y": 464
+          },
+          {
+            "map": "World Map",
+            "x": 242,
+            "y": 622
+          }
+        ]
+      },
+      {
+        "name": "Ruined Courtyard",
+        "sections": [
+          {
+            "name": "Morph tunnel",
+            "ref": "Phendrana Drifts/Ruined Courtyard/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 288,
+            "y": 374
+          },
+          {
+            "map": "World Map",
+            "x": 192,
+            "y": 476
+          }
+        ]
+      },
+      {
+        "name": "Security Cave",
+        "sections": [
+          { "ref": "Phendrana Drifts/Security Cave/" }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 438,
+            "y": 1038
+          }
+        ]
+      },
+      {
+        "name": "Storage Cave",
+        "sections": [
+          {
+            "name": "Bendezium wall",
+            "ref": "Phendrana Drifts/Storage Cave/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 471,
+            "y": 996
+          }
+        ]
+      },
+      {
+        "name": "Transport Access",
+        "sections": [
+          {
+            "name": "Encased in ice",
+            "ref": "Phendrana Drifts/Transport Access/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 453,
+            "y": 674
+          },
+          {
+            "map": "World Map",
+            "x": 292,
+            "y": 575
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "World Map",
     "children": [
       {
@@ -1132,6 +1533,68 @@
             "map": "World Map",
             "x": 437,
             "y": 371
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins East",
+        "sections": [
+          { "ref": "Phendrana Drifts/Ice Ruins East/Behind Ice" },
+          { "ref": "Phendrana Drifts/Ice Ruins East/Spider Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 241,
+            "y": 406
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines",
+        "sections": [
+          { "ref": "Phendrana Drifts/Phendrana Shorelines/Behind Ice" },
+          { "ref": "Phendrana Drifts/Phendrana Shorelines/Spider Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 191,
+            "y": 388
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Aether",
+        "sections": [
+          { "ref": "Phendrana Drifts/Research Lab Aether/Tank" },
+          { "ref": "Phendrana Drifts/Research Lab Aether/Morph Track" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 194,
+            "y": 563
+          }
+        ]
+      },
+      {
+        "name": "Phendrana's Edge",
+        "sections": [
+          {
+            "name": "Security Cave",
+            "ref": "Phendrana Drifts/Security Cave/"
+          },
+          {
+            "name": "Storage Cave",
+            "ref": "Phendrana Drifts/Storage Cave/"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 293,
+            "y": 713
           }
         ]
       }
