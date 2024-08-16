@@ -19,20 +19,20 @@
   },
   {
     "name": "Magmoor Caverns",
-    "location_size": 8,
-    "location_border_thickness": 2,
+    "location_size": 12,
+    "location_border_thickness": 3,
     "img": "images/maps/magmoor.jpg"
   },
   {
     "name": "Phendrana Drifts",
-    "location_size": 8,
-    "location_border_thickness": 2,
+    "location_size": 12,
+    "location_border_thickness": 3,
     "img": "images/maps/phendrana.jpg"
   },
   {
     "name": "Phazon Mines",
-    "location_size": 12,
-    "location_border_thickness": 3,
+    "location_size": 16,
+    "location_border_thickness": 4,
     "img": "images/maps/phazon.jpg"
   },
   {

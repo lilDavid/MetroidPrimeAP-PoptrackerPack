@@ -817,7 +817,7 @@
           {
             "map": "Magmoor Caverns",
             "x": 366,
-            "y": 464
+            "y": 466
           }
         ]
       },
@@ -893,7 +893,7 @@
           {
             "map": "Magmoor Caverns",
             "x": 378,
-            "y": 455
+            "y": 448
           }
         ]
       }
@@ -1317,8 +1317,8 @@
             "x": 644,
             "y": 706,
             "shape": "diamond",
-            "size": 16,
-            "border_thickness": 4
+            "size": 20,
+            "border_thickness": 5
           },
           {
             "map": "Mines Sublevel 1",
@@ -1349,8 +1349,8 @@
             "x": 240,
             "y": 487,
             "shape": "diamond",
-            "size": 16,
-            "border_thickness": 4
+            "size": 20,
+            "border_thickness": 5
           },
           {
             "map": "Mines Sublevel 1",
@@ -1508,8 +1508,8 @@
             "x": 372,
             "y": 495,
             "shape": "diamond",
-            "size": 16,
-            "border_thickness": 4
+            "size": 20,
+            "border_thickness": 5
           },
           {
             "map": "Mines Sublevel 1",
@@ -1693,8 +1693,8 @@
             "x": 406,
             "y": 726,
             "shape": "diamond",
-            "size": 16,
-            "border_thickness": 4
+            "size": 20,
+            "border_thickness": 5
           },
           {
             "map": "Mines Sublevel 1",
