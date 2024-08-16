@@ -117,7 +117,7 @@
       {
         "name": "Great Tree Chamber",
         "sections": [
-          { "name": "Tallon Overworld/Great Tree Chamber/" }
+          { "ref": "Tallon Overworld/Great Tree Chamber/" }
         ],
         "map_locations": [
           {
