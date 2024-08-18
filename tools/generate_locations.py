@@ -11,7 +11,7 @@ import sys
 from typing import Dict, List, NamedTuple, Optional, Tuple, Union
 
 
-locations = Path(__file__).parent / "locations"
+locations = Path(__file__).parents[1] / "locations"
 
 
 class ItemImage(StrEnum):
@@ -161,6 +161,21 @@ class PickupData(NamedTuple):
     name: str
     image: Optional[ItemImage]
 
+    @classmethod
+    def from_ast(cls, pickup_data: ast.expr):
+        if (type(pickup_data) is not ast.Call or type(pickup_data.func) is not ast.Name or
+            pickup_data.func.id != "PickupData"):
+            raise ValueError("Pickup item is not from PickupData constructor")
+        check_name: str = ast.literal_eval(pickup_data.args[0])
+
+        _, without_area = check_name.split(": ")
+        parts = without_area.split(" - ")
+        if len(parts) == 1:
+            item_name = ""
+        else:
+            _, item_name = parts
+        return cls(item_name, item_images.get(check_name))
+
     def into_json(self):
         return omit_empty_lists_and_null({
             "name": self.name,
@@ -171,6 +186,29 @@ class PickupData(NamedTuple):
 class RoomData(NamedTuple):
     name: str
     pickups: List[PickupData]
+
+    @classmethod
+    def from_ast(cls, name: ast.expr, room_data: ast.expr, filename: str):
+        if (type(name) is not ast.Attribute or type(name.value) is not ast.Name or
+            name.value.id != "RoomName"):
+            raise ValueError("Room name not from RoomName enum")
+
+        room_name: str = eval(compile(ast.Expression(name), filename, "eval")).value
+
+        if (type(room_data) is not ast.Call or type(room_data.func) is not ast.Name or
+            room_data.func.id != "RoomData"):
+            raise ValueError("Room not assigned to RoomData object")
+
+        pickups: List[PickupData] = []
+        for keyword in room_data.keywords:
+            if keyword.arg != "pickups":
+                continue
+            if type(keyword.value) is not ast.List:
+                raise ValueError("Kwarg pickups is not a list")
+            for element in keyword.value.elts:
+                pickups.append(PickupData.from_ast(element))
+
+        return cls(room_name, pickups)
 
     def into_json(self):
         return omit_empty_lists_and_null({
@@ -243,46 +281,10 @@ class AreaData(NamedTuple):
         if rooms_assign is None:
             raise ValueError("Missing assignment to self.rooms")
 
-        room_keys = list(map(ast.Expression, rooms_assign.keys))
-        room_values: List[List[ast.Expression]] = []
-        for value in rooms_assign.values:
-            if (type(value) is not ast.Call or type(value.func) is not ast.Name or
-                value.func.id != "RoomData"):
-                raise ValueError("Room not assigned to RoomData object")
-            pickups = []
-            for keyword in value.keywords:
-                if keyword.arg != "pickups":
-                    continue
-                if type(keyword.value) is not ast.List:
-                    raise ValueError("Kwarg pickups is not a list")
-                for element in keyword.value.elts:
-                    if (type(element) is not ast.Call or type(element.func) is not ast.Name or
-                        element.func.id != "PickupData"):
-                        raise ValueError("Pickup item is not from PickupData constructor")
-                    pickups.append(ast.Expression(element.args[0]))
-            room_values.append(pickups)
-
         area_name = eval(compile(area_name_expr, filename, "eval"))
-        pickups: List[Tuple[str, List[str]]] = [
-            (eval(compile(key, filename, "eval")).value,
-             [eval(compile(pickup, filename, "eval")) for pickup in value])
-            for key, value in zip(room_keys, room_values, strict=True)
-        ]
-
-        rooms: List[str, RoomData] = []
-        for room, items in pickups:
-            item_names: List[PickupData] = []
-            for item in items:
-                _, checkname = item.split(": ")
-                checkname = checkname.split(" - ")
-                if len(checkname) == 1:
-                    item_name = ""
-                else:
-                    _, item_name = checkname
-                item_names.append(PickupData(item_name, item_images.get(item)))
-            rooms.append(RoomData(room, item_names))
-
-        return cls(area_name, list(rooms))
+        rooms = [RoomData.from_ast(key, value, filename)
+                 for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)]
+        return cls(area_name, rooms)
 
     def into_json(self):
         return [omit_empty_lists_and_null({
