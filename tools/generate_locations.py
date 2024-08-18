@@ -157,6 +157,14 @@ def omit_empty_lists_and_null(object: Dict[str, JsonValue]) -> Dict[str, JsonVal
     return {k: v for k, v in object.items() if v not in (None, [])}
 
 
+class ASTParseError(ValueError):
+    tree: ast.AST
+
+    def __init__(self, tree: ast.AST, *args):
+        super().__init__(*args)
+        self.tree = tree
+
+
 class PickupData(NamedTuple):
     name: str
     image: Optional[ItemImage]
@@ -165,7 +173,7 @@ class PickupData(NamedTuple):
     def from_ast(cls, pickup_data: ast.expr):
         if (type(pickup_data) is not ast.Call or type(pickup_data.func) is not ast.Name or
             pickup_data.func.id != "PickupData"):
-            raise ValueError("Pickup item is not from PickupData constructor")
+            raise ASTParseError(pickup_data, "Pickup item is not from PickupData constructor")
         check_name: str = ast.literal_eval(pickup_data.args[0])
 
         _, without_area = check_name.split(": ")
@@ -191,20 +199,20 @@ class RoomData(NamedTuple):
     def from_ast(cls, name: ast.expr, room_data: ast.expr, filename: str):
         if (type(name) is not ast.Attribute or type(name.value) is not ast.Name or
             name.value.id != "RoomName"):
-            raise ValueError("Room name not from RoomName enum")
+            raise ASTParseError(name, "Room name not from RoomName enum")
 
         room_name: str = eval(compile(ast.Expression(name), filename, "eval")).value
 
         if (type(room_data) is not ast.Call or type(room_data.func) is not ast.Name or
             room_data.func.id != "RoomData"):
-            raise ValueError("Room not assigned to RoomData object")
+            raise ASTParseError(room_data, "Room not assigned to RoomData object")
 
         pickups: List[PickupData] = []
         for keyword in room_data.keywords:
             if keyword.arg != "pickups":
                 continue
             if type(keyword.value) is not ast.List:
-                raise ValueError("Kwarg pickups is not a list")
+                raise ASTParseError(keyword.value, "Kwarg pickups is not a list")
             for element in keyword.value.elts:
                 pickups.append(PickupData.from_ast(element))
 
@@ -224,7 +232,7 @@ class AreaData(NamedTuple):
     @classmethod
     def from_ast(cls, tree: ast.AST, filename: str):
         if type(tree) is not ast.Module:
-            raise ValueError("Tree is not a module")
+            raise ASTParseError(tree, "Tree is not a module")
         module: ast.Module = tree
 
         class_def: Optional[ast.ClassDef] = None
@@ -233,9 +241,9 @@ class AreaData(NamedTuple):
                 if class_def is None:
                     class_def = statement
                 else:
-                    raise ValueError("Multiple class definitions in module")
+                    raise ASTParseError(module, "Multiple class definitions in module")
         if class_def is None:
-            raise ValueError("No class definition in module")
+            raise ASTParseError(module, "No class definition in module")
 
         init_method: Optional[ast.FunctionDef] = None
         for statement in class_def.body:
@@ -243,9 +251,9 @@ class AreaData(NamedTuple):
                 if init_method is None:
                     init_method = statement
                 else:
-                    raise ValueError("Found multiple __init__() methods")
+                    raise ASTParseError(class_def, "Found multiple __init__() methods")
         if init_method is None:
-            raise ValueError("Class is missing __init__() method")
+            raise ASTParseError(class_def, "Class is missing __init__() method")
 
         area_name_expr: Optional[ast.Expression] = None
         area_name: Optional[str] = None
@@ -264,22 +272,22 @@ class AreaData(NamedTuple):
                             area_name_expr = ast.Expression(arg)
                             break
                         else:
-                            raise ValueError("Found multiple area name expressions")
+                            raise ASTParseError(statement.value, "Found multiple area name expressions")
             elif type(statement) is ast.Assign:
                 for target in statement.targets:
                     if type(target) is ast.Attribute:
                         if (type(target.value) is ast.Name
                             and target.value.id == "self" and target.attr == "rooms"):
                             if type(statement.value) is not ast.Dict:
-                                raise ValueError("Assigned a non-dict to self.rooms")
+                                raise ASTParseError(statement.value, "Assigned a non-dict to self.rooms")
                             if rooms_assign is None:
                                 rooms_assign = statement.value
                             else:
-                                raise ValueError("Found multiple assignments to self.rooms")
+                                raise ASTParseError(init_method, "Found multiple assignments to self.rooms")
         if area_name_expr is None:
-            raise ValueError("Missing area name")
+            ASTParseError(statement.value, "Missing area name")
         if rooms_assign is None:
-            raise ValueError("Missing assignment to self.rooms")
+            ASTParseError(init_method, "Missing assignment to self.rooms")
 
         area_name = eval(compile(area_name_expr, filename, "eval"))
         rooms = [RoomData.from_ast(key, value, filename)
@@ -301,7 +309,11 @@ with open(input, "r") as stream:
 
 data_ast = ast.parse(content)
 # print(ast.dump(data_ast, indent=2))
-result = AreaData.from_ast(data_ast, input.name)
+try:
+    result = AreaData.from_ast(data_ast, input.name)
+except ASTParseError as e:
+    print(ast.dump(e.tree))
+    raise
 
 with open(output, "w") as stream:
    json.dump(result.into_json(), stream, indent=2)
