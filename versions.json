@@ -3,9 +3,17 @@
         {
             "package_version": "0.1.0",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.0/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "e53e64be8f5baae41c8afacf96f3bb609af9c4e4b2b01a426abf8cb873a96ba6",
+            "sha256": "cf91cc634bf62466bbfcc2f6ecf34246d5e562d2f729804a8cfb7c39dd7ebd10",
             "changelog": [
                 "Initial release"
+            ]
+        },
+        {
+            "package_version": "0.1.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "e53e64be8f5baae41c8afacf96f3bb609af9c4e4b2b01a426abf8cb873a96ba6",
+            "changelog": [
+                "No longer assumes you start with Power Beam"
             ]
         }
     ]

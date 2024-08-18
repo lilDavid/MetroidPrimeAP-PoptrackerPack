@@ -1,5 +1,5 @@
 ITEM_MAPPING = {
- -- [5031000] = {"PowerBeam", "toggle"},
+    [5031000] = {"PowerBeam", "toggle"},
     [5031001] = {"IceBeam", "toggle"},
     [5031002] = {"WaveBeam", "toggle"},
     [5031003] = {"PlasmaBeam", "toggle"},

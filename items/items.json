@@ -23,7 +23,7 @@
     "name": "Power Beam",
     "codes": "PowerBeam",
     "img": "images/items/powerbeam.png",
-    "type": "static"
+    "type": "toggle"
   },
   {
     "name": "Wave Beam",
