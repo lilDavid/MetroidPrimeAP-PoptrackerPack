@@ -14,6 +14,15 @@ from typing import Dict, List, NamedTuple, Optional, Tuple, Union
 locations = Path(__file__).parents[1] / "locations"
 
 
+areas = {
+    "tallon": "TallonOverworld",
+    "chozo": "ChozoRuins",
+    "magmoor": "MagmoorCaverns",
+    "phen": "PhendranaDrifts",
+    "mines": "PhazonMines",
+}
+
+
 class ItemImage(StrEnum):
     EnergyTank = "energytank"
     MissileLauncher = "missilelauncher"
@@ -119,18 +128,14 @@ parser.add_argument(
     help="Path to the extracted Metroid Prime AP world source"
 )
 parser.add_argument(
-    "area", type=str,
+    "area", type=str, choices=areas.keys(),
     help="Name of the data module to read"
-)
-parser.add_argument(
-    "output", type=Path,
-    help="Filename to write results into"
 )
 args = parser.parse_args()
 
 data_path: Path = args.path_to_apworld / "data"
-area: str = args.area
-output: Path = locations / args.output.name
+area: str = areas[args.area]
+output: Path = (locations / args.area).with_suffix(".json")
 
 
 # Import names
