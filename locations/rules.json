@@ -1,0 +1,48 @@
+[
+    {
+        "name": "rules",
+        "children": [
+            {
+                "name": "can_thermal",
+                "access_rules": [
+                    "RemoveThermalRequirements",
+                    "[ThermalVisor]"
+                ]
+            },
+            {
+                "name": "can_xray",
+                "access_rules": [
+                    "RemoveXRayRequirements",
+                    "[XRayVisor]"
+                ]
+            },
+            {
+                "name": "can_flaahgra",
+                "access_rules": [
+                    "StartingRoomSunchamberLobby",
+                    "@Chozo Ruins/Sunchamber,[$can_combat_flaaghra],$can_missile,$can_bomb",
+                    "@Chozo Ruins/Sunchamber,[$can_combat_flaaghra],$can_missile,$can_power_bomb,$has_power_bomb_count|4"
+                ]
+            },
+            {
+                "name": "can_warp_to_start",
+                "access_rules": [
+                    "@Tallon Overworld/Landing Site",
+                    "@Chozo Ruins/Save Station1",
+                    "@Chozo Ruins/Save Station2",
+                    "@Chozo Ruins/Save Station3",
+                    "@Magmoor Caverns/Save Station Magmoor A",
+                    "@Magmoor Caverns/Save Station Magmoor B",
+                    "@Phendrana Drifts/Save Station A",
+                    "@Phendrana Drifts/Save Station B",
+                    "@Phendrana Drifts/Save Station C",
+                    "@Phendrana Drifts/Save Station D",
+                    "@Tallon Overworld/Cargo Freight Lift to Deck Gamma",
+                    "@Phazon Mines/Save Station Mines A",
+                    "@Phazon Mines/Save Station Mines B",
+                    "@Phazon Mines/Save Station Mines C"
+                ]
+            }
+        ]
+    }
+]

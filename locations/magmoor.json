@@ -11,11 +11,17 @@
         "name": "Fiery Shores",
         "sections": [
           {
-            "name": "Morph Track"
+            "name": "Morph Track",
+            "access_rules": [
+              "$can_bomb"
+            ]
           },
           {
             "name": "Warrior Shrine Tunnel",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/powerbomb.png",
+            "access_rules": [
+              "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine"
+            ]
           }
         ]
       },
@@ -30,7 +36,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel/"
+            ]
           }
         ]
       },
@@ -39,7 +48,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "@rules/can_thermal,$can_wave_beam,$can_scan,$can_morph_ball"
+            ]
           }
         ]
       },
@@ -75,7 +87,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/icespreader.png"
+            "chest_unopened_img": "images/items/icespreader.png",
+            "access_rules": [
+              "$can_power_bomb,$can_space_jump"
+            ]
           }
         ]
       },
@@ -110,7 +125,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_heat,$can_bomb"
+            ]
           }
         ]
       },
@@ -124,7 +142,10 @@
         "name": "Triclops Pit",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "@rules/can_xray,$can_space_jump,$can_missile"
+            ]
           }
         ]
       },

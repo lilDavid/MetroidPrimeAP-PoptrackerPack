@@ -18,7 +18,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/wavebeam.png"
+            "chest_unopened_img": "images/items/wavebeam.png",
+            "access_rules": [
+              "$can_space_jump"
+            ]
           }
         ]
       },
@@ -30,7 +33,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "$can_morph_ball,$can_space_jump,$can_melt_ice"
+            ]
           }
         ]
       },
@@ -39,7 +45,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_bomb"
+            ]
           }
         ]
       },
@@ -56,7 +65,10 @@
         "name": "Frost Cave",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_grapple,$can_missile,$can_move_underwater"
+            ]
           }
         ]
       },
@@ -68,10 +80,16 @@
         "sections": [
           {
             "name": "Underwater",
-            "chest_unopened_img": "images/items/gravitysuit.png"
+            "chest_unopened_img": "images/items/gravitysuit.png",
+            "access_rules": [
+              "$can_move_underwater,$can_space_jump"
+            ]
           },
           {
-            "name": "Grapple Ledge"
+            "name": "Grapple Ledge",
+            "access_rules": [
+              "$can_move_underwater,$can_space_jump,$can_melt_ice,$can_grapple"
+            ]
           }
         ]
       },
@@ -91,10 +109,16 @@
         "name": "Ice Ruins East",
         "sections": [
           {
-            "name": "Behind Ice"
+            "name": "Behind Ice",
+            "access_rules": [
+              "$can_melt_ice"
+            ]
           },
           {
-            "name": "Spider Track"
+            "name": "Spider Track",
+            "access_rules": [
+              "$can_spider"
+            ]
           }
         ]
       },
@@ -103,7 +127,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/powerbomb.png",
+            "access_rules": [
+              "$can_melt_ice,$can_space_jump,$can_missile"
+            ]
           }
         ]
       },
@@ -127,7 +154,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/supermissile.png"
+            "chest_unopened_img": "images/items/supermissile.png",
+            "access_rules": [
+              "[$can_combat_labs],$_can_climb_observatory_via_puzzle"
+            ]
           }
         ]
       },
@@ -144,10 +174,16 @@
         "name": "Phendrana Shorelines",
         "sections": [
           {
-            "name": "Behind Ice"
+            "name": "Behind Ice",
+            "access_rules": [
+              "$can_melt_ice"
+            ]
           },
           {
-            "name": "Spider Track"
+            "name": "Spider Track",
+            "access_rules": [
+              "$can_bomb,$can_spider,$can_super_missile,$can_scan,$can_space_jump"
+            ]
           }
         ]
       },
@@ -168,7 +204,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/spiderball.png"
+            "chest_unopened_img": "images/items/spiderball.png",
+            "access_rules": [
+              "[$can_combat_thardus],@rules/can_thermal"
+            ]
           }
         ]
       },
@@ -188,7 +227,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/thermalvisor.png"
+            "chest_unopened_img": "images/items/thermalvisor.png",
+            "access_rules": [
+              "[$can_combat_labs],@rules/can_thermal,$can_scan,$can_wave_beam"
+            ]
           }
         ]
       },
@@ -200,10 +242,16 @@
         "sections": [
           {
             "name": "Tank",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "[$can_combat_labs],$can_missile"
+            ]
           },
           {
-            "name": "Morph Track"
+            "name": "Morph Track",
+            "access_rules": [
+              "[$can_combat_labs],$can_bomb,$can_space_jump"
+            ]
           }
         ]
       },
@@ -211,7 +259,10 @@
         "name": "Research Lab Hydra",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_super_missile,$can_scan"
+            ]
           }
         ]
       },
@@ -220,7 +271,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$_can_reach_top_of_ruined_courtyard"
+            ]
           }
         ]
       },
@@ -274,7 +328,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_melt_ice"
+            ]
           }
         ]
       },

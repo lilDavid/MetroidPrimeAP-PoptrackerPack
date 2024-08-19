@@ -9,7 +9,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/powerbomb.png",
+            "access_rules": [
+              "$can_bomb"
+            ]
           }
         ]
       },
@@ -32,7 +35,10 @@
         "name": "Elite Control Access",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball"
+            ]
           }
         ]
       },
@@ -47,7 +53,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/phazonsuit.png"
+            "chest_unopened_img": "images/items/phazonsuit.png",
+            "access_rules": [
+              "[$can_combat_omega_pirate],$can_xray|true"
+            ]
           }
         ]
       },
@@ -56,10 +65,16 @@
         "sections": [
           {
             "name": "Phazon Elite",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "$can_power_bomb"
+            ]
           },
           {
-            "name": "Laser"
+            "name": "Laser",
+            "access_rules": [
+              "$can_bomb,$can_boost,$can_space_jump,$can_scan"
+            ]
           }
         ]
       },
@@ -70,7 +85,10 @@
         "name": "Fungal Hall Access",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball,$can_phazon"
+            ]
           }
         ]
       },
@@ -78,7 +96,12 @@
         "name": "Fungal Hall B",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_bomb",
+              "$can_power_bomb",
+              "$can_bomb,$can_power_bomb"
+            ]
           }
         ]
       },
@@ -86,7 +109,10 @@
         "name": "Main Quarry",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball,$can_spider,$can_bomb,@rules/can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
+            ]
           }
         ]
       },
@@ -100,7 +126,12 @@
         "name": "Metroid Quarantine A",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,@rules/can_xray",
+              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray",
+              "[$can_combat_mines],$can_scan,$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray"
+            ]
           }
         ]
       },
@@ -108,7 +139,10 @@
         "name": "Metroid Quarantine B",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "[$can_combat_mines],@Elite Quarters Access,$can_super_missile"
+            ]
           }
         ]
       },
@@ -129,7 +163,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "$can_phazon,$can_bomb"
+            ]
           }
         ]
       },
@@ -137,7 +174,10 @@
         "name": "Phazon Processing Center",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_spider,$can_bomb,$can_space_jump,$can_power_bomb"
+            ]
           }
         ]
       },
@@ -146,7 +186,12 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_backwards_lower_mines",
+              "@Elite Quarters",
+              "$can_backwards_lower_mines,@Elite Quarters"
+            ]
           }
         ]
       },
@@ -175,7 +220,10 @@
         "name": "Security Access A",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_power_bomb"
+            ]
           }
         ]
       },
@@ -214,7 +262,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_scan,$can_power_bomb,$can_space_jump"
+            ]
           }
         ]
       },

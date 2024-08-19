@@ -9,7 +9,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/spacejumpboots.png"
+            "chest_unopened_img": "images/items/spacejumpboots.png",
+            "access_rules": [
+              "$can_space_jump"
+            ]
           }
         ]
       },
@@ -34,7 +37,10 @@
         "name": "Biohazard Containment",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_super_missile"
+            ]
           }
         ]
       },
@@ -46,7 +52,18 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_missile,$can_crashed_frigate",
+              "$can_charge_beam,$can_crashed_frigate",
+              "$can_missile,$can_charge_beam,$can_crashed_frigate",
+              "$can_missile,$can_crashed_frigate_backwards",
+              "$can_charge_beam,$can_crashed_frigate_backwards",
+              "$can_missile,$can_charge_beam,$can_crashed_frigate_backwards",
+              "$can_missile,$can_crashed_frigate,$can_crashed_frigate_backwards",
+              "$can_charge_beam,$can_crashed_frigate,$can_crashed_frigate_backwards",
+              "$can_missile,$can_charge_beam,$can_crashed_frigate,$can_crashed_frigate_backwards"
+            ]
           }
         ]
       },
@@ -54,7 +71,10 @@
         "name": "Frigate Crash Site",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_space_jump,$can_move_underwater"
+            ]
           }
         ]
       },
@@ -77,7 +97,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_bomb,$can_move_underwater"
+            ]
           }
         ]
       },
@@ -85,7 +108,10 @@
         "name": "Landing Site",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball"
+            ]
           }
         ]
       },
@@ -93,7 +119,10 @@
         "name": "Life Grove Tunnel",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_power_bomb,$can_bomb,$can_boost"
+            ]
           }
         ]
       },
@@ -106,7 +135,10 @@
           },
           {
             "name": "Underwater Spinner",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "$can_boost,$can_bomb"
+            ]
           }
         ]
       },
@@ -114,7 +146,10 @@
         "name": "Overgrown Cavern",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball"
+            ]
           }
         ]
       },
@@ -122,7 +157,10 @@
         "name": "Root Cave",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_space_jump,$can_grapple,@rules/can_xray"
+            ]
           }
         ]
       },

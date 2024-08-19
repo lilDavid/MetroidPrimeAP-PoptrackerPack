@@ -26,7 +26,10 @@
         "name": "Burn Dome",
         "sections": [
           {
-            "name": "Missile"
+            "name": "Missile",
+            "access_rules": [
+              "$can_bomb"
+            ]
           },
           {
             "name": "Incinerator Drone",
@@ -44,7 +47,10 @@
         "name": "Crossway",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_bomb,$can_boost,$can_spider,$can_super_missile,$can_scan"
+            ]
           }
         ]
       },
@@ -55,10 +61,16 @@
         "name": "Dynamo",
         "sections": [
           {
-            "name": "Lower"
+            "name": "Lower",
+            "access_rules": [
+              "$can_missile"
+            ]
           },
           {
-            "name": "Spider Track"
+            "name": "Spider Track",
+            "access_rules": [
+              "$can_spider"
+            ]
           }
         ]
       },
@@ -93,7 +105,10 @@
         "name": "Furnace",
         "sections": [
           {
-            "name": "Spider Tracks"
+            "name": "Spider Tracks",
+            "access_rules": [
+              "$can_power_bomb,$can_boost,$can_spider"
+            ]
           },
           {
             "name": "Inside Furnace",
@@ -108,7 +123,12 @@
         "name": "Gathering Hall",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_space_jump,$can_bomb",
+              "$can_space_jump,$can_power_bomb",
+              "$can_space_jump,$can_bomb,$can_power_bomb"
+            ]
           }
         ]
       },
@@ -117,7 +137,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "[$can_combat_ghosts],$can_power_beam,$can_bomb,$can_spider,$can_ice_beam,$can_space_jump"
+            ]
           }
         ]
       },
@@ -126,7 +149,11 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/missilelauncher.png"
+            "chest_unopened_img": "images/items/missilelauncher.png",
+            "access_rules": [
+              "$can_power_beam",
+              "RemoveHiveMecha"
+            ]
           }
         ]
       },
@@ -135,7 +162,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/powerbomb.png",
+            "access_rules": [
+              "$can_grapple,$can_heat,$can_power_bomb"
+            ]
           }
         ]
       },
@@ -143,17 +173,29 @@
         "name": "Main Plaza",
         "sections": [
           {
-            "name": "Half-Pipe"
+            "name": "Half-Pipe",
+            "access_rules": [
+              "$can_boost"
+            ]
           },
           {
-            "name": "Grapple Ledge"
+            "name": "Grapple Ledge",
+            "access_rules": [
+              "@Piston Tunnel,$can_grapple"
+            ]
           },
           {
-            "name": "Tree"
+            "name": "Tree",
+            "access_rules": [
+              "$can_super_missile"
+            ]
           },
           {
             "name": "Locked Door",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "@Plaza Access,$can_morph_ball"
+            ]
           }
         ]
       },
@@ -188,7 +230,10 @@
         "name": "Ruined Fountain",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
+            ]
           }
         ]
       },
@@ -196,10 +241,16 @@
         "name": "Ruined Gallery",
         "sections": [
           {
-            "name": "Missile Wall"
+            "name": "Missile Wall",
+            "access_rules": [
+              "$can_missile"
+            ]
           },
           {
-            "name": "Tunnel"
+            "name": "Tunnel",
+            "access_rules": [
+              "$can_bomb"
+            ]
           }
         ]
       },
@@ -207,7 +258,10 @@
         "name": "Ruined Nursery",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_bomb"
+            ]
           }
         ]
       },
@@ -219,13 +273,24 @@
         "sections": [
           {
             "name": "Plated Beetle",
-            "chest_unopened_img": "images/items/morphball.png"
+            "chest_unopened_img": "images/items/morphball.png",
+            "access_rules": [
+              "$can_exit_ruined_shrine"
+            ]
           },
           {
-            "name": "Half-Pipe"
+            "name": "Half-Pipe",
+            "access_rules": [
+              "$can_boost"
+            ]
           },
           {
-            "name": "Lower Tunnel"
+            "name": "Lower Tunnel",
+            "access_rules": [
+              "$can_bomb",
+              "$can_power_bomb",
+              "$can_bomb,$can_power_bomb"
+            ]
           }
         ]
       },
@@ -258,11 +323,17 @@
         "sections": [
           {
             "name": "Flaaghra",
-            "chest_unopened_img": "images/items/variasuit.png"
+            "chest_unopened_img": "images/items/variasuit.png",
+            "access_rules": [
+              "@rules/can_flaahgra"
+            ]
           },
           {
             "name": "Ghosts",
-            "chest_unopened_img": "images/items/artifacts0.png"
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "access_rules": [
+              "@rules/can_flaahgra,[$can_combat_ghosts],$can_climb_sun_tower"
+            ]
           }
         ]
       },
@@ -286,7 +357,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/wavebuster.png"
+            "chest_unopened_img": "images/items/wavebuster.png",
+            "access_rules": [
+              "$can_climb_tower_of_light"
+            ]
           }
         ]
       },
@@ -294,7 +368,10 @@
         "name": "Training Chamber Access",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_morph_ball"
+            ]
           }
         ]
       },
@@ -303,7 +380,10 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_boost,$can_spider,$can_bomb"
+            ]
           }
         ]
       },
@@ -338,7 +418,10 @@
         "name": "Vault",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_bomb"
+            ]
           }
         ]
       },
@@ -346,7 +429,10 @@
         "name": "Watery Hall Access",
         "sections": [
           {
-            "name": ""
+            "name": "",
+            "access_rules": [
+              "$can_missile"
+            ]
           }
         ]
       },
@@ -354,10 +440,16 @@
         "name": "Watery Hall",
         "sections": [
           {
-            "name": "Scan Puzzle"
+            "name": "Scan Puzzle",
+            "access_rules": [
+              "$can_scan"
+            ]
           },
           {
-            "name": "Underwater"
+            "name": "Underwater",
+            "access_rules": [
+              "$can_move_underwater,$can_space_jump,@rules/can_flaahgra"
+            ]
           }
         ]
       },
@@ -366,7 +458,10 @@
         "sections": [
           {
             "name": "Inside Furnace",
-            "chest_unopened_img": "images/items/energytank.png"
+            "chest_unopened_img": "images/items/energytank.png",
+            "access_rules": [
+              "$can_bomb"
+            ]
           }
         ]
       }

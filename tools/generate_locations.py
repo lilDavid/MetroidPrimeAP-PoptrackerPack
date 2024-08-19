@@ -8,7 +8,7 @@ from pathlib import Path
 import importlib
 import importlib.util
 import sys
-from typing import Dict, List, NamedTuple, Optional, Tuple, Union
+from typing import Container, Dict, List, NamedTuple, Optional, Union
 
 
 locations = Path(__file__).parents[1] / "locations"
@@ -119,6 +119,28 @@ item_images = {
 }
 
 
+override_functions = {
+    "can_thermal",
+    "can_xray",
+    "can_flaahgra",
+    "can_warp_to_start",
+}
+
+
+manual_rules = {
+    "Chozo Ruins: Hive Totem": [
+        "$can_power_beam",
+        "RemoveHiveMecha",
+    ],
+    "Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel": [
+        "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine",
+    ],
+    "Magmoor Caverns: Lava Lake": [
+        "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel/",
+    ],
+}
+
+
 # Get args
 parser = ArgumentParser(
     description="Converts the logic rules from MetrodAPrime for use in this tracker."
@@ -170,29 +192,178 @@ class ASTParseError(ValueError):
         self.tree = tree
 
 
+def validate_prime_world_node(world: ast.expr):
+    if type(world) != ast.Subscript:
+        raise ASTParseError(world, "Expected subscript")
+    worlds = world.value
+    if type(worlds) != ast.Attribute or worlds.attr != "worlds":
+        raise ASTParseError(world, "Expected attribute 'worlds'")
+    multiworld = worlds.value
+    if type(multiworld) != ast.Attribute or multiworld.attr != "multiworld":
+        raise ASTParseError(world, "Expected attribute 'multiworld'")
+    state = multiworld.value
+    if type(state) != ast.Name:
+        raise ASTParseError(world, "Expected name")
+
+
+def logic_function(function_name: str):
+    if function_name in override_functions:
+        return f"@rules/{function_name}"
+    if function_name.startswith("can_combat"):
+        return f"[${function_name}]"
+    return f"${function_name}"
+
+
+class RuleConverter(ast.NodeTransformer):
+    collected_rules: Dict[str, None]
+    rule_list_name: str
+    filename: str
+
+    def __init__(self, rule_list_name: str, filename: str):
+        self.collected_rules = {}
+        self.rule_list_name = rule_list_name
+        self.filename = filename
+
+    def visit_Call(self, node: ast.Call):
+        if type(node.func) is ast.Name:
+            function_name = node.func.id
+        elif type(node.func) is ast.Attribute:
+            name = node.func.value
+            if type(name) is not ast.Name:
+                raise ASTParseError(name, f"Expected name: {ast.dump(name)}")
+            if node.func.attr.startswith("can_reach"):
+                function_name = "can_reach"
+            else:
+                raise NotImplementedError(node.func.attr)
+        else:
+            raise ASTParseError(node.func, "Invalid function name")
+
+        if function_name == "can_reach":
+            if type(node.args[0]) is ast.Attribute:
+                location_name = eval(compile(ast.Expression(node.args[0]), self.filename, "eval"))
+            elif type(node.args[0]) is ast.Call:
+                func = node.args[0].func
+                if type(func) is not ast.Attribute:
+                    raise ASTParseError(func)
+                if func.attr == "get_location":
+                    validate_prime_world_node(func.value)
+                    location_name = "/".join(PickupData.split_check_name(ast.literal_eval(node.args[0].args[0])))
+                else:
+                    raise NotImplementedError(func.attr)
+            else:
+                raise ASTParseError(node.args[0])
+            rule = f"@{location_name}"
+        elif len(node.args) < 2:
+            raise ASTParseError(node, f"{function_name} call with {len(node.args)} arguments")
+        elif len(node.args) == 2:
+            rule = logic_function(function_name)
+        else:
+            args: List[str] = []
+            for arg in node.args[2:]:
+                value = ast.literal_eval(arg)
+                if type(value) is str:
+                    args.append(value)
+                else:
+                    args.append(str(value).lower())
+            rule = "|".join((f"${function_name}", *args))
+
+
+        self.collected_rules[rule] = None
+        node = ast.Subscript(
+            value=ast.Name(id=self.rule_list_name, ctx=ast.Load()),
+            slice=ast.Constant(value=rule),
+            ctx=ast.Load(),
+        )
+        ast.fix_missing_locations(node)
+        return node
+
+
+def bits(n, size):
+    for _ in range(size):
+        yield n & 1
+        n >>= 1
+
+
+def parse_access_rule(rule_func: ast.expr, filename: str):
+    if type(rule_func) is ast.Name:
+        return [logic_function(rule_func.id)]
+
+    elif type(rule_func) is ast.Lambda:
+        if len(rule_func.args.args) != 2:
+            raise ASTParseError(rule_func, f"Lambda has {len(rule_func.args.args)} arguments")
+
+        if type(rule_func.body) is ast.Constant:
+            if ast.literal_eval(rule_func.body):
+                return None
+            else:
+                return ["False"]
+
+        if type(rule_func.body) is ast.Call:
+            if type(rule_func.body.func) is ast.Name:
+                return [f"${rule_func.body.func.id}"]
+            raise NotImplementedError(ast.dump(rule_func.body.func))
+
+        if type(rule_func.body) is not ast.BoolOp:
+            raise ASTParseError(rule_func, f"Lambda body is not a boolean operation")
+
+        # Generate a truth table corresponding to each function's output
+        dnf = []
+        converter = RuleConverter("rule_functions", filename)
+        expression = ast.Expression(converter.visit(rule_func.body))
+        for i in range(1 << (len(converter.collected_rules))):
+            rule_functions = {rule: bit for rule, bit in zip(converter.collected_rules, bits(i, len(converter.collected_rules)))}
+            try:
+                if eval(compile(expression, __file__, "eval")):
+                    dnf.append(",".join(rule for rule, value in rule_functions.items() if value))
+            except Exception as e:
+                raise ASTParseError(expression) from e
+        return dnf
+
+    else:
+        raise ASTParseError(rule_func, "Could not parse access rule")
+
+
 class PickupData(NamedTuple):
     name: str
     image: Optional[ItemImage]
+    access_rules: List[str]
+
+    @staticmethod
+    def split_check_name(check: str):
+        area, room = check.split(": ")
+        parts = room.split(" - ")
+        if len(parts) == 1:
+            room = parts[0]
+            item = ""
+        else:
+            room, item = parts
+        return area, room, item
 
     @classmethod
-    def from_ast(cls, pickup_data: ast.expr):
+    def from_ast(cls, pickup_data: ast.expr, filename):
         if (type(pickup_data) is not ast.Call or type(pickup_data.func) is not ast.Name or
             pickup_data.func.id != "PickupData"):
             raise ASTParseError(pickup_data, "Pickup item is not from PickupData constructor")
         check_name: str = ast.literal_eval(pickup_data.args[0])
 
-        _, without_area = check_name.split(": ")
-        parts = without_area.split(" - ")
-        if len(parts) == 1:
-            item_name = ""
+        _, _, item_name = cls.split_check_name(check_name)
+
+        if check_name in manual_rules:
+            access_rule = manual_rules[check_name]
         else:
-            _, item_name = parts
-        return cls(item_name, item_images.get(check_name))
+            access_rule: Optional[str] = None
+            for kwarg in pickup_data.keywords:
+                if kwarg.arg != "rule_func":
+                    continue
+                access_rule = parse_access_rule(kwarg.value, filename)
+
+        return cls(item_name, item_images.get(check_name), access_rule if access_rule is not None else [])
 
     def into_json(self):
         return omit_empty_lists_and_null({
             "name": self.name,
             "chest_unopened_img": self.image.filename() if self.image is not None else None,
+            "access_rules": self.access_rules
         })
 
 
@@ -219,7 +390,7 @@ class RoomData(NamedTuple):
             if type(keyword.value) is not ast.List:
                 raise ASTParseError(keyword.value, "Kwarg pickups is not a list")
             for element in keyword.value.elts:
-                pickups.append(PickupData.from_ast(element))
+                pickups.append(PickupData.from_ast(element, filename))
 
         return cls(room_name, pickups)
 
@@ -317,8 +488,7 @@ data_ast = ast.parse(content)
 try:
     result = AreaData.from_ast(data_ast, input.name)
 except ASTParseError as e:
-    print(ast.dump(e.tree))
-    raise
+    raise Exception(ast.dump(e.tree)) from e
 
 with open(output, "w") as stream:
    json.dump(result.into_json(), stream, indent=2)

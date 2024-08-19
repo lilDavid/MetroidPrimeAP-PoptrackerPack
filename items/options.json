@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Required Artifacts",
+    "codes": "RequiredArtifacts",
+    "img": "images/items/artifacts0.png",
+    "type": "consumable",
+    "min_quantity": 1,
+    "max_quantity": 12
+  },
+  {
+    "name": "Missile Launcher",
+    "codes": "MainMissile",
+    "type": "toggle"
+  },
+  {
+    "name": "Main Power Bomb",
+    "codes": "MainPowerBomb",
+    "type": "toggle"
+  },
+  {
+    "name": "Non-Varia Heat Damage",
+    "codes": "NonVariaHeatDamage",
+    "type": "toggle"
+  },
+  {
+    "name": "Remove Hive Mecha",
+    "codes": "RemoveHiveMecha",
+    "type": "toggle"
+  },
+  {
+    "name": "Trick Difficulty",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "No tricks",
+        "codes": "TricksNone"
+      },
+      {
+        "name": "Easy",
+        "codes": "TricksEasy"
+      },
+      {
+        "name": "Medium",
+        "codes": "TricksMedium"
+      },
+      {
+        "name": "Hard",
+        "codes": "TricksHard"
+      }
+    ]
+  },
+  {
+    "name": "Backwards Lower Mines",
+    "codes": "BackwardsLowerMines",
+    "type": "toggle"
+  },
+  {
+    "name": "Flaahgra Power Bombs",
+    "codes": "FlaahgraPowerBombs",
+    "type": "toggle"
+  },
+  {
+    "name": "Remove X-Ray Visor Requirements",
+    "codes": "RemoveXRayRequirements",
+    "type": "toggle"
+  },
+  {
+    "name": "Remove Thermal Visor Requirements",
+    "codes": "RemoveThermalRequirements",
+    "type": "toggle"
+  },
+  {
+    "name": "Starting Room",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "Landing Site",
+        "codes": "StartingRoomLandingSite",
+        "inherit_codes": false
+      },
+      {
+        "name": "Arboretum",
+        "codes": "StartingRoomArboretum",
+        "inherit_codes": false
+      },
+      {
+        "name": "Burn Dome Access",
+        "codes": "StartingRoomBurnDomeAccess",
+        "inherit_codes": false
+      },
+      {
+        "name": "Ruined Fountain",
+        "codes": "StartingRoomRuinedFountain",
+        "inherit_codes": false
+      },
+      {
+        "name": "Save Station 1",
+        "codes": "StartingRoomSaveStation1",
+        "inherit_codes": false
+      },
+      {
+        "name": "Save Station 2",
+        "codes": "StartingRoomSaveStation2",
+        "inherit_codes": false
+      },
+      {
+        "name": "Tower Chamber",
+        "codes": "StartingRoomTowerChamber",
+        "inherit_codes": false
+      },
+      {
+        "name": "Warrior Shrine",
+        "codes": "StartingRoomWarriorShrine",
+        "inherit_codes": false
+      },
+      {
+        "name": "East Tower",
+        "codes": "StartingRoomEastTower",
+        "inherit_codes": false
+      },
+      {
+        "name": "Save Station B",
+        "codes": "StartingRoomSaveStationB",
+        "inherit_codes": false
+      },
+      {
+        "name": "Arbor Chamber",
+        "codes": "StartingRoomArborChamber",
+        "inherit_codes": false
+      },
+      {
+        "name": "Transport to Chozo Ruins East",
+        "codes": "StartingRoomTransportToChozoRuinsEast",
+        "inherit_codes": false
+      },
+      {
+        "name": "Quarantine Monitor",
+        "codes": "StartingRoomQuarantineMonitor",
+        "inherit_codes": false
+      },
+      {
+        "name": "Sunchamber Lobby",
+        "codes": "StartingRoomSunchamberLobby",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Combat Logic Difficulty",
+    "type": "progressive",
+    "codes": "CombatLogic",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "Normal",
+        "codes": "CombatLogicNormal"
+      },
+      {
+        "name": "Minimal",
+        "codes": "CombatLogicMinimal"
+      },
+      {
+        "name": "No logic",
+        "codes": "CombatLogicNone"
+      }
+    ]
+  },
+  {
+    "name": "Elevator Randomization",
+    "codes": "ElevatorRandomization",
+    "type": "toggle"
+  },
+  {
+    "name": "Door Color Randomization",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "None",
+        "codes": "DoorRandoNone",
+        "inherit_codes": false
+      },
+      {
+        "name": "Global",
+        "codes": "DoorRandoGlobal",
+        "inherit_codes": false
+      },
+      {
+        "name": "Regional",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Pre-scan Elevators",
+    "codes": "PreScanElevators",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Beam Upgrades",
+    "codes": "ProgressiveBeams",
+    "type": "toggle"
+  }
+]
