@@ -81,8 +81,7 @@
       {"img": "images/items/powerbeam.png"},
       {"img": "images/items/chargebeam.png"},
       {"img": "images/items/supermissile.png"}
-    ],
-    "allow_disabled": false
+    ]
   },
   {
     "name": "Progressive Wave Beam",
