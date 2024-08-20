@@ -715,6 +715,7 @@
         "sections": [
           {
             "name": "Scan Puzzle",
+            "chest_unopened_img": "images/items/chargebeam.png",
             "access_rules": [
               "$can_scan"
             ]

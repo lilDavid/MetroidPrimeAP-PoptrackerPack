@@ -4,7 +4,7 @@
     "codes": "EnergyTank",
     "img": "images/items/energytank.png",
     "type": "consumable",
-    "max_quantity": 12
+    "max_quantity": 14
   },
   {
     "name": "Missile Launcher",

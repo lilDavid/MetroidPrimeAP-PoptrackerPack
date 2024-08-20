@@ -77,6 +77,7 @@ item_images = {
     'Chozo Ruins: Hive Totem': ItemImage.MissileLauncher,
     'Chozo Ruins: Sunchamber - Flaaghra': ItemImage.VariaSuit,
     'Chozo Ruins: Sunchamber - Ghosts': ItemImage.ArtifactWild,
+    'Chozo Ruins: Watery Hall - Scan Puzzle': ItemImage.ChargeBeam,
     'Chozo Ruins: Burn Dome - Incinerator Drone': ItemImage.Bombs,
     'Chozo Ruins: Furnace - Inside Furnace': ItemImage.EnergyTank,
     'Chozo Ruins: Hall of the Elders': ItemImage.EnergyTank,
