@@ -5,7 +5,12 @@
     "chest_opened_img": "images/checked.png",
     "children": [
       {
-        "name": "Burning Trail"
+        "name": "Burning Trail",
+        "access_rules": [
+          "@Lake Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Save Station Magmoor A,@doors/Missile",
+          "@Transport to Chozo Ruins North,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Fiery Shores",
@@ -23,13 +28,29 @@
               "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine"
             ]
           }
+        ],
+        "access_rules": [
+          "@Shore Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Transport Tunnel B,@doors/AnyBeam/,$can_heat,$can_morph_ball",
+          "@Warrior Shrine,@doors/None/,$can_heat,$can_power_bomb,$can_bomb"
         ]
       },
       {
-        "name": "Geothermal Core"
+        "name": "Geothermal Core",
+        "access_rules": [
+          "@North Core Tunnel,@doors/WaveBeam/,$can_space_jump",
+          "@Plasma Processing,@doors/AnyBeam",
+          "@South Core Tunnel,@doors/WaveBeam/,$can_space_jump"
+        ]
       },
       {
-        "name": "Lake Tunnel"
+        "name": "Lake Tunnel",
+        "access_rules": [
+          "@Burning Trail,@doors/AnyBeam",
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_power_bomb",
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_bomb,$can_power_bomb"
+        ]
       },
       {
         "name": "Lava Lake",
@@ -41,6 +62,12 @@
               "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel/"
             ]
           }
+        ],
+        "access_rules": [
+          "@Lake Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_morph_ball",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_space_jump",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_morph_ball,$can_space_jump"
         ]
       },
       {
@@ -53,19 +80,48 @@
               "@rules/can_thermal,$can_wave_beam,$can_scan,$can_morph_ball"
             ]
           }
+        ],
+        "access_rules": [
+          "@South Core Tunnel,@doors/WaveBeam/,$can_space_jump",
+          "@Transport Tunnel C,@doors/WaveBeam",
+          "@Workstation Tunnel,@doors/AnyBeam/,$can_power_bomb"
         ]
       },
       {
-        "name": "Monitor Station"
+        "name": "Monitor Station",
+        "access_rules": [
+          "@Monitor Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Shore Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Transport Tunnel A,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "@Warrior Shrine,@doors/AnyBeam/,$can_heat"
+        ]
       },
       {
-        "name": "Monitor Tunnel"
+        "name": "Monitor Tunnel",
+        "access_rules": [
+          "@Monitor Station,@doors/AnyBeam/,$can_heat",
+          "@Triclops Pit,@doors/AnyBeam/,$can_heat"
+        ]
       },
       {
-        "name": "North Core Tunnel"
+        "name": "North Core Tunnel",
+        "access_rules": [
+          "@Geothermal Core,@doors/AnyBeam/,$can_space_jump",
+          "@Twin Fires,@doors/WaveBeam/,$can_space_jump,$has_energy_tanks|2",
+          "@Twin Fires,@doors/WaveBeam/,$can_grapple",
+          "@Twin Fires,@doors/WaveBeam/,$can_space_jump,$can_grapple",
+          "@Twin Fires,@doors/WaveBeam/,$has_energy_tanks|2,$can_grapple",
+          "@Twin Fires,@doors/WaveBeam/,$can_space_jump,$has_energy_tanks|2,$can_grapple"
+        ]
       },
       {
-        "name": "Pit Tunnel"
+        "name": "Pit Tunnel",
+        "access_rules": [
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_power_bomb",
+          "@Lava Lake,@doors/AnyBeam/,$can_heat,$can_bomb,$can_power_bomb",
+          "@Triclops Pit,@doors/AnyBeam/,$can_heat"
+        ]
       },
       {
         "name": "Plasma Processing",
@@ -74,13 +130,22 @@
             "name": "",
             "chest_unopened_img": "images/items/plasmabeam.png"
           }
+        ],
+        "access_rules": [
+          "@Geothermal Core,@doors/IceBeam/,$can_bomb,$can_boost,$can_grapple,$can_spider,$can_space_jump"
         ]
       },
       {
-        "name": "Save Station Magmoor A"
+        "name": "Save Station Magmoor A",
+        "access_rules": [
+          "@Burning Trail,@doors/Missile"
+        ]
       },
       {
-        "name": "Save Station Magmoor B"
+        "name": "Save Station Magmoor B",
+        "access_rules": [
+          "@Transport to Phendrana Drifts South,@doors/Missile"
+        ]
       },
       {
         "name": "Shore Tunnel",
@@ -92,10 +157,24 @@
               "$can_power_bomb,$can_space_jump"
             ]
           }
+        ],
+        "access_rules": [
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_grapple",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb,$can_grapple",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$has_energy_tanks|4",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb,$has_energy_tanks|4",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_grapple,$has_energy_tanks|4",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb,$can_grapple,$has_energy_tanks|4",
+          "@Monitor Station,@doors/AnyBeam/,$can_heat"
         ]
       },
       {
-        "name": "South Core Tunnel"
+        "name": "South Core Tunnel",
+        "access_rules": [
+          "@Geothermal Core,@doors/AnyBeam/,$can_space_jump",
+          "@Magmoor Workstation,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Storage Cavern",
@@ -103,22 +182,48 @@
           {
             "name": ""
           }
+        ],
+        "access_rules": [
+          "@Triclops Pit,@doors/AnyBeam/,$can_heat,$can_morph_ball"
         ]
       },
       {
-        "name": "Transport to Chozo Ruins North"
+        "name": "Transport to Chozo Ruins North",
+        "access_rules": [
+          "@Burning Trail,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Transport to Phazon Mines West"
+        "name": "Transport to Phazon Mines West",
+        "access_rules": [
+          "@Workstation Tunnel,@doors/IceBeam/,$can_power_bomb"
+        ]
       },
       {
-        "name": "Transport to Phendrana Drifts North"
+        "name": "Transport to Phendrana Drifts North",
+        "access_rules": [
+          "@Transport Tunnel A,@doors/AnyBeam/,$can_heat,$can_bomb"
+        ]
       },
       {
-        "name": "Transport to Phendrana Drifts South"
+        "name": "Transport to Phendrana Drifts South",
+        "access_rules": [
+          "@Save Station Magmoor B,@doors/Missile",
+          "@Transport Tunnel C,@doors/WaveBeam"
+        ]
       },
       {
-        "name": "Transport to Tallon Overworld West"
+        "name": "Transport to Tallon Overworld West",
+        "access_rules": [
+          "@Transport Tunnel B,@doors/AnyBeam/,$can_heat,$can_morph_ball",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_move_underwater",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_move_underwater",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_space_jump",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_space_jump",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_move_underwater,$can_space_jump",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_move_underwater,$can_space_jump"
+        ]
       },
       {
         "name": "Transport Tunnel A",
@@ -130,13 +235,27 @@
               "$can_heat,$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Monitor Station,@doors/AnyBeam/,$can_heat",
+          "@Transport to Phendrana Drifts North,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Transport Tunnel B"
+        "name": "Transport Tunnel B",
+        "access_rules": [
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_grapple",
+          "@Fiery Shores,@doors/AnyBeam/,$can_heat,$can_bomb,$can_grapple",
+          "@Transport to Tallon Overworld West,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Transport Tunnel C"
+        "name": "Transport Tunnel C",
+        "access_rules": [
+          "@Magmoor Workstation,@doors/WaveBeam/,$can_space_jump",
+          "@Transport to Phendrana Drifts South,@doors/WaveBeam"
+        ]
       },
       {
         "name": "Triclops Pit",
@@ -147,13 +266,32 @@
               "@rules/can_xray,$can_space_jump,$can_missile"
             ]
           }
+        ],
+        "access_rules": [
+          "@Monitor Tunnel,@doors/AnyBeam/,$can_heat",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_morph_ball",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_space_jump",
+          "@Pit Tunnel,@doors/AnyBeam/,$can_heat,$can_morph_ball,$can_space_jump",
+          "@Storage Cavern,@doors/AnyBeam/,$can_heat"
         ]
       },
       {
-        "name": "Twin Fires Tunnel"
+        "name": "Twin Fires Tunnel",
+        "access_rules": [
+          "@Transport to Tallon Overworld West,@doors/AnyBeam",
+          "@Twin Fires,@doors/AnyBeam/,$can_space_jump,$has_energy_tanks|2",
+          "@Twin Fires,@doors/AnyBeam/,$can_grapple",
+          "@Twin Fires,@doors/AnyBeam/,$can_space_jump,$can_grapple",
+          "@Twin Fires,@doors/AnyBeam/,$has_energy_tanks|2,$can_grapple",
+          "@Twin Fires,@doors/AnyBeam/,$can_space_jump,$has_energy_tanks|2,$can_grapple"
+        ]
       },
       {
-        "name": "Twin Fires"
+        "name": "Twin Fires",
+        "access_rules": [
+          "@North Core Tunnel,@doors/WaveBeam/,$can_space_jump",
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider"
+        ]
       },
       {
         "name": "Warrior Shrine",
@@ -162,10 +300,17 @@
             "name": "",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
+        ],
+        "access_rules": [
+          "@Monitor Station,@doors/AnyBeam/,$can_heat,$can_space_jump,$can_boost"
         ]
       },
       {
-        "name": "Workstation Tunnel"
+        "name": "Workstation Tunnel",
+        "access_rules": [
+          "@Magmoor Workstation,@doors/AnyBeam/,$can_space_jump",
+          "@Transport to Phazon Mines West,@doors/IceBeam"
+        ]
       }
     ]
   }

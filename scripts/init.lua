@@ -9,6 +9,7 @@ Tracker:AddItems("items/options.json")
 
 Tracker:AddMaps("maps/maps.json")
 
+Tracker:AddLocations("locations/door_types.json")
 Tracker:AddLocations("locations/rules.json")
 Tracker:AddLocations("locations/chozo.json")
 Tracker:AddLocations("locations/phen.json")

@@ -10,7 +10,9 @@ import sys
 from typing import Dict, List, NamedTuple, Optional, Union
 
 
-locations = Path(__file__).parents[1] / "locations"
+pack = Path(__file__).parents[1]
+locations = pack / "locations"
+options = pack / "items/options.json"
 
 
 areas = [
@@ -118,6 +120,18 @@ item_images = {
 }
 
 
+locks = {
+    "Blue": "AnyBeam",
+    "Wave": "WaveBeam",
+    "Ice": "IceBeam",
+    "Plasma": "PlasmaBeam",
+    "Missile": "Missile",
+    "Power_Beam": "PowerBeam",
+    "Bomb": "Bomb",
+    "None_": "None",
+}
+
+
 override_functions = {
     "can_thermal",
     "can_xray",
@@ -126,7 +140,23 @@ override_functions = {
 }
 
 
-manual_rules = {
+manual_door_rules = {
+    ("Arboretum", "Sunchamber Lobby"): [
+        "$can_scan,$can_bomb",
+        "$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump"
+    ],
+    ("Hive Totem", "Transport Access North"): [
+        "$can_power_beam",
+        "RemoveHiveMecha"
+    ],
+    ("Magma Pool", "Meditation Fountain"): [
+        "$has_energy_tanks|1,VariaSuit",
+        "$has_energy_tanks|1,GravitySuit",
+        "$has_energy_tanks|1,PhazonSuit",
+    ]
+}
+
+manual_location_rules = {
     "Chozo Ruins: Hive Totem": [
         "$can_power_beam",
         "RemoveHiveMecha",
@@ -175,6 +205,24 @@ JsonValue = Union[str, int, float, List["JsonValue"], Dict[str, "JsonValue"], No
 
 def omit_empty_lists_and_null(object: Dict[str, JsonValue]) -> Dict[str, JsonValue]:
     return {k: v for k, v in object.items() if v not in (None, [])}
+
+
+def load_starting_rooms(options: List[Dict[str, JsonValue]]):
+    starting_room_data: Optional[List[Dict[str, JsonValue]]] = None
+    for option in options:
+        if option["name"] == "Starting Room":
+            starting_room_data = option["stages"]
+    if starting_room_data is None:
+        raise ValueError("No starting room data")
+
+    starting_rooms: Dict[str, str] = {}
+    for room in starting_room_data:
+        starting_rooms[room["name"]] = room["codes"]
+    return starting_rooms
+
+
+with open(options, "r") as stream:
+    starting_rooms = load_starting_rooms(json.load(stream))
 
 
 class ASTParseError(ValueError):
@@ -309,7 +357,7 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
                 if eval(compile(expression, __file__, "eval")):
                     dnf.append(",".join(rule for rule, value in rule_functions.items() if value))
             except Exception as e:
-                raise ASTParseError(expression) from e
+                raise ASTParseError(rule_func) from e
         return dnf
 
     else:
@@ -341,8 +389,8 @@ class PickupData(NamedTuple):
 
         _, _, item_name = cls.split_check_name(check_name)
 
-        if check_name in manual_rules:
-            access_rule = manual_rules[check_name]
+        if check_name in manual_location_rules:
+            access_rule = manual_location_rules[check_name]
         else:
             access_rule: Optional[str] = None
             for kwarg in pickup_data.keywords:
@@ -360,9 +408,52 @@ class PickupData(NamedTuple):
         })
 
 
-class RoomData(NamedTuple):
+class DoorData(NamedTuple):
+    source: str
+    destination: str
+    access_rule: List[str]
+    exclude_from_rando: bool
+
+    @classmethod
+    def from_ast(cls, door: ast.expr, source: str, filename: str):
+        if (type(door) is not ast.Call or type(door.func) is not ast.Name or
+            door.func.id != "DoorData"):
+            raise ASTParseError(door, "Door item is not from DoorData constructor")
+        door_type = None
+        exclude_from_rando = False
+        access_rule = None
+        if (type(door.args[0]) is not ast.Attribute or type(door.args[0].value) is not ast.Name or
+            door.args[0].value.id != "RoomName"):
+            raise ASTParseError(door.args[0], "Expected room name")
+        destination = eval(compile(ast.Expression(door.args[0]), filename, "eval"))
+        for kwarg in door.keywords:
+            if kwarg.arg in ("lock", "defaultLock"):
+                if (type(kwarg.value) is not ast.Attribute or
+                    type(kwarg.value.value) is not ast.Name or
+                    kwarg.value.value.id != "DoorLockType"):
+                    raise ASTParseError(kwarg.value, "Door lock is not a DoorLockType")
+                if kwarg.arg == "lock" or door_type is None:
+                    door_type = locks[kwarg.value.attr]
+            if kwarg.arg == "exclude_from_rando":
+                exclude_from_rando = ast.literal_eval(kwarg.value)
+            if kwarg.arg == "rule_func":
+                if (source, destination.value) in manual_door_rules:
+                    access_rule = manual_door_rules[(source, destination.value)]
+                else:
+                    access_rule = parse_access_rule(kwarg.value, filename)
+        if door_type is None:
+            door_type = "AnyBeam"
+        if access_rule:
+            access_rule = [f"@doors/{door_type}/,{rule}" for rule in access_rule]
+        else:
+            access_rule = [f"@doors/{door_type}"]
+        return cls(source, destination.value, access_rule, exclude_from_rando)
+
+
+class WorldRoomData(NamedTuple):
     name: str
     pickups: List[PickupData]
+    doors: List[DoorData]  # Doors whose sources are this room
 
     @classmethod
     def from_ast(cls, name: ast.expr, room_data: ast.expr, filename: str):
@@ -377,26 +468,49 @@ class RoomData(NamedTuple):
             raise ASTParseError(room_data, "Room not assigned to RoomData object")
 
         pickups: List[PickupData] = []
+        doors: List[DoorData] = []
         for keyword in room_data.keywords:
-            if keyword.arg != "pickups":
-                continue
-            if type(keyword.value) is not ast.List:
-                raise ASTParseError(keyword.value, "Kwarg pickups is not a list")
-            for element in keyword.value.elts:
-                pickups.append(PickupData.from_ast(element, filename))
+            if keyword.arg == "pickups":
+                if type(keyword.value) is not ast.List:
+                    raise ASTParseError(keyword.value, "Kwarg pickups is not a list")
+                for element in keyword.value.elts:
+                    pickups.append(PickupData.from_ast(element, filename))
+            if keyword.arg == "doors":
+                if type(keyword.value) is not ast.Dict:
+                    raise ValueError("Kwarg doors is not a dict")
+                for value in keyword.value.values:
+                    doors.append(DoorData.from_ast(value, room_name, filename))
 
-        return cls(room_name, pickups)
+        return cls(room_name, pickups, doors)
+
+
+class TrackerRoomData(NamedTuple):
+    name: str
+    pickups: List[PickupData]
+    doors: List[DoorData]  # Doors whose destinations are this room
+
+    @classmethod
+    def from_world_room_data(cls, world_data: WorldRoomData, all_doors: List[DoorData]):
+        doors = [door for door in all_doors if door.destination == world_data.name]
+        return cls(world_data.name, world_data.pickups, doors)
+
+    def get_access_rules(self):
+        rules = []
+        for door in self.doors:
+            rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
+        return rules
 
     def into_json(self):
         return omit_empty_lists_and_null({
             "name": self.name,
-            "sections": [pickup.into_json() for pickup in self.pickups]
+            "sections": [pickup.into_json() for pickup in self.pickups],
+            "access_rules": self.get_access_rules(),
         })
 
 
 class AreaData(NamedTuple):
     name: str
-    rooms: List[RoomData]
+    rooms: List[TrackerRoomData]
 
     @classmethod
     def from_ast(cls, tree: ast.AST, filename: str):
@@ -459,9 +573,13 @@ class AreaData(NamedTuple):
             ASTParseError(init_method, "Missing assignment to self.rooms")
 
         area_name = eval(compile(area_name_expr, filename, "eval"))
-        rooms = [RoomData.from_ast(key, value, filename)
+        world_rooms = [WorldRoomData.from_ast(key, value, filename)
                  for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)]
-        return cls(area_name, rooms)
+        doors = []
+        for room in world_rooms:
+            doors.extend(room.doors)
+        tracker_rooms = [TrackerRoomData.from_world_room_data(room, doors) for room in world_rooms]
+        return cls(area_name, tracker_rooms)
 
     def into_json(self):
         return [omit_empty_lists_and_null({
@@ -486,6 +604,8 @@ for short_name, data_name in areas:
         result = AreaData.from_ast(data_ast, input.name)
     except ASTParseError as e:
         raise Exception(f"Could not parse {input.name}:\n{ast.dump(e.tree)}") from e
+    except Exception as e:
+        raise Exception(f"Could not parse {input.name}") from e
 
     with open(output, "w") as stream:
        json.dump(result.into_json(), stream, indent=2)

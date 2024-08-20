@@ -5,13 +5,29 @@
     "chest_opened_img": "images/checked.png",
     "children": [
       {
-        "name": "Aether Lab Entryway"
+        "name": "Aether Lab Entryway",
+        "access_rules": [
+          "@East Tower,@doors/WaveBeam/,$can_scan",
+          "@Research Lab Aether,@doors/WaveBeam/,[$can_combat_labs],$can_space_jump"
+        ]
       },
       {
-        "name": "Canyon Entryway"
+        "name": "Canyon Entryway",
+        "access_rules": [
+          "@Ice Ruins West,@doors/Missile",
+          "@Phendrana Canyon,@doors/AnyBeam/,$can_boost,$can_scan",
+          "@Phendrana Canyon,@doors/AnyBeam/,$can_space_jump",
+          "@Phendrana Canyon,@doors/AnyBeam/,$can_boost,$can_space_jump",
+          "@Phendrana Canyon,@doors/AnyBeam/,$can_scan,$can_space_jump",
+          "@Phendrana Canyon,@doors/AnyBeam/,$can_boost,$can_scan,$can_space_jump"
+        ]
       },
       {
-        "name": "Chamber Access"
+        "name": "Chamber Access",
+        "access_rules": [
+          "@Gravity Chamber,@doors/WaveBeam/,$can_move_underwater,$can_space_jump",
+          "@Hunter Cave,@doors/WaveBeam/,$can_space_jump,$can_grapple"
+        ]
       },
       {
         "name": "Chapel of the Elders",
@@ -23,10 +39,17 @@
               "$can_space_jump"
             ]
           }
+        ],
+        "access_rules": [
+          "@Chapel Tunnel,@doors/AnyBeam/,$can_bomb"
         ]
       },
       {
-        "name": "Chapel Tunnel"
+        "name": "Chapel Tunnel",
+        "access_rules": [
+          "@Chapel of the Elders,@doors/AnyBeam/,$can_defeat_sheegoth,$can_space_jump,$can_wave_beam",
+          "@Chozo Ice Temple,@doors/AnyBeam/,$can_bomb,$can_space_jump,$can_missile"
+        ]
       },
       {
         "name": "Chozo Ice Temple",
@@ -38,6 +61,16 @@
               "$can_morph_ball,$can_space_jump,$can_melt_ice"
             ]
           }
+        ],
+        "access_rules": [
+          "@Chapel Tunnel,@doors/AnyBeam/,$can_bomb",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile",
+          "@Temple Entryway,@doors/AnyBeam/,$can_charge_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_charge_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_charge_beam,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_charge_beam,$can_plasma_beam"
         ]
       },
       {
@@ -50,16 +83,32 @@
               "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@East Tower,@doors/WaveBeam",
+          "@West Tower,@doors/WaveBeam/,$can_scan"
         ]
       },
       {
-        "name": "Courtyard Entryway"
+        "name": "Courtyard Entryway",
+        "access_rules": [
+          "@Ice Ruins West,@doors/WaveBeam/,$can_space_jump",
+          "@Ruined Courtyard,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "East Tower"
+        "name": "East Tower",
+        "access_rules": [
+          "@Aether Lab Entryway,@doors/WaveBeam",
+          "@Control Tower,@doors/WaveBeam/,[$can_combat_labs]"
+        ]
       },
       {
-        "name": "Frost Cave Access"
+        "name": "Frost Cave Access",
+        "access_rules": [
+          "@Frost Cave,@doors/WaveBeam/,$can_space_jump",
+          "@Frozen Pike,@doors/WaveBeam/,$can_space_jump"
+        ]
       },
       {
         "name": "Frost Cave",
@@ -70,10 +119,21 @@
               "$can_grapple,$can_missile,$can_move_underwater"
             ]
           }
+        ],
+        "access_rules": [
+          "@Frost Cave Access,@doors/WaveBeam/,$can_bomb",
+          "@Save Station C,@doors/WaveBeam",
+          "@Upper Edge Tunnel,@doors/WaveBeam/,$can_morph_ball"
         ]
       },
       {
-        "name": "Frozen Pike"
+        "name": "Frozen Pike",
+        "access_rules": [
+          "@Frost Cave Access,@doors/WaveBeam/,$can_bomb",
+          "@Hunter Cave Access,@doors/WaveBeam",
+          "@Pike Access,@doors/WaveBeam",
+          "@Transport Access,@doors/IceBeam"
+        ]
       },
       {
         "name": "Gravity Chamber",
@@ -91,19 +151,41 @@
               "$can_move_underwater,$can_space_jump,$can_melt_ice,$can_grapple"
             ]
           }
+        ],
+        "access_rules": [
+          "@Chamber Access,@doors/WaveBeam",
+          "@Lake Tunnel,@doors/WaveBeam"
         ]
       },
       {
-        "name": "Hunter Cave Access"
+        "name": "Hunter Cave Access",
+        "access_rules": [
+          "@Frozen Pike,@doors/WaveBeam/,$can_move_underwater,$can_space_jump",
+          "@Hunter Cave,@doors/WaveBeam/,$can_missile,$can_grapple,$can_space_jump"
+        ]
       },
       {
-        "name": "Hunter Cave"
+        "name": "Hunter Cave",
+        "access_rules": [
+          "@Chamber Access,@doors/WaveBeam",
+          "@Hunter Cave Access,@doors/WaveBeam",
+          "@Lake Tunnel,@doors/WaveBeam",
+          "@Lower Edge Tunnel,@doors/WaveBeam/,$can_morph_ball"
+        ]
       },
       {
-        "name": "Hydra Lab Entryway"
+        "name": "Hydra Lab Entryway",
+        "access_rules": [
+          "@Research Entrance,@doors/WaveBeam",
+          "@Research Lab Hydra,@doors/WaveBeam/,[$can_combat_labs],$can_scan"
+        ]
       },
       {
-        "name": "Ice Ruins Access"
+        "name": "Ice Ruins Access",
+        "access_rules": [
+          "@Ice Ruins East,@doors/AnyBeam",
+          "@Phendrana Shorelines,@doors/AnyBeam/,$can_missile,$can_scan"
+        ]
       },
       {
         "name": "Ice Ruins East",
@@ -120,6 +202,12 @@
               "$can_spider"
             ]
           }
+        ],
+        "access_rules": [
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_missile",
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_charge_beam",
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_missile,$can_charge_beam",
+          "@Plaza Walkway,@doors/AnyBeam"
         ]
       },
       {
@@ -132,22 +220,46 @@
               "$can_melt_ice,$can_space_jump,$can_missile"
             ]
           }
+        ],
+        "access_rules": [
+          "@Canyon Entryway,@doors/Missile",
+          "@Courtyard Entryway,@doors/AnyBeam",
+          "@Ruins Entryway,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Lake Tunnel"
+        "name": "Lake Tunnel",
+        "access_rules": [
+          "@Gravity Chamber,@doors/WaveBeam/,$can_move_underwater,$can_space_jump",
+          "@Hunter Cave,@doors/WaveBeam/,$can_space_jump,$can_missile"
+        ]
       },
       {
-        "name": "Lower Edge Tunnel"
+        "name": "Lower Edge Tunnel",
+        "access_rules": [
+          "@Hunter Cave,@doors/WaveBeam/,$can_space_jump",
+          "@Phendrana's Edge,@doors/WaveBeam"
+        ]
       },
       {
-        "name": "Map Station"
+        "name": "Map Station",
+        "access_rules": [
+          "@Research Entrance,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "North Quarantine Tunnel"
+        "name": "North Quarantine Tunnel",
+        "access_rules": [
+          "@Quarantine Access,@doors/AnyBeam",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],$can_spider,@rules/can_thermal"
+        ]
       },
       {
-        "name": "Observatory Access"
+        "name": "Observatory Access",
+        "access_rules": [
+          "@Observatory,@doors/WaveBeam",
+          "@Research Lab Hydra,@doors/WaveBeam/,[$can_combat_labs],$can_scan"
+        ]
       },
       {
         "name": "Observatory",
@@ -159,6 +271,11 @@
               "[$can_combat_labs],$_can_climb_observatory_via_puzzle"
             ]
           }
+        ],
+        "access_rules": [
+          "@Observatory Access,@doors/WaveBeam",
+          "@Save Station D,@doors/Missile",
+          "@West Tower Entrance,@doors/WaveBeam"
         ]
       },
       {
@@ -168,6 +285,9 @@
             "name": "",
             "chest_unopened_img": "images/items/boostball.png"
           }
+        ],
+        "access_rules": [
+          "@Canyon Entryway,@doors/AnyBeam"
         ]
       },
       {
@@ -185,19 +305,56 @@
               "$can_bomb,$can_spider,$can_super_missile,$can_scan,$can_space_jump"
             ]
           }
+        ],
+        "access_rules": [
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_missile",
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_charge_beam",
+          "@Ice Ruins Access,@doors/AnyBeam/,$can_missile,$can_charge_beam",
+          "@Plaza Walkway,@doors/AnyBeam",
+          "@Ruins Entryway,@doors/AnyBeam",
+          "@Save Station B,@doors/AnyBeam",
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam",
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_missile",
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam,$can_missile",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile",
+          "@Temple Entryway,@doors/AnyBeam/,$can_charge_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_charge_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_charge_beam,$can_plasma_beam",
+          "@Temple Entryway,@doors/AnyBeam/,$can_missile,$can_charge_beam,$can_plasma_beam"
         ]
       },
       {
-        "name": "Phendrana's Edge"
+        "name": "Phendrana's Edge",
+        "access_rules": [
+          "@Lower Edge Tunnel,@doors/WaveBeam/,$can_morph_ball",
+          "@Security Cave,@doors/None/,$can_morph_ball",
+          "@Storage Cave,@doors/PlasmaBeam",
+          "@Upper Edge Tunnel,@doors/WaveBeam/,$can_morph_ball"
+        ]
       },
       {
-        "name": "Pike Access"
+        "name": "Pike Access",
+        "access_rules": [
+          "@Frozen Pike,@doors/WaveBeam/,$can_space_jump",
+          "@Research Core,@doors/IceBeam"
+        ]
       },
       {
-        "name": "Plaza Walkway"
+        "name": "Plaza Walkway",
+        "access_rules": [
+          "@Ice Ruins East,@doors/AnyBeam",
+          "@Phendrana Shorelines,@doors/AnyBeam/,$can_space_jump",
+          "@Ruins Entryway,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Quarantine Access"
+        "name": "Quarantine Access",
+        "access_rules": [
+          "@North Quarantine Tunnel,@doors/WaveBeam/,$can_morph_ball",
+          "@Ruined Courtyard,@doors/AnyBeam/,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,@rules/can_thermal,$can_super_missile"
+        ]
       },
       {
         "name": "Quarantine Cave",
@@ -209,6 +366,11 @@
               "[$can_combat_thardus],@rules/can_thermal"
             ]
           }
+        ],
+        "access_rules": [
+          "@North Quarantine Tunnel,@doors/WaveBeam/,$can_morph_ball",
+          "@Quarantine Monitor,@doors/None/,$can_morph_ball",
+          "@South Quarantine Tunnel,@doors/WaveBeam"
         ]
       },
       {
@@ -217,10 +379,21 @@
           {
             "name": ""
           }
+        ],
+        "access_rules": [
+          "@Quarantine Cave,@doors/None/,[$can_combat_thardus],$can_spider,$can_grapple"
         ]
       },
       {
-        "name": "Research Core Access"
+        "name": "Research Core Access",
+        "access_rules": [
+          "@Research Core,@doors/WaveBeam/,[$can_combat_labs],@rules/can_thermal,$can_wave_beam",
+          "@Research Lab Aether,@doors/WaveBeam/,[$can_combat_labs],$can_missile",
+          "@Research Lab Aether,@doors/WaveBeam/,$can_power_bomb",
+          "@Research Lab Aether,@doors/WaveBeam/,[$can_combat_labs],$can_power_bomb",
+          "@Research Lab Aether,@doors/WaveBeam/,$can_missile,$can_power_bomb",
+          "@Research Lab Aether,@doors/WaveBeam/,[$can_combat_labs],$can_missile,$can_power_bomb"
+        ]
       },
       {
         "name": "Research Core",
@@ -232,10 +405,19 @@
               "[$can_combat_labs],@rules/can_thermal,$can_scan,$can_wave_beam"
             ]
           }
+        ],
+        "access_rules": [
+          "@Pike Access,@doors/IceBeam",
+          "@Research Core Access,@doors/WaveBeam"
         ]
       },
       {
-        "name": "Research Entrance"
+        "name": "Research Entrance",
+        "access_rules": [
+          "@Hydra Lab Entryway,@doors/WaveBeam",
+          "@Map Station,@doors/AnyBeam",
+          "@Specimen Storage,@doors/WaveBeam"
+        ]
       },
       {
         "name": "Research Lab Aether",
@@ -253,6 +435,10 @@
               "[$can_combat_labs],$can_bomb,$can_space_jump"
             ]
           }
+        ],
+        "access_rules": [
+          "@Aether Lab Entryway,@doors/WaveBeam",
+          "@Research Core Access,@doors/WaveBeam"
         ]
       },
       {
@@ -264,6 +450,10 @@
               "$can_super_missile,$can_scan"
             ]
           }
+        ],
+        "access_rules": [
+          "@Hydra Lab Entryway,@doors/WaveBeam",
+          "@Observatory Access,@doors/WaveBeam"
         ]
       },
       {
@@ -276,22 +466,45 @@
               "$_can_reach_top_of_ruined_courtyard"
             ]
           }
+        ],
+        "access_rules": [
+          "@Courtyard Entryway,@doors/AnyBeam",
+          "@Quarantine Access,@doors/AnyBeam",
+          "@Save Station A,@doors/Missile",
+          "@Specimen Storage,@doors/WaveBeam"
         ]
       },
       {
-        "name": "Ruins Entryway"
+        "name": "Ruins Entryway",
+        "access_rules": [
+          "@Ice Ruins West,@doors/AnyBeam",
+          "@Phendrana Shorelines,@doors/AnyBeam/,$can_space_jump",
+          "@Plaza Walkway,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Save Station A"
+        "name": "Save Station A",
+        "access_rules": [
+          "@Ruined Courtyard,@doors/Missile/,$_can_reach_top_of_ruined_courtyard"
+        ]
       },
       {
-        "name": "Save Station B"
+        "name": "Save Station B",
+        "access_rules": [
+          "@Phendrana Shorelines,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Save Station C"
+        "name": "Save Station C",
+        "access_rules": [
+          "@Frost Cave,@doors/WaveBeam/,$can_space_jump,$can_missile"
+        ]
       },
       {
-        "name": "Save Station D"
+        "name": "Save Station D",
+        "access_rules": [
+          "@Observatory,@doors/Missile/,[$can_combat_labs],$_can_climb_observatory_via_puzzle"
+        ]
       },
       {
         "name": "Security Cave",
@@ -300,16 +513,37 @@
             "name": "",
             "chest_unopened_img": "images/items/powerbomb.png"
           }
+        ],
+        "access_rules": [
+          "@Phendrana's Edge,@doors/None/,$can_grapple,$can_morph_ball,$can_space_jump"
         ]
       },
       {
-        "name": "Shoreline Entrance"
+        "name": "Shoreline Entrance",
+        "access_rules": [
+          "@Phendrana Shorelines,@doors/AnyBeam",
+          "@Transport to Magmoor Caverns West,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "South Quarantine Tunnel"
+        "name": "South Quarantine Tunnel",
+        "access_rules": [
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_space_jump",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_grapple",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_space_jump,$can_grapple",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_space_jump,$can_grapple",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_spider,$can_space_jump,$can_grapple",
+          "@Quarantine Cave,@doors/WaveBeam/,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_space_jump,$can_grapple",
+          "@Transport to Magmoor Caverns South,@doors/WaveBeam"
+        ]
       },
       {
-        "name": "Specimen Storage"
+        "name": "Specimen Storage",
+        "access_rules": [
+          "@Research Entrance,@doors/WaveBeam",
+          "@Ruined Courtyard,@doors/WaveBeam/,$_can_reach_top_of_ruined_courtyard"
+        ]
       },
       {
         "name": "Storage Cave",
@@ -318,10 +552,19 @@
             "name": "",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
+        ],
+        "access_rules": [
+          "@Phendrana's Edge,@doors/PlasmaBeam/,$can_grapple,@rules/can_thermal,$can_power_bomb,$can_space_jump",
+          "@Phendrana's Edge,@doors/PlasmaBeam/,$can_grapple,@rules/can_xray,$can_power_bomb,$can_space_jump",
+          "@Phendrana's Edge,@doors/PlasmaBeam/,$can_grapple,@rules/can_thermal,@rules/can_xray,$can_power_bomb,$can_space_jump"
         ]
       },
       {
-        "name": "Temple Entryway"
+        "name": "Temple Entryway",
+        "access_rules": [
+          "@Chozo Ice Temple,@doors/AnyBeam",
+          "@Phendrana Shorelines,@doors/AnyBeam/,$can_space_jump"
+        ]
       },
       {
         "name": "Transport Access",
@@ -333,22 +576,47 @@
               "$can_melt_ice"
             ]
           }
+        ],
+        "access_rules": [
+          "@Frozen Pike,@doors/WaveBeam/,$can_bomb,$can_space_jump",
+          "@Transport to Magmoor Caverns South,@doors/IceBeam/,$can_spider"
         ]
       },
       {
-        "name": "Transport to Magmoor Caverns South"
+        "name": "Transport to Magmoor Caverns South",
+        "access_rules": [
+          "@South Quarantine Tunnel,@doors/WaveBeam",
+          "@Transport Access,@doors/IceBeam"
+        ]
       },
       {
-        "name": "Transport to Magmoor Caverns West"
+        "name": "Transport to Magmoor Caverns West",
+        "access_rules": [
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam",
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_missile",
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam,$can_missile"
+        ]
       },
       {
-        "name": "Upper Edge Tunnel"
+        "name": "Upper Edge Tunnel",
+        "access_rules": [
+          "@Frost Cave,@doors/WaveBeam/,$can_space_jump,$can_missile",
+          "@Phendrana's Edge,@doors/WaveBeam"
+        ]
       },
       {
-        "name": "West Tower Entrance"
+        "name": "West Tower Entrance",
+        "access_rules": [
+          "@Observatory,@doors/WaveBeam/,[$can_combat_labs],$_can_climb_observatory_via_puzzle",
+          "@West Tower,@doors/Missile"
+        ]
       },
       {
-        "name": "West Tower"
+        "name": "West Tower",
+        "access_rules": [
+          "@Control Tower,@doors/WaveBeam/,[$can_combat_labs]",
+          "@West Tower Entrance,@doors/Missile"
+        ]
       }
     ]
   }

@@ -11,16 +11,31 @@
             "name": "",
             "chest_unopened_img": "images/items/icebeam.png"
           }
+        ],
+        "access_rules": [
+          "@Reflecting Pool,@doors/Missile/,$can_boost,$can_bomb"
         ]
       },
       {
-        "name": "Arboretum Access"
+        "name": "Arboretum Access",
+        "access_rules": [
+          "@Arboretum,@doors/Missile",
+          "@Ruined Fountain,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Arboretum"
+        "name": "Arboretum",
+        "access_rules": [
+          "@Arboretum Access,@doors/AnyBeam",
+          "@Gathering Hall Access,@doors/Missile",
+          "@Sunchamber Lobby,@doors/AnyBeam/,False"
+        ]
       },
       {
-        "name": "Burn Dome Access"
+        "name": "Burn Dome Access",
+        "access_rules": [
+          "@Energy Core,@doors/None/,$can_bomb"
+        ]
       },
       {
         "name": "Burn Dome",
@@ -35,13 +50,24 @@
             "name": "Incinerator Drone",
             "chest_unopened_img": "images/items/bombs.png"
           }
+        ],
+        "access_rules": [
+          "@Burn Dome Access,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Crossway Access South"
+        "name": "Crossway Access South",
+        "access_rules": [
+          "@Crossway,@doors/IceBeam",
+          "@Hall of the Elders,@doors/IceBeam/,[$can_combat_ghosts],$can_power_beam"
+        ]
       },
       {
-        "name": "Crossway Access West"
+        "name": "Crossway Access West",
+        "access_rules": [
+          "@Crossway,@doors/AnyBeam",
+          "@Furnace,@doors/None/,$can_morph_ball"
+        ]
       },
       {
         "name": "Crossway",
@@ -52,10 +78,21 @@
               "$can_bomb,$can_boost,$can_spider,$can_super_missile,$can_scan"
             ]
           }
+        ],
+        "access_rules": [
+          "@Crossway Access South,@doors/IceBeam/,$can_morph_ball",
+          "@Crossway Access West,@doors/WaveBeam/,$can_morph_ball",
+          "@Elder Hall Access,@doors/Missile"
         ]
       },
       {
-        "name": "Dynamo Access"
+        "name": "Dynamo Access",
+        "access_rules": [
+          "@Dynamo,@doors/AnyBeam",
+          "@Watery Hall,@doors/Missile/,$can_scan,$can_power_bomb",
+          "@Watery Hall,@doors/Missile/,$can_scan,$can_bomb",
+          "@Watery Hall,@doors/Missile/,$can_scan,$can_power_bomb,$can_bomb"
+        ]
       },
       {
         "name": "Dynamo",
@@ -72,13 +109,26 @@
               "$can_spider"
             ]
           }
+        ],
+        "access_rules": [
+          "@Dynamo Access,@doors/AnyBeam"
         ]
       },
       {
-        "name": "East Atrium"
+        "name": "East Atrium",
+        "access_rules": [
+          "@Energy Core Access,@doors/AnyBeam",
+          "@Gathering Hall,@doors/AnyBeam/,$can_morph_ball",
+          "@Gathering Hall,@doors/AnyBeam/,$can_space_jump",
+          "@Gathering Hall,@doors/AnyBeam/,$can_morph_ball,$can_space_jump"
+        ]
       },
       {
-        "name": "East Furnace Access"
+        "name": "East Furnace Access",
+        "access_rules": [
+          "@Furnace,@doors/IceBeam/,$can_space_jump",
+          "@Hall of the Elders,@doors/IceBeam/,[$can_combat_ghosts],$can_power_beam"
+        ]
       },
       {
         "name": "Elder Chamber",
@@ -87,19 +137,39 @@
             "name": "",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
+        ],
+        "access_rules": [
+          "@Hall of the Elders,@doors/IceBeam/,[$can_combat_ghosts],$can_bomb,$can_plasma_beam,$can_space_jump,$can_spider"
         ]
       },
       {
-        "name": "Elder Hall Access"
+        "name": "Elder Hall Access",
+        "access_rules": [
+          "@Crossway,@doors/Missile/,$can_boost",
+          "@Hall of the Elders,@doors/AnyBeam/,[$can_combat_ghosts],$can_boost,$can_missile,$can_space_jump"
+        ]
       },
       {
-        "name": "Energy Core Access"
+        "name": "Energy Core Access",
+        "access_rules": [
+          "@East Atrium,@doors/AnyBeam",
+          "@Energy Core,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Energy Core"
+        "name": "Energy Core",
+        "access_rules": [
+          "@Burn Dome Access,@doors/None/,$can_bomb",
+          "@Energy Core Access,@doors/AnyBeam",
+          "@West Furnace Access,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Eyon Tunnel"
+        "name": "Eyon Tunnel",
+        "access_rules": [
+          "@Nursery Access,@doors/AnyBeam",
+          "@Ruined Nursery,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Furnace",
@@ -114,10 +184,19 @@
             "name": "Inside Furnace",
             "chest_unopened_img": "images/items/energytank.png"
           }
+        ],
+        "access_rules": [
+          "@Crossway Access West,@doors/AnyBeam/,$can_morph_ball",
+          "@East Furnace Access,@doors/IceBeam",
+          "@West Furnace Access,@doors/AnyBeam/,$can_spider,$can_bomb"
         ]
       },
       {
-        "name": "Gathering Hall Access"
+        "name": "Gathering Hall Access",
+        "access_rules": [
+          "@Arboretum,@doors/Missile",
+          "@Gathering Hall,@doors/Missile"
+        ]
       },
       {
         "name": "Gathering Hall",
@@ -130,6 +209,12 @@
               "$can_space_jump,$can_bomb,$can_power_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@East Atrium,@doors/AnyBeam",
+          "@Gathering Hall Access,@doors/AnyBeam",
+          "@Save Station 2,@doors/Missile",
+          "@Watery Hall Access,@doors/AnyBeam"
         ]
       },
       {
@@ -142,6 +227,13 @@
               "[$can_combat_ghosts],$can_power_beam,$can_bomb,$can_spider,$can_ice_beam,$can_space_jump"
             ]
           }
+        ],
+        "access_rules": [
+          "@Crossway Access South,@doors/IceBeam/,$can_morph_ball",
+          "@East Furnace Access,@doors/IceBeam",
+          "@Elder Chamber,@doors/IceBeam",
+          "@Elder Hall Access,@doors/AnyBeam",
+          "@Reflecting Pool Access,@doors/AnyBeam"
         ]
       },
       {
@@ -155,6 +247,10 @@
               "RemoveHiveMecha"
             ]
           }
+        ],
+        "access_rules": [
+          "@Totem Access,@doors/AnyBeam",
+          "@Transport Access North,@doors/Missile/,$can_bomb"
         ]
       },
       {
@@ -167,6 +263,10 @@
               "$can_grapple,$can_heat,$can_power_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Meditation Fountain,@doors/AnyBeam",
+          "@Training Chamber Access,@doors/WaveBeam"
         ]
       },
       {
@@ -197,34 +297,81 @@
               "@Plaza Access,$can_morph_ball"
             ]
           }
+        ],
+        "access_rules": [
+          "@Nursery Access,@doors/AnyBeam",
+          "@Piston Tunnel,@doors/AnyBeam/,$can_morph_ball",
+          "@Plaza Access,@doors/AnyBeam",
+          "@Ruined Fountain Access,@doors/AnyBeam/,$can_morph_ball",
+          "@Ruined Shrine Access,@doors/Missile",
+          "@Ruins Entrance,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Map Station"
+        "name": "Map Station",
+        "access_rules": [
+          "@Ruined Gallery,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Meditation Fountain"
+        "name": "Meditation Fountain",
+        "access_rules": [
+          "@Magma Pool,@doors/AnyBeam/,$has_energy_tanks|1,VariaSuit",
+          "@Magma Pool,@doors/AnyBeam/,$has_energy_tanks|1,GravitySuit",
+          "@Magma Pool,@doors/AnyBeam/,$has_energy_tanks|1,PhazonSuit",
+          "@Ruined Fountain,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "North Atrium"
+        "name": "North Atrium",
+        "access_rules": [
+          "@Ruined Gallery,@doors/AnyBeam",
+          "@Ruined Nursery,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Nursery Access"
+        "name": "Nursery Access",
+        "access_rules": [
+          "@Eyon Tunnel,@doors/AnyBeam",
+          "@Main Plaza,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Piston Tunnel"
+        "name": "Piston Tunnel",
+        "access_rules": [
+          "@Main Plaza,@doors/AnyBeam/,False",
+          "@Training Chamber,@doors/AnyBeam/,$can_boost,$can_bomb"
+        ]
       },
       {
-        "name": "Plaza Access"
+        "name": "Plaza Access",
+        "access_rules": [
+          "@Main Plaza,@doors/AnyBeam/,False",
+          "@Vault,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Reflecting Pool Access"
+        "name": "Reflecting Pool Access",
+        "access_rules": [
+          "@Hall of the Elders,@doors/AnyBeam/,[$can_combat_ghosts],$can_bomb,$can_spider,$can_wave_beam,$can_space_jump",
+          "@Reflecting Pool,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Reflecting Pool"
+        "name": "Reflecting Pool",
+        "access_rules": [
+          "@Antechamber,@doors/AnyBeam/,$can_missile",
+          "@Reflecting Pool Access,@doors/AnyBeam",
+          "@Save Station 3,@doors/Missile/,$can_bomb",
+          "@Transport Access South,@doors/IceBeam"
+        ]
       },
       {
-        "name": "Ruined Fountain Access"
+        "name": "Ruined Fountain Access",
+        "access_rules": [
+          "@Main Plaza,@doors/AnyBeam",
+          "@Ruined Fountain,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Ruined Fountain",
@@ -235,6 +382,11 @@
               "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
             ]
           }
+        ],
+        "access_rules": [
+          "@Arboretum Access,@doors/AnyBeam",
+          "@Meditation Fountain,@doors/AnyBeam",
+          "@Ruined Fountain Access,@doors/AnyBeam/,$can_morph_ball"
         ]
       },
       {
@@ -252,6 +404,11 @@
               "$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Map Station,@doors/AnyBeam",
+          "@North Atrium,@doors/AnyBeam",
+          "@Totem Access,@doors/AnyBeam"
         ]
       },
       {
@@ -263,10 +420,21 @@
               "$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Eyon Tunnel,@doors/AnyBeam",
+          "@North Atrium,@doors/AnyBeam",
+          "@Save Station 1,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Ruined Shrine Access"
+        "name": "Ruined Shrine Access",
+        "access_rules": [
+          "@Main Plaza,@doors/Missile",
+          "@Ruined Shrine,@doors/AnyBeam/,$can_morph_ball",
+          "@Ruined Shrine,@doors/AnyBeam/,$can_space_jump",
+          "@Ruined Shrine,@doors/AnyBeam/,$can_morph_ball,$can_space_jump"
+        ]
       },
       {
         "name": "Ruined Shrine",
@@ -292,31 +460,65 @@
               "$can_bomb,$can_power_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Ruined Shrine Access,@doors/AnyBeam",
+          "@Tower of Light Access,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Ruins Entrance"
+        "name": "Ruins Entrance",
+        "access_rules": [
+          "@Main Plaza,@doors/AnyBeam",
+          "@Transport to Tallon Overworld North,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Save Station 1"
+        "name": "Save Station 1",
+        "access_rules": [
+          "@Ruined Nursery,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Save Station 2"
+        "name": "Save Station 2",
+        "access_rules": [
+          "@Gathering Hall,@doors/Missile"
+        ]
       },
       {
-        "name": "Save Station 3"
+        "name": "Save Station 3",
+        "access_rules": [
+          "@Reflecting Pool,@doors/Missile/,$can_boost,$can_bomb",
+          "@Transport to Tallon Overworld East,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Sun Tower"
+        "name": "Sun Tower",
+        "access_rules": [
+          "@Sun Tower Access,@doors/AnyBeam",
+          "@Transport to Magmoor Caverns North,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Sun Tower Access"
+        "name": "Sun Tower Access",
+        "access_rules": [
+          "@Sun Tower,@doors/AnyBeam/,$can_climb_sun_tower",
+          "@Sunchamber,@doors/AnyBeam/,@rules/can_flaahgra"
+        ]
       },
       {
-        "name": "Sunchamber Access"
+        "name": "Sunchamber Access",
+        "access_rules": [
+          "@Sunchamber Lobby,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Sunchamber Lobby"
+        "name": "Sunchamber Lobby",
+        "access_rules": [
+          "@Arboretum,@doors/Missile/,$can_scan,$can_bomb",
+          "@Arboretum,@doors/Missile/,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump",
+          "@Sunchamber Access,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Sunchamber",
@@ -335,10 +537,18 @@
               "@rules/can_flaahgra,[$can_combat_ghosts],$can_climb_sun_tower"
             ]
           }
+        ],
+        "access_rules": [
+          "@Sun Tower Access,@doors/AnyBeam",
+          "@Sunchamber Access,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Totem Access"
+        "name": "Totem Access",
+        "access_rules": [
+          "@Hive Totem,@doors/AnyBeam",
+          "@Ruined Gallery,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Tower Chamber",
@@ -347,10 +557,17 @@
             "name": "",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
+        ],
+        "access_rules": [
+          "@Tower of Light,@doors/WaveBeam/,$can_move_underwater,$can_space_jump"
         ]
       },
       {
-        "name": "Tower of Light Access"
+        "name": "Tower of Light Access",
+        "access_rules": [
+          "@Ruined Shrine,@doors/WaveBeam/,$can_spider,$can_boost",
+          "@Tower of Light,@doors/WaveBeam"
+        ]
       },
       {
         "name": "Tower of Light",
@@ -362,6 +579,10 @@
               "$can_climb_tower_of_light"
             ]
           }
+        ],
+        "access_rules": [
+          "@Tower Chamber,@doors/WaveBeam",
+          "@Tower of Light Access,@doors/WaveBeam"
         ]
       },
       {
@@ -373,6 +594,10 @@
               "$can_morph_ball"
             ]
           }
+        ],
+        "access_rules": [
+          "@Magma Pool,@doors/WaveBeam/,$can_grapple,$can_heat",
+          "@Training Chamber,@doors/WaveBeam"
         ]
       },
       {
@@ -385,6 +610,10 @@
               "$can_boost,$can_spider,$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Piston Tunnel,@doors/AnyBeam/,$can_morph_ball",
+          "@Training Chamber Access,@doors/WaveBeam"
         ]
       },
       {
@@ -394,25 +623,52 @@
             "name": "",
             "chest_unopened_img": "images/items/energytank.png"
           }
+        ],
+        "access_rules": [
+          "@Hive Totem,@doors/Missile/,$can_power_beam",
+          "@Hive Totem,@doors/Missile/,RemoveHiveMecha",
+          "@Transport to Magmoor Caverns North,@doors/AnyBeam"
         ]
       },
       {
-        "name": "Transport Access South"
+        "name": "Transport Access South",
+        "access_rules": [
+          "@Reflecting Pool,@doors/IceBeam/,$can_boost,$can_bomb",
+          "@Transport to Tallon Overworld South,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Transport to Magmoor Caverns North"
+        "name": "Transport to Magmoor Caverns North",
+        "access_rules": [
+          "@Sun Tower,@doors/AnyBeam",
+          "@Transport Access North,@doors/AnyBeam/,$can_morph_ball",
+          "@Vault Access,@doors/AnyBeam/,$can_morph_ball"
+        ]
       },
       {
-        "name": "Transport to Tallon Overworld East"
+        "name": "Transport to Tallon Overworld East",
+        "access_rules": [
+          "@Save Station 3,@doors/AnyBeam/,$can_bomb"
+        ]
       },
       {
-        "name": "Transport to Tallon Overworld North"
+        "name": "Transport to Tallon Overworld North",
+        "access_rules": [
+          "@Ruins Entrance,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Transport to Tallon Overworld South"
+        "name": "Transport to Tallon Overworld South",
+        "access_rules": [
+          "@Transport Access South,@doors/AnyBeam"
+        ]
       },
       {
-        "name": "Vault Access"
+        "name": "Vault Access",
+        "access_rules": [
+          "@Transport to Magmoor Caverns North,@doors/AnyBeam",
+          "@Vault,@doors/AnyBeam"
+        ]
       },
       {
         "name": "Vault",
@@ -423,6 +679,10 @@
               "$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Plaza Access,@doors/AnyBeam",
+          "@Vault Access,@doors/AnyBeam/,$can_morph_ball"
         ]
       },
       {
@@ -434,6 +694,10 @@
               "$can_missile"
             ]
           }
+        ],
+        "access_rules": [
+          "@Gathering Hall,@doors/AnyBeam",
+          "@Watery Hall,@doors/Missile"
         ]
       },
       {
@@ -451,6 +715,10 @@
               "$can_move_underwater,$can_space_jump,@rules/can_flaahgra"
             ]
           }
+        ],
+        "access_rules": [
+          "@Dynamo Access,@doors/Missile/,$can_bomb",
+          "@Watery Hall Access,@doors/Missile"
         ]
       },
       {
@@ -463,6 +731,10 @@
               "$can_bomb"
             ]
           }
+        ],
+        "access_rules": [
+          "@Energy Core,@doors/AnyBeam/,$can_bomb",
+          "@Furnace,@doors/AnyBeam/,$can_bomb"
         ]
       }
     ]
