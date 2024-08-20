@@ -5,22 +5,21 @@ import ast
 from enum import StrEnum
 import json
 from pathlib import Path
-import importlib
 import importlib.util
 import sys
-from typing import Container, Dict, List, NamedTuple, Optional, Union
+from typing import Dict, List, NamedTuple, Optional, Union
 
 
 locations = Path(__file__).parents[1] / "locations"
 
 
-areas = {
-    "tallon": "TallonOverworld",
-    "chozo": "ChozoRuins",
-    "magmoor": "MagmoorCaverns",
-    "phen": "PhendranaDrifts",
-    "mines": "PhazonMines",
-}
+areas = [
+    ("tallon", "TallonOverworld"),
+    ("chozo", "ChozoRuins"),
+    ("magmoor", "MagmoorCaverns"),
+    ("phen", "PhendranaDrifts"),
+    ("mines", "PhazonMines"),
+]
 
 
 class ItemImage(StrEnum):
@@ -141,7 +140,7 @@ manual_rules = {
 }
 
 
-# Get args
+# Parse args
 parser = ArgumentParser(
     description="Converts the logic rules from MetrodAPrime for use in this tracker."
 )
@@ -149,15 +148,9 @@ parser.add_argument(
     "path_to_apworld", type=Path,
     help="Path to the extracted Metroid Prime AP world source"
 )
-parser.add_argument(
-    "area", type=str, choices=areas.keys(),
-    help="Name of the data module to read"
-)
 args = parser.parse_args()
 
 data_path: Path = args.path_to_apworld / "data"
-area: str = areas[args.area]
-output: Path = (locations / args.area).with_suffix(".json")
 
 
 # Import names
@@ -176,7 +169,7 @@ from metroidprime.AreaNames import MetroidPrimeArea
 from metroidprime.RoomNames import RoomName
 
 
-# Parse file
+# AST parsing
 JsonValue = Union[str, int, float, List["JsonValue"], Dict[str, "JsonValue"], None]
 
 
@@ -479,16 +472,20 @@ class AreaData(NamedTuple):
         })]
 
 
-input = (data_path / area).with_suffix(".py")
-with open(input, "r") as stream:
-    content = stream.read()
+# Parse files
+for short_name, data_name in areas:
+    input = (data_path / data_name).with_suffix(".py")
+    output = (locations / short_name).with_suffix(".json")
 
-data_ast = ast.parse(content)
-# print(ast.dump(data_ast, indent=2))
-try:
-    result = AreaData.from_ast(data_ast, input.name)
-except ASTParseError as e:
-    raise Exception(ast.dump(e.tree)) from e
+    with open(input, "r") as stream:
+        content = stream.read()
 
-with open(output, "w") as stream:
-   json.dump(result.into_json(), stream, indent=2)
+    data_ast = ast.parse(content)
+    # print(ast.dump(data_ast, indent=2))
+    try:
+        result = AreaData.from_ast(data_ast, input.name)
+    except ASTParseError as e:
+        raise Exception(f"Could not parse {input.name}:\n{ast.dump(e.tree)}") from e
+
+    with open(output, "w") as stream:
+       json.dump(result.into_json(), stream, indent=2)
