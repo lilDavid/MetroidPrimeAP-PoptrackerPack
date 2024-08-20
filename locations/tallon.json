@@ -28,6 +28,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomArborChamber",
           "@Root Cave,@doors/PlasmaBeam/,$can_grapple,@rules/can_xray,$can_space_jump"
         ]
       },
@@ -166,6 +167,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomLandingSite",
           "@Alcove,@doors/AnyBeam/,$can_space_jump",
           "@Canyon Cavern,@doors/AnyBeam",
           "@Gully,@doors/AnyBeam/,$can_bomb,$can_space_jump",
@@ -278,31 +280,37 @@
       {
         "name": "Transport to Chozo Ruins East",
         "access_rules": [
-          "@Transport Tunnel C,@doors/IceBeam"
+          "StartingRoomTransportToChozoRuinsEast",
+          "@Transport Tunnel C,@doors/IceBeam",
+          "$can_access_elevators,@Chozo Ruins/Transport to Tallon Overworld East"
         ]
       },
       {
         "name": "Transport to Chozo Ruins South",
         "access_rules": [
-          "@Transport Tunnel D,@doors/IceBeam"
+          "@Transport Tunnel D,@doors/IceBeam",
+          "$can_access_elevators,@Chozo Ruins/Transport to Tallon Overworld South"
         ]
       },
       {
         "name": "Transport to Chozo Ruins West",
         "access_rules": [
-          "@Transport Tunnel A,@doors/AnyBeam"
+          "@Transport Tunnel A,@doors/AnyBeam",
+          "$can_access_elevators,@Chozo Ruins/Transport to Tallon Overworld North"
         ]
       },
       {
         "name": "Transport to Magmoor Caverns East",
         "access_rules": [
-          "@Transport Tunnel B,@doors/AnyBeam"
+          "@Transport Tunnel B,@doors/AnyBeam",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Tallon Overworld West"
         ]
       },
       {
         "name": "Transport to Phazon Mines East",
         "access_rules": [
-          "@Transport Tunnel E,@doors/IceBeam"
+          "@Transport Tunnel E,@doors/IceBeam",
+          "$can_access_elevators,@Phazon Mines/Transport to Tallon Overworld South"
         ]
       },
       {

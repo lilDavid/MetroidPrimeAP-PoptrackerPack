@@ -169,6 +169,37 @@ manual_location_rules = {
     ],
 }
 
+transport_rules = {
+    "Tallon Overworld": {
+        "Transport to Chozo Ruins West": "@Chozo Ruins/Transport to Tallon Overworld North",
+        "Transport to Magmoor Caverns East": "@Magmoor Caverns/Transport to Tallon Overworld West",
+        "Transport to Chozo Ruins East": "@Chozo Ruins/Transport to Tallon Overworld East",
+        "Transport to Chozo Ruins South": "@Chozo Ruins/Transport to Tallon Overworld South",
+        "Transport to Phazon Mines East": "@Phazon Mines/Transport to Tallon Overworld South",
+    },
+    "Chozo Ruins": {
+        "Transport to Tallon Overworld North": "@Tallon Overworld/Transport to Chozo Ruins West",
+        "Transport to Magmoor Caverns North": "@Magmoor Caverns/Transport to Chozo Ruins North",
+        "Transport to Tallon Overworld East": "@Tallon Overworld/Transport to Chozo Ruins East",
+        "Transport to Tallon Overworld West": "@Tallon Overworld/Transport to Chozo Ruins West",
+    },
+    "Magmoor Caverns": {
+        "Transport to Chozo Ruins North": "@Chozo Ruins/Transport to Magmoor Caverns North",
+        "Transport to Phendrana Drifts North": "@Phendrana Drifts/Transport to Magmoor Caverns West",
+        "Transport to Tallon Overworld West": "@Tallon Overworld/Transport to Magmoor Caverns East",
+        "Transport to Phendrana Drifts South": "@Phendrana Drifts/Transport to Magmoor Caverns South",
+        "Transport to Phazon Mines West": "@Phazon Mines/Transport to Magmoor Caverns South",
+    },
+    "Phendrana Drifts": {
+        "Transport to Magmoor Caverns West": "@Magmoor Caverns/Transport to Phendrana Drifts North",
+        "Transport to Magmoor Caverns South": "@Magmoor Caverns/Transport to Phendrana Drifts South",
+    },
+    "Phazon Mines": {
+        "Transport to Tallon Overworld South": "@Magmoor Caverns/Transport to Phazon Mines East",
+        "Transport to Magmoor Caverns South": "@Magmoor Caverns/Transport to Phazon Mines West",
+    },
+}
+
 
 # Parse args
 parser = ArgumentParser(
@@ -487,24 +518,28 @@ class WorldRoomData(NamedTuple):
 class TrackerRoomData(NamedTuple):
     name: str
     pickups: List[PickupData]
-    doors: List[DoorData]  # Doors whose destinations are this room
+    access_rules: List[str]
 
     @classmethod
-    def from_world_room_data(cls, world_data: WorldRoomData, all_doors: List[DoorData]):
+    def from_world_room_data(cls, world_data: WorldRoomData, all_doors: List[DoorData], transports: Dict[str, str]):
         doors = [door for door in all_doors if door.destination == world_data.name]
-        return cls(world_data.name, world_data.pickups, doors)
 
-    def get_access_rules(self):
         rules = []
-        for door in self.doors:
+        if world_data.name in starting_rooms:
+            rules.append(starting_rooms[world_data.name])
+        for door in doors:
             rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
-        return rules
+
+        if world_data.name in transports:
+            rules.append(f"$can_access_elevators,{transports[world_data.name]}")
+
+        return cls(world_data.name, world_data.pickups, rules)
 
     def into_json(self):
         return omit_empty_lists_and_null({
             "name": self.name,
             "sections": [pickup.into_json() for pickup in self.pickups],
-            "access_rules": self.get_access_rules(),
+            "access_rules": self.access_rules,
         })
 
 
@@ -578,7 +613,8 @@ class AreaData(NamedTuple):
         doors = []
         for room in world_rooms:
             doors.extend(room.doors)
-        tracker_rooms = [TrackerRoomData.from_world_room_data(room, doors) for room in world_rooms]
+        tracker_rooms = [TrackerRoomData.from_world_room_data(room, doors, transport_rules[area_name])
+                         for room in world_rooms]
         return cls(area_name, tracker_rooms)
 
     def into_json(self):

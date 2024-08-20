@@ -422,13 +422,15 @@
       {
         "name": "Transport to Magmoor Caverns South",
         "access_rules": [
-          "@Transport Access,@doors/IceBeam"
+          "@Transport Access,@doors/IceBeam",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Phazon Mines West"
         ]
       },
       {
         "name": "Transport to Tallon Overworld South",
         "access_rules": [
-          "@Quarry Access,@doors/WaveBeam"
+          "@Quarry Access,@doors/WaveBeam",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Phazon Mines East"
         ]
       },
       {

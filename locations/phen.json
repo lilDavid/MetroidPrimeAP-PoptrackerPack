@@ -99,6 +99,7 @@
       {
         "name": "East Tower",
         "access_rules": [
+          "StartingRoomEastTower",
           "@Aether Lab Entryway,@doors/WaveBeam",
           "@Control Tower,@doors/WaveBeam/,[$can_combat_labs]"
         ]
@@ -381,6 +382,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomQuarantineMonitor",
           "@Quarantine Cave,@doors/None/,[$can_combat_thardus],$can_spider,$can_grapple"
         ]
       },
@@ -491,6 +493,7 @@
       {
         "name": "Save Station B",
         "access_rules": [
+          "StartingRoomSaveStationB",
           "@Phendrana Shorelines,@doors/AnyBeam"
         ]
       },
@@ -586,7 +589,8 @@
         "name": "Transport to Magmoor Caverns South",
         "access_rules": [
           "@South Quarantine Tunnel,@doors/WaveBeam",
-          "@Transport Access,@doors/IceBeam"
+          "@Transport Access,@doors/IceBeam",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Phendrana Drifts South"
         ]
       },
       {
@@ -594,7 +598,8 @@
         "access_rules": [
           "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam",
           "@Shoreline Entrance,@doors/AnyBeam/,$can_missile",
-          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam,$can_missile"
+          "@Shoreline Entrance,@doors/AnyBeam/,$can_charge_beam,$can_missile",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Phendrana Drifts North"
         ]
       },
       {

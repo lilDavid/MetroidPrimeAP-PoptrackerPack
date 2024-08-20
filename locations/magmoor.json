@@ -190,26 +190,30 @@
       {
         "name": "Transport to Chozo Ruins North",
         "access_rules": [
-          "@Burning Trail,@doors/AnyBeam"
+          "@Burning Trail,@doors/AnyBeam",
+          "$can_access_elevators,@Chozo Ruins/Transport to Magmoor Caverns North"
         ]
       },
       {
         "name": "Transport to Phazon Mines West",
         "access_rules": [
-          "@Workstation Tunnel,@doors/IceBeam/,$can_power_bomb"
+          "@Workstation Tunnel,@doors/IceBeam/,$can_power_bomb",
+          "$can_access_elevators,@Phazon Mines/Transport to Magmoor Caverns South"
         ]
       },
       {
         "name": "Transport to Phendrana Drifts North",
         "access_rules": [
-          "@Transport Tunnel A,@doors/AnyBeam/,$can_heat,$can_bomb"
+          "@Transport Tunnel A,@doors/AnyBeam/,$can_heat,$can_bomb",
+          "$can_access_elevators,@Phendrana Drifts/Transport to Magmoor Caverns West"
         ]
       },
       {
         "name": "Transport to Phendrana Drifts South",
         "access_rules": [
           "@Save Station Magmoor B,@doors/Missile",
-          "@Transport Tunnel C,@doors/WaveBeam"
+          "@Transport Tunnel C,@doors/WaveBeam",
+          "$can_access_elevators,@Phendrana Drifts/Transport to Magmoor Caverns South"
         ]
       },
       {
@@ -222,7 +226,8 @@
           "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_space_jump",
           "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_space_jump",
           "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_move_underwater,$can_space_jump",
-          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_move_underwater,$can_space_jump"
+          "@Twin Fires Tunnel,@doors/AnyBeam/,$can_heat,$can_spider,$can_move_underwater,$can_space_jump",
+          "$can_access_elevators,@Tallon Overworld/Transport to Magmoor Caverns East"
         ]
       },
       {
@@ -302,6 +307,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomWarriorShrine",
           "@Monitor Station,@doors/AnyBeam/,$can_heat,$can_space_jump,$can_boost"
         ]
       },

@@ -26,6 +26,7 @@
       {
         "name": "Arboretum",
         "access_rules": [
+          "StartingRoomArboretum",
           "@Arboretum Access,@doors/AnyBeam",
           "@Gathering Hall Access,@doors/Missile",
           "@Sunchamber Lobby,@doors/AnyBeam/,False"
@@ -34,6 +35,7 @@
       {
         "name": "Burn Dome Access",
         "access_rules": [
+          "StartingRoomBurnDomeAccess",
           "@Energy Core,@doors/None/,$can_bomb"
         ]
       },
@@ -384,6 +386,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomRuinedFountain",
           "@Arboretum Access,@doors/AnyBeam",
           "@Meditation Fountain,@doors/AnyBeam",
           "@Ruined Fountain Access,@doors/AnyBeam/,$can_morph_ball"
@@ -476,12 +479,14 @@
       {
         "name": "Save Station 1",
         "access_rules": [
+          "StartingRoomSaveStation1",
           "@Ruined Nursery,@doors/AnyBeam"
         ]
       },
       {
         "name": "Save Station 2",
         "access_rules": [
+          "StartingRoomSaveStation2",
           "@Gathering Hall,@doors/Missile"
         ]
       },
@@ -515,6 +520,7 @@
       {
         "name": "Sunchamber Lobby",
         "access_rules": [
+          "StartingRoomSunchamberLobby",
           "@Arboretum,@doors/Missile/,$can_scan,$can_bomb",
           "@Arboretum,@doors/Missile/,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump",
           "@Sunchamber Access,@doors/AnyBeam"
@@ -559,6 +565,7 @@
           }
         ],
         "access_rules": [
+          "StartingRoomTowerChamber",
           "@Tower of Light,@doors/WaveBeam/,$can_move_underwater,$can_space_jump"
         ]
       },
@@ -642,19 +649,22 @@
         "access_rules": [
           "@Sun Tower,@doors/AnyBeam",
           "@Transport Access North,@doors/AnyBeam/,$can_morph_ball",
-          "@Vault Access,@doors/AnyBeam/,$can_morph_ball"
+          "@Vault Access,@doors/AnyBeam/,$can_morph_ball",
+          "$can_access_elevators,@Magmoor Caverns/Transport to Chozo Ruins North"
         ]
       },
       {
         "name": "Transport to Tallon Overworld East",
         "access_rules": [
-          "@Save Station 3,@doors/AnyBeam/,$can_bomb"
+          "@Save Station 3,@doors/AnyBeam/,$can_bomb",
+          "$can_access_elevators,@Tallon Overworld/Transport to Chozo Ruins East"
         ]
       },
       {
         "name": "Transport to Tallon Overworld North",
         "access_rules": [
-          "@Ruins Entrance,@doors/AnyBeam"
+          "@Ruins Entrance,@doors/AnyBeam",
+          "$can_access_elevators,@Tallon Overworld/Transport to Chozo Ruins West"
         ]
       },
       {
