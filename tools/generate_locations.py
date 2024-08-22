@@ -196,7 +196,7 @@ transport_rules = {
         "Transport to Magmoor Caverns South": "@Magmoor Caverns/Transport to Phendrana Drifts South",
     },
     "Phazon Mines": {
-        "Transport to Tallon Overworld South": "@Magmoor Caverns/Transport to Phazon Mines East",
+        "Transport to Tallon Overworld South": "@Tallon Overworld/Transport to Phazon Mines East",
         "Transport to Magmoor Caverns South": "@Magmoor Caverns/Transport to Phazon Mines West",
     },
 }
@@ -476,7 +476,7 @@ class DoorData(NamedTuple):
         if door_type is None:
             door_type = "AnyBeam"
         if access_rule:
-            access_rule = [f"@doors/{door_type}/,{rule}" for rule in access_rule]
+            access_rule = [f"@doors/{door_type},{rule}" for rule in access_rule]
         else:
             access_rule = [f"@doors/{door_type}"]
         return cls(source, destination.value, access_rule, exclude_from_rando)

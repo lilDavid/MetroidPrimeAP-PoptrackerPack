@@ -28,9 +28,9 @@
                 "name": "can_warp_to_start",
                 "access_rules": [
                     "@Tallon Overworld/Landing Site",
-                    "@Chozo Ruins/Save Station1",
-                    "@Chozo Ruins/Save Station2",
-                    "@Chozo Ruins/Save Station3",
+                    "@Chozo Ruins/Save Station 1",
+                    "@Chozo Ruins/Save Station 2",
+                    "@Chozo Ruins/Save Station 3",
                     "@Magmoor Caverns/Save Station Magmoor A",
                     "@Magmoor Caverns/Save Station Magmoor B",
                     "@Phendrana Drifts/Save Station A",

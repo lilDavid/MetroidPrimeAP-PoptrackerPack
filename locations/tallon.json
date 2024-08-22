@@ -17,7 +17,7 @@
         ],
         "access_rules": [
           "@Gully,@doors/AnyBeam",
-          "@Landing Site,@doors/AnyBeam/,$can_space_jump"
+          "@Landing Site,@doors/AnyBeam,$can_space_jump"
         ]
       },
       {
@@ -29,7 +29,7 @@
         ],
         "access_rules": [
           "StartingRoomArborChamber",
-          "@Root Cave,@doors/PlasmaBeam/,$can_grapple,@rules/can_xray,$can_space_jump"
+          "@Root Cave,@doors/PlasmaBeam,$can_grapple,@rules/can_xray,$can_space_jump"
         ]
       },
       {
@@ -55,8 +55,8 @@
           }
         ],
         "access_rules": [
-          "@Cargo Freight Lift to Deck Gamma,@doors/AnyBeam/,$can_crashed_frigate",
-          "@Hydro Access Tunnel,@doors/AnyBeam/,$can_bomb,$can_move_underwater,$can_space_jump"
+          "@Cargo Freight Lift to Deck Gamma,@doors/AnyBeam,$can_crashed_frigate",
+          "@Hydro Access Tunnel,@doors/AnyBeam,$can_bomb,$can_move_underwater,$can_space_jump"
         ]
       },
       {
@@ -86,8 +86,8 @@
           }
         ],
         "access_rules": [
-          "@Biohazard Containment,@doors/AnyBeam/,$can_crashed_frigate_backwards",
-          "@Frigate Crash Site,@doors/IceBeam/,$can_crashed_frigate"
+          "@Biohazard Containment,@doors/AnyBeam,$can_crashed_frigate_backwards",
+          "@Frigate Crash Site,@doors/IceBeam,$can_crashed_frigate"
         ]
       },
       {
@@ -101,9 +101,9 @@
           }
         ],
         "access_rules": [
-          "@Cargo Freight Lift to Deck Gamma,@doors/IceBeam/,$can_crashed_frigate_backwards",
-          "@Overgrown Cavern,@doors/IceBeam/,$can_morph_ball",
-          "@Waterfall Cavern,@doors/Missile/,$can_morph_ball"
+          "@Cargo Freight Lift to Deck Gamma,@doors/IceBeam,$can_crashed_frigate_backwards",
+          "@Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
+          "@Waterfall Cavern,@doors/Missile,$can_morph_ball"
         ]
       },
       {
@@ -114,29 +114,29 @@
           }
         ],
         "access_rules": [
-          "@Great Tree Hall,@doors/AnyBeam/,@rules/can_xray,$can_space_jump"
+          "@Great Tree Hall,@doors/AnyBeam,@rules/can_xray,$can_space_jump"
         ]
       },
       {
         "name": "Great Tree Hall",
         "access_rules": [
           "@Great Tree Chamber,@doors/AnyBeam",
-          "@Hydro Access Tunnel,@doors/AnyBeam/,$can_crashed_frigate,$can_boost",
-          "@Life Grove Tunnel,@doors/IceBeam/,$can_power_bomb,$can_boost",
+          "@Hydro Access Tunnel,@doors/AnyBeam,$can_crashed_frigate,$can_boost",
+          "@Life Grove Tunnel,@doors/IceBeam,$can_power_bomb,$can_boost",
           "@Transport Tunnel D,@doors/IceBeam",
-          "@Transport Tunnel E,@doors/IceBeam/,$can_boost"
+          "@Transport Tunnel E,@doors/IceBeam,$can_boost"
         ]
       },
       {
         "name": "Gully",
         "access_rules": [
           "@Alcove,@doors/AnyBeam",
-          "@Landing Site,@doors/AnyBeam/,$can_space_jump",
-          "@Tallon Canyon,@doors/AnyBeam/,$can_space_jump",
-          "@Tallon Canyon,@doors/AnyBeam/,$can_space_jump,$can_boost",
-          "@Tallon Canyon,@doors/AnyBeam/,$can_space_jump,$can_bomb",
-          "@Tallon Canyon,@doors/AnyBeam/,$can_boost,$can_bomb",
-          "@Tallon Canyon,@doors/AnyBeam/,$can_space_jump,$can_boost,$can_bomb"
+          "@Landing Site,@doors/AnyBeam,$can_space_jump",
+          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump",
+          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_boost",
+          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_bomb",
+          "@Tallon Canyon,@doors/AnyBeam,$can_boost,$can_bomb",
+          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_boost,$can_bomb"
         ]
       },
       {
@@ -151,8 +151,8 @@
           }
         ],
         "access_rules": [
-          "@Biohazard Containment,@doors/AnyBeam/,$can_crashed_frigate",
-          "@Great Tree Hall,@doors/AnyBeam/,False",
+          "@Biohazard Containment,@doors/AnyBeam,$can_crashed_frigate",
+          "@Great Tree Hall,@doors/AnyBeam,False",
           "@Transport Tunnel E,@doors/IceBeam"
         ]
       },
@@ -168,11 +168,11 @@
         ],
         "access_rules": [
           "StartingRoomLandingSite",
-          "@Alcove,@doors/AnyBeam/,$can_space_jump",
+          "@Alcove,@doors/AnyBeam,$can_space_jump",
           "@Canyon Cavern,@doors/AnyBeam",
-          "@Gully,@doors/AnyBeam/,$can_bomb,$can_space_jump",
+          "@Gully,@doors/AnyBeam,$can_bomb,$can_space_jump",
           "@Temple Hall,@doors/AnyBeam",
-          "@Waterfall Cavern,@doors/AnyBeam/,$can_morph_ball"
+          "@Waterfall Cavern,@doors/AnyBeam,$can_morph_ball"
         ]
       },
       {
@@ -186,8 +186,8 @@
           }
         ],
         "access_rules": [
-          "@Great Tree Hall,@doors/IceBeam/,$can_spider",
-          "@Life Grove,@doors/None/,$can_power_bomb,$can_space_jump,$can_morph_ball,$can_power_beam"
+          "@Great Tree Hall,@doors/IceBeam,$can_spider",
+          "@Life Grove,@doors/None,$can_power_bomb,$can_space_jump,$can_morph_ball,$can_power_beam"
         ]
       },
       {
@@ -206,7 +206,7 @@
           }
         ],
         "access_rules": [
-          "@Life Grove Tunnel,@doors/None/,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost"
+          "@Life Grove Tunnel,@doors/None,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost"
         ]
       },
       {
@@ -220,7 +220,7 @@
           }
         ],
         "access_rules": [
-          "@Frigate Crash Site,@doors/IceBeam/,False",
+          "@Frigate Crash Site,@doors/IceBeam,False",
           "@Transport Tunnel C,@doors/IceBeam"
         ]
       },
@@ -251,7 +251,7 @@
         "name": "Tallon Canyon",
         "access_rules": [
           "@Canyon Cavern,@doors/AnyBeam",
-          "@Gully,@doors/AnyBeam/,$can_bomb,$can_space_jump",
+          "@Gully,@doors/AnyBeam,$can_bomb,$can_space_jump",
           "@Root Tunnel,@doors/AnyBeam",
           "@Transport Tunnel A,@doors/AnyBeam"
         ]
@@ -335,7 +335,7 @@
       {
         "name": "Transport Tunnel C",
         "access_rules": [
-          "@Overgrown Cavern,@doors/IceBeam/,$can_morph_ball",
+          "@Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
           "@Transport to Chozo Ruins East,@doors/IceBeam"
         ]
       },
@@ -349,15 +349,15 @@
       {
         "name": "Transport Tunnel E",
         "access_rules": [
-          "@Great Tree Hall,@doors/IceBeam/,False",
-          "@Hydro Access Tunnel,@doors/IceBeam/,$can_crashed_frigate",
+          "@Great Tree Hall,@doors/IceBeam,False",
+          "@Hydro Access Tunnel,@doors/IceBeam,$can_crashed_frigate",
           "@Transport to Phazon Mines East,@doors/IceBeam"
         ]
       },
       {
         "name": "Waterfall Cavern",
         "access_rules": [
-          "@Frigate Crash Site,@doors/Missile/,$can_missile",
+          "@Frigate Crash Site,@doors/Missile,$can_missile",
           "@Landing Site,@doors/AnyBeam"
         ]
       }
