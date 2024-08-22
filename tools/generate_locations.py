@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import importlib.util
 import sys
-from typing import Dict, List, NamedTuple, Optional, Union
+from typing import Dict, List, NamedTuple, Optional, Set, Union
 
 
 pack = Path(__file__).parents[1]
@@ -242,14 +242,14 @@ def omit_empty_lists_and_null(object: Dict[str, JsonValue]) -> Dict[str, JsonVal
 def load_starting_rooms(options: List[Dict[str, JsonValue]]):
     starting_room_data: Optional[List[Dict[str, JsonValue]]] = None
     for option in options:
-        if option["name"] == "Starting Room":
+        if option.get("codes") == "StartingRoom":
             starting_room_data = option["stages"]
     if starting_room_data is None:
         raise ValueError("No starting room data")
 
-    starting_rooms: Dict[str, str] = {}
+    starting_rooms: Set[str] = set()
     for room in starting_room_data:
-        starting_rooms[room["name"]] = room["codes"]
+        starting_rooms.add(room["codes"])
     return starting_rooms
 
 
@@ -526,8 +526,9 @@ class TrackerRoomData(NamedTuple):
         doors = [door for door in all_doors if door.destination == world_data.name]
 
         rules = []
-        if world_data.name in starting_rooms:
-            rules.append(starting_rooms[world_data.name])
+        starting_room_option = "StartingRoom" + world_data.name.title().replace(" ", "")
+        if starting_room_option in starting_rooms:
+            rules.append(starting_room_option)
         for door in doors:
             rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
 

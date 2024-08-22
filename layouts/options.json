@@ -1,0 +1,26 @@
+{
+  "settings_popup": {
+    "type": "container",
+    "background": "#000000",
+    "margin": "6, 6",
+    "content": {
+      "type": "itemgrid",
+      "item_h_alignment": "left",
+      "item_size": "400, 20",
+      "rows": [
+        [ "RequiredArtifacts" ],
+        [ "MainMissile" ],
+        [ "MainPowerBomb" ],
+        [ "NonVariaHeatDamage" ],
+        [ "RemoveHiveMecha" ],
+        [ "BackwardsLowerMines" ],
+        [ "FlaahgraPowerBombs" ],
+        [ "RemoveXRayRequirements" ],
+        [ "RemoveThermalRequirements" ],
+        [ "StartingRoom" ],
+        [ "CombatLogic" ],
+        [ "PreScanElevators" ]
+      ]
+    }
+  }
+}

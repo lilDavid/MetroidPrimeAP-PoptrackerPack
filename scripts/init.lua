@@ -22,6 +22,7 @@ Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/maps.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
+Tracker:AddLayouts("layouts/options.json")
 
 if PopVersion and PopVersion >= "0.18.0" then
     ScriptHost:LoadScript("scripts/autotracking.lua")

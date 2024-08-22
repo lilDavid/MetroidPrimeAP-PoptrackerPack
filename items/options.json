@@ -1,206 +1,335 @@
 [
   {
-    "name": "Required Artifacts",
     "codes": "RequiredArtifacts",
-    "img": "images/items/artifacts0.png",
-    "type": "consumable",
-    "min_quantity": 1,
-    "max_quantity": 12
-  },
-  {
-    "name": "Missile Launcher",
-    "codes": "MainMissile",
-    "type": "toggle"
-  },
-  {
-    "name": "Main Power Bomb",
-    "codes": "MainPowerBomb",
-    "type": "toggle"
-  },
-  {
-    "name": "Non-Varia Heat Damage",
-    "codes": "NonVariaHeatDamage",
-    "type": "toggle"
-  },
-  {
-    "name": "Remove Hive Mecha",
-    "codes": "RemoveHiveMecha",
-    "type": "toggle"
-  },
-  {
-    "name": "Trick Difficulty",
     "type": "progressive",
     "allow_disabled": false,
     "stages": [
+      { "img": "images/options/requiredartifacts-1.png" },
+      { "img": "images/options/requiredartifacts-2.png" },
+      { "img": "images/options/requiredartifacts-3.png" },
+      { "img": "images/options/requiredartifacts-4.png" },
+      { "img": "images/options/requiredartifacts-5.png" },
+      { "img": "images/options/requiredartifacts-6.png" },
+      { "img": "images/options/requiredartifacts-7.png" },
+      { "img": "images/options/requiredartifacts-8.png" },
+      { "img": "images/options/requiredartifacts-9.png" },
+      { "img": "images/options/requiredartifacts-10.png" },
+      { "img": "images/options/requiredartifacts-11.png" },
+      { "img": "images/options/requiredartifacts-12.png" }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
       {
-        "name": "No tricks",
-        "codes": "TricksNone"
+        "img": "images/options/missilelauncher-off.png",
+        "img_mods": "@disabled"
       },
       {
-        "name": "Easy",
-        "codes": "TricksEasy"
-      },
-      {
-        "name": "Medium",
-        "codes": "TricksMedium"
-      },
-      {
-        "name": "Hard",
-        "codes": "TricksHard"
+        "img": "images/options/missilelauncher-on.png",
+        "codes": "MainMissile"
       }
     ]
   },
   {
-    "name": "Backwards Lower Mines",
-    "codes": "BackwardsLowerMines",
-    "type": "toggle"
-  },
-  {
-    "name": "Flaahgra Power Bombs",
-    "codes": "FlaahgraPowerBombs",
-    "type": "toggle"
-  },
-  {
-    "name": "Remove X-Ray Visor Requirements",
-    "codes": "RemoveXRayRequirements",
-    "type": "toggle"
-  },
-  {
-    "name": "Remove Thermal Visor Requirements",
-    "codes": "RemoveThermalRequirements",
-    "type": "toggle"
-  },
-  {
-    "name": "Starting Room",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "stages": [
       {
-        "name": "Landing Site",
+        "img": "images/options/mainpb-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/mainpb-on.png",
+        "codes": "MainPowerBomb"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/heatdamage-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/heatdamage-on.png",
+        "codes": "NonVariaHeatDamage"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/hivemecha-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/hivemecha-on.png",
+        "codes": "RemoveHiveMecha"
+      }
+    ]
+  },
+  {
+    "codes": "Tricks",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/tricks-none.png",
+        "img_mods": "@disabled",
+        "codes": "TricksNone",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tricks-easy.png",
+        "codes": "TricksEasy",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tricks-medium.png",
+        "codes": "TricksMedium",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tricks-hard.png",
+        "codes": "TricksHard",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/lowermines-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/lowermines-on.png",
+        "codes": "BackwardsLowerMines"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/flaahgrapbs-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/flaahgrapbs-on.png",
+        "codes": "FlaahgraPowerBombs"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/xray-all.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/xray-op.png",
+        "codes": "RemoveXRayRequirements"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/thermal-all.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/thermal-none.png",
+        "codes": "RemoveThermalRequirements"
+      }
+    ]
+  },
+  {
+    "codes": "StartingRoom",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/start-landingsite.png",
         "codes": "StartingRoomLandingSite",
         "inherit_codes": false
       },
       {
-        "name": "Arboretum",
+        "img": "images/options/start-arboretum.png",
         "codes": "StartingRoomArboretum",
         "inherit_codes": false
       },
       {
-        "name": "Burn Dome Access",
+        "img": "images/options/start-burndomeaccess.png",
         "codes": "StartingRoomBurnDomeAccess",
         "inherit_codes": false
       },
       {
-        "name": "Ruined Fountain",
+        "img": "images/options/start-ruinedfountain.png",
         "codes": "StartingRoomRuinedFountain",
         "inherit_codes": false
       },
       {
-        "name": "Save Station 1",
+        "img": "images/options/start-savestation1.png",
         "codes": "StartingRoomSaveStation1",
         "inherit_codes": false
       },
       {
-        "name": "Save Station 2",
+        "img": "images/options/start-savestation2.png",
         "codes": "StartingRoomSaveStation2",
         "inherit_codes": false
       },
       {
-        "name": "Tower Chamber",
+        "img": "images/options/start-towerchamber.png",
         "codes": "StartingRoomTowerChamber",
         "inherit_codes": false
       },
       {
-        "name": "Warrior Shrine",
+        "img": "images/options/start-warriorshrine.png",
         "codes": "StartingRoomWarriorShrine",
         "inherit_codes": false
       },
       {
-        "name": "East Tower",
+        "img": "images/options/start-easttower.png",
         "codes": "StartingRoomEastTower",
         "inherit_codes": false
       },
       {
-        "name": "Save Station B",
+        "img": "images/options/start-savestationb.png",
         "codes": "StartingRoomSaveStationB",
         "inherit_codes": false
       },
       {
-        "name": "Arbor Chamber",
+        "img": "images/options/start-arborchamber.png",
         "codes": "StartingRoomArborChamber",
         "inherit_codes": false
       },
       {
-        "name": "Transport to Chozo Ruins East",
+        "img": "images/options/start-transporttochozoeast.png",
         "codes": "StartingRoomTransportToChozoRuinsEast",
         "inherit_codes": false
       },
       {
-        "name": "Quarantine Monitor",
+        "img": "images/options/start-quarantinemonitor.png",
         "codes": "StartingRoomQuarantineMonitor",
         "inherit_codes": false
       },
       {
-        "name": "Sunchamber Lobby",
+        "img": "images/options/start-sunchamberlobby.png",
         "codes": "StartingRoomSunchamberLobby",
         "inherit_codes": false
       }
     ]
   },
   {
-    "name": "Combat Logic Difficulty",
     "type": "progressive",
     "codes": "CombatLogic",
     "allow_disabled": false,
+    "loop": true,
     "stages": [
       {
-        "name": "Normal",
+        "img": "images/options/combat-normal.png",
+        "img_mods": "@disabled",
         "codes": "CombatLogicNormal"
       },
       {
-        "name": "Minimal",
+        "img": "images/options/combat-minimal.png",
         "codes": "CombatLogicMinimal"
       },
       {
-        "name": "No logic",
+        "img": "images/options/combat-nologic.png",
         "codes": "CombatLogicNone"
       }
     ]
   },
   {
-    "name": "Elevator Randomization",
-    "codes": "ElevatorRandomization",
-    "type": "toggle"
-  },
-  {
-    "name": "Door Color Randomization",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "stages": [
       {
-        "name": "None",
+        "img": "images/options/elevators-normal.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/elevators-random.png",
+        "codes": "ElevatorRandomization"
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/doors-normal",
+        "img_mods": "@disabled",
         "codes": "DoorRandoNone",
         "inherit_codes": false
       },
       {
-        "name": "Global",
-        "codes": "DoorRandoGlobal",
+        "img": "images/options/doors-global",
+        "codes": "DoorRando,DoorRandoGlobal",
         "inherit_codes": false
       },
       {
-        "name": "Regional",
+        "img": "images/options/doors-regional",
+        "codes": "DoorRando,DoorRandoRegional",
         "inherit_codes": false
       }
     ]
   },
   {
-    "name": "Pre-scan Elevators",
-    "codes": "PreScanElevators",
-    "type": "toggle"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/options/prescan-off.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/options/prescan-on.png",
+        "codes": "PreScanElevators"
+      }
+    ]
   },
   {
-    "name": "Progressive Beam Upgrades",
-    "codes": "ProgressiveBeams",
-    "type": "toggle"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img_mods": "@disabled"
+      },
+      {
+        "codes": "ProgressiveBeams"
+      }
+    ]
   }
 ]
