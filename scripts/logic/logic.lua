@@ -1,9 +1,25 @@
 -- Utils
 
 function has(item, n)
-    local count = Tracker:ProviderCountForCode(item)
+    local obj = Tracker:FindObjectForCode(item)
+    if obj == nil then
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print(string.format("has: unrecognized item %s", item))
+        end
+        return false
+    end
     if n == nil then
         n = 1
+    end
+    local count
+    if obj.Type == "progressive" then
+        count = obj.CurrentStage
+    elseif obj.Type == "consumable" then
+        count = obj.AcquiredCount
+    elseif obj.Active then
+        count = 1
+    else
+        count = 0
     end
     return (count >= tonumber(n))
 end
@@ -132,7 +148,7 @@ function can_charge_beam(required_beam)
     if has("ChargeBeam") then
         return true
     end
-    for _, beam in {"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"} do
+    for _, beam in ipairs({"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"}) do
         if has("Progressive" .. beam, 2) then
             return true
         end
