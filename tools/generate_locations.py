@@ -42,7 +42,7 @@ class ItemImage(StrEnum):
     SpiderBall = "spiderball"
     Bombs = "bombs"
     PowerBomb = "powerbomb"
-    PowerBombExpansion = "powerbomb"
+    PowerBombExpansion = "powerbombexpansion"
     ThermalVisor = "thermalvisor"
     XRayVisor = "xrayvisor"
     SpaceJump = "spacejumpboots"

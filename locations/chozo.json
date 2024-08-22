@@ -260,7 +260,7 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png",
+            "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "$can_grapple,$can_heat,$can_power_bomb"
             ]

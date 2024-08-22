@@ -216,7 +216,7 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png",
+            "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "$can_melt_ice,$can_space_jump,$can_missile"
             ]
@@ -514,7 +514,7 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/powerbomb.png"
+            "chest_unopened_img": "images/items/powerbombexpansion.png"
           }
         ],
         "access_rules": [

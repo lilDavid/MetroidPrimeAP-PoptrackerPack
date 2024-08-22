@@ -23,7 +23,7 @@
           },
           {
             "name": "Warrior Shrine Tunnel",
-            "chest_unopened_img": "images/items/powerbomb.png",
+            "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine"
             ]

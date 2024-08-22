@@ -152,7 +152,7 @@
   {
     "name": "Power Bomb Expansion",
     "codes": "PowerBombExpansion",
-    "img": "images/items/powerbomb.png",
+    "img": "images/items/powerbombexpansion.png",
     "type": "consumable",
     "max_quantity": 4
   },
