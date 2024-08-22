@@ -166,7 +166,7 @@ manual_location_rules = {
         "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine",
     ],
     "Magmoor Caverns: Lava Lake": [
-        "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel/",
+        "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel",
     ],
 }
 
