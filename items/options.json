@@ -3,6 +3,7 @@
     "codes": "RequiredArtifacts",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 11,
     "stages": [
       { "img": "images/options/requiredartifacts-1.png" },
       { "img": "images/options/requiredartifacts-2.png" },
@@ -283,6 +284,7 @@
   },
   {
     "type": "progressive",
+    "codes": "DoorRando",
     "allow_disabled": false,
     "loop": true,
     "stages": [

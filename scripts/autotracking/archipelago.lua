@@ -5,6 +5,7 @@
 -- this is useful since remote items will not reset but local items might
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/option_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -60,9 +61,60 @@ function onClear(slot_data)
     end
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
-    -- manually run snes interface functions after onClear in case we are already ingame
-    if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
-        -- add snes interface functions here
+
+    -- reset options
+    for k, v in pairs(SLOT_DATA_MAPPING) do
+        local obj
+        local default
+        local name
+        if type(v) == "string" then
+            name = v
+            default = nil
+        else
+            name = v["name"]
+            if not name and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                print(string.format("onClear: 'name' field required for %s", k))
+            end
+            default = v["default"]
+        end
+        obj = Tracker:FindObjectForCode(name)
+        if obj then
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                print(string.format("onClear: clearing setting %s", name))
+            end
+            if default then
+                obj.CurrentStage = default
+            else
+                obj.CurrentStage = 0
+            end
+        elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+            print(string.format("onClear: unknown option %s", name))
+        end
+    end
+    -- set options
+    for k, v in pairs(SLOT_DATA) do
+        if k == "starting_room_name" then
+            local obj = Tracker:FindObjectForCode("StartingRoom")
+            obj.CurrentStage = START_ROOM_MAPPING[v]
+        else
+            local option = SLOT_DATA_MAPPING[k]
+            if type(option) == "string" then
+                local obj = Tracker:FindObjectForCode(option)
+                if obj then
+                    obj.CurrentStage = v
+                elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: unknown option %s", v))
+                end
+            elseif type(option) == "table" then
+                local obj = Tracker:FindObjectForCode(option["name"])
+                local offset = option["offset"]
+                if obj then
+                    obj.CurrentStage = v + (offset or 0)
+                elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: unknown option %s", v))
+                end
+            end
+        end
     end
 end
 
