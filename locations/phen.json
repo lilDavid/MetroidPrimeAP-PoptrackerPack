@@ -16,10 +16,7 @@
         "access_rules": [
           "@Ice Ruins West,@doors/Missile",
           "@Phendrana Canyon,@doors/AnyBeam,$can_boost,$can_scan",
-          "@Phendrana Canyon,@doors/AnyBeam,$can_space_jump",
-          "@Phendrana Canyon,@doors/AnyBeam,$can_boost,$can_space_jump",
-          "@Phendrana Canyon,@doors/AnyBeam,$can_scan,$can_space_jump",
-          "@Phendrana Canyon,@doors/AnyBeam,$can_boost,$can_scan,$can_space_jump"
+          "@Phendrana Canyon,@doors/AnyBeam,$can_space_jump"
         ]
       },
       {
@@ -66,11 +63,7 @@
           "@Chapel Tunnel,@doors/AnyBeam,$can_bomb",
           "@Temple Entryway,@doors/AnyBeam,$can_missile",
           "@Temple Entryway,@doors/AnyBeam,$can_charge_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_charge_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_charge_beam,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_charge_beam,$can_plasma_beam"
+          "@Temple Entryway,@doors/AnyBeam,$can_plasma_beam"
         ]
       },
       {
@@ -207,7 +200,6 @@
         "access_rules": [
           "@Ice Ruins Access,@doors/AnyBeam,$can_missile",
           "@Ice Ruins Access,@doors/AnyBeam,$can_charge_beam",
-          "@Ice Ruins Access,@doors/AnyBeam,$can_missile,$can_charge_beam",
           "@Plaza Walkway,@doors/AnyBeam"
         ]
       },
@@ -310,20 +302,14 @@
         "access_rules": [
           "@Ice Ruins Access,@doors/AnyBeam,$can_missile",
           "@Ice Ruins Access,@doors/AnyBeam,$can_charge_beam",
-          "@Ice Ruins Access,@doors/AnyBeam,$can_missile,$can_charge_beam",
           "@Plaza Walkway,@doors/AnyBeam",
           "@Ruins Entryway,@doors/AnyBeam",
           "@Save Station B,@doors/AnyBeam",
           "@Shoreline Entrance,@doors/AnyBeam,$can_charge_beam",
           "@Shoreline Entrance,@doors/AnyBeam,$can_missile",
-          "@Shoreline Entrance,@doors/AnyBeam,$can_charge_beam,$can_missile",
           "@Temple Entryway,@doors/AnyBeam,$can_missile",
           "@Temple Entryway,@doors/AnyBeam,$can_charge_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_charge_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_charge_beam,$can_plasma_beam",
-          "@Temple Entryway,@doors/AnyBeam,$can_missile,$can_charge_beam,$can_plasma_beam"
+          "@Temple Entryway,@doors/AnyBeam,$can_plasma_beam"
         ]
       },
       {
@@ -391,10 +377,7 @@
         "access_rules": [
           "@Research Core,@doors/WaveBeam,[$can_combat_labs],@rules/can_thermal,$can_wave_beam",
           "@Research Lab Aether,@doors/WaveBeam,[$can_combat_labs],$can_missile",
-          "@Research Lab Aether,@doors/WaveBeam,$can_power_bomb",
-          "@Research Lab Aether,@doors/WaveBeam,[$can_combat_labs],$can_power_bomb",
-          "@Research Lab Aether,@doors/WaveBeam,$can_missile,$can_power_bomb",
-          "@Research Lab Aether,@doors/WaveBeam,[$can_combat_labs],$can_missile,$can_power_bomb"
+          "@Research Lab Aether,@doors/WaveBeam,$can_power_bomb"
         ]
       },
       {
@@ -532,12 +515,7 @@
         "name": "South Quarantine Tunnel",
         "access_rules": [
           "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider",
-          "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_space_jump",
-          "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_grapple",
           "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_space_jump,$can_grapple",
-          "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_space_jump,$can_grapple",
-          "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_spider,$can_space_jump,$can_grapple",
-          "@Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider,$can_space_jump,$can_grapple",
           "@Transport to Magmoor Caverns South,@doors/WaveBeam"
         ]
       },
@@ -558,8 +536,7 @@
         ],
         "access_rules": [
           "@Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_thermal,$can_power_bomb,$can_space_jump",
-          "@Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_xray,$can_power_bomb,$can_space_jump",
-          "@Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_thermal,@rules/can_xray,$can_power_bomb,$can_space_jump"
+          "@Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_xray,$can_power_bomb,$can_space_jump"
         ]
       },
       {
@@ -598,7 +575,6 @@
         "access_rules": [
           "@Shoreline Entrance,@doors/AnyBeam,$can_charge_beam",
           "@Shoreline Entrance,@doors/AnyBeam,$can_missile",
-          "@Shoreline Entrance,@doors/AnyBeam,$can_charge_beam,$can_missile",
           "$can_access_elevators,@Magmoor Caverns/Transport to Phendrana Drifts North"
         ]
       },

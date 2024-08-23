@@ -379,17 +379,40 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
         if type(rule_func.body) is not ast.BoolOp:
             raise ASTParseError(rule_func, f"Lambda body is not a boolean operation")
 
-        # Generate a truth table corresponding to each function's output
-        dnf = []
+        # PopTracker's access rules are expressed as a sum of products without negation. To convert
+        # the world's access rules to PopTracker's format, generate a truth table by testing each
+        # combination of conditions mentioned by the rule.
+
+        # The index is the combination of conditions. Combinations which satisfy the access rule are
+        # expressed in PopTracker's format; otherwise, the value at that index is None.
+        truth_table: List[Optional[str]] = []
+
+        # To test the item combinations, first convert the AP function calls to dict[str, int]
+        # lookups for *this* code to run, recording conditions used on the way.
         converter = RuleConverter("rule_functions", filename)
         expression = ast.Expression(converter.visit(rule_func.body))
+
+        # Then test each combination by evaluating the converted conditions.
         for i in range(1 << (len(converter.collected_rules))):
             rule_functions = {rule: bit for rule, bit in zip(converter.collected_rules, bits(i, len(converter.collected_rules)))}
             try:
                 if eval(compile(expression, __file__, "eval")):
-                    dnf.append(",".join(rule for rule, value in rule_functions.items() if value))
+                    truth_table.append(",".join(rule for rule, value in rule_functions.items() if value))
+                else:
+                    truth_table.append(None)
             except Exception as e:
                 raise ASTParseError(rule_func) from e
+
+        # Exclude rules that are implied by another rule: if an earlier combination with a subset of
+        # the conditions satisfies the access rule, this combination is redundant.
+        dnf: List[str] = []
+        for i, rule in enumerate(truth_table):
+            if rule is None:
+                continue
+            covering_rules = any(True for j in range(i)
+                                 if truth_table[j] is not None and truth_table[i & j] is not None)
+            if not covering_rules:
+                dnf.append(rule)
         return dnf
 
     else:

@@ -153,8 +153,7 @@
             "name": "",
             "access_rules": [
               "$can_bomb",
-              "$can_power_bomb",
-              "$can_bomb,$can_power_bomb"
+              "$can_power_bomb"
             ]
           }
         ],
@@ -201,8 +200,7 @@
             "name": "",
             "access_rules": [
               "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,@rules/can_xray",
-              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray",
-              "[$can_combat_mines],$can_scan,$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray"
+              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray"
             ]
           }
         ],
@@ -288,7 +286,6 @@
           "@Maintenance Tunnel,@doors/IceBeam,$can_power_bomb",
           "@Processing Center Access,@doors/PlasmaBeam,$can_scan",
           "@Processing Center Access,@doors/PlasmaBeam,$can_backwards_lower_mines",
-          "@Processing Center Access,@doors/PlasmaBeam,$can_scan,$can_backwards_lower_mines",
           "@Transport Access,@doors/IceBeam"
         ]
       },
@@ -300,8 +297,7 @@
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_backwards_lower_mines",
-              "@Elite Quarters",
-              "$can_backwards_lower_mines,@Elite Quarters"
+              "@Elite Quarters"
             ]
           }
         ],
@@ -400,16 +396,7 @@
         ],
         "access_rules": [
           "@Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,$can_power_bomb",
-          "@Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,$can_power_bomb,@Waste Disposal",
-          "@Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,$can_power_bomb,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_spider,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_bomb,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_power_bomb,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_spider,$can_power_bomb,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_bomb,$can_power_bomb,@Waste Disposal,$can_grapple",
-          "@Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,$can_power_bomb,@Waste Disposal,$can_grapple"
+          "@Ore Processing,@doors/IceBeam,@Waste Disposal,$can_grapple"
         ]
       },
       {

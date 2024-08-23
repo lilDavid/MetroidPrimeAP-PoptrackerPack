@@ -48,8 +48,7 @@
         "access_rules": [
           "@Burning Trail,@doors/AnyBeam",
           "@Lava Lake,@doors/AnyBeam,$can_heat,$can_bomb",
-          "@Lava Lake,@doors/AnyBeam,$can_heat,$can_power_bomb",
-          "@Lava Lake,@doors/AnyBeam,$can_heat,$can_bomb,$can_power_bomb"
+          "@Lava Lake,@doors/AnyBeam,$can_heat,$can_power_bomb"
         ]
       },
       {
@@ -66,8 +65,7 @@
         "access_rules": [
           "@Lake Tunnel,@doors/AnyBeam,$can_heat",
           "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_morph_ball",
-          "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_space_jump",
-          "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_morph_ball,$can_space_jump"
+          "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_space_jump"
         ]
       },
       {
@@ -108,10 +106,7 @@
         "access_rules": [
           "@Geothermal Core,@doors/AnyBeam,$can_space_jump",
           "@Twin Fires,@doors/WaveBeam,$can_space_jump,$has_energy_tanks|2",
-          "@Twin Fires,@doors/WaveBeam,$can_grapple",
-          "@Twin Fires,@doors/WaveBeam,$can_space_jump,$can_grapple",
-          "@Twin Fires,@doors/WaveBeam,$has_energy_tanks|2,$can_grapple",
-          "@Twin Fires,@doors/WaveBeam,$can_space_jump,$has_energy_tanks|2,$can_grapple"
+          "@Twin Fires,@doors/WaveBeam,$can_grapple"
         ]
       },
       {
@@ -119,7 +114,6 @@
         "access_rules": [
           "@Lava Lake,@doors/AnyBeam,$can_heat,$can_bomb",
           "@Lava Lake,@doors/AnyBeam,$can_heat,$can_power_bomb",
-          "@Lava Lake,@doors/AnyBeam,$can_heat,$can_bomb,$can_power_bomb",
           "@Triclops Pit,@doors/AnyBeam,$can_heat"
         ]
       },
@@ -161,11 +155,7 @@
         "access_rules": [
           "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb",
           "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_grapple",
-          "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb,$can_grapple",
           "@Fiery Shores,@doors/AnyBeam,$can_heat,$has_energy_tanks|4",
-          "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb,$has_energy_tanks|4",
-          "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_grapple,$has_energy_tanks|4",
-          "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb,$can_grapple,$has_energy_tanks|4",
           "@Monitor Station,@doors/AnyBeam,$can_heat"
         ]
       },
@@ -222,11 +212,7 @@
           "@Transport Tunnel B,@doors/AnyBeam,$can_heat,$can_morph_ball",
           "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_spider",
           "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_move_underwater",
-          "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_spider,$can_move_underwater",
           "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_space_jump",
-          "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_spider,$can_space_jump",
-          "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_move_underwater,$can_space_jump",
-          "@Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_spider,$can_move_underwater,$can_space_jump",
           "$can_access_elevators,@Tallon Overworld/Transport to Magmoor Caverns East"
         ]
       },
@@ -251,7 +237,6 @@
         "access_rules": [
           "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb",
           "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_grapple",
-          "@Fiery Shores,@doors/AnyBeam,$can_heat,$can_bomb,$can_grapple",
           "@Transport to Tallon Overworld West,@doors/AnyBeam"
         ]
       },
@@ -276,7 +261,6 @@
           "@Monitor Tunnel,@doors/AnyBeam,$can_heat",
           "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_morph_ball",
           "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_space_jump",
-          "@Pit Tunnel,@doors/AnyBeam,$can_heat,$can_morph_ball,$can_space_jump",
           "@Storage Cavern,@doors/AnyBeam,$can_heat"
         ]
       },
@@ -285,10 +269,7 @@
         "access_rules": [
           "@Transport to Tallon Overworld West,@doors/AnyBeam",
           "@Twin Fires,@doors/AnyBeam,$can_space_jump,$has_energy_tanks|2",
-          "@Twin Fires,@doors/AnyBeam,$can_grapple",
-          "@Twin Fires,@doors/AnyBeam,$can_space_jump,$can_grapple",
-          "@Twin Fires,@doors/AnyBeam,$has_energy_tanks|2,$can_grapple",
-          "@Twin Fires,@doors/AnyBeam,$can_space_jump,$has_energy_tanks|2,$can_grapple"
+          "@Twin Fires,@doors/AnyBeam,$can_grapple"
         ]
       },
       {

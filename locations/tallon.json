@@ -75,13 +75,8 @@
             "access_rules": [
               "$can_missile,$can_crashed_frigate",
               "$can_charge_beam,$can_crashed_frigate",
-              "$can_missile,$can_charge_beam,$can_crashed_frigate",
               "$can_missile,$can_crashed_frigate_backwards",
-              "$can_charge_beam,$can_crashed_frigate_backwards",
-              "$can_missile,$can_charge_beam,$can_crashed_frigate_backwards",
-              "$can_missile,$can_crashed_frigate,$can_crashed_frigate_backwards",
-              "$can_charge_beam,$can_crashed_frigate,$can_crashed_frigate_backwards",
-              "$can_missile,$can_charge_beam,$can_crashed_frigate,$can_crashed_frigate_backwards"
+              "$can_charge_beam,$can_crashed_frigate_backwards"
             ]
           }
         ],
@@ -133,10 +128,7 @@
           "@Alcove,@doors/AnyBeam",
           "@Landing Site,@doors/AnyBeam,$can_space_jump",
           "@Tallon Canyon,@doors/AnyBeam,$can_space_jump",
-          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_boost",
-          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_bomb",
-          "@Tallon Canyon,@doors/AnyBeam,$can_boost,$can_bomb",
-          "@Tallon Canyon,@doors/AnyBeam,$can_space_jump,$can_boost,$can_bomb"
+          "@Tallon Canyon,@doors/AnyBeam,$can_boost,$can_bomb"
         ]
       },
       {

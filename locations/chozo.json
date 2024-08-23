@@ -92,8 +92,7 @@
         "access_rules": [
           "@Dynamo,@doors/AnyBeam",
           "@Watery Hall,@doors/Missile,$can_scan,$can_power_bomb",
-          "@Watery Hall,@doors/Missile,$can_scan,$can_bomb",
-          "@Watery Hall,@doors/Missile,$can_scan,$can_power_bomb,$can_bomb"
+          "@Watery Hall,@doors/Missile,$can_scan,$can_bomb"
         ]
       },
       {
@@ -121,8 +120,7 @@
         "access_rules": [
           "@Energy Core Access,@doors/AnyBeam",
           "@Gathering Hall,@doors/AnyBeam,$can_morph_ball",
-          "@Gathering Hall,@doors/AnyBeam,$can_space_jump",
-          "@Gathering Hall,@doors/AnyBeam,$can_morph_ball,$can_space_jump"
+          "@Gathering Hall,@doors/AnyBeam,$can_space_jump"
         ]
       },
       {
@@ -207,8 +205,7 @@
             "name": "",
             "access_rules": [
               "$can_space_jump,$can_bomb",
-              "$can_space_jump,$can_power_bomb",
-              "$can_space_jump,$can_bomb,$can_power_bomb"
+              "$can_space_jump,$can_power_bomb"
             ]
           }
         ],
@@ -435,8 +432,7 @@
         "access_rules": [
           "@Main Plaza,@doors/Missile",
           "@Ruined Shrine,@doors/AnyBeam,$can_morph_ball",
-          "@Ruined Shrine,@doors/AnyBeam,$can_space_jump",
-          "@Ruined Shrine,@doors/AnyBeam,$can_morph_ball,$can_space_jump"
+          "@Ruined Shrine,@doors/AnyBeam,$can_space_jump"
         ]
       },
       {
@@ -459,8 +455,7 @@
             "name": "Lower Tunnel",
             "access_rules": [
               "$can_bomb",
-              "$can_power_bomb",
-              "$can_bomb,$can_power_bomb"
+              "$can_power_bomb"
             ]
           }
         ],
