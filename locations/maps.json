@@ -955,7 +955,7 @@
         "map_locations": [
           {
             "map": "Phendrana Drifts",
-            "x": 315,
+            "x": 335,
             "y": 607
           },
           {
@@ -1217,8 +1217,8 @@
         "map_locations": [
           {
             "map": "Phendrana Drifts",
-            "x": 328,
-            "y": 464
+            "x": 319,
+            "y": 569
           },
           {
             "map": "World Map",
