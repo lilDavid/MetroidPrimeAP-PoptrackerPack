@@ -200,11 +200,11 @@ function can_combat_generic(normal_tanks, minimal_tanks, requires_charge_beam)
     if requires_charge_beam == nil then
         requires_charge_beam = true
     end
-    if has("CombatLogicNone") then
+    if has("CombatLogic", 2) then
         return true
-    elseif has("CombatLogicMinimal") then
+    elseif has("CombatLogic", 1) then
         return has_energy_tanks(minimal_tanks) and (can_charge_beam() or not requires_charge_beam)
-    elseif has("CombatLogicNormal") then
+    else
         return has_energy_tanks(normal_tanks) and (can_charge_beam() or not requires_charge_beam)
     end
 end
@@ -222,11 +222,11 @@ function can_combat_thardus()
     if has_any({"StartingRoomQuarantineMonitor", "StartingRoomSaveStationB"}) then
         return can_plasma_beam() or can_power_beam() or can_wave_beam()
     end
-    if has("CombatLogicNone") then
+    if has("CombatLogic", 2) then
         return true
-    elseif has("CombatLogicMinimal") then
+    elseif has("CombatLogic", 1) then
         return can_plasma_beam() or can_power_beam() or can_wave_beam()
-    elseif has("CombatLogicNormal") then
+    else
         return has_energy_tanks(3) and (can_charge_beam() and (can_plasma_beam() or can_power_beam()))
     end
 end
@@ -249,11 +249,11 @@ function can_combat_prime()
 end
 
 function can_combat_ghosts()
-    if has("CombatLogicNone") then
+    if has("CombatLogic", 2) then
         return true
-    elseif has("CombatLogicMinimal") then
+    elseif has("CombatLogic", 1) then
         return can_power_beam()
-    elseif has("CombatLogicNormal") then
+    else
         return can_charge_beam("PowerBeam") and can_power_beam() and can_xray(true)
     end
 end
