@@ -142,15 +142,15 @@ override_functions = {
 
 
 manual_door_rules = {
-    ("Arboretum", "Sunchamber Lobby"): [
+    ("Chozo Ruins/Arboretum", "Sunchamber Lobby"): [
         "$can_scan,$can_bomb",
         "$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump"
     ],
-    ("Hive Totem", "Transport Access North"): [
+    ("Chozo Ruins/Hive Totem", "Transport Access North"): [
         "$can_power_beam",
         "RemoveHiveMecha"
     ],
-    ("Magma Pool", "Meditation Fountain"): [
+    ("Chozo Ruins/Magma Pool", "Meditation Fountain"): [
         "$has_energy_tanks|1,VariaSuit",
         "$has_energy_tanks|1,GravitySuit",
         "$has_energy_tanks|1,PhazonSuit",
@@ -182,7 +182,7 @@ transport_rules = {
         "Transport to Tallon Overworld North": "@Tallon Overworld/Transport to Chozo Ruins West",
         "Transport to Magmoor Caverns North": "@Magmoor Caverns/Transport to Chozo Ruins North",
         "Transport to Tallon Overworld East": "@Tallon Overworld/Transport to Chozo Ruins East",
-        "Transport to Tallon Overworld West": "@Tallon Overworld/Transport to Chozo Ruins West",
+        "Transport to Tallon Overworld South": "@Tallon Overworld/Transport to Chozo Ruins South",
     },
     "Magmoor Caverns": {
         "Transport to Chozo Ruins North": "@Chozo Ruins/Transport to Magmoor Caverns North",
@@ -511,7 +511,7 @@ class WorldRoomData(NamedTuple):
     doors: List[DoorData]  # Doors whose sources are this room
 
     @classmethod
-    def from_ast(cls, name: ast.expr, room_data: ast.expr, filename: str):
+    def from_ast(cls, area: str, name: ast.expr, room_data: ast.expr, filename: str):
         if (type(name) is not ast.Attribute or type(name.value) is not ast.Name or
             name.value.id != "RoomName"):
             raise ASTParseError(name, "Room name not from RoomName enum")
@@ -534,7 +534,7 @@ class WorldRoomData(NamedTuple):
                 if type(keyword.value) is not ast.Dict:
                     raise ValueError("Kwarg doors is not a dict")
                 for value in keyword.value.values:
-                    doors.append(DoorData.from_ast(value, room_name, filename))
+                    doors.append(DoorData.from_ast(value, f"{area}/{room_name}", filename))
 
         return cls(room_name, pickups, doors)
 
@@ -556,7 +556,7 @@ class TrackerRoomData(NamedTuple):
             rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
 
         if world_data.name in transports:
-            rules.append(f"$can_access_elevators,{transports[world_data.name]}")
+            rules.append(f"{transports[world_data.name]},$can_access_elevators")
 
         return cls(world_data.name, world_data.pickups, rules)
 
@@ -633,7 +633,7 @@ class AreaData(NamedTuple):
             ASTParseError(init_method, "Missing assignment to self.rooms")
 
         area_name = eval(compile(area_name_expr, filename, "eval"))
-        world_rooms = [WorldRoomData.from_ast(key, value, filename)
+        world_rooms = [WorldRoomData.from_ast(area_name, key, value, filename)
                  for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)]
         doors = []
         for room in world_rooms:
