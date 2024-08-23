@@ -18,7 +18,7 @@ SLOT_DATA_MAPPING = {
     ["remove_thermal_requirements"] = "RemoveThermalRequirements",
     ["starting_room_name"] = "StartingRoom", -- Special-cased when autotracking but needed to reset
     ["combat_logic_difficulty"] = "CombatLogic",
-    ["elevator_randomization"] = "ElevatorRandomization",
+    ["elevator_randomization"] = "ElevatorsRandom",
     ["door_color_randomization"] = "DoorRando",
     ["pre_scan_elevators"] = "PreScanElevators",
 }

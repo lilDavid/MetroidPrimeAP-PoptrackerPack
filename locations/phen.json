@@ -567,7 +567,8 @@
         "access_rules": [
           "@Phendrana Drifts/South Quarantine Tunnel,@doors/WaveBeam",
           "@Phendrana Drifts/Transport Access,@doors/IceBeam",
-          "@Magmoor Caverns/Transport to Phendrana Drifts South,$can_access_elevators"
+          "ElevatorsNormal,@Magmoor Caverns/Transport to Phendrana Drifts South,$can_access_elevators",
+          "ElevatorsRandom,PhendranaDriftsTransportToMagmoorCavernsSouth"
         ]
       },
       {
@@ -575,7 +576,8 @@
         "access_rules": [
           "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_charge_beam",
           "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_missile",
-          "@Magmoor Caverns/Transport to Phendrana Drifts North,$can_access_elevators"
+          "ElevatorsNormal,@Magmoor Caverns/Transport to Phendrana Drifts North,$can_access_elevators",
+          "ElevatorsRandom,PhendranaDriftsTransportToMagmoorCavernsWest"
         ]
       },
       {

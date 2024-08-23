@@ -127,8 +127,8 @@
           },
           {
             "map": "World Map",
-            "x": 1028,
-            "y": 336
+            "x": 1076,
+            "y": 326
           }
         ]
       },
@@ -253,6 +253,136 @@
             "y": 320
           }
         ]
+      },
+      {
+        "name": "Transport to Chozo Ruins East",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Tallon Overworld/Transport to Chozo Ruins East,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Tallon Overworld East (Frigate Crash Site)",
+            "hosted_item": "TallonOverworldTransportToChozoRuinsEast"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 530,
+            "y": 21
+          },
+          {
+            "map": "World Map",
+            "x": 1027,
+            "y": 211
+          }
+        ]
+      },
+      {
+        "name": "Transport to Chozo Ruins South",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Tallon Overworld/Transport to Chozo Ruins South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Tallon Overworld South (Great Tree Hall, Upper)",
+            "hosted_item": "TallonOverworldTransportToChozoRuinsSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 590,
+            "y": 337
+          },
+          {
+            "map": "World Map",
+            "x": 1027,
+            "y": 304
+          }
+        ]
+      },
+      {
+        "name": "Transport to Chozo Ruins West",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Tallon Overworld/Transport to Chozo Ruins West,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Tallon Overworld North (Tallon Canyon)",
+            "hosted_item": "TallonOverworldTransportToChozoRuinsWest"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 170,
+            "y": 151
+          },
+          {
+            "map": "World Map",
+            "x": 780,
+            "y": 261
+          }
+        ]
+      },
+      {
+        "name": "Transport to Magmoor Caverns East",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Tallon Overworld/Transport to Magmoor Caverns East,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Tallon Overworld West (Root Cave)",
+            "hosted_item": "TallonOverworldTransportToMagmoorCavernsEast"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 40,
+            "y": 352
+          },
+          {
+            "map": "World Map",
+            "x": 733,
+            "y": 356
+          }
+        ]
+      },
+      {
+        "name": "Transport to Phazon Mines East",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Tallon Overworld/Transport to Phazon Mines East,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Tallon Overworld South (Great Tree Hall, Lower)",
+            "hosted_item": "TallonOverworldTransportToPhazonMinesEast"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 40,
+            "y": 352
+          },
+          {
+            "map": "World Map",
+            "x": 1028,
+            "y": 398
+          }
+        ]
       }
     ]
   },
@@ -272,8 +402,8 @@
           },
           {
             "map": "World Map",
-            "x": 683,
-            "y": 198
+            "x": 707,
+            "y": 207
           }
         ]
       },
@@ -664,6 +794,110 @@
         ]
       },
       {
+        "name": "Transport to Magmoor Caverns North",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Chozo Ruins/Transport to Magmoor Caverns North,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Chozo Ruins North (Sun Tower)",
+            "hosted_item": "ChozoRuinsTransportToMagmoorCavernsNorth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 243,
+            "y": 22
+          },
+          {
+            "map": "World Map",
+            "x": 434,
+            "y": 38
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld East",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Chozo Ruins/Transport to Tallon Overworld East,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Chozo Ruins East (Reflecting Pool, Save Station)",
+            "hosted_item": "ChozoRuinsTransportToTallonOverworldEast"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 559,
+            "y": 443
+          },
+          {
+            "map": "World Map",
+            "x": 660,
+            "y": 207
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld North",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Chozo Ruins/Transport to Tallon Overworld North,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Chozo Ruins West (Main Plaza)",
+            "hosted_item": "ChozoRuinsTransportToTallonOverworldNorth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 185,
+            "y": 354
+          },
+          {
+            "map": "World Map",
+            "x": 386,
+            "y": 191
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld South",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Chozo Ruins/Transport to Tallon Overworld South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Chozo Ruins South (Reflecting Pool, Far End)",
+            "hosted_item": "ChozoRuinsTransportToTallonOverworldSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 641,
+            "y": 519
+          },
+          {
+            "map": "World Map",
+            "x": 682,
+            "y": 238
+          }
+        ]
+      },
+      {
         "name": "Watery Hall",
         "sections": [
           { "ref": "Chozo Ruins/Watery Hall/Scan puzzle" }
@@ -858,8 +1092,148 @@
           },
           {
             "map": "World Map",
-            "x": 339,
-            "y": 372
+            "x": 356,
+            "y": 364
+          }
+        ]
+      },
+      {
+        "name": "Transport to Chozo Ruins North",
+        "visibility_rules": [
+          "ElevatorsRandom"
+        ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Magmoor Caverns/Transport to Chozo Ruins North,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Magmoor Caverns North (Lava Lake)",
+            "hosted_item": "MagmoorCavernsTransportToChozoRuinsNorth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 81,
+            "y": 47
+          },
+          {
+            "map": "World Map",
+            "x": 239,
+            "y": 190
+          }
+        ]
+      },
+      {
+        "name": "Transport to Phazon Mines West",
+        "visibility_rules": [
+          "ElevatorsRandom"
+        ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Magmoor Caverns/Transport to Phazon Mines West,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Magmoor Caverns South (Magmoor Workstation, Debris)",
+            "hosted_item": "MagmoorCavernsTransportToPhazonMinesWest"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 509,
+            "y": 1045
+          },
+          {
+            "map": "World Map",
+            "x": 488,
+            "y": 588
+          }
+        ]
+      },
+      {
+        "name": "Transport to Phendrana Drifts North",
+        "visibility_rules": [
+          "ElevatorsRandom"
+        ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Magmoor Caverns/Transport to Phendrana Drifts North,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Magmoor Caverns West (Monitor Station)",
+            "hosted_item": "MagmoorCavernsTransportToPhendranaDriftsNorth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 211,
+            "y": 444
+          },
+          {
+            "map": "World Map",
+            "x": 325,
+            "y": 375
+          }
+        ]
+      },
+      {
+        "name": "Transport to Phendrana Drifts South",
+        "visibility_rules": [
+          "ElevatorsRandom"
+        ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Magmoor Caverns/Transport to Phendrana Drifts South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Magmoor Caverns South (Magmoor Workstation, Save Station)",
+            "hosted_item": "MagmoorCavernsTransportToPhendranaDriftsSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 389,
+            "y": 905
+          },
+          {
+            "map": "World Map",
+            "x": 439,
+            "y": 526
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld West",
+        "visibility_rules": [
+          "ElevatorsRandom"
+        ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Magmoor Caverns/Transport to Tallon Overworld West,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Magmoor Caverns East (Twin Fires)",
+            "hosted_item": "MagmoorCavernsTransportToTallonOverworldWest"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 416,
+            "y": 621
+          },
+          {
+            "map": "World Map",
+            "x": 439,
+            "y": 437
           }
         ]
       },
@@ -1297,6 +1671,58 @@
             "y": 575
           }
         ]
+      },
+      {
+        "name": "Transport to Magmoor Caverns South",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Phendrana Drifts/Transport to Magmoor Caverns South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Phendrana Drifts South (Quarantine Cave)",
+            "hosted_item": "PhendranaDriftsTransportToMagmoorCavernsSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 445,
+            "y": 628
+          },
+          {
+            "map": "World Map",
+            "x": 292,
+            "y": 540
+          }
+        ]
+      },
+      {
+        "name": "Transport to Magmoor Caverns West",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Phendrana Drifts/Transport to Magmoor Caverns West,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Phendrana Drifts North (Phendrana Shorelines)",
+            "hosted_item": "PhendranaDriftsTransportToMagmoorCavernsWest"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 296,
+            "y": 40
+          },
+          {
+            "map": "World Map",
+            "x": 189,
+            "y": 360
+          }
+        ]
       }
     ]
   },
@@ -1618,6 +2044,68 @@
         ]
       },
       {
+        "name": "Transport to Magmoor Caverns South",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Phazon Mines/Transport to Magmoor Caverns South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Phazon Mines West (Phazon Processing Center)",
+            "hosted_item": "PhazonMinesTransportToMagmoorCavernsSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 42,
+            "y": 984
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 23,
+            "y": 98
+          },
+          {
+            "map": "World Map",
+            "x": 635,
+            "y": 510
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld South",
+        "visibility_rules": [ "ElevatorsRandom" ],
+        "access_rules": [
+          "{$can_access_elevators}",
+          "@Phazon Mines/Transport to Tallon Overworld South,$can_access_elevators"
+        ],
+        "sections": [
+          {
+            "name": "Phazon Mines East (Main Quarry)",
+            "hosted_item": "PhazonMinesTransportToTallonOverworldSouth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 701,
+            "y": 104
+          },
+          {
+            "map": "Mines Surface",
+            "x": 561,
+            "y": 90
+          },
+          {
+            "map": "World Map",
+            "x": 758,
+            "y": 520
+          }
+        ]
+      },
+      {
         "name": "Security Access A",
         "sections": [
           {
@@ -1722,7 +2210,7 @@
           {
             "map": "World Map",
             "x": 1028,
-            "y": 392
+            "y": 354
           }
         ]
       },
@@ -2081,7 +2569,7 @@
           {
             "map": "World Map",
             "x": 635,
-            "y": 525
+            "y": 545
           }
         ]
       }

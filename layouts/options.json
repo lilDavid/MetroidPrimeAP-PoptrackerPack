@@ -19,6 +19,7 @@
         [ "RemoveThermalRequirements" ],
         [ "StartingRoom" ],
         [ "CombatLogic" ],
+        [ "ElevatorsRandom" ],
         [ "PreScanElevators" ]
       ]
     }

@@ -181,21 +181,24 @@
         "name": "Transport to Chozo Ruins North",
         "access_rules": [
           "@Magmoor Caverns/Burning Trail,@doors/AnyBeam",
-          "@Chozo Ruins/Transport to Magmoor Caverns North,$can_access_elevators"
+          "ElevatorsNormal,@Chozo Ruins/Transport to Magmoor Caverns North,$can_access_elevators",
+          "ElevatorsRandom,MagmoorCavernsTransportToChozoRuinsNorth"
         ]
       },
       {
         "name": "Transport to Phazon Mines West",
         "access_rules": [
           "@Magmoor Caverns/Workstation Tunnel,@doors/IceBeam,$can_power_bomb",
-          "@Phazon Mines/Transport to Magmoor Caverns South,$can_access_elevators"
+          "ElevatorsNormal,@Phazon Mines/Transport to Magmoor Caverns South,$can_access_elevators",
+          "ElevatorsRandom,MagmoorCavernsTransportToPhazonMinesWest"
         ]
       },
       {
         "name": "Transport to Phendrana Drifts North",
         "access_rules": [
           "@Magmoor Caverns/Transport Tunnel A,@doors/AnyBeam,$can_heat,$can_bomb",
-          "@Phendrana Drifts/Transport to Magmoor Caverns West,$can_access_elevators"
+          "ElevatorsNormal,@Phendrana Drifts/Transport to Magmoor Caverns West,$can_access_elevators",
+          "ElevatorsRandom,MagmoorCavernsTransportToPhendranaDriftsNorth"
         ]
       },
       {
@@ -203,7 +206,8 @@
         "access_rules": [
           "@Magmoor Caverns/Save Station Magmoor B,@doors/Missile",
           "@Magmoor Caverns/Transport Tunnel C,@doors/WaveBeam",
-          "@Phendrana Drifts/Transport to Magmoor Caverns South,$can_access_elevators"
+          "ElevatorsNormal,@Phendrana Drifts/Transport to Magmoor Caverns South,$can_access_elevators",
+          "ElevatorsRandom,MagmoorCavernsTransportToPhendranaDriftsSouth"
         ]
       },
       {
@@ -213,7 +217,8 @@
           "@Magmoor Caverns/Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_spider",
           "@Magmoor Caverns/Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_move_underwater",
           "@Magmoor Caverns/Twin Fires Tunnel,@doors/AnyBeam,$can_heat,$can_space_jump",
-          "@Tallon Overworld/Transport to Magmoor Caverns East,$can_access_elevators"
+          "ElevatorsNormal,@Tallon Overworld/Transport to Magmoor Caverns East,$can_access_elevators",
+          "ElevatorsRandom,MagmoorCavernsTransportToTallonOverworldWest"
         ]
       },
       {

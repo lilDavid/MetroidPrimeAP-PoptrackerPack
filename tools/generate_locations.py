@@ -545,7 +545,7 @@ class TrackerRoomData(NamedTuple):
     access_rules: List[str]
 
     @classmethod
-    def from_world_room_data(cls, world_data: WorldRoomData, all_doors: List[DoorData], transports: Dict[str, str]):
+    def from_world_room_data(cls, area: str, world_data: WorldRoomData, all_doors: List[DoorData], transports: Dict[str, str]):
         doors = [door for door in all_doors if door.destination == world_data.name]
 
         rules = []
@@ -556,7 +556,8 @@ class TrackerRoomData(NamedTuple):
             rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
 
         if world_data.name in transports:
-            rules.append(f"{transports[world_data.name]},$can_access_elevators")
+            rules.append(f"ElevatorsNormal,{transports[world_data.name]},$can_access_elevators")
+            rules.append(f"ElevatorsRandom,{f"{area} {world_data.name}".title().replace(" ", "")}")
 
         return cls(world_data.name, world_data.pickups, rules)
 
@@ -638,7 +639,7 @@ class AreaData(NamedTuple):
         doors = []
         for room in world_rooms:
             doors.extend(room.doors)
-        tracker_rooms = [TrackerRoomData.from_world_room_data(room, doors, transport_rules[area_name])
+        tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors, transport_rules[area_name])
                          for room in world_rooms]
         return cls(area_name, tracker_rooms)
 

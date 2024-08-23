@@ -274,35 +274,40 @@
         "access_rules": [
           "StartingRoomTransportToChozoRuinsEast",
           "@Tallon Overworld/Transport Tunnel C,@doors/IceBeam",
-          "@Chozo Ruins/Transport to Tallon Overworld East,$can_access_elevators"
+          "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld East,$can_access_elevators",
+          "ElevatorsRandom,TallonOverworldTransportToChozoRuinsEast"
         ]
       },
       {
         "name": "Transport to Chozo Ruins South",
         "access_rules": [
           "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
-          "@Chozo Ruins/Transport to Tallon Overworld South,$can_access_elevators"
+          "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld South,$can_access_elevators",
+          "ElevatorsRandom,TallonOverworldTransportToChozoRuinsSouth"
         ]
       },
       {
         "name": "Transport to Chozo Ruins West",
         "access_rules": [
           "@Tallon Overworld/Transport Tunnel A,@doors/AnyBeam",
-          "@Chozo Ruins/Transport to Tallon Overworld North,$can_access_elevators"
+          "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld North,$can_access_elevators",
+          "ElevatorsRandom,TallonOverworldTransportToChozoRuinsWest"
         ]
       },
       {
         "name": "Transport to Magmoor Caverns East",
         "access_rules": [
           "@Tallon Overworld/Transport Tunnel B,@doors/AnyBeam",
-          "@Magmoor Caverns/Transport to Tallon Overworld West,$can_access_elevators"
+          "ElevatorsNormal,@Magmoor Caverns/Transport to Tallon Overworld West,$can_access_elevators",
+          "ElevatorsRandom,TallonOverworldTransportToMagmoorCavernsEast"
         ]
       },
       {
         "name": "Transport to Phazon Mines East",
         "access_rules": [
           "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam",
-          "@Phazon Mines/Transport to Tallon Overworld South,$can_access_elevators"
+          "ElevatorsNormal,@Phazon Mines/Transport to Tallon Overworld South,$can_access_elevators",
+          "ElevatorsRandom,TallonOverworldTransportToPhazonMinesEast"
         ]
       },
       {

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Tallon Overworld North (Tallon Canyon)",
+    "codes": "TallonOverworldTransportToChozoRuinsWest",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Tallon Overworld West (Root Cave)",
+    "codes": "TallonOverworldTransportToMagmoorCavernsEast",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Tallon Overworld East (Frigate Crash Site)",
+    "codes": "TallonOverworldTransportToChozoRuinsEast",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Tallon Overworld South (Great Tree Hall, Upper)",
+    "codes": "TallonOverworldTransportToChozoRuinsSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Tallon Overworld South (Great Tree Hall, Lower)",
+    "codes": "TallonOverworldTransportToPhazonMinesEast",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+
+  {
+    "name": "Chozo Ruins West (Main Plaza)",
+    "codes": "ChozoRuinsTransportToTallonOverworldNorth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Chozo Ruins North (Sun Tower)",
+    "codes": "ChozoRuinsTransportToMagmoorCavernsNorth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Chozo Ruins East (Reflecting Pool, Save Station)",
+    "codes": "ChozoRuinsTransportToTallonOverworldEast",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Chozo Ruins South (Reflecting Pool, Far End)",
+    "codes": "ChozoRuinsTransportToTallonOverworldSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+
+  {
+    "name": "Magmoor Caverns North (Lava Lake)",
+    "codes": "MagmoorCavernsTransportToChozoRuinsNorth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Magmoor Caverns West (Monitor Station)",
+    "codes": "MagmoorCavernsTransportToPhendranaDriftsNorth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Magmoor Caverns East (Twin Fires)",
+    "codes": "MagmoorCavernsTransportToTallonOverworldWest",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Magmoor Caverns South (Magmoor Workstation, Save Station)",
+    "codes": "MagmoorCavernsTransportToPhendranaDriftsSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Magmoor Caverns South (Magmoor Workstation, Debris)",
+    "codes": "MagmoorCavernsTransportToPhazonMinesWest",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+
+  {
+    "name": "Phendrana Drifts North (Phendrana Shorelines)",
+    "codes": "PhendranaDriftsTransportToMagmoorCavernsWest",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Phendrana Drifts South (Quarantine Cave)",
+    "codes": "PhendranaDriftsTransportToMagmoorCavernsSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+
+  {
+    "name": "Phazon Mines East (Main Quarry)",
+    "codes": "PhazonMinesTransportToTallonOverworldSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  },
+  {
+    "name": "Phazon Mines West (Phazon Processing Center)",
+    "codes": "PhazonMinesTransportToMagmoorCavernsSouth",
+    "img": "images/elevator.png",
+    "type": "toggle"
+  }
+]

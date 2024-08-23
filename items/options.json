@@ -274,11 +274,14 @@
     "stages": [
       {
         "img": "images/options/elevators-normal.png",
-        "img_mods": "@disabled"
+        "img_mods": "@disabled",
+        "codes": "ElevatorsNormal",
+        "inherit_codes": false
       },
       {
         "img": "images/options/elevators-random.png",
-        "codes": "ElevatorRandomization"
+        "codes": "ElevatorsRandom",
+        "inherit_codes": false
       }
     ]
   },

@@ -645,28 +645,32 @@
           "@Chozo Ruins/Sun Tower,@doors/AnyBeam",
           "@Chozo Ruins/Transport Access North,@doors/AnyBeam,$can_morph_ball",
           "@Chozo Ruins/Vault Access,@doors/AnyBeam,$can_morph_ball",
-          "@Magmoor Caverns/Transport to Chozo Ruins North,$can_access_elevators"
+          "ElevatorsNormal,@Magmoor Caverns/Transport to Chozo Ruins North,$can_access_elevators",
+          "ElevatorsRandom,ChozoRuinsTransportToMagmoorCavernsNorth"
         ]
       },
       {
         "name": "Transport to Tallon Overworld East",
         "access_rules": [
           "@Chozo Ruins/Save Station 3,@doors/AnyBeam,$can_bomb",
-          "@Tallon Overworld/Transport to Chozo Ruins East,$can_access_elevators"
+          "ElevatorsNormal,@Tallon Overworld/Transport to Chozo Ruins East,$can_access_elevators",
+          "ElevatorsRandom,ChozoRuinsTransportToTallonOverworldEast"
         ]
       },
       {
         "name": "Transport to Tallon Overworld North",
         "access_rules": [
           "@Chozo Ruins/Ruins Entrance,@doors/AnyBeam",
-          "@Tallon Overworld/Transport to Chozo Ruins West,$can_access_elevators"
+          "ElevatorsNormal,@Tallon Overworld/Transport to Chozo Ruins West,$can_access_elevators",
+          "ElevatorsRandom,ChozoRuinsTransportToTallonOverworldNorth"
         ]
       },
       {
         "name": "Transport to Tallon Overworld South",
         "access_rules": [
           "@Chozo Ruins/Transport Access South,@doors/AnyBeam",
-          "@Tallon Overworld/Transport to Chozo Ruins South,$can_access_elevators"
+          "ElevatorsNormal,@Tallon Overworld/Transport to Chozo Ruins South,$can_access_elevators",
+          "ElevatorsRandom,ChozoRuinsTransportToTallonOverworldSouth"
         ]
       },
       {
