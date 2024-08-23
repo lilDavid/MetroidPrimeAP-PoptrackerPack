@@ -1,7 +1,7 @@
 [
   {
     "name": "Phazon Mines",
-    "chest_unopened_img": "images/items/missilelauncher.png",
+    "chest_unopened_img": "images/items/missileexpansion.png",
     "chest_opened_img": "images/checked.png",
     "children": [
       {

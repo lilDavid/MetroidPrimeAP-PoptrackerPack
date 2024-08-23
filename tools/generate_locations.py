@@ -27,7 +27,7 @@ areas = [
 class ItemImage(StrEnum):
     EnergyTank = "energytank"
     MissileLauncher = "missilelauncher"
-    MissileExpansion = "missilelauncher"
+    MissileExpansion = "missileexpansion"
     WaveBeam = "wavebeam"
     IceBeam = "icebeam"
     PlasmaBeam = "plasmabeam"
@@ -645,7 +645,7 @@ class AreaData(NamedTuple):
     def into_json(self):
         return [omit_empty_lists_and_null({
             "name": self.name,
-            "chest_unopened_img": "images/items/missilelauncher.png",
+            "chest_unopened_img": ItemImage.MissileExpansion.filename(),
             "chest_opened_img": "images/checked.png",
             "children": [room.into_json() for room in self.rooms]
         })]

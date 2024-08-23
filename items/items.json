@@ -15,7 +15,7 @@
   {
     "name": "Missile Expansion",
     "codes": "MissileExpansion",
-    "img": "images/items/missilelauncher.png",
+    "img": "images/items/missileexpansion.png",
     "type": "consumable",
     "max_quantity": 50
   },
