@@ -26,6 +26,16 @@
                 "Corrections for a few errors from previous versions",
                 "Report any logic inconsistencies you find!"
             ]
+        },
+        {
+            "package_version": "0.3.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.3.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "3bbc7b65f44a04d993f8ab83dd4258a27baf4727f7c51d1c70ea16d45ffaca9c",
+            "changelog": [
+                "Elevator randomization",
+                "New item icons",
+                "Logic fixes"
+            ]
         }
     ]
 }
