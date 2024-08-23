@@ -89,7 +89,7 @@
     "type": "progressive",
     "stages": [
       {"img": "images/items/wavebeam.png"},
-      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/chargewave.png"},
       {"img": "images/items/wavebuster.png"}
     ]
   },
@@ -99,7 +99,7 @@
     "type": "progressive",
     "stages": [
       {"img": "images/items/icebeam.png"},
-      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/chargeice.png"},
       {"img": "images/items/icespreader.png"}
     ]
   },
@@ -109,7 +109,7 @@
     "type": "progressive",
     "stages": [
       {"img": "images/items/plasmabeam.png"},
-      {"img": "images/items/chargebeam.png"},
+      {"img": "images/items/chargeplasma.png"},
       {"img": "images/items/flamethrower.png"}
     ]
   },
