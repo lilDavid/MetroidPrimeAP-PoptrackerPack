@@ -12,7 +12,7 @@ from typing import Dict, List, NamedTuple, Optional, Set, Union
 
 pack = Path(__file__).parents[1]
 locations = pack / "locations"
-options = pack / "items/options.json"
+items = pack / "items"
 
 
 areas = [
@@ -176,6 +176,25 @@ manual_location_rules = {
     ],
 }
 
+manual_trick_rules = {
+    "tower_of_light_climb_nsj": [
+        "$can_missile,$has|MissileExpansion|8,$can_bomb"
+    ],
+    "lava_lake_item_suitless": [
+        "$can_missile,$can_space_jump,$has_energy_tanks|4,@Magmoor Caverns/Lake Tunnel/"
+    ],
+    "lava_lake_item_missiles_only": [
+        "$can_missile,@Magmoor Caverns/Lake Tunnel/"
+    ],
+    "elite_research_backwards_wall_boost_no_spider": [
+        # elite_research_backwards_wall_boost and mines_climb_shafts_no_spider
+        "$can_boost,$can_space_jump,$can_wave_beam"
+    ],
+    "metroid_quarantine_b_no_spider_grapple": [
+        "$can_space_jump,$can_scan"
+    ]
+}
+
 transport_rules = {
     "Tallon Overworld": {
         "Transport to Chozo Ruins West": "@Chozo Ruins/Transport to Tallon Overworld North",
@@ -259,7 +278,7 @@ def load_starting_rooms(options: List[Dict[str, JsonValue]]):
     return starting_rooms
 
 
-with open(options, "r") as stream:
+with open(items / "options.json", "r") as stream:
     starting_rooms = load_starting_rooms(json.load(stream))
 
 
@@ -437,6 +456,131 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
         raise ASTParseError(rule_func, "Could not parse access rule")
 
 
+class TrickData(NamedTuple):
+    DIFFICULTY_MAP = {
+        "Easy": 1,
+        "Medium": 2,
+        "Hard": 3,
+    }
+
+    id: str
+    access_rule: List[str]
+
+    @classmethod
+    def from_ast(cls, statement: ast.stmt, filename: str):
+        if type(statement) is ast.AnnAssign:
+            target = statement.target
+        elif type(statement) is ast.Assign and len(statement.targets) == 1:
+            target = statement.targets[0]
+        else:
+            raise ASTParseError(statement)
+
+        if type(target) is not ast.Name:
+            raise ASTParseError(statement)
+        trick_id = target.id
+
+        if (type(statement.value) is not ast.Call or type(statement.value.func) is not ast.Name or
+            statement.value.func.id != "TrickInfo"):
+            raise ASTParseError(statement, "Assignment not from TrickInfo constructor")
+
+        difficulty_expr = statement.value.args[2]
+        if (type(difficulty_expr) is not ast.Attribute or
+            type(difficulty_expr.value) is not ast.Name or
+            difficulty_expr.value.id != "TrickDifficulty"):
+            raise ASTParseError(difficulty_expr, "Difficulty assignment not from TrickDifficulty")
+        difficulty = cls.DIFFICULTY_MAP[difficulty_expr.attr]
+
+        if trick_id in manual_trick_rules:
+            access_rule = manual_trick_rules[trick_id]
+        else:
+            rule_expr: Optional[ast.expr]
+            if len(statement.value.args) > 3:
+                rule_expr = statement.value.args[3]
+            else:
+                rule_expr = None
+                for keyword in statement.value.keywords:
+                    if keyword.arg == "rule_func":
+                        rule_expr = keyword.value
+                if rule_expr == None:
+                    raise ASTParseError(statement.value, "Missing rule_func")
+            try:
+                access_rule = parse_access_rule(rule_expr, filename)
+            except ASTParseError as e:
+                raise ASTParseError(statement) from e
+        if access_rule:
+            access_rule = [f"[$trick|{trick_id}|{difficulty}],{rule}" for rule in access_rule]
+        else:
+            access_rule = [f"[$trick|{trick_id}|{difficulty}]"]
+
+        return cls(trick_id, access_rule)
+
+    def json_item(self) -> Dict[str, JsonValue]:
+        return {
+            "codes": self.id,
+            "type": "progressive",
+            "initial_stage_idx": 1,
+            "allow_disabled": False,
+            "stages": [
+                {
+                    "img": f"images/tricks/{self.id}-red.png",
+                },
+                {
+                    "img": f"images/tricks/{self.id}.png",
+                    "img_mods": "@disabled",
+                },
+                {
+                    "img": f"images/tricks/{self.id}.png",
+                },
+            ],
+        }
+
+
+def read_trick_data(tree: ast.AST, filename: str) -> List[TrickData]:
+    if type(tree) is not ast.Module:
+        raise ASTParseError(tree, "Tree is not a module")
+    module: ast.Module = tree
+
+    class_def: Optional[ast.ClassDef] = None
+    for statement in module.body:
+        if type(statement) is ast.ClassDef and statement.name == "Tricks":
+            class_def = statement
+    if class_def is None:
+        raise ASTParseError(module, "Could not find Tricks class definition")
+
+    tricks = [TrickData.from_ast(statement, filename) for statement in class_def.body]
+    return tricks
+
+
+tricks_file = data_path / "Tricks.py"
+with open(tricks_file, "r") as stream:
+    content = stream.read()
+
+data_ast = ast.parse(content)
+try:
+    trick_list = read_trick_data(data_ast, tricks_file)
+except ASTParseError as e:
+    raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
+except Exception as e:
+    raise Exception(f"Could not parse tricks") from e
+
+with open(items / "tricks.json", "w") as stream:
+   json.dump([trick.json_item() for trick in trick_list], stream, indent=2)
+
+tricks = {trick.id: trick.access_rule for trick in trick_list}
+
+def get_tricks(tree: ast.expr):
+    if type(tree) is not ast.List:
+        raise ASTParseError(tree, "Expected list")
+
+    access_rules: List[str] = []
+    for element in tree.elts:
+        if (type(element) is not ast.Attribute or type(element.value) is not ast.Name or
+            element.value.id != "Tricks"):
+            raise ASTParseError("Expected Tricks attribute access")
+        access_rules.extend(tricks[element.attr])
+    return access_rules
+
+
 class PickupData(NamedTuple):
     name: str
     image: Optional[ItemImage]
@@ -462,16 +606,17 @@ class PickupData(NamedTuple):
 
         _, _, item_name = cls.split_check_name(check_name)
 
-        if check_name in manual_location_rules:
-            access_rule = manual_location_rules[check_name]
-        else:
-            access_rule: Optional[str] = None
-            for kwarg in pickup_data.keywords:
-                if kwarg.arg != "rule_func":
-                    continue
-                access_rule = parse_access_rule(kwarg.value, filename)
+        access_rules: List[str] = []
+        for kwarg in pickup_data.keywords:
+            if kwarg.arg == "rule_func":
+                if check_name in manual_location_rules:
+                    access_rules.extend(manual_location_rules[check_name])
+                else:
+                    access_rules.extend(parse_access_rule(kwarg.value, filename) or "")
+            if kwarg.arg == "tricks":
+                access_rules.extend(get_tricks(kwarg.value))
 
-        return cls(item_name, item_images.get(check_name), access_rule if access_rule is not None else [])
+        return cls(item_name, item_images.get(check_name), access_rules)
 
     def into_json(self):
         return omit_empty_lists_and_null({
@@ -495,6 +640,7 @@ class DoorData(NamedTuple):
         door_type = None
         exclude_from_rando = False
         access_rule = None
+        trick_rules: List[str] = []
         if (type(door.args[0]) is not ast.Attribute or type(door.args[0].value) is not ast.Name or
             door.args[0].value.id != "RoomName"):
             raise ASTParseError(door.args[0], "Expected room name")
@@ -514,13 +660,16 @@ class DoorData(NamedTuple):
                     access_rule = manual_door_rules[(source, destination.value)]
                 else:
                     access_rule = parse_access_rule(kwarg.value, filename)
+            if kwarg.arg == "tricks":
+                trick_rules.extend(get_tricks(kwarg.value))
         if door_type is None:
             door_type = "AnyBeam"
         if access_rule:
-            access_rule = [f"@doors/{door_type},{rule}" for rule in access_rule]
+            access_rules = [f"@doors/{door_type},{rule}" for rule in access_rule]
         else:
-            access_rule = [f"@doors/{door_type}"]
-        return cls(source, destination.value, access_rule, exclude_from_rando)
+            access_rules = [f"@doors/{door_type}"]
+        access_rules.extend(f"@doors/{door_type},{rule}" for rule in trick_rules)
+        return cls(source, destination.value, access_rules, exclude_from_rando)
 
 
 class WorldRoomData(NamedTuple):

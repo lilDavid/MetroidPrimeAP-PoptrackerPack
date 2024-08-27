@@ -13,7 +13,9 @@
           }
         ],
         "access_rules": [
-          "@Chozo Ruins/Reflecting Pool,@doors/Missile,$can_boost,$can_bomb"
+          "@Chozo Ruins/Reflecting Pool,@doors/Missile,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,@doors/Missile,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,@doors/Missile,[$trick|reflecting_pool_nsj_climb|3],$can_bomb"
         ]
       },
       {
@@ -77,7 +79,8 @@
           {
             "name": "",
             "access_rules": [
-              "$can_bomb,$can_boost,$can_spider,$can_super_missile,$can_scan"
+              "$can_bomb,$can_boost,$can_spider,$can_super_missile,$can_scan",
+              "[$trick|crossway_item_fewer_reqs|1],$can_morph_ball,$can_space_jump"
             ]
           }
         ],
@@ -139,13 +142,15 @@
           }
         ],
         "access_rules": [
-          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$can_combat_ghosts],$can_bomb,$can_plasma_beam,$can_space_jump,$can_spider"
+          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$can_combat_ghosts],$can_bomb,$can_plasma_beam,$can_space_jump,$can_spider",
+          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$trick|hall_of_elders_elder_chamber_no_spider|1],$can_bomb,$can_plasma_beam,$can_space_jump,$can_power_beam,[$can_combat_ghosts]"
         ]
       },
       {
         "name": "Elder Hall Access",
         "access_rules": [
           "@Chozo Ruins/Crossway,@doors/Missile,$can_boost",
+          "@Chozo Ruins/Crossway,@doors/Missile,[$trick|crossway_hpbj|3],$can_bomb",
           "@Chozo Ruins/Hall of the Elders,@doors/AnyBeam,[$can_combat_ghosts],$can_boost,$can_missile,$can_space_jump"
         ]
       },
@@ -177,7 +182,9 @@
           {
             "name": "Spider Tracks",
             "access_rules": [
-              "$can_power_bomb,$can_boost,$can_spider"
+              "$can_power_bomb,$can_boost,$can_spider",
+              "[$trick|furnace_spider_track_hbj|2],$can_bomb,$can_spider",
+              "[$trick|furnace_spider_track_sj_bombs|2],$can_bomb,$can_space_jump"
             ]
           },
           {
@@ -188,7 +195,8 @@
         "access_rules": [
           "@Chozo Ruins/Crossway Access West,@doors/AnyBeam,$can_morph_ball",
           "@Chozo Ruins/East Furnace Access,@doors/IceBeam",
-          "@Chozo Ruins/West Furnace Access,@doors/AnyBeam,$can_spider,$can_bomb"
+          "@Chozo Ruins/West Furnace Access,@doors/AnyBeam,$can_spider,$can_bomb",
+          "@Chozo Ruins/West Furnace Access,@doors/AnyBeam,[$trick|furnace_no_spider_ball|1],$can_bomb"
         ]
       },
       {
@@ -205,7 +213,8 @@
             "name": "",
             "access_rules": [
               "$can_space_jump,$can_bomb",
-              "$can_space_jump,$can_power_bomb"
+              "$can_space_jump,$can_power_bomb",
+              "[$trick|gathering_hall_without_space_jump|1],$can_bomb"
             ]
           }
         ],
@@ -223,7 +232,8 @@
             "name": "",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
-              "[$can_combat_ghosts],$can_power_beam,$can_bomb,$can_spider,$can_ice_beam,$can_space_jump"
+              "[$can_combat_ghosts],$can_power_beam,$can_bomb,$can_spider,$can_ice_beam,$can_space_jump",
+              "[$trick|hall_of_elders_item_no_spider|1],$can_bomb,$can_ice_beam,$can_space_jump,$can_power_beam,[$can_combat_ghosts]"
             ]
           }
         ],
@@ -259,7 +269,10 @@
             "name": "",
             "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
-              "$can_grapple,$can_heat,$can_power_bomb"
+              "$can_grapple,$can_heat,$can_power_bomb",
+              "[$trick|magma_pool_item_infinite_speed|2],$can_infinite_speed,$can_bomb",
+              "[$trick|magma_pool_item_scan_dash|2],$can_space_jump,$can_scan,$can_power_bomb",
+              "[$trick|magma_pool_item_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2,$can_power_bomb"
             ]
           }
         ],
@@ -274,13 +287,16 @@
           {
             "name": "Half-Pipe",
             "access_rules": [
-              "$can_boost"
+              "$can_boost",
+              "[$trick|plaza_half_pipe_no_boost|1],$can_space_jump",
+              "[$trick|plaza_half_pipe_morph_only|3],$can_morph_ball"
             ]
           },
           {
             "name": "Grapple Ledge",
             "access_rules": [
-              "@Piston Tunnel,$can_grapple"
+              "@Piston Tunnel,$can_grapple",
+              "[$trick|plaza_grapple_ledge_r_jump|1],$can_space_jump"
             ]
           },
           {
@@ -293,7 +309,8 @@
             "name": "Locked Door",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
-              "@Plaza Access,$can_morph_ball"
+              "@Plaza Access,$can_morph_ball",
+              "[$trick|vault_via_plaza|1],$can_space_jump"
             ]
           }
         ],
@@ -346,6 +363,7 @@
         "name": "Plaza Access",
         "access_rules": [
           "@Chozo Ruins/Main Plaza,@doors/AnyBeam,False",
+          "@Chozo Ruins/Main Plaza,@doors/AnyBeam,[$trick|vault_via_plaza|1],$can_space_jump",
           "@Chozo Ruins/Vault,@doors/AnyBeam"
         ]
       },
@@ -353,6 +371,8 @@
         "name": "Reflecting Pool Access",
         "access_rules": [
           "@Chozo Ruins/Hall of the Elders,@doors/AnyBeam,[$can_combat_ghosts],$can_bomb,$can_spider,$can_wave_beam,$can_space_jump",
+          "@Chozo Ruins/Hall of the Elders,@doors/AnyBeam,[$trick|hall_of_elders_reflecting_pool_no_spider|1],$can_space_jump,$can_wave_beam,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
+          "@Chozo Ruins/Hall of the Elders,@doors/AnyBeam,[$trick|hall_of_elders_reflecting_pool_no_wave_beam|2],$can_space_jump,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
           "@Chozo Ruins/Reflecting Pool,@doors/AnyBeam"
         ]
       },
@@ -417,7 +437,8 @@
           {
             "name": "",
             "access_rules": [
-              "$can_bomb"
+              "$can_bomb",
+              "[$trick|ruined_nursery_no_bombs|3],$can_space_jump,$can_morph_ball"
             ]
           }
         ],
@@ -432,7 +453,8 @@
         "access_rules": [
           "@Chozo Ruins/Main Plaza,@doors/Missile",
           "@Chozo Ruins/Ruined Shrine,@doors/AnyBeam,$can_morph_ball",
-          "@Chozo Ruins/Ruined Shrine,@doors/AnyBeam,$can_space_jump"
+          "@Chozo Ruins/Ruined Shrine,@doors/AnyBeam,$can_space_jump",
+          "@Chozo Ruins/Ruined Shrine,@doors/AnyBeam,[$trick|ruined_shrine_scan_dash_escape|1],$can_scan"
         ]
       },
       {
@@ -442,7 +464,8 @@
             "name": "Plated Beetle",
             "chest_unopened_img": "images/items/morphball.png",
             "access_rules": [
-              "$can_exit_ruined_shrine"
+              "$can_exit_ruined_shrine",
+              "[$trick|ruined_shrine_scan_dash_escape|1],$can_scan"
             ]
           },
           {
@@ -489,6 +512,8 @@
         "name": "Save Station 3",
         "access_rules": [
           "@Chozo Ruins/Reflecting Pool,@doors/Missile,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,@doors/Missile,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,@doors/Missile,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
           "@Chozo Ruins/Transport to Tallon Overworld East,@doors/AnyBeam"
         ]
       },
@@ -518,6 +543,7 @@
           "StartingRoomSunchamberLobby",
           "@Chozo Ruins/Arboretum,@doors/Missile,$can_scan,$can_bomb",
           "@Chozo Ruins/Arboretum,@doors/Missile,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump",
+          "@Chozo Ruins/Arboretum,@doors/Missile,[$trick|arboretum_scan_gate_skip|1],$can_bomb",
           "@Chozo Ruins/Sunchamber Access,@doors/AnyBeam"
         ]
       },
@@ -561,13 +587,17 @@
         ],
         "access_rules": [
           "StartingRoomTowerChamber",
-          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,$can_move_underwater,$can_space_jump"
+          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,$can_move_underwater,$can_space_jump",
+          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,[$trick|tower_chamber_no_gravity|1],$can_space_jump",
+          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,[$trick|tower_chamber_no_space_jump|1],$can_bomb,$can_move_underwater"
         ]
       },
       {
         "name": "Tower of Light Access",
         "access_rules": [
           "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,$can_spider,$can_boost",
+          "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,[$trick|ruined_shrine_upper_door_no_spider_ball|1],$can_space_jump",
+          "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,[$trick|ruined_shrine_upper_door_scan_dash|3],$can_scan",
           "@Chozo Ruins/Tower of Light,@doors/WaveBeam"
         ]
       },
@@ -578,7 +608,9 @@
             "name": "",
             "chest_unopened_img": "images/items/wavebuster.png",
             "access_rules": [
-              "$can_climb_tower_of_light"
+              "$can_climb_tower_of_light",
+              "[$trick|tower_of_light_climb_without_missiles|1],$can_space_jump,$can_scan",
+              "[$trick|tower_of_light_climb_nsj|3],$can_missile,$has|MissileExpansion|8,$can_bomb"
             ]
           }
         ],
@@ -599,6 +631,8 @@
         ],
         "access_rules": [
           "@Chozo Ruins/Magma Pool,@doors/WaveBeam,$can_grapple,$can_heat",
+          "@Chozo Ruins/Magma Pool,@doors/WaveBeam,[$trick|magma_pool_scan_dash|2],$can_space_jump,$can_scan",
+          "@Chozo Ruins/Magma Pool,@doors/WaveBeam,[$trick|magma_pool_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2",
           "@Chozo Ruins/Training Chamber,@doors/WaveBeam"
         ]
       },
@@ -636,6 +670,8 @@
         "name": "Transport Access South",
         "access_rules": [
           "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
           "@Chozo Ruins/Transport to Tallon Overworld South,@doors/AnyBeam"
         ]
       },
@@ -723,7 +759,9 @@
           {
             "name": "Underwater",
             "access_rules": [
-              "$can_move_underwater,$can_space_jump,@rules/can_flaahgra"
+              "$can_move_underwater,$can_space_jump,@rules/can_flaahgra",
+              "[$trick|watery_hall_no_gravity|1],$can_space_jump",
+              "[$trick|watery_hall_no_gravity_no_space_jump|2],"
             ]
           }
         ],

@@ -42,6 +42,19 @@ function has_any(items)
     return false
 end
 
+function trick(id, difficulty)
+    local trick_item = Tracker:FindObjectForCode(id)
+    if trick_item == nil then
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print(string.format("trick: unrecognized id %s", id))
+        end
+        return false
+    end
+    if trick_item.CurrentStage == 0 then return false end
+    if trick_item.CurrentStage == 2 then return true end
+    return has("Tricks", tonumber(difficulty))
+end
+
 
 -- Logic
 

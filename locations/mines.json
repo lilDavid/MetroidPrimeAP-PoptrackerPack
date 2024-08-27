@@ -39,14 +39,16 @@
         "name": "Elevator Access A",
         "access_rules": [
           "@Phazon Mines/Elevator A,@doors/IceBeam",
-          "@Phazon Mines/Ore Processing,@doors/IceBeam,$can_spider,$can_grapple,$can_bomb,$can_power_bomb,$can_space_jump"
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,$can_spider,$can_grapple,$can_bomb,$can_power_bomb,$can_space_jump",
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,[$trick|ore_processing_climb_no_grapple_spider|1],$can_bomb,$can_power_bomb,$can_space_jump"
         ]
       },
       {
         "name": "Elevator Access B",
         "access_rules": [
           "@Phazon Mines/Elevator B,@doors/PlasmaBeam",
-          "@Phazon Mines/Metroid Quarantine A,@doors/IceBeam,[$can_combat_mines],$can_scan,$can_spider,$can_bomb,$can_space_jump,^$can_xray"
+          "@Phazon Mines/Metroid Quarantine A,@doors/IceBeam,[$can_combat_mines],$can_scan,$can_spider,$can_bomb,$can_space_jump,^$can_xray",
+          "@Phazon Mines/Metroid Quarantine A,@doors/IceBeam,[$trick|metroid_quarantine_a_no_spider|2],$can_scan,^$can_xray,$can_space_jump"
         ]
       },
       {
@@ -76,14 +78,16 @@
         "access_rules": [
           "@Phazon Mines/Elite Control Access,@doors/WaveBeam",
           "@Phazon Mines/Maintenance Tunnel,@doors/IceBeam,$can_power_bomb",
-          "@Phazon Mines/Ventilation Shaft,@doors/IceBeam,$can_boost"
+          "@Phazon Mines/Ventilation Shaft,@doors/IceBeam,$can_boost",
+          "@Phazon Mines/Ventilation Shaft,@doors/IceBeam,[$trick|ventilation_shaft_hpbj|3],$can_bomb,$can_space_jump"
         ]
       },
       {
         "name": "Elite Quarters Access",
         "access_rules": [
           "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],^$can_xray|2",
-          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_spider,$can_grapple,$can_space_jump,$can_scan"
+          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_spider,$can_grapple,$can_space_jump,$can_scan",
+          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$trick|metroid_quarantine_b_no_spider_grapple|2],$can_space_jump,$can_scan"
         ]
       },
       {
@@ -115,12 +119,15 @@
           {
             "name": "Laser",
             "access_rules": [
-              "$can_bomb,$can_boost,$can_space_jump,$can_scan"
+              "$can_bomb,$can_boost,$can_space_jump,$can_scan",
+              "[$trick|elite_research_spinner_no_boost|1],$can_bomb,$can_scan,$can_space_jump"
             ]
           }
         ],
         "access_rules": [
           "@Phazon Mines/Research Access,@doors/IceBeam,$can_spider,@Research Access",
+          "@Phazon Mines/Research Access,@doors/IceBeam,[$trick|elite_research_backwards_wall_boost_no_spider|3],$can_boost,$can_space_jump,$can_wave_beam",
+          "@Phazon Mines/Research Access,@doors/IceBeam,[$trick|elite_research_backwards_wall_boost|1],$can_boost",
           "@Phazon Mines/Security Access B,@doors/IceBeam"
         ]
       },
@@ -137,7 +144,8 @@
           {
             "name": "",
             "access_rules": [
-              "$can_morph_ball,$can_phazon"
+              "$can_morph_ball,$can_phazon",
+              "[$trick|fungal_hall_access_no_phazon_suit|1],$can_morph_ball,$has_energy_tanks|1"
             ]
           }
         ],
@@ -169,7 +177,8 @@
           {
             "name": "",
             "access_rules": [
-              "$can_morph_ball,$can_spider,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
+              "$can_morph_ball,$can_spider,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump",
+              "[$trick|main_quarry_item_no_spider|2],$can_morph_ball,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
             ]
           }
         ],
@@ -184,7 +193,8 @@
         "name": "Maintenance Tunnel",
         "access_rules": [
           "@Phazon Mines/Elite Control,@doors/IceBeam,$can_scan",
-          "@Phazon Mines/Phazon Processing Center,@doors/IceBeam,$can_spider,$can_bomb,$can_space_jump"
+          "@Phazon Mines/Phazon Processing Center,@doors/IceBeam,$can_spider,$can_bomb,$can_space_jump",
+          "@Phazon Mines/Phazon Processing Center,@doors/IceBeam,[$trick|climb_phazon_processing_center_no_spider|1],$can_space_jump"
         ]
       },
       {
@@ -236,7 +246,8 @@
       {
         "name": "Missile Station Mines",
         "access_rules": [
-          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,$can_space_jump,$can_grapple"
+          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,$can_space_jump,$can_grapple",
+          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,[$trick|fungal_hall_b_no_grapple|2],$can_space_jump"
         ]
       },
       {
@@ -251,6 +262,7 @@
         "name": "Ore Processing",
         "access_rules": [
           "@Phazon Mines/Elevator Access A,@doors/IceBeam,$can_spider",
+          "@Phazon Mines/Elevator Access A,@doors/IceBeam,[$trick|mines_climb_shafts_no_spider|3],$can_space_jump,$can_wave_beam",
           "@Phazon Mines/Research Access,@doors/IceBeam",
           "@Phazon Mines/Storage Depot B,@doors/IceBeam",
           "@Phazon Mines/Waste Disposal,@doors/IceBeam,$can_bomb"
@@ -269,7 +281,9 @@
         ],
         "access_rules": [
           "@Phazon Mines/Fungal Hall A,@doors/IceBeam,$can_grapple,$can_space_jump",
-          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,$can_space_jump"
+          "@Phazon Mines/Fungal Hall A,@doors/IceBeam,[$trick|fungal_hall_a_no_grapple|2],$can_space_jump",
+          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,$can_space_jump",
+          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,[$trick|fungal_hall_b_no_grapple|2],$can_space_jump"
         ]
       },
       {
@@ -278,7 +292,8 @@
           {
             "name": "",
             "access_rules": [
-              "$can_spider,$can_bomb,$can_space_jump,$can_power_bomb"
+              "$can_spider,$can_bomb,$can_space_jump,$can_power_bomb",
+              "[$trick|phazon_processing_center_item_no_spider|1],$can_space_jump,$can_power_bomb"
             ]
           }
         ],
@@ -303,7 +318,8 @@
         ],
         "access_rules": [
           "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],^$can_xray|2,$can_scan",
-          "@Phazon Mines/Phazon Processing Center,@doors/PlasmaBeam,$can_phazon"
+          "@Phazon Mines/Phazon Processing Center,@doors/PlasmaBeam,$can_phazon",
+          "@Phazon Mines/Phazon Processing Center,@doors/PlasmaBeam,[$trick|phazon_processing_center_no_phazon_suit|1]"
         ]
       },
       {
@@ -317,6 +333,7 @@
         "name": "Quarantine Access B",
         "access_rules": [
           "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,$can_space_jump,$can_grapple",
+          "@Phazon Mines/Fungal Hall B,@doors/PlasmaBeam,[$trick|fungal_hall_b_no_grapple|2],$can_space_jump",
           "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_space_jump"
         ]
       },
@@ -331,6 +348,7 @@
         "name": "Research Access",
         "access_rules": [
           "@Phazon Mines/Elite Research,@doors/IceBeam,$can_bomb,$can_boost,$can_space_jump,$can_scan",
+          "@Phazon Mines/Elite Research,@doors/IceBeam,[$trick|elite_research_spinner_no_boost|1],$can_bomb,$can_scan,$can_space_jump",
           "@Phazon Mines/Ore Processing,@doors/IceBeam"
         ]
       },
@@ -349,7 +367,8 @@
       {
         "name": "Save Station Mines C",
         "access_rules": [
-          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_spider,$can_grapple,$can_space_jump,$can_scan"
+          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_spider,$can_grapple,$can_space_jump,$can_scan",
+          "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$trick|metroid_quarantine_b_no_spider_grapple|2],$can_space_jump,$can_scan"
         ]
       },
       {
@@ -396,13 +415,15 @@
         ],
         "access_rules": [
           "@Phazon Mines/Ore Processing,@doors/IceBeam,$can_spider,$can_bomb,$can_power_bomb",
-          "@Phazon Mines/Ore Processing,@doors/IceBeam,@Waste Disposal,$can_grapple"
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,@Waste Disposal,$can_grapple",
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,[$trick|ore_processing_to_storage_depot_b_no_spider|1],$can_bomb,$can_power_bomb,$can_space_jump"
         ]
       },
       {
         "name": "Transport Access",
         "access_rules": [
           "@Phazon Mines/Phazon Processing Center,@doors/IceBeam,$can_spider,$can_bomb,$can_space_jump",
+          "@Phazon Mines/Phazon Processing Center,@doors/IceBeam,[$trick|climb_phazon_processing_center_no_spider|1],$can_space_jump",
           "@Phazon Mines/Transport to Magmoor Caverns South,@doors/IceBeam"
         ]
       },
@@ -442,7 +463,9 @@
         "name": "Waste Disposal",
         "access_rules": [
           "@Phazon Mines/Main Quarry,@doors/IceBeam,$can_grapple,$can_space_jump",
-          "@Phazon Mines/Ore Processing,@doors/IceBeam,$can_spider,$can_grapple,$can_bomb,$can_power_bomb,$can_space_jump"
+          "@Phazon Mines/Main Quarry,@doors/IceBeam,[$trick|main_quarry_to_waste_disposal_no_grapple|1],$can_scan,$can_space_jump",
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,$can_spider,$can_grapple,$can_bomb,$can_power_bomb,$can_space_jump",
+          "@Phazon Mines/Ore Processing,@doors/IceBeam,[$trick|ore_processing_climb_no_grapple_spider|1],$can_bomb,$can_power_bomb,$can_space_jump"
         ]
       }
     ]

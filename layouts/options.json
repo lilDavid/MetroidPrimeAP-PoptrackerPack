@@ -4,23 +4,47 @@
     "background": "#000000",
     "margin": "6, 6",
     "content": {
-      "type": "itemgrid",
-      "item_h_alignment": "left",
-      "item_size": "400, 20",
-      "rows": [
-        [ "RequiredArtifacts" ],
-        [ "MainMissile" ],
-        [ "MainPowerBomb" ],
-        [ "NonVariaHeatDamage" ],
-        [ "RemoveHiveMecha" ],
-        [ "BackwardsLowerMines" ],
-        [ "FlaahgraPowerBombs" ],
-        [ "RemoveXRayRequirements" ],
-        [ "RemoveThermalRequirements" ],
-        [ "StartingRoom" ],
-        [ "CombatLogic" ],
-        [ "ElevatorsRandom" ],
-        [ "PreScanElevators" ]
+      "type": "tabbed",
+      "tabs": [
+        {
+          "title": "Options",
+          "content": [
+            {
+              "type": "itemgrid",
+              "item_h_alignment": "left",
+              "item_size": "400, 20",
+              "rows": [
+                [ "RequiredArtifacts" ],
+                [ "MainMissile" ],
+                [ "MainPowerBomb" ],
+                [ "NonVariaHeatDamage" ],
+                [ "RemoveHiveMecha" ],
+                [ "Tricks" ],
+                [ "BackwardsLowerMines" ],
+                [ "FlaahgraPowerBombs" ],
+                [ "RemoveXRayRequirements" ],
+                [ "RemoveThermalRequirements" ],
+                [ "StartingRoom" ],
+                [ "CombatLogic" ],
+                [ "ElevatorsRandom" ],
+                [ "PreScanElevators" ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tricks",
+          "content": [
+            {
+              "type": "itemgrid",
+              "item_h_alignment": "left",
+              "item_size": "400, 20",
+              "rows": [
+                [ "alcove_escape" ]
+              ]
+            }
+          ]
+        }
       ]
     }
   }
