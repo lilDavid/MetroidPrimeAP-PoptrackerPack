@@ -116,22 +116,30 @@ function can_morph_ball()
     return has("MorphBall")
 end
 
-function can_xray(hard_required)
-    if hard_required then
-        return has("XRayVisor")
-    elseif has("RemoveXRayRequirements") then
-        return true
+function can_xray(requirement)
+    if requirement == nil then
+        requirement = 0
+    else
+        requirement = tonumber(requirement)
     end
-    return has("XRayVisor")
+    local remove_xray_reqs = Tracker:FindObjectForCode("RemoveXRayRequirements").CurrentStage
+    if has("XRayVisor") then return AccessibilityLevel.Normal end
+    if requirement == 2 then return AccessibilityLevel.None end
+    if remove_xray_reqs > requirement then return AccessibilityLevel.Normal end
+    return AccessibilityLevel.SequenceBreak
 end
 
-function can_thermal(hard_required)
-    if hard_required then
-        return has("ThermalVisor")
-    elseif has("RemoveThermalRequirements") then
-        return true
+function can_thermal(requirement)
+    if requirement == nil then
+        requirement = 0
+    else
+        requirement = tonumber(requirement)
     end
-    return has("ThermalVisor")
+    local remove_thermal_reqs = Tracker:FindObjectForCode("RemoveThermalRequirements").CurrentStage
+    if has("ThermalVisor") then return AccessibilityLevel.Normal end
+    if requirement == 2 then return AccessibilityLevel.None end
+    if remove_thermal_reqs > requirement then return AccessibilityLevel.Normal end
+    return AccessibilityLevel.SequenceBreak
 end
 
 function can_move_underwater()
@@ -254,7 +262,8 @@ function can_combat_ghosts()
     elseif has("CombatLogic", 1) then
         return can_power_beam()
     else
-        return can_charge_beam("PowerBeam") and can_power_beam() and can_xray(true)
+        return can_charge_beam("PowerBeam") and can_power_beam()
+            and can_xray(1) == AccessibilityLevel.Normal
     end
 end
 
@@ -287,7 +296,10 @@ end
 -- Data/TallonOverworld
 
 function can_crashed_frigate()
-    return (can_bomb() and can_space_jump() and can_wave_beam() and can_move_underwater() and can_thermal())
+    if not (can_bomb() and can_space_jump() and can_wave_beam() and can_move_underwater()) then
+        return AccessibilityLevel.None
+    end
+    return can_thermal()
 end
 
 function can_crashed_frigate_backwards()

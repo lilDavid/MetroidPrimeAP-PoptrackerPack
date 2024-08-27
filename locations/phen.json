@@ -244,7 +244,7 @@
         "name": "North Quarantine Tunnel",
         "access_rules": [
           "@Phendrana Drifts/Quarantine Access,@doors/AnyBeam",
-          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],$can_spider,@rules/can_thermal"
+          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],$can_spider,^$can_thermal"
         ]
       },
       {
@@ -340,7 +340,7 @@
         "name": "Quarantine Access",
         "access_rules": [
           "@Phendrana Drifts/North Quarantine Tunnel,@doors/WaveBeam,$can_morph_ball",
-          "@Phendrana Drifts/Ruined Courtyard,@doors/AnyBeam,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,@rules/can_thermal,$can_super_missile"
+          "@Phendrana Drifts/Ruined Courtyard,@doors/AnyBeam,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,^$can_thermal,$can_super_missile"
         ]
       },
       {
@@ -350,7 +350,7 @@
             "name": "",
             "chest_unopened_img": "images/items/spiderball.png",
             "access_rules": [
-              "[$can_combat_thardus],@rules/can_thermal"
+              "[$can_combat_thardus],^$can_thermal"
             ]
           }
         ],
@@ -375,7 +375,7 @@
       {
         "name": "Research Core Access",
         "access_rules": [
-          "@Phendrana Drifts/Research Core,@doors/WaveBeam,[$can_combat_labs],@rules/can_thermal,$can_wave_beam",
+          "@Phendrana Drifts/Research Core,@doors/WaveBeam,[$can_combat_labs],^$can_thermal,$can_wave_beam",
           "@Phendrana Drifts/Research Lab Aether,@doors/WaveBeam,[$can_combat_labs],$can_missile",
           "@Phendrana Drifts/Research Lab Aether,@doors/WaveBeam,$can_power_bomb"
         ]
@@ -387,7 +387,7 @@
             "name": "",
             "chest_unopened_img": "images/items/thermalvisor.png",
             "access_rules": [
-              "[$can_combat_labs],@rules/can_thermal,$can_scan,$can_wave_beam"
+              "[$can_combat_labs],^$can_thermal,$can_scan,$can_wave_beam"
             ]
           }
         ],
@@ -514,8 +514,8 @@
       {
         "name": "South Quarantine Tunnel",
         "access_rules": [
-          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_bomb,$can_spider",
-          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],@rules/can_thermal,$can_space_jump,$can_grapple",
+          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],^$can_thermal,$can_bomb,$can_spider",
+          "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],^$can_thermal,$can_space_jump,$can_grapple",
           "@Phendrana Drifts/Transport to Magmoor Caverns South,@doors/WaveBeam"
         ]
       },
@@ -535,8 +535,8 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_thermal,$can_power_bomb,$can_space_jump",
-          "@Phendrana Drifts/Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,@rules/can_xray,$can_power_bomb,$can_space_jump"
+          "@Phendrana Drifts/Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,^$can_thermal,$can_power_bomb,$can_space_jump",
+          "@Phendrana Drifts/Phendrana's Edge,@doors/PlasmaBeam,$can_grapple,^$can_xray,$can_power_bomb,$can_space_jump"
         ]
       },
       {

@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 import ast
-from enum import StrEnum
+from enum import Enum, StrEnum
 import json
 from pathlib import Path
 import importlib.util
@@ -133,11 +133,17 @@ locks = {
 }
 
 
+class FunctionOverride(Enum):
+    LOCATION = 0
+    ACCESSIBILITY = 1
+
+
 override_functions = {
-    "can_thermal",
-    "can_xray",
-    "can_flaahgra",
-    "can_warp_to_start",
+    "can_thermal": FunctionOverride.ACCESSIBILITY,
+    "can_xray": FunctionOverride.ACCESSIBILITY,
+    "can_crashed_frigate": FunctionOverride.ACCESSIBILITY,
+    "can_flaahgra": FunctionOverride.LOCATION,
+    "can_warp_to_start": FunctionOverride.LOCATION,
 }
 
 
@@ -279,12 +285,17 @@ def validate_prime_world_node(world: ast.expr):
         raise ASTParseError(world, "Expected name")
 
 
-def logic_function(function_name: str):
-    if function_name in override_functions:
+def logic_function(function_name: str, full_rule: Optional[str] = None):
+    override_type = override_functions.get(function_name)
+    if override_type == FunctionOverride.LOCATION:
         return f"@rules/{function_name}"
+    if full_rule is None:
+        full_rule = function_name
+    if override_type == FunctionOverride.ACCESSIBILITY:
+        return f"^${full_rule}"
     if function_name.startswith("can_combat"):
-        return f"[${function_name}]"
-    return f"${function_name}"
+        return f"[${full_rule}]"
+    return f"${full_rule}"
 
 
 class RuleConverter(ast.NodeTransformer):
@@ -328,8 +339,15 @@ class RuleConverter(ast.NodeTransformer):
             rule = f"@{location_name}"
         elif len(node.args) < 2:
             raise ASTParseError(node, f"{function_name} call with {len(node.args)} arguments")
-        elif len(node.args) == 2:
-            rule = logic_function(function_name)
+        elif function_name in ("can_thermal", "can_xray"):
+            if any(keyword.arg == "hard_required" for keyword in node.keywords):
+                # Assume that if hard_required is specified, its value is always true
+                rule = logic_function(function_name, f"{function_name}|2")
+            elif len(node.args) > 2:
+                # Assume that the only extra arg is True for usually_required
+                rule = logic_function(function_name, f"{function_name}|1")
+            else:
+                rule = logic_function(function_name)
         else:
             args: List[str] = []
             for arg in node.args[2:]:
@@ -338,7 +356,7 @@ class RuleConverter(ast.NodeTransformer):
                     args.append(value)
                 else:
                     args.append(str(value).lower())
-            rule = "|".join((f"${function_name}", *args))
+            rule = logic_function(function_name, "|".join((function_name, *args)))
 
 
         self.collected_rules[rule] = None

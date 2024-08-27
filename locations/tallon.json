@@ -29,7 +29,7 @@
         ],
         "access_rules": [
           "StartingRoomArborChamber",
-          "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,$can_grapple,@rules/can_xray,$can_space_jump"
+          "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,$can_grapple,^$can_xray,$can_space_jump"
         ]
       },
       {
@@ -55,7 +55,7 @@
           }
         ],
         "access_rules": [
-          "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,@doors/AnyBeam,$can_crashed_frigate",
+          "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,@doors/AnyBeam,^$can_crashed_frigate",
           "@Tallon Overworld/Hydro Access Tunnel,@doors/AnyBeam,$can_bomb,$can_move_underwater,$can_space_jump"
         ]
       },
@@ -73,8 +73,8 @@
             "name": "",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
-              "$can_missile,$can_crashed_frigate",
-              "$can_charge_beam,$can_crashed_frigate",
+              "$can_missile,^$can_crashed_frigate",
+              "$can_charge_beam,^$can_crashed_frigate",
               "$can_missile,$can_crashed_frigate_backwards",
               "$can_charge_beam,$can_crashed_frigate_backwards"
             ]
@@ -82,7 +82,7 @@
         ],
         "access_rules": [
           "@Tallon Overworld/Biohazard Containment,@doors/AnyBeam,$can_crashed_frigate_backwards",
-          "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,$can_crashed_frigate"
+          "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,^$can_crashed_frigate"
         ]
       },
       {
@@ -109,14 +109,14 @@
           }
         ],
         "access_rules": [
-          "@Tallon Overworld/Great Tree Hall,@doors/AnyBeam,@rules/can_xray,$can_space_jump"
+          "@Tallon Overworld/Great Tree Hall,@doors/AnyBeam,^$can_xray,$can_space_jump"
         ]
       },
       {
         "name": "Great Tree Hall",
         "access_rules": [
           "@Tallon Overworld/Great Tree Chamber,@doors/AnyBeam",
-          "@Tallon Overworld/Hydro Access Tunnel,@doors/AnyBeam,$can_crashed_frigate,$can_boost",
+          "@Tallon Overworld/Hydro Access Tunnel,@doors/AnyBeam,^$can_crashed_frigate,$can_boost",
           "@Tallon Overworld/Life Grove Tunnel,@doors/IceBeam,$can_power_bomb,$can_boost",
           "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
           "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam,$can_boost"
@@ -143,7 +143,7 @@
           }
         ],
         "access_rules": [
-          "@Tallon Overworld/Biohazard Containment,@doors/AnyBeam,$can_crashed_frigate",
+          "@Tallon Overworld/Biohazard Containment,@doors/AnyBeam,^$can_crashed_frigate",
           "@Tallon Overworld/Great Tree Hall,@doors/AnyBeam,False",
           "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam"
         ]
@@ -222,7 +222,7 @@
           {
             "name": "",
             "access_rules": [
-              "$can_space_jump,$can_grapple,@rules/can_xray"
+              "$can_space_jump,$can_grapple,^$can_xray"
             ]
           }
         ],
@@ -347,7 +347,7 @@
         "name": "Transport Tunnel E",
         "access_rules": [
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,False",
-          "@Tallon Overworld/Hydro Access Tunnel,@doors/IceBeam,$can_crashed_frigate",
+          "@Tallon Overworld/Hydro Access Tunnel,@doors/IceBeam,^$can_crashed_frigate",
           "@Tallon Overworld/Transport to Phazon Mines East,@doors/IceBeam"
         ]
       },

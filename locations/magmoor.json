@@ -75,7 +75,7 @@
             "name": "",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
-              "@rules/can_thermal,$can_wave_beam,$can_scan,$can_morph_ball"
+              "^$can_thermal,$can_wave_beam,$can_scan,$can_morph_ball"
             ]
           }
         ],
@@ -258,7 +258,7 @@
           {
             "name": "",
             "access_rules": [
-              "@rules/can_xray,$can_space_jump,$can_missile"
+              "^$can_xray,$can_space_jump,$can_missile"
             ]
           }
         ],

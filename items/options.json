@@ -140,6 +140,7 @@
   },
   {
     "type": "progressive",
+    "codes": "RemoveXRayRequirements",
     "allow_disabled": false,
     "loop": true,
     "stages": [
@@ -148,13 +149,16 @@
         "img_mods": "@disabled"
       },
       {
-        "img": "images/options/xray-op.png",
-        "codes": "RemoveXRayRequirements"
+        "img": "images/options/xray-few.png"
+      },
+      {
+        "img": "images/options/xray-op.png"
       }
     ]
   },
   {
     "type": "progressive",
+    "codes": "RemoveThermalRequirements",
     "allow_disabled": false,
     "loop": true,
     "stages": [
@@ -163,8 +167,10 @@
         "img_mods": "@disabled"
       },
       {
-        "img": "images/options/thermal-none.png",
-        "codes": "RemoveThermalRequirements"
+        "img": "images/options/thermal-few.png"
+      },
+      {
+        "img": "images/options/thermal-none.png"
       }
     ]
   },

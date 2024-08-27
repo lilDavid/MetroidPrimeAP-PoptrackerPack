@@ -3,20 +3,6 @@
         "name": "rules",
         "children": [
             {
-                "name": "can_thermal",
-                "access_rules": [
-                    "RemoveThermalRequirements",
-                    "[ThermalVisor]"
-                ]
-            },
-            {
-                "name": "can_xray",
-                "access_rules": [
-                    "RemoveXRayRequirements",
-                    "[XRayVisor]"
-                ]
-            },
-            {
                 "name": "can_flaahgra",
                 "access_rules": [
                     "StartingRoomSunchamberLobby",

@@ -46,7 +46,7 @@
         "name": "Elevator Access B",
         "access_rules": [
           "@Phazon Mines/Elevator B,@doors/PlasmaBeam",
-          "@Phazon Mines/Metroid Quarantine A,@doors/IceBeam,[$can_combat_mines],$can_scan,$can_spider,$can_bomb,$can_space_jump,@rules/can_xray"
+          "@Phazon Mines/Metroid Quarantine A,@doors/IceBeam,[$can_combat_mines],$can_scan,$can_spider,$can_bomb,$can_space_jump,^$can_xray"
         ]
       },
       {
@@ -82,7 +82,7 @@
       {
         "name": "Elite Quarters Access",
         "access_rules": [
-          "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],$can_xray|true",
+          "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],^$can_xray|2",
           "@Phazon Mines/Metroid Quarantine B,@doors/PlasmaBeam,[$can_combat_mines],$can_spider,$can_grapple,$can_space_jump,$can_scan"
         ]
       },
@@ -93,7 +93,7 @@
             "name": "",
             "chest_unopened_img": "images/items/phazonsuit.png",
             "access_rules": [
-              "[$can_combat_omega_pirate],$can_xray|true"
+              "[$can_combat_omega_pirate],^$can_xray|2"
             ]
           }
         ],
@@ -169,7 +169,7 @@
           {
             "name": "",
             "access_rules": [
-              "$can_morph_ball,$can_spider,$can_bomb,@rules/can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
+              "$can_morph_ball,$can_spider,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
             ]
           }
         ],
@@ -199,8 +199,8 @@
           {
             "name": "",
             "access_rules": [
-              "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,@rules/can_xray",
-              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,@rules/can_xray"
+              "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,^$can_xray",
+              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,^$can_xray"
             ]
           }
         ],
@@ -302,7 +302,7 @@
           }
         ],
         "access_rules": [
-          "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],$can_xray|true,$can_scan",
+          "@Phazon Mines/Elite Quarters,@doors/PlasmaBeam,[$can_combat_omega_pirate],^$can_xray|2,$can_scan",
           "@Phazon Mines/Phazon Processing Center,@doors/PlasmaBeam,$can_phazon"
         ]
       },
