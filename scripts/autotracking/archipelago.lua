@@ -93,25 +93,36 @@ function onClear(slot_data)
     end
     -- set options
     for k, v in pairs(SLOT_DATA) do
-        if k == "starting_room_name" then
-            local obj = Tracker:FindObjectForCode("StartingRoom")
-            obj.CurrentStage = START_ROOM_MAPPING[v]
-        else
-            local option = SLOT_DATA_MAPPING[k]
-            if type(option) == "string" then
-                local obj = Tracker:FindObjectForCode(option)
-                if obj then
-                    obj.CurrentStage = v
-                elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-                    print(string.format("onClear: unknown option %s", v))
-                end
-            elseif type(option) == "table" then
-                local obj = Tracker:FindObjectForCode(option["name"])
-                local offset = option["offset"]
-                if obj then
-                    obj.CurrentStage = v + (offset or 0)
-                elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-                    print(string.format("onClear: unknown option %s", v))
+        local option = SLOT_DATA_MAPPING[k]
+        if type(v) == "boolean" then
+            if v then v = 1 else v = 0 end
+        end
+        local key, value
+        if type(option) == "string" then
+            key = option
+            if type(v) == "number" then
+                value = v
+            end
+        elseif type(option) == "table" then
+            key = option["name"]
+            if type(v) == "number" then
+                value = v + (option["offset"] or 0)
+            elseif option["mapping"] ~= nil and option["mapping"][v] ~= nil then
+                value = option["mapping"][v]
+            end
+        end
+        if key ~= nil then
+            local obj = Tracker:FindObjectForCode(key)
+            if obj ~= nil and value ~= nil then
+                obj.CurrentStage = value
+            end
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                if obj == nil then
+                    print(string.format("onClear: unknown option %s", k))
+                elseif value == nil then
+                    print(string.format("onClear: unknown option and value %s: %s", k, v))
+                else
+                    print(string.format("onClear: setting option %s to %s", key, value))
                 end
             end
         end
