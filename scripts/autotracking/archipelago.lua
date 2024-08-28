@@ -6,6 +6,7 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/option_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/trick_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -91,6 +92,11 @@ function onClear(slot_data)
             print(string.format("onClear: unknown option %s", name))
         end
     end
+    for _, v in pairs(TRICK_MAPPING) do
+        local obj = Tracker:FindObjectForCode(v)
+        obj.CurrentStage = 1
+        print(string.format("onClear: setting trick %s to default", v))
+    end
     -- set options
     for k, v in pairs(SLOT_DATA) do
         local option = SLOT_DATA_MAPPING[k]
@@ -123,6 +129,40 @@ function onClear(slot_data)
                     print(string.format("onClear: unknown option and value %s: %s", k, v))
                 else
                     print(string.format("onClear: setting option %s to %s", key, value))
+                end
+            end
+        end
+    end
+    local trick_deny_list = SLOT_DATA["trick_deny_list"]
+    if trick_deny_list ~= nil then
+        for _, trick_name in ipairs(trick_deny_list) do
+            local trick_id = TRICK_MAPPING[trick_name]
+            if trick_id == nil then
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: unknown trick %s", trick_name))
+                end
+            else
+                local obj = Tracker:FindObjectForCode(trick_id)
+                obj.CurrentStage = 0
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: denying trick %s", trick_name))
+                end
+            end
+        end
+    end
+    local trick_allow_list = SLOT_DATA["trick_allow_list"]
+    if trick_allow_list ~= nil then
+        for _, trick_name in ipairs(trick_allow_list) do
+            local trick_id = TRICK_MAPPING[trick_name]
+            if trick_id == nil then
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: unknown trick %s", trick_name))
+                end
+            else
+                local obj = Tracker:FindObjectForCode(trick_id)
+                obj.CurrentStage = 2
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: allowing trick %s", trick_name))
                 end
             end
         end
