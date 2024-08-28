@@ -36,7 +36,7 @@
     ]
   },
   {
-    "codes": "frigate_no_gravity",
+    "codes": "frigate_no_gravity,frigate_backwards_no_gravity",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
@@ -72,38 +72,20 @@
     ]
   },
   {
-    "codes": "frigate_backwards_no_gravity",
-    "type": "progressive",
-    "initial_stage_idx": 1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/tricks/frigate_backwards_no_gravity-red.png"
-      },
-      {
-        "img": "images/tricks/frigate_backwards_no_gravity.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/tricks/frigate_backwards_no_gravity.png"
-      }
-    ]
-  },
-  {
     "codes": "frigate_crash_site_scan_dash",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/frigate_crash_site_scan_dash-red.png"
+        "img": "images/tricks/crashed_frigate_scan_dash-red.png"
       },
       {
-        "img": "images/tricks/frigate_crash_site_scan_dash.png",
+        "img": "images/tricks/crashed_frigate_scan_dash.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/frigate_crash_site_scan_dash.png"
+        "img": "images/tricks/crashed_frigate_scan_dash.png"
       }
     ]
   },
@@ -114,14 +96,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump-red.png"
+        "img": "images/tricks/crashed_frigate_slope_jump-red.png"
       },
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump.png",
+        "img": "images/tricks/crashed_frigate_slope_jump.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump.png"
+        "img": "images/tricks/crashed_frigate_slope_jump.png"
       }
     ]
   },
@@ -132,14 +114,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump_no_sjb-red.png"
+        "img": "images/tricks/crashed_frigate_slope_jump_no_space_jump-red.png"
       },
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump_no_sjb.png",
+        "img": "images/tricks/crashed_frigate_slope_jump_no_space_jump.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/frigate_crash_site_slope_jump_no_sjb.png"
+        "img": "images/tricks/crashed_frigate_slope_jump_no_space_jump.png"
       }
     ]
   },
@@ -150,14 +132,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/frigate_crash_site_climb_to_overgrown_cavern-red.png"
+        "img": "images/tricks/crashed_frigate_climb_to_overgrown_cavern-red.png"
       },
       {
-        "img": "images/tricks/frigate_crash_site_climb_to_overgrown_cavern.png",
+        "img": "images/tricks/crashed_frigate_climb_to_overgrown_cavern.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/frigate_crash_site_climb_to_overgrown_cavern.png"
+        "img": "images/tricks/crashed_frigate_climb_to_overgrown_cavern.png"
       }
     ]
   },
@@ -204,14 +186,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/great_tree_chamber_nsj_no_xray-red.png"
+        "img": "images/tricks/great_tree_chamber_no_space_jump_no_xray-red.png"
       },
       {
-        "img": "images/tricks/great_tree_chamber_nsj_no_xray.png",
+        "img": "images/tricks/great_tree_chamber_no_space_jump_no_xray.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/great_tree_chamber_nsj_no_xray.png"
+        "img": "images/tricks/great_tree_chamber_no_space_jump_no_xray.png"
       }
     ]
   },
@@ -294,14 +276,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/plaza_half_pipe_morph_only-red.png"
+        "img": "images/tricks/plaza_half_pipe_with_only_morph_ball-red.png"
       },
       {
-        "img": "images/tricks/plaza_half_pipe_morph_only.png",
+        "img": "images/tricks/plaza_half_pipe_with_only_morph_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/plaza_half_pipe_morph_only.png"
+        "img": "images/tricks/plaza_half_pipe_with_only_morph_ball.png"
       }
     ]
   },
@@ -348,14 +330,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/ruined_shrine_upper_door_no_spider_ball-red.png"
+        "img": "images/tricks/ruined_shrine_upper_door_l_jump-red.png"
       },
       {
-        "img": "images/tricks/ruined_shrine_upper_door_no_spider_ball.png",
+        "img": "images/tricks/ruined_shrine_upper_door_l_jump.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/ruined_shrine_upper_door_no_spider_ball.png"
+        "img": "images/tricks/ruined_shrine_upper_door_l_jump.png"
       }
     ]
   },
@@ -420,19 +402,19 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/tower_of_light_climb_nsj-red.png"
+        "img": "images/tricks/tower_of_light_climb_no_space_jump-red.png"
       },
       {
-        "img": "images/tricks/tower_of_light_climb_nsj.png",
+        "img": "images/tricks/tower_of_light_climb_no_space_jump.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/tower_of_light_climb_nsj.png"
+        "img": "images/tricks/tower_of_light_climb_no_space_jump.png"
       }
     ]
   },
   {
-    "codes": "tower_chamber_no_gravity",
+    "codes": "tower_chamber_no_gravity,tower_chamber_no_space_jump",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
@@ -446,24 +428,6 @@
       },
       {
         "img": "images/tricks/tower_chamber_no_gravity.png"
-      }
-    ]
-  },
-  {
-    "codes": "tower_chamber_no_space_jump",
-    "type": "progressive",
-    "initial_stage_idx": 1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/tricks/tower_chamber_no_space_jump-red.png"
-      },
-      {
-        "img": "images/tricks/tower_chamber_no_space_jump.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/tricks/tower_chamber_no_space_jump.png"
       }
     ]
   },
@@ -492,19 +456,37 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/magma_pool_scan_dash-red.png"
+        "img": "images/tricks/cross_magma_pool_suitless-red.png"
       },
       {
-        "img": "images/tricks/magma_pool_scan_dash.png",
+        "img": "images/tricks/cross_magma_pool_suitless.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/magma_pool_scan_dash.png"
+        "img": "images/tricks/cross_magma_pool_suitless.png"
       }
     ]
   },
   {
     "codes": "magma_pool_debris_jump",
+    "type": "progressive",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/tricks/cross_magma_pool_with_sjb_and_gravity-red.png"
+      },
+      {
+        "img": "images/tricks/cross_magma_pool_with_sjb_and_gravity.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/tricks/cross_magma_pool_with_sjb_and_gravity.png"
+      }
+    ]
+  },
+  {
+    "codes": "magma_pool_item_debris_jump",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
@@ -522,38 +504,20 @@
     ]
   },
   {
-    "codes": "magma_pool_item_debris_jump",
-    "type": "progressive",
-    "initial_stage_idx": 1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/tricks/magma_pool_item_debris_jump-red.png"
-      },
-      {
-        "img": "images/tricks/magma_pool_item_debris_jump.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/tricks/magma_pool_item_debris_jump.png"
-      }
-    ]
-  },
-  {
     "codes": "magma_pool_item_scan_dash",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/magma_pool_item_scan_dash-red.png"
+        "img": "images/tricks/magma_pool_item_no_grapple-red.png"
       },
       {
-        "img": "images/tricks/magma_pool_item_scan_dash.png",
+        "img": "images/tricks/magma_pool_item_no_grapple.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/magma_pool_item_scan_dash.png"
+        "img": "images/tricks/magma_pool_item_no_grapple.png"
       }
     ]
   },
@@ -726,14 +690,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/crossway_hpbj-red.png"
+        "img": "images/tricks/crossway_half_pipe_bomb_jump-red.png"
       },
       {
-        "img": "images/tricks/crossway_hpbj.png",
+        "img": "images/tricks/crossway_half_pipe_bomb_jump.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/crossway_hpbj.png"
+        "img": "images/tricks/crossway_half_pipe_bomb_jump.png"
       }
     ]
   },
@@ -744,14 +708,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/hall_of_elders_bomb_slots_no_spider-red.png"
+        "img": "images/tricks/hall_of_elders_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/hall_of_elders_bomb_slots_no_spider.png",
+        "img": "images/tricks/hall_of_elders_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/hall_of_elders_bomb_slots_no_spider.png"
+        "img": "images/tricks/hall_of_elders_no_spider_ball.png"
       }
     ]
   },
@@ -762,14 +726,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider-red.png"
+        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider.png",
+        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider.png"
+        "img": "images/tricks/hall_of_elders_reflecting_pool_no_spider_ball.png"
       }
     ]
   },
@@ -798,14 +762,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider-red.png"
+        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider.png",
+        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider.png"
+        "img": "images/tricks/hall_of_elders_elder_chamber_no_spider_ball.png"
       }
     ]
   },
@@ -816,14 +780,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/hall_of_elders_item_no_spider-red.png"
+        "img": "images/tricks/hall_of_elders_item_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/hall_of_elders_item_no_spider.png",
+        "img": "images/tricks/hall_of_elders_item_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/hall_of_elders_item_no_spider.png"
+        "img": "images/tricks/hall_of_elders_item_no_spider_ball.png"
       }
     ]
   },
@@ -852,14 +816,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/reflecting_pool_nsj_climb-red.png"
+        "img": "images/tricks/reflecting_pool_no_space_jump_climb-red.png"
       },
       {
-        "img": "images/tricks/reflecting_pool_nsj_climb.png",
+        "img": "images/tricks/reflecting_pool_no_space_jump_climb.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/reflecting_pool_nsj_climb.png"
+        "img": "images/tricks/reflecting_pool_no_space_jump_climb.png"
       }
     ]
   },
@@ -1086,14 +1050,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/twin_fires_tunnel_no_spider-red.png"
+        "img": "images/tricks/twin_fires_tunnel_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/twin_fires_tunnel_no_spider.png",
+        "img": "images/tricks/twin_fires_tunnel_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/twin_fires_tunnel_no_spider.png"
+        "img": "images/tricks/twin_fires_tunnel_no_spider_ball.png"
       }
     ]
   },
@@ -1260,7 +1224,7 @@
     ]
   },
   {
-    "codes": "phendrana_courtyard_no_boost_spider",
+    "codes": "phendrana_courtyard_no_boost_spider,phendrana_courtyard_item_no_boost_spider",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
@@ -1274,24 +1238,6 @@
       },
       {
         "img": "images/tricks/phendrana_courtyard_no_boost_spider.png"
-      }
-    ]
-  },
-  {
-    "codes": "phendrana_courtyard_item_no_boost_spider",
-    "type": "progressive",
-    "initial_stage_idx": 1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/tricks/phendrana_courtyard_item_no_boost_spider-red.png"
-      },
-      {
-        "img": "images/tricks/phendrana_courtyard_item_no_boost_spider.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/tricks/phendrana_courtyard_item_no_boost_spider.png"
       }
     ]
   },
@@ -1500,14 +1446,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/main_quarry_item_no_spider-red.png"
+        "img": "images/tricks/main_quarry_item_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/main_quarry_item_no_spider.png",
+        "img": "images/tricks/main_quarry_item_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/main_quarry_item_no_spider.png"
+        "img": "images/tricks/main_quarry_item_no_spider_ball.png"
       }
     ]
   },
@@ -1536,14 +1482,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/ore_processing_to_storage_depot_b_no_spider-red.png"
+        "img": "images/tricks/ore_processing_climb_to_storage_no_grapple_spider-red.png"
       },
       {
-        "img": "images/tricks/ore_processing_to_storage_depot_b_no_spider.png",
+        "img": "images/tricks/ore_processing_climb_to_storage_no_grapple_spider.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/ore_processing_to_storage_depot_b_no_spider.png"
+        "img": "images/tricks/ore_processing_climb_to_storage_no_grapple_spider.png"
       }
     ]
   },
@@ -1572,14 +1518,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/mines_climb_shafts_no_spider-red.png"
+        "img": "images/tricks/mines_climb_shafts_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/mines_climb_shafts_no_spider.png",
+        "img": "images/tricks/mines_climb_shafts_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/mines_climb_shafts_no_spider.png"
+        "img": "images/tricks/mines_climb_shafts_no_spider_ball.png"
       }
     ]
   },
@@ -1590,50 +1536,32 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/elite_research_spinner_no_boost-red.png"
+        "img": "images/tricks/elite_research_laser_no_boost-red.png"
       },
       {
-        "img": "images/tricks/elite_research_spinner_no_boost.png",
+        "img": "images/tricks/elite_research_laser_no_boost.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/elite_research_spinner_no_boost.png"
+        "img": "images/tricks/elite_research_laser_no_boost.png"
       }
     ]
   },
   {
-    "codes": "elite_research_backwards_wall_boost",
+    "codes": "elite_research_backwards_wall_boost,elite_research_backwards_wall_boost_no_spider",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/elite_research_backwards_wall_boost-red.png"
+        "img": "images/tricks/elite_research_infinite_boost-red.png"
       },
       {
-        "img": "images/tricks/elite_research_backwards_wall_boost.png",
+        "img": "images/tricks/elite_research_infinite_boost.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/elite_research_backwards_wall_boost.png"
-      }
-    ]
-  },
-  {
-    "codes": "elite_research_backwards_wall_boost_no_spider",
-    "type": "progressive",
-    "initial_stage_idx": 1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider-red.png"
-      },
-      {
-        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider.png"
+        "img": "images/tricks/elite_research_infinite_boost.png"
       }
     ]
   },
@@ -1662,14 +1590,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/metroid_quarantine_a_no_spider-red.png"
+        "img": "images/tricks/metroid_quarantine_a_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/metroid_quarantine_a_no_spider.png",
+        "img": "images/tricks/metroid_quarantine_a_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/metroid_quarantine_a_no_spider.png"
+        "img": "images/tricks/metroid_quarantine_a_no_spider_ball.png"
       }
     ]
   },
@@ -1752,14 +1680,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/phazon_processing_center_item_no_spider-red.png"
+        "img": "images/tricks/phazon_processing_center_item_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/phazon_processing_center_item_no_spider.png",
+        "img": "images/tricks/phazon_processing_center_item_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/phazon_processing_center_item_no_spider.png"
+        "img": "images/tricks/phazon_processing_center_item_no_spider_ball.png"
       }
     ]
   },
@@ -1788,14 +1716,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider-red.png"
+        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider.png",
+        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider.png"
+        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball.png"
       }
     ]
   }

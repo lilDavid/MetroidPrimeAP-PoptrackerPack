@@ -36,11 +36,159 @@
           "title": "Tricks",
           "content": [
             {
-              "type": "itemgrid",
-              "item_h_alignment": "left",
-              "item_size": "400, 20",
-              "rows": [
-                [ "alcove_escape" ]
+              "type": "tabbed",
+              "tabs": [
+                {
+                  "title": "Tallon Overworld",
+                  "content": {
+                    "type": "itemgrid",
+                    "item_h_alignment": "left",
+                    "item_size": "400, 15",
+                    "item_margin": "3, 3",
+                    "rows": [
+                      [ "alcove_escape" ],
+                      [ "landing_site_scan_dash" ],
+                      [ "frigate_no_gravity" ],
+                      [ "hydro_access_tunnel_no_gravity" ],
+                      [ "frigate_crash_site_scan_dash" ],
+                      [ "frigate_crash_site_slope_jump" ],
+                      [ "frigate_crash_site_slope_jump_no_sjb" ],
+                      [ "frigate_crash_site_climb_to_overgrown_cavern" ],
+                      [ "great_tree_hall_skip_bars" ],
+                      [ "great_tree_chamber_no_xray" ],
+                      [ "great_tree_chamber_nsj_no_xray" ],
+                      [ "great_tree_hall_no_spider_ball" ],
+                      [ "root_cave_arbor_chamber_no_grapple_xray" ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Chozo Ruins",
+                  "content": {
+                    "type": "itemgrid",
+                    "item_h_alignment": "left",
+                    "item_size": "400, 15",
+                    "item_margin": "3, 3",
+                    "rows": [
+                      [ "vault_via_plaza" ],
+                      [ "plaza_half_pipe_no_boost" ],
+                      [ "plaza_half_pipe_morph_only" ],
+                      [ "plaza_grapple_ledge_r_jump" ],
+                      [ "plaza_grapple_ledge_tree_grapple" ],
+                      [ "ruined_shrine_upper_door_no_spider_ball" ],
+                      [ "ruined_shrine_upper_door_scan_dash" ],
+                      [ "ruined_shrine_scan_dash_escape" ],
+                      [ "tower_of_light_climb_without_missiles" ],
+                      [ "tower_of_light_climb_nsj" ],
+                      [ "tower_chamber_no_gravity" ],
+                      [ "ruined_nursery_no_bombs" ],
+                      [ "magma_pool_scan_dash" ],
+                      [ "magma_pool_debris_jump" ],
+                      [ "magma_pool_item_debris_jump" ],
+                      [ "magma_pool_item_scan_dash" ],
+                      [ "magma_pool_item_infinite_speed" ],
+                      [ "arboretum_scan_gate_skip" ],
+                      [ "gathering_hall_without_space_jump" ],
+                      [ "watery_hall_no_gravity" ],
+                      [ "watery_hall_no_gravity_no_space_jump" ],
+                      [ "furnace_no_spider_ball" ],
+                      [ "furnace_spider_track_hbj" ],
+                      [ "furnace_spider_track_sj_bombs" ],
+                      [ "crossway_item_fewer_reqs" ],
+                      [ "crossway_hpbj" ],
+                      [ "hall_of_elders_bomb_slots_no_spider" ],
+                      [ "hall_of_elders_reflecting_pool_no_spider" ],
+                      [ "hall_of_elders_reflecting_pool_no_wave_beam" ],
+                      [ "hall_of_elders_elder_chamber_no_spider" ],
+                      [ "hall_of_elders_item_no_spider" ],
+                      [ "reflecting_pool_space_jump_climb" ],
+                      [ "reflecting_pool_nsj_climb" ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Magmoor Caverns",
+                  "content": {
+                    "type": "itemgrid",
+                    "item_h_alignment": "left",
+                    "item_size": "400, 15",
+                    "item_margin": "3, 3",
+                    "rows": [
+                      [ "lava_lake_item_suitless" ],
+                      [ "lava_lake_item_missiles_only" ],
+                      [ "triclops_pit_item_no_sj" ],
+                      [ "triclops_pit_item_no_xray" ],
+                      [ "triclops_pit_item_no_sj_no_xray" ],
+                      [ "triclops_pit_item_no_missiles" ],
+                      [ "warrior_shrine_no_boost" ],
+                      [ "warrior_shrine_scan_only" ],
+                      [ "warrior_shrine_no_items" ],
+                      [ "shore_tunnel_escape_no_sj" ],
+                      [ "fiery_shores_morphball_track_sj" ],
+                      [ "transport_tunnel_b_damage_boost" ],
+                      [ "twin_fires_tunnel_no_spider" ],
+                      [ "cross_twin_fires_suitless" ],
+                      [ "geothermal_core_no_grapple_spider" ],
+                      [ "magmoor_workstation_no_thermal" ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Phendrana Drifts",
+                  "content": {
+                    "type": "itemgrid",
+                    "item_h_alignment": "left",
+                    "item_size": "400, 15",
+                    "item_margin": "3, 3",
+                    "rows": [
+                      [ "ice_temple_no_sj" ],
+                      [ "ice_temple_to_chapel_no_sj" ],
+                      [ "shorelines_spider_track_no_sj" ],
+                      [ "ice_temple_item_no_sj" ],
+                      [ "chapel_of_elders_escape_no_sj" ],
+                      [ "phendrana_canyon_escape_no_items" ],
+                      [ "phendrana_courtyard_no_boost_spider" ],
+                      [ "control_tower_item_no_plasma" ],
+                      [ "monitor_cave_no_grapple" ],
+                      [ "quarantine_to_north_courtyard_slope_jump" ],
+                      [ "observatory_puzzle_skip" ],
+                      [ "frozen_pike_no_bombs" ],
+                      [ "frozen_pike_no_gravity_suit" ],
+                      [ "frost_cave_no_grapple" ],
+                      [ "phendranas_edge_storage_cavern_no_grapple" ],
+                      [ "phendranas_edge_security_cavern_no_grapple" ],
+                      [ "hunter_cave_no_grapple" ],
+                      [ "gravity_chamber_no_grapple_plasma" ]
+                    ]
+                  }
+                },
+                {
+                  "title": "Phazon Mines",
+                  "content": {
+                    "type": "itemgrid",
+                    "item_h_alignment": "left",
+                    "item_size": "400, 15",
+                    "item_margin": "3, 3",
+                    "rows": [
+                      [ "main_quarry_item_no_spider" ],
+                      [ "main_quarry_to_waste_disposal_no_grapple" ],
+                      [ "ore_processing_to_storage_depot_b_no_spider" ],
+                      [ "ore_processing_climb_no_grapple_spider" ],
+                      [ "mines_climb_shafts_no_spider" ],
+                      [ "elite_research_spinner_no_boost" ],
+                      [ "elite_research_backwards_wall_boost" ],
+                      [ "ventilation_shaft_hpbj" ],
+                      [ "metroid_quarantine_a_no_spider" ],
+                      [ "fungal_hall_access_no_phazon_suit" ],
+                      [ "fungal_hall_a_no_grapple" ],
+                      [ "fungal_hall_b_no_grapple" ],
+                      [ "metroid_quarantine_b_no_spider_grapple" ],
+                      [ "phazon_processing_center_item_no_spider" ],
+                      [ "phazon_processing_center_no_phazon_suit" ],
+                      [ "climb_phazon_processing_center_no_spider" ]
+                    ]
+                  }
+                }
               ]
             }
           ]

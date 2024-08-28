@@ -44,3 +44,4 @@ luac.out
 # Project-specific ignores
 output/
 *.zip
+.venv
