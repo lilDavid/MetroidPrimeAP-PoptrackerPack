@@ -36,6 +36,17 @@
                 "New item icons",
                 "Logic fixes"
             ]
+        },
+        {
+            "package_version": "0.3.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "6e5fb31890da13952c75303739ea96322f1a862eb0c31b3ebde156966ca1db1f",
+            "changelog": [
+                "Trick Logic",
+                "Fewer option for X-Ray and Thermal Requirements",
+                "Fixed Magmoor Caverns: Lava Lake and Chozo Ruins: Ruined Nursery not appearing on the map",
+                "Fixed autotracking for certain options"
+            ]
         }
     ]
 }
