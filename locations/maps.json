@@ -653,7 +653,7 @@
       {
         "name": "Ruined Nursery",
         "sections": [
-          { "ref": "Chozo Ruins/Ruined Nursery" }
+          { "ref": "Chozo Ruins/Ruined Nursery/" }
         ],
         "map_locations": [
           {
@@ -984,7 +984,7 @@
         "sections": [
           {
             "name": "Shatter the column",
-            "ref": "Magmoor Caverns/Fiery Shores/"
+            "ref": "Magmoor Caverns/Lava Lake/"
           }
         ],
         "map_locations": [
