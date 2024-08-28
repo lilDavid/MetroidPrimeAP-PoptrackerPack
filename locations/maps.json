@@ -193,8 +193,14 @@
       {
         "name": "Life Grove",
         "sections": [
-          { "ref": "Tallon Overworld/Life Grove/Start" },
-          { "ref": "Tallon Overworld/Life Grove/Underwater Spinner" }
+          {
+            "name": "Start",
+            "ref": "Tallon Overworld/Life Grove/Start"
+          },
+          {
+            "name": "Underwater Spinner",
+            "ref": "Tallon Overworld/Life Grove/Underwater Spinner"
+          }
         ],
         "map_locations": [
           {
@@ -431,8 +437,14 @@
       {
         "name": "Dynamo",
         "sections": [
-          { "ref": "Chozo Ruins/Dynamo/Lower" },
-          { "ref": "Chozo Ruins/Dynamo/Spider Track" }
+          {
+            "name": "Lower",
+            "ref": "Chozo Ruins/Dynamo/Lower"
+          },
+          {
+            "name": "Spider Track",
+            "ref": "Chozo Ruins/Dynamo/Spider Track"
+          }
         ],
         "map_locations": [
           {
@@ -466,8 +478,14 @@
       {
         "name": "Furnace",
         "sections": [
-          { "ref": "Chozo Ruins/Furnace/Spider Tracks" },
-          { "ref": "Chozo Ruins/Furnace/Inside Furnace" }
+          {
+            "name": "Spider Tracks",
+            "ref": "Chozo Ruins/Furnace/Spider Tracks"
+          },
+          {
+            "name": "Inside Furnace",
+            "ref": "Chozo Ruins/Furnace/Inside Furnace"
+          }
         ],
         "map_locations": [
           {
@@ -671,9 +689,18 @@
       {
         "name": "Ruined Shrine",
         "sections": [
-          { "ref": "Chozo Ruins/Ruined Shrine/Plated Beetle" },
-          { "ref": "Chozo Ruins/Ruined Shrine/Half-Pipe" },
-          { "ref": "Chozo Ruins/Ruined Shrine/Lower Tunnel" }
+          {
+            "name": "Plated Beetle",
+            "ref": "Chozo Ruins/Ruined Shrine/Plated Beetle"
+          },
+          {
+            "name": "Half-Pipe",
+            "ref": "Chozo Ruins/Ruined Shrine/Half-Pipe"
+          },
+          {
+            "name": "Lower Tunnel",
+            "ref": "Chozo Ruins/Ruined Shrine/Lower Tunnel"
+          }
         ],
         "map_locations": [
           {
@@ -968,8 +995,14 @@
       {
         "name": "Fiery Shores",
         "sections": [
-          { "ref": "Magmoor Caverns/Fiery Shores/Morph Track" },
-          { "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel" }
+          {
+            "name": "Morph Track",
+            "ref": "Magmoor Caverns/Fiery Shores/Morph Track"
+          },
+          {
+            "name": "Warrior Shrine Tunnel",
+            "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel"
+          }
         ],
         "map_locations": [
           {
@@ -1363,8 +1396,14 @@
       {
         "name": "Gravity Chamber",
         "sections": [
-          { "ref": "Phendrana Drifts/Gravity Chamber/Underwater" },
-          { "ref": "Phendrana Drifts/Gravity Chamber/Grapple Ledge" }
+          {
+            "name": "Underwater",
+            "ref": "Phendrana Drifts/Gravity Chamber/Underwater"
+          },
+          {
+            "name": "Grapple Ledge",
+            "ref": "Phendrana Drifts/Gravity Chamber/Grapple Ledge"
+          }
         ],
         "map_locations": [
           {
@@ -2203,8 +2242,14 @@
             "name": "Tunnel",
             "ref": "Tallon Overworld/Life Grove Tunnel/"
           },
-          { "ref": "Tallon Overworld/Life Grove/Start" },
-          { "ref": "Tallon Overworld/Life Grove/Underwater Spinner" }
+          {
+            "name": "Start",
+            "ref": "Tallon Overworld/Life Grove/Start"
+          },
+          {
+            "name": "Underwater Spinner",
+            "ref": "Tallon Overworld/Life Grove/Underwater Spinner"
+          }
         ],
         "map_locations": [
           {
@@ -2242,8 +2287,14 @@
       {
         "name": "Burn Dome",
         "sections": [
-          { "ref": "Chozo Ruins/Burn Dome/Missile" },
-          { "ref": "Chozo Ruins/Burn Dome/Incinerator Drone" }
+          {
+            "name": "Missile",
+            "ref": "Chozo Ruins/Burn Dome/Missile"
+          },
+          {
+            "name": "Incinerator Drone",
+            "ref": "Chozo Ruins/Burn Dome/Incinerator Drone"
+          }
         ],
         "map_locations": [
           {
@@ -2320,10 +2371,22 @@
       {
         "name": "Main Plaza",
         "sections": [
-          { "ref": "Chozo Ruins/Main Plaza/Half-Pipe" },
-          { "ref": "Chozo Ruins/Main Plaza/Grapple Ledge" },
-          { "ref": "Chozo Ruins/Main Plaza/Tree" },
-          { "ref": "Chozo Ruins/Main Plaza/Locked Door" }
+          {
+            "name": "Half-Pipe",
+            "ref": "Chozo Ruins/Main Plaza/Half-Pipe"
+          },
+          {
+            "name": "Grapple Ledge",
+            "ref": "Chozo Ruins/Main Plaza/Grapple Ledge"
+          },
+          {
+            "name": "Tree",
+            "ref": "Chozo Ruins/Main Plaza/Tree"
+          },
+          {
+            "name": "Locked Door",
+            "ref": "Chozo Ruins/Main Plaza/Locked Door"
+          }
         ],
         "map_locations": [
           {
@@ -2336,8 +2399,14 @@
       {
         "name": "Ruined Gallery",
         "sections": [
-          { "ref": "Chozo Ruins/Ruined Gallery/Missile Wall" },
-          { "ref": "Chozo Ruins/Ruined Gallery/Tunnel" }
+          {
+            "name": "Missile Wall",
+            "ref": "Chozo Ruins/Ruined Gallery/Missile Wall"
+          },
+          {
+            "name": "Tunnel",
+            "ref": "Chozo Ruins/Ruined Gallery/Tunnel"
+          }
         ],
         "map_locations": [
           {
@@ -2350,8 +2419,14 @@
       {
         "name": "Sunchamber",
         "sections": [
-          { "ref": "Chozo Ruins/Sunchamber/Flaaghra" },
-          { "ref": "Chozo Ruins/Sunchamber/Ghosts" }
+          {
+            "name": "Flaaghra",
+            "ref": "Chozo Ruins/Sunchamber/Flaaghra"
+          },
+          {
+            "name": "Ghosts",
+            "ref": "Chozo Ruins/Sunchamber/Ghosts"
+          }
         ],
         "map_locations": [
           {
@@ -2384,8 +2459,14 @@
       {
         "name": "Watery Hall",
         "sections": [
-          { "ref": "Chozo Ruins/Watery Hall/Scan Puzzle" },
-          { "ref": "Chozo Ruins/Watery Hall/Underwater" },
+          {
+            "name": "Scan Puzzle",
+            "ref": "Chozo Ruins/Watery Hall/Scan Puzzle"
+          },
+          {
+            "name": "Underwater",
+            "ref": "Chozo Ruins/Watery Hall/Underwater"
+          },
           {
             "name": "Watery Hall Access",
             "ref": "Chozo Ruins/Watery Hall Access/"
@@ -2432,8 +2513,14 @@
       {
         "name": "Ice Ruins East",
         "sections": [
-          { "ref": "Phendrana Drifts/Ice Ruins East/Behind Ice" },
-          { "ref": "Phendrana Drifts/Ice Ruins East/Spider Track" }
+          {
+            "name": "Behind Ice",
+            "ref": "Phendrana Drifts/Ice Ruins East/Behind Ice"
+          },
+          {
+            "name": "Spider Track",
+            "ref": "Phendrana Drifts/Ice Ruins East/Spider Track"
+          }
         ],
         "map_locations": [
           {
@@ -2446,8 +2533,14 @@
       {
         "name": "Phendrana Shorelines",
         "sections": [
-          { "ref": "Phendrana Drifts/Phendrana Shorelines/Behind Ice" },
-          { "ref": "Phendrana Drifts/Phendrana Shorelines/Spider Track" }
+          {
+            "name": "Behind Ice",
+            "ref": "Phendrana Drifts/Phendrana Shorelines/Behind Ice"
+          },
+          {
+            "name": "Spider Track",
+            "ref": "Phendrana Drifts/Phendrana Shorelines/Spider Track"
+          }
         ],
         "map_locations": [
           {
@@ -2460,8 +2553,14 @@
       {
         "name": "Research Lab Aether",
         "sections": [
-          { "ref": "Phendrana Drifts/Research Lab Aether/Tank" },
-          { "ref": "Phendrana Drifts/Research Lab Aether/Morph Track" }
+          {
+            "name": "Tank",
+            "ref": "Phendrana Drifts/Research Lab Aether/Tank"
+          },
+          {
+            "name": "Morph Track",
+            "ref": "Phendrana Drifts/Research Lab Aether/Morph Track"
+          }
         ],
         "map_locations": [
           {
@@ -2518,8 +2617,14 @@
       {
         "name": "Elite Research",
         "sections": [
-          { "ref": "Phazon Mines/Elite Research/Phazon Elite" },
-          { "ref": "Phazon Mines/Elite Research/Laser" },
+          {
+            "name": "Phazon Elite",
+            "ref": "Phazon Mines/Elite Research/Phazon Elite"
+          },
+          {
+            "name": "Laser",
+            "ref": "Phazon Mines/Elite Research/Laser"
+          },
           {
             "name": "Storage Depot A",
             "ref": "Phazon Mines/Storage Depot A/"
