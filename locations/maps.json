@@ -414,6 +414,38 @@
         ]
       },
       {
+        "name": "Burn Dome",
+        "sections": [
+          {
+            "name": "Missile",
+            "ref": "Chozo Ruins/Burn Dome/Missile"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 518,
+            "y": 224
+          }
+        ]
+      },
+      {
+        "name": "Burn Dome",
+        "sections": [
+          {
+            "name": "Incinerator Drone",
+            "ref": "Chozo Ruins/Burn Dome/Incinerator Drone"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 510,
+            "y": 259
+          }
+        ]
+      },
+      {
         "name": "Crossway",
         "sections": [
           {
@@ -927,7 +959,7 @@
       {
         "name": "Watery Hall",
         "sections": [
-          { "ref": "Chozo Ruins/Watery Hall/Scan puzzle" }
+          { "ref": "Chozo Ruins/Watery Hall/Scan Puzzle" }
         ],
         "map_locations": [
           {
