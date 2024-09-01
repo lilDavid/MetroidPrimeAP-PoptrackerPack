@@ -277,12 +277,18 @@
           {
             "map": "Tallon Overworld",
             "x": 530,
-            "y": 21
+            "y": 21,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 1027,
-            "y": 211
+            "y": 211,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -303,12 +309,18 @@
           {
             "map": "Tallon Overworld",
             "x": 590,
-            "y": 337
+            "y": 337,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 1027,
-            "y": 304
+            "y": 304,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -329,12 +341,18 @@
           {
             "map": "Tallon Overworld",
             "x": 170,
-            "y": 151
+            "y": 151,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 780,
-            "y": 261
+            "y": 261,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -355,12 +373,18 @@
           {
             "map": "Tallon Overworld",
             "x": 40,
-            "y": 352
+            "y": 352,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 733,
-            "y": 356
+            "y": 356,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -380,13 +404,19 @@
         "map_locations": [
           {
             "map": "Tallon Overworld",
-            "x": 40,
-            "y": 352
+            "x": 534,
+            "y": 483,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 1028,
-            "y": 398
+            "y": 398,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       }
@@ -869,12 +899,18 @@
           {
             "map": "Chozo Ruins",
             "x": 243,
-            "y": 22
+            "y": 22,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 434,
-            "y": 38
+            "y": 38,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -895,12 +931,18 @@
           {
             "map": "Chozo Ruins",
             "x": 559,
-            "y": 443
+            "y": 443,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 660,
-            "y": 207
+            "y": 207,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -921,12 +963,18 @@
           {
             "map": "Chozo Ruins",
             "x": 185,
-            "y": 354
+            "y": 354,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 386,
-            "y": 191
+            "y": 191,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -947,12 +995,18 @@
           {
             "map": "Chozo Ruins",
             "x": 641,
-            "y": 519
+            "y": 519,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 682,
-            "y": 238
+            "y": 238,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1181,12 +1235,18 @@
           {
             "map": "Magmoor Caverns",
             "x": 81,
-            "y": 47
+            "y": 47,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 239,
-            "y": 190
+            "y": 190,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1209,12 +1269,18 @@
           {
             "map": "Magmoor Caverns",
             "x": 509,
-            "y": 1045
+            "y": 1045,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 488,
-            "y": 588
+            "y": 588,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1237,12 +1303,18 @@
           {
             "map": "Magmoor Caverns",
             "x": 211,
-            "y": 444
+            "y": 444,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 325,
-            "y": 375
+            "y": 375,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1265,12 +1337,18 @@
           {
             "map": "Magmoor Caverns",
             "x": 389,
-            "y": 905
+            "y": 905,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 439,
-            "y": 526
+            "y": 526,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1293,12 +1371,18 @@
           {
             "map": "Magmoor Caverns",
             "x": 416,
-            "y": 621
+            "y": 621,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 439,
-            "y": 437
+            "y": 437,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1760,12 +1844,18 @@
           {
             "map": "Phendrana Drifts",
             "x": 445,
-            "y": 628
+            "y": 628,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 292,
-            "y": 540
+            "y": 540,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -1786,12 +1876,18 @@
           {
             "map": "Phendrana Drifts",
             "x": 296,
-            "y": 40
+            "y": 40,
+            "shape": "diamond",
+            "size": 16,
+            "border_thickness": 4
           },
           {
             "map": "World Map",
             "x": 189,
-            "y": 360
+            "y": 360,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       }
@@ -1812,10 +1908,7 @@
           {
             "map": "Phazon Mines",
             "x": 644,
-            "y": 706,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 706
           },
           {
             "map": "Mines Sublevel 1",
@@ -1825,10 +1918,7 @@
           {
             "map": "World Map",
             "x": 734,
-            "y": 558,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 558
           }
         ]
       },
@@ -1844,10 +1934,7 @@
           {
             "map": "Phazon Mines",
             "x": 240,
-            "y": 487,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 487
           },
           {
             "map": "Mines Sublevel 1",
@@ -2003,10 +2090,7 @@
           {
             "map": "Phazon Mines",
             "x": 372,
-            "y": 495,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 495
           },
           {
             "map": "Mines Sublevel 1",
@@ -2016,10 +2100,7 @@
           {
             "map": "World Map",
             "x": 783,
-            "y": 493,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 493
           }
         ]
       },
@@ -2131,17 +2212,26 @@
           {
             "map": "Phazon Mines",
             "x": 42,
-            "y": 984
+            "y": 984,
+            "shape": "diamond",
+            "size": 22,
+            "border_thickness": 6
           },
           {
             "map": "Mines Sublevel 2",
             "x": 23,
-            "y": 98
+            "y": 98,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 635,
-            "y": 510
+            "y": 510,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -2162,17 +2252,26 @@
           {
             "map": "Phazon Mines",
             "x": 701,
-            "y": 104
+            "y": 104,
+            "shape": "diamond",
+            "size": 22,
+            "border_thickness": 6
           },
           {
             "map": "Mines Surface",
             "x": 561,
-            "y": 90
+            "y": 90,
+            "shape": "diamond",
+            "size": 12,
+            "border_thickness": 3
           },
           {
             "map": "World Map",
             "x": 758,
-            "y": 520
+            "y": 520,
+            "shape": "diamond",
+            "size": 20,
+            "border_thickness": 5
           }
         ]
       },
@@ -2250,15 +2349,12 @@
           {
             "map": "Phazon Mines",
             "x": 406,
-            "y": 726,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 726
           },
           {
             "map": "Mines Sublevel 1",
-            "x": 113,
-            "y": 45
+            "x": 281,
+            "y": 285
           }
         ]
       }
@@ -2639,10 +2735,7 @@
           {
             "map": "World Map",
             "x": 684,
-            "y": 528,
-            "shape": "diamond",
-            "size": 20,
-            "border_thickness": 5
+            "y": 528
           }
         ]
       },

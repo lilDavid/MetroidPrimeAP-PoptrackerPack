@@ -43,10 +43,9 @@
   },
   {
     "name": "Mines Sublevel 1",
-    "location_size": 12,
-    "location_border_thickness": 3,
-    "img": "images/maps/phazon_1.jpg",
-    "location_shape": "diamond"
+    "location_size": 8,
+    "location_border_thickness": 2,
+    "img": "images/maps/phazon_1.jpg"
   },
   {
     "name": "Mines Sublevel 2",
