@@ -38,7 +38,7 @@
             ]
         },
         {
-            "package_version": "0.3.0",
+            "package_version": "0.4.0",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.0/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "6e5fb31890da13952c75303739ea96322f1a862eb0c31b3ebde156966ca1db1f",
             "changelog": [
@@ -46,6 +46,15 @@
                 "Fewer option for X-Ray and Thermal Requirements",
                 "Fixed Magmoor Caverns: Lava Lake and Chozo Ruins: Ruined Nursery not appearing on the map",
                 "Fixed autotracking for certain options"
+            ]
+        },
+        {
+            "package_version": "0.4.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "e34d3f452d9d1f49b02ed701984feb108dcc9c3b29e7f9e11278beec2e8f1b0b",
+            "changelog": [
+                "Fixed map displays for Burn Dome, Watery Hall Scan Puzzle, and Ventilation Shaft",
+                "Changed map location shapes: all items are now squares, and all elevators are now diamonds"
             ]
         }
     ]
