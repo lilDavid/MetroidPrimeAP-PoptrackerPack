@@ -1716,14 +1716,14 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball-red.png"
+        "img": "images/tricks/phazon_processing_center_no_spider_ball-red.png"
       },
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball.png",
+        "img": "images/tricks/phazon_processing_center_no_spider_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/climb_phazon_processing_center_no_spider_ball.png"
+        "img": "images/tricks/phazon_processing_center_no_spider_ball.png"
       }
     ]
   }

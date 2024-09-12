@@ -476,6 +476,7 @@ class TrickData(NamedTuple):
     }
 
     id: str
+    name: str
     access_rule: List[str]
 
     @classmethod
@@ -494,6 +495,9 @@ class TrickData(NamedTuple):
         if (type(statement.value) is not ast.Call or type(statement.value.func) is not ast.Name or
             statement.value.func.id != "TrickInfo"):
             raise ASTParseError(statement, "Assignment not from TrickInfo constructor")
+
+        trick_name: str = ast.literal_eval(statement.value.args[0])
+        trick_name = trick_name.lower().replace(" ", "_").replace("'", "")
 
         difficulty_expr = statement.value.args[2]
         if (type(difficulty_expr) is not ast.Attribute or
@@ -524,24 +528,29 @@ class TrickData(NamedTuple):
         else:
             access_rule = [f"[$trick|{trick_id}|{difficulty}]"]
 
-        return cls(trick_id, access_rule)
+        return cls(trick_id, trick_name, access_rule)
+
+
+class TrackerTrickData(NamedTuple):
+    name: str
+    codes: List[str]
 
     def json_item(self) -> Dict[str, JsonValue]:
         return {
-            "codes": self.id,
+            "codes": ",".join(self.codes),
             "type": "progressive",
             "initial_stage_idx": 1,
             "allow_disabled": False,
             "stages": [
                 {
-                    "img": f"images/tricks/{self.id}-red.png",
+                    "img": f"images/tricks/{self.name}-red.png",
                 },
                 {
-                    "img": f"images/tricks/{self.id}.png",
+                    "img": f"images/tricks/{self.name}.png",
                     "img_mods": "@disabled",
                 },
                 {
-                    "img": f"images/tricks/{self.id}.png",
+                    "img": f"images/tricks/{self.name}.png",
                 },
             ],
         }
@@ -575,8 +584,14 @@ except ASTParseError as e:
 except Exception as e:
     raise Exception(f"Could not parse tricks") from e
 
-# with open(items / "tricks.json", "w") as stream:
-   # json.dump([trick.json_item() for trick in trick_list], stream, indent=2)
+tracker_tricks: Dict[str, TrackerTrickData] = {}
+for trick in trick_list:
+    if trick.name not in tracker_tricks:
+        tracker_tricks[trick.name] = TrackerTrickData(trick.name, [])
+    tracker_tricks[trick.name].codes.append(trick.id)
+
+with open(items / "tricks.json", "w") as stream:
+   json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
 
 tricks = {trick.id: trick.access_rule for trick in trick_list}
 
