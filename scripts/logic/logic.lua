@@ -177,6 +177,22 @@ function can_charge_beam(required_beam)
     return false
 end
 
+function can_beam_combo(required_beam)
+    if not can_missile() or not can_charge_beam(required_beam) then
+        return false
+    end
+
+    if required_beam == "WaveBeam" then
+        return has("Wavebuster") or has("ProgressiveWaveBeam", 3)
+    end
+    if required_beam == "IceBeam" then
+        return has("IceSpreader") or has("ProgressiveIceBeam", 3)
+    end
+    if required_beam == "PlasmaBeam" then
+        return has("PlasmaBeam") or has("ProgressivePlasmaBeam", 3)
+    end
+end
+
 function can_scan()
     return has("ScanVisor")
 end

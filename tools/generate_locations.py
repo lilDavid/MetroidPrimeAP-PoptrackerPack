@@ -126,10 +126,22 @@ locks = {
     "Wave": "WaveBeam",
     "Ice": "IceBeam",
     "Plasma": "PlasmaBeam",
-    "Missile": "Missile",
+    # "Missile": "Missile",
     "Power_Beam": "PowerBeam",
+    # "Bomb": "Bomb",
+    "None_": None,
+}
+
+blast_shields = {
     "Bomb": "Bomb",
-    "None_": "None",
+    "Charge_Beam": "ChargeBeam",
+    "Flamethrower": "Flamethrower",
+    "Ice_Spreader": "IceSpreader",
+    "Wavebuster": "Wavebuster",
+    "Power_Bomb": "PowerBomb",
+    "Super_Missile": "SuperMissile",
+    "Missile": "Missile",
+    "None_": None,
 }
 
 
@@ -563,8 +575,8 @@ except ASTParseError as e:
 except Exception as e:
     raise Exception(f"Could not parse tricks") from e
 
-with open(items / "tricks.json", "w") as stream:
-   json.dump([trick.json_item() for trick in trick_list], stream, indent=2)
+# with open(items / "tricks.json", "w") as stream:
+   # json.dump([trick.json_item() for trick in trick_list], stream, indent=2)
 
 tricks = {trick.id: trick.access_rule for trick in trick_list}
 
@@ -638,6 +650,7 @@ class DoorData(NamedTuple):
             door.func.id != "DoorData"):
             raise ASTParseError(door, "Door item is not from DoorData constructor")
         door_type = None
+        blast_shield = None
         exclude_from_rando = False
         access_rule = None
         trick_rules: List[str] = []
@@ -653,6 +666,12 @@ class DoorData(NamedTuple):
                     raise ASTParseError(kwarg.value, "Door lock is not a DoorLockType")
                 if kwarg.arg == "lock" or door_type is None:
                     door_type = locks[kwarg.value.attr]
+            if kwarg.arg == "blast_shield":
+                if (type(kwarg.value) is not ast.Attribute or
+                    type(kwarg.value.value) is not ast.Name or
+                    kwarg.value.value.id != "BlastShieldType"):
+                    raise ASTParseError(kwarg.value, "Blast shield is not a BlastShieldType")
+                blast_shield = blast_shields[kwarg.value.attr]
             if kwarg.arg == "exclude_from_rando":
                 exclude_from_rando = ast.literal_eval(kwarg.value)
             if kwarg.arg == "rule_func":
@@ -662,13 +681,18 @@ class DoorData(NamedTuple):
                     access_rule = parse_access_rule(kwarg.value, filename)
             if kwarg.arg == "tricks":
                 trick_rules.extend(get_tricks(kwarg.value))
-        if door_type is None:
-            door_type = "AnyBeam"
+        door_rule = []
+        if door_type not in (None, "AnyBeam"):
+            door_rule.append(f"@doors/{door_type}")
+        if blast_shield is not None:
+            door_rule.append(f"@blastshields/{blast_shield}")
         if access_rule:
-            access_rules = [f"@doors/{door_type},{rule}" for rule in access_rule]
+            access_rules = [",".join(door_rule + [rule]) for rule in access_rule]
+        elif door_rule:
+            access_rules = [",".join(door_rule)]
         else:
-            access_rules = [f"@doors/{door_type}"]
-        access_rules.extend(f"@doors/{door_type},{rule}" for rule in trick_rules)
+            access_rules = []
+        access_rules.extend(",".join(door_rule + [rule]) for rule in trick_rules)
         return cls(source, destination.value, access_rules, exclude_from_rando)
 
 
@@ -720,7 +744,10 @@ class TrackerRoomData(NamedTuple):
         if starting_room_option in starting_rooms:
             rules.append(starting_room_option)
         for door in doors:
-            rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
+            if door.access_rule:
+                rules.extend(f"@{door.source},{rule}" for rule in door.access_rule)
+            else:
+                rules.append(f"@{door.source}")
 
         if world_data.name in transports:
             rules.append(f"ElevatorsNormal,{transports[world_data.name]},$can_access_elevators")

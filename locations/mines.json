@@ -55,7 +55,7 @@
         "name": "Elevator B",
         "access_rules": [
           "@Phazon Mines/Elevator Access B,@doors/PlasmaBeam",
-          "@Phazon Mines/Fungal Hall Access,@doors/AnyBeam,$can_space_jump"
+          "@Phazon Mines/Fungal Hall Access,$can_space_jump"
         ]
       },
       {
@@ -134,7 +134,7 @@
       {
         "name": "Fungal Hall A",
         "access_rules": [
-          "@Phazon Mines/Fungal Hall Access,@doors/AnyBeam,$can_space_jump",
+          "@Phazon Mines/Fungal Hall Access,$can_space_jump",
           "@Phazon Mines/Phazon Mining Tunnel,@doors/PlasmaBeam,$can_bomb,$can_power_bomb"
         ]
       },

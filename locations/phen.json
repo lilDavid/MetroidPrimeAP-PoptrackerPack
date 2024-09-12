@@ -14,9 +14,9 @@
       {
         "name": "Canyon Entryway",
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins West,@doors/Missile",
-          "@Phendrana Drifts/Phendrana Canyon,@doors/AnyBeam,$can_boost,$can_scan",
-          "@Phendrana Drifts/Phendrana Canyon,@doors/AnyBeam,$can_space_jump"
+          "@Phendrana Drifts/Ice Ruins West,@blastshields/Missile",
+          "@Phendrana Drifts/Phendrana Canyon,$can_boost,$can_scan",
+          "@Phendrana Drifts/Phendrana Canyon,$can_space_jump"
         ]
       },
       {
@@ -39,16 +39,16 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Chapel Tunnel,@doors/AnyBeam,$can_bomb"
+          "@Phendrana Drifts/Chapel Tunnel,$can_bomb"
         ]
       },
       {
         "name": "Chapel Tunnel",
         "access_rules": [
-          "@Phendrana Drifts/Chapel of the Elders,@doors/AnyBeam,$can_defeat_sheegoth,$can_space_jump,$can_wave_beam",
-          "@Phendrana Drifts/Chapel of the Elders,@doors/AnyBeam,[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam",
-          "@Phendrana Drifts/Chozo Ice Temple,@doors/AnyBeam,$can_bomb,$can_space_jump,$can_missile",
-          "@Phendrana Drifts/Chozo Ice Temple,@doors/AnyBeam,[$trick|ice_temple_to_chapel_no_sj|2],$can_bomb,$can_missile"
+          "@Phendrana Drifts/Chapel of the Elders,$can_defeat_sheegoth,$can_space_jump,$can_wave_beam",
+          "@Phendrana Drifts/Chapel of the Elders,[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam",
+          "@Phendrana Drifts/Chozo Ice Temple,$can_bomb,$can_space_jump,$can_missile",
+          "@Phendrana Drifts/Chozo Ice Temple,[$trick|ice_temple_to_chapel_no_sj|2],$can_bomb,$can_missile"
         ]
       },
       {
@@ -63,10 +63,10 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Chapel Tunnel,@doors/AnyBeam,$can_bomb",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_missile",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_plasma_beam"
+          "@Phendrana Drifts/Chapel Tunnel,$can_bomb",
+          "@Phendrana Drifts/Temple Entryway,$can_missile",
+          "@Phendrana Drifts/Temple Entryway,$can_charge_beam",
+          "@Phendrana Drifts/Temple Entryway,$can_plasma_beam"
         ]
       },
       {
@@ -90,7 +90,7 @@
         "name": "Courtyard Entryway",
         "access_rules": [
           "@Phendrana Drifts/Ice Ruins West,@doors/WaveBeam,$can_space_jump",
-          "@Phendrana Drifts/Ruined Courtyard,@doors/AnyBeam"
+          "@Phendrana Drifts/Ruined Courtyard"
         ]
       },
       {
@@ -131,7 +131,7 @@
           "@Phendrana Drifts/Frost Cave Access,@doors/WaveBeam,$can_bomb",
           "@Phendrana Drifts/Hunter Cave Access,@doors/WaveBeam",
           "@Phendrana Drifts/Pike Access,@doors/WaveBeam",
-          "@Phendrana Drifts/Transport Access,@doors/IceBeam"
+          "@Phendrana Drifts/Transport Access,@doors/WaveBeam"
         ]
       },
       {
@@ -184,8 +184,8 @@
       {
         "name": "Ice Ruins Access",
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins East,@doors/AnyBeam",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam,$can_missile,$can_scan"
+          "@Phendrana Drifts/Ice Ruins East",
+          "@Phendrana Drifts/Phendrana Shorelines,$can_missile,$can_scan"
         ]
       },
       {
@@ -205,9 +205,9 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins Access,@doors/AnyBeam,$can_missile",
-          "@Phendrana Drifts/Ice Ruins Access,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Plaza Walkway,@doors/AnyBeam"
+          "@Phendrana Drifts/Ice Ruins Access,$can_missile",
+          "@Phendrana Drifts/Ice Ruins Access,$can_charge_beam",
+          "@Phendrana Drifts/Plaza Walkway"
         ]
       },
       {
@@ -222,9 +222,9 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Canyon Entryway,@doors/Missile",
-          "@Phendrana Drifts/Courtyard Entryway,@doors/AnyBeam",
-          "@Phendrana Drifts/Ruins Entryway,@doors/AnyBeam"
+          "@Phendrana Drifts/Canyon Entryway,@blastshields/Missile",
+          "@Phendrana Drifts/Courtyard Entryway",
+          "@Phendrana Drifts/Ruins Entryway"
         ]
       },
       {
@@ -244,13 +244,13 @@
       {
         "name": "Map Station",
         "access_rules": [
-          "@Phendrana Drifts/Research Entrance,@doors/AnyBeam"
+          "@Phendrana Drifts/Research Entrance"
         ]
       },
       {
         "name": "North Quarantine Tunnel",
         "access_rules": [
-          "@Phendrana Drifts/Quarantine Access,@doors/AnyBeam",
+          "@Phendrana Drifts/Quarantine Access",
           "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$can_combat_thardus],$can_spider,^$can_thermal",
           "@Phendrana Drifts/Quarantine Cave,@doors/WaveBeam,[$trick|quarantine_to_north_courtyard_slope_jump|2],$can_space_jump"
         ]
@@ -276,7 +276,7 @@
         ],
         "access_rules": [
           "@Phendrana Drifts/Observatory Access,@doors/WaveBeam",
-          "@Phendrana Drifts/Save Station D,@doors/Missile",
+          "@Phendrana Drifts/Save Station D,@blastshields/Missile",
           "@Phendrana Drifts/West Tower Entrance,@doors/WaveBeam"
         ]
       },
@@ -292,7 +292,7 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Canyon Entryway,@doors/AnyBeam"
+          "@Phendrana Drifts/Canyon Entryway"
         ]
       },
       {
@@ -313,23 +313,23 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins Access,@doors/AnyBeam,$can_missile",
-          "@Phendrana Drifts/Ice Ruins Access,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Plaza Walkway,@doors/AnyBeam",
-          "@Phendrana Drifts/Ruins Entryway,@doors/AnyBeam",
-          "@Phendrana Drifts/Save Station B,@doors/AnyBeam",
-          "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_missile",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_missile",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Temple Entryway,@doors/AnyBeam,$can_plasma_beam"
+          "@Phendrana Drifts/Ice Ruins Access,$can_missile",
+          "@Phendrana Drifts/Ice Ruins Access,$can_charge_beam",
+          "@Phendrana Drifts/Plaza Walkway",
+          "@Phendrana Drifts/Ruins Entryway",
+          "@Phendrana Drifts/Save Station B",
+          "@Phendrana Drifts/Shoreline Entrance,$can_charge_beam",
+          "@Phendrana Drifts/Shoreline Entrance,$can_missile",
+          "@Phendrana Drifts/Temple Entryway,$can_missile",
+          "@Phendrana Drifts/Temple Entryway,$can_charge_beam",
+          "@Phendrana Drifts/Temple Entryway,$can_plasma_beam"
         ]
       },
       {
         "name": "Phendrana's Edge",
         "access_rules": [
           "@Phendrana Drifts/Lower Edge Tunnel,@doors/WaveBeam,$can_morph_ball",
-          "@Phendrana Drifts/Security Cave,@doors/None,$can_morph_ball",
+          "@Phendrana Drifts/Security Cave,$can_morph_ball",
           "@Phendrana Drifts/Storage Cave,@doors/PlasmaBeam",
           "@Phendrana Drifts/Upper Edge Tunnel,@doors/WaveBeam,$can_morph_ball"
         ]
@@ -344,17 +344,17 @@
       {
         "name": "Plaza Walkway",
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins East,@doors/AnyBeam",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam,$can_space_jump",
-          "@Phendrana Drifts/Ruins Entryway,@doors/AnyBeam"
+          "@Phendrana Drifts/Ice Ruins East",
+          "@Phendrana Drifts/Phendrana Shorelines,$can_space_jump",
+          "@Phendrana Drifts/Ruins Entryway"
         ]
       },
       {
         "name": "Quarantine Access",
         "access_rules": [
           "@Phendrana Drifts/North Quarantine Tunnel,@doors/WaveBeam,$can_morph_ball",
-          "@Phendrana Drifts/Ruined Courtyard,@doors/AnyBeam,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,^$can_thermal,$can_super_missile",
-          "@Phendrana Drifts/Ruined Courtyard,@doors/AnyBeam,[$trick|phendrana_courtyard_no_boost_spider|1],$can_space_jump"
+          "@Phendrana Drifts/Ruined Courtyard,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,^$can_thermal,$can_super_missile",
+          "@Phendrana Drifts/Ruined Courtyard,[$trick|phendrana_courtyard_no_boost_spider|1],$can_space_jump"
         ]
       },
       {
@@ -370,7 +370,7 @@
         ],
         "access_rules": [
           "@Phendrana Drifts/North Quarantine Tunnel,@doors/WaveBeam,$can_morph_ball",
-          "@Phendrana Drifts/Quarantine Monitor,@doors/None,$can_morph_ball",
+          "@Phendrana Drifts/Quarantine Monitor,$can_morph_ball",
           "@Phendrana Drifts/South Quarantine Tunnel,@doors/WaveBeam"
         ]
       },
@@ -383,8 +383,8 @@
         ],
         "access_rules": [
           "StartingRoomQuarantineMonitor",
-          "@Phendrana Drifts/Quarantine Cave,@doors/None,[$can_combat_thardus],$can_spider,$can_grapple",
-          "@Phendrana Drifts/Quarantine Cave,@doors/None,[$trick|monitor_cave_no_grapple|2],$can_spider,$can_space_jump,$can_scan"
+          "@Phendrana Drifts/Quarantine Cave,[$can_combat_thardus],$can_spider,$can_grapple",
+          "@Phendrana Drifts/Quarantine Cave,[$trick|monitor_cave_no_grapple|2],$can_spider,$can_space_jump,$can_scan"
         ]
       },
       {
@@ -415,7 +415,7 @@
         "name": "Research Entrance",
         "access_rules": [
           "@Phendrana Drifts/Hydra Lab Entryway,@doors/WaveBeam",
-          "@Phendrana Drifts/Map Station,@doors/AnyBeam",
+          "@Phendrana Drifts/Map Station",
           "@Phendrana Drifts/Specimen Storage,@doors/WaveBeam"
         ]
       },
@@ -469,32 +469,32 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Courtyard Entryway,@doors/AnyBeam",
-          "@Phendrana Drifts/Quarantine Access,@doors/AnyBeam",
-          "@Phendrana Drifts/Save Station A,@doors/Missile",
+          "@Phendrana Drifts/Courtyard Entryway",
+          "@Phendrana Drifts/Quarantine Access",
+          "@Phendrana Drifts/Save Station A,@blastshields/Missile",
           "@Phendrana Drifts/Specimen Storage,@doors/WaveBeam"
         ]
       },
       {
         "name": "Ruins Entryway",
         "access_rules": [
-          "@Phendrana Drifts/Ice Ruins West,@doors/AnyBeam",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam,$can_space_jump",
-          "@Phendrana Drifts/Plaza Walkway,@doors/AnyBeam"
+          "@Phendrana Drifts/Ice Ruins West",
+          "@Phendrana Drifts/Phendrana Shorelines,$can_space_jump",
+          "@Phendrana Drifts/Plaza Walkway"
         ]
       },
       {
         "name": "Save Station A",
         "access_rules": [
-          "@Phendrana Drifts/Ruined Courtyard,@doors/Missile,$_can_reach_top_of_ruined_courtyard",
-          "@Phendrana Drifts/Ruined Courtyard,@doors/Missile,[$trick|phendrana_courtyard_no_boost_spider|1],$can_space_jump"
+          "@Phendrana Drifts/Ruined Courtyard,@blastshields/Missile,$_can_reach_top_of_ruined_courtyard",
+          "@Phendrana Drifts/Ruined Courtyard,@blastshields/Missile,[$trick|phendrana_courtyard_no_boost_spider|1],$can_space_jump"
         ]
       },
       {
         "name": "Save Station B",
         "access_rules": [
           "StartingRoomSaveStationB",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam"
+          "@Phendrana Drifts/Phendrana Shorelines"
         ]
       },
       {
@@ -506,8 +506,8 @@
       {
         "name": "Save Station D",
         "access_rules": [
-          "@Phendrana Drifts/Observatory,@doors/Missile,[$can_combat_labs],$_can_climb_observatory_via_puzzle",
-          "@Phendrana Drifts/Observatory,@doors/Missile,[$trick|observatory_puzzle_skip|2],$can_space_jump,$can_scan"
+          "@Phendrana Drifts/Observatory,@blastshields/Missile,[$can_combat_labs],$_can_climb_observatory_via_puzzle",
+          "@Phendrana Drifts/Observatory,@blastshields/Missile,[$trick|observatory_puzzle_skip|2],$can_space_jump,$can_scan"
         ]
       },
       {
@@ -519,15 +519,15 @@
           }
         ],
         "access_rules": [
-          "@Phendrana Drifts/Phendrana's Edge,@doors/None,$can_grapple,$can_morph_ball,$can_space_jump",
-          "@Phendrana Drifts/Phendrana's Edge,@doors/None,[$trick|phendranas_edge_security_cavern_no_grapple|1],$can_grapple,$can_morph_ball,$can_space_jump"
+          "@Phendrana Drifts/Phendrana's Edge,$can_grapple,$can_morph_ball,$can_space_jump",
+          "@Phendrana Drifts/Phendrana's Edge,[$trick|phendranas_edge_security_cavern_no_grapple|1],$can_grapple,$can_morph_ball,$can_space_jump"
         ]
       },
       {
         "name": "Shoreline Entrance",
         "access_rules": [
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam",
-          "@Phendrana Drifts/Transport to Magmoor Caverns West,@doors/AnyBeam"
+          "@Phendrana Drifts/Phendrana Shorelines",
+          "@Phendrana Drifts/Transport to Magmoor Caverns West"
         ]
       },
       {
@@ -564,9 +564,9 @@
       {
         "name": "Temple Entryway",
         "access_rules": [
-          "@Phendrana Drifts/Chozo Ice Temple,@doors/AnyBeam",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam,$can_space_jump",
-          "@Phendrana Drifts/Phendrana Shorelines,@doors/AnyBeam,[$trick|ice_temple_no_sj|2],$can_bomb"
+          "@Phendrana Drifts/Chozo Ice Temple",
+          "@Phendrana Drifts/Phendrana Shorelines,$can_space_jump",
+          "@Phendrana Drifts/Phendrana Shorelines,[$trick|ice_temple_no_sj|2],$can_bomb"
         ]
       },
       {
@@ -598,8 +598,8 @@
       {
         "name": "Transport to Magmoor Caverns West",
         "access_rules": [
-          "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_charge_beam",
-          "@Phendrana Drifts/Shoreline Entrance,@doors/AnyBeam,$can_missile",
+          "@Phendrana Drifts/Shoreline Entrance,$can_charge_beam",
+          "@Phendrana Drifts/Shoreline Entrance,$can_missile",
           "ElevatorsNormal,@Magmoor Caverns/Transport to Phendrana Drifts North,$can_access_elevators",
           "ElevatorsRandom,PhendranaDriftsTransportToMagmoorCavernsWest"
         ]
@@ -616,14 +616,14 @@
         "access_rules": [
           "@Phendrana Drifts/Observatory,@doors/WaveBeam,[$can_combat_labs],$_can_climb_observatory_via_puzzle",
           "@Phendrana Drifts/Observatory,@doors/WaveBeam,[$trick|observatory_puzzle_skip|2],$can_space_jump,$can_scan",
-          "@Phendrana Drifts/West Tower,@doors/Missile"
+          "@Phendrana Drifts/West Tower,@blastshields/Missile"
         ]
       },
       {
         "name": "West Tower",
         "access_rules": [
           "@Phendrana Drifts/Control Tower,@doors/WaveBeam,[$can_combat_labs]",
-          "@Phendrana Drifts/West Tower Entrance,@doors/Missile"
+          "@Phendrana Drifts/West Tower Entrance,@blastshields/Missile"
         ]
       }
     ]
