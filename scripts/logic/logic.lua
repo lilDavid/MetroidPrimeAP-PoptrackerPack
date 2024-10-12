@@ -87,11 +87,12 @@ function can_spider()
     return has_all({"MorphBall", "SpiderBall"})
 end
 
-function can_missile()
+function can_missile(expansions)
+    if expansions == nil or expansions < 1 then expansions = 1 end
     if has("MainMissile") then
-        return has("MissileLauncher")
+        return has("MissileLauncher") and has("MissileExpansion", expansions - 1)
     end
-    return has("MissileExpansion")
+    return has("MissileExpansion", expansions)
 end
 
 function can_super_missile()
@@ -177,19 +178,19 @@ function can_charge_beam(required_beam)
     return false
 end
 
-function can_beam_combo(required_beam)
-    if not can_missile() or not can_charge_beam(required_beam) then
+function can_charge_combo(required_beam)
+    if not can_missile(2) or not can_charge_beam(required_beam) then
         return false
     end
 
     if required_beam == "WaveBeam" then
-        return has("Wavebuster") or has("ProgressiveWaveBeam", 3)
+        return can_missile(3) and (has("Wavebuster") or has("ProgressiveWaveBeam", 3))
     end
     if required_beam == "IceBeam" then
         return has("IceSpreader") or has("ProgressiveIceBeam", 3)
     end
     if required_beam == "PlasmaBeam" then
-        return has("PlasmaBeam") or has("ProgressivePlasmaBeam", 3)
+        return can_missile(3) and (has("PlasmaBeam") or has("ProgressivePlasmaBeam", 3))
     end
 end
 
@@ -198,8 +199,10 @@ function can_scan()
 end
 
 function can_heat()
-    -- Varia required despite setting to make Gravity and Phazon work?
-    return has("VariaSuit")
+    if has("NonVariaHeatDamage") then
+        return has("VariaSuit")
+    end
+    return has_any({"VariaSuit", "GravitySuit", "PhazonSuit"})
 end
 
 function can_phazon()

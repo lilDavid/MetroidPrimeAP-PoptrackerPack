@@ -147,7 +147,6 @@
         "access_rules": [
           "@Tallon Overworld/Landing Site,$can_space_jump",
           "@Tallon Overworld/Landing Site,[$trick|landing_site_scan_dash|1],$can_scan",
-          "@Tallon Overworld/Tallon Canyon,$can_space_jump",
           "@Tallon Overworld/Tallon Canyon,$can_boost,$can_bomb"
         ]
       },
@@ -186,7 +185,7 @@
           "@Tallon Overworld/Alcove,$can_space_jump",
           "@Tallon Overworld/Alcove,[$trick|alcove_escape|1]",
           "@Tallon Overworld/Canyon Cavern",
-          "@Tallon Overworld/Gully,$can_bomb,$can_space_jump",
+          "@Tallon Overworld/Gully",
           "@Tallon Overworld/Temple Hall",
           "@Tallon Overworld/Waterfall Cavern,$can_morph_ball"
         ]

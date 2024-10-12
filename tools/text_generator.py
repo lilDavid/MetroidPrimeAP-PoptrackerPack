@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Dict
+import sys
 
 from PIL import Image
 
@@ -126,3 +127,6 @@ def create_trick_images(trick_name: str):
     filename = trick_name.lower().replace(" ", "_").replace("'", "")
     white.save(TRICK_NAME_PATH / f"{filename}.png")
     red.save(TRICK_NAME_PATH / f"{filename}-red.png")
+
+
+create_trick_images(sys.argv[1])

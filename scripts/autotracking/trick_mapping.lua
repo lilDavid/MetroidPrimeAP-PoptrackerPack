@@ -23,6 +23,7 @@ TRICK_MAPPING = {
     ["Tower of Light Climb Without Missiles"] = "tower_of_light_climb_without_missiles",
     ["Tower of Light Climb No Space Jump"] = "tower_of_light_climb_nsj",
     ["Tower Chamber No Gravity"] = "tower_chamber_no_gravity",
+    ["Tower Chamber No Space Jump"] = "tower_chamber_no_space_jump",
     ["Ruined Nursery No Bombs"] = "ruined_nursery_no_bombs",
     ["Cross Magma Pool Suitless"] = "magma_pool_scan_dash",
     ["Cross Magma Pool With SJB and Gravity"] = "magma_pool_debris_jump",

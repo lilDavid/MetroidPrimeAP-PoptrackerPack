@@ -414,7 +414,7 @@
     ]
   },
   {
-    "codes": "tower_chamber_no_gravity,tower_chamber_no_space_jump",
+    "codes": "tower_chamber_no_gravity",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
@@ -428,6 +428,24 @@
       },
       {
         "img": "images/tricks/tower_chamber_no_gravity.png"
+      }
+    ]
+  },
+  {
+    "codes": "tower_chamber_no_space_jump",
+    "type": "progressive",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/tricks/tower_chamber_no_space_jump-red.png"
+      },
+      {
+        "img": "images/tricks/tower_chamber_no_space_jump.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/tricks/tower_chamber_no_space_jump.png"
       }
     ]
   },

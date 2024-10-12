@@ -3,11 +3,12 @@
 from argparse import ArgumentParser
 import ast
 from enum import Enum, StrEnum
+import itertools
 import json
 from pathlib import Path
 import importlib.util
 import sys
-from typing import Dict, List, NamedTuple, Optional, Set, Union
+from typing import Dict, Iterable, List, NamedTuple, Optional, Set, Union
 
 
 pack = Path(__file__).parents[1]
@@ -656,8 +657,10 @@ class PickupData(NamedTuple):
 class DoorData(NamedTuple):
     source: str
     destination: str
+    open_rule: str
     access_rule: List[str]
     exclude_from_rando: bool
+    target_door_index: Optional[int]
 
     @classmethod
     def from_ast(cls, door: ast.expr, source: str, filename: str):
@@ -667,6 +670,7 @@ class DoorData(NamedTuple):
         door_type = None
         blast_shield = None
         exclude_from_rando = False
+        target_door_index = None
         access_rule = None
         trick_rules: List[str] = []
         if (type(door.args[0]) is not ast.Attribute or type(door.args[0].value) is not ast.Name or
@@ -689,6 +693,8 @@ class DoorData(NamedTuple):
                 blast_shield = blast_shields[kwarg.value.attr]
             if kwarg.arg == "exclude_from_rando":
                 exclude_from_rando = ast.literal_eval(kwarg.value)
+            if kwarg.arg == "sub_region_door_index":
+                target_door_index = ast.literal_eval(kwarg.value)
             if kwarg.arg == "rule_func":
                 if (source, destination.value) in manual_door_rules:
                     access_rule = manual_door_rules[(source, destination.value)]
@@ -708,13 +714,14 @@ class DoorData(NamedTuple):
         else:
             access_rules = []
         access_rules.extend(",".join(door_rule + [rule]) for rule in trick_rules)
-        return cls(source, destination.value, access_rules, exclude_from_rando)
+        return cls(source, destination.value, ",".join(door_rule), access_rules,
+                   exclude_from_rando, target_door_index)
 
 
 class WorldRoomData(NamedTuple):
     name: str
     pickups: List[PickupData]
-    doors: List[DoorData]  # Doors whose sources are this room
+    doors: Dict[int, DoorData]  # Doors whose sources are this room
 
     @classmethod
     def from_ast(cls, area: str, name: ast.expr, room_data: ast.expr, filename: str):
@@ -729,7 +736,7 @@ class WorldRoomData(NamedTuple):
             raise ASTParseError(room_data, "Room not assigned to RoomData object")
 
         pickups: List[PickupData] = []
-        doors: List[DoorData] = []
+        doors: Dict[int, DoorData] = {}
         for keyword in room_data.keywords:
             if keyword.arg == "pickups":
                 if type(keyword.value) is not ast.List:
@@ -739,8 +746,8 @@ class WorldRoomData(NamedTuple):
             if keyword.arg == "doors":
                 if type(keyword.value) is not ast.Dict:
                     raise ValueError("Kwarg doors is not a dict")
-                for value in keyword.value.values:
-                    doors.append(DoorData.from_ast(value, f"{area}/{room_name}", filename))
+                for key, value in zip(keyword.value.keys, keyword.value.values, strict=True):
+                    doors[ast.literal_eval(key)] = DoorData.from_ast(value, f"{area}/{room_name}", filename)
 
         return cls(room_name, pickups, doors)
 
@@ -751,8 +758,9 @@ class TrackerRoomData(NamedTuple):
     access_rules: List[str]
 
     @classmethod
-    def from_world_room_data(cls, area: str, world_data: WorldRoomData, all_doors: List[DoorData], transports: Dict[str, str]):
-        doors = [door for door in all_doors if door.destination == world_data.name]
+    def from_world_room_data(cls, area: str, world_data: WorldRoomData,
+                             all_doors: Iterable[DoorData], transports: Dict[str, str]):
+        doors = (door for door in all_doors if door.destination == world_data.name)
 
         rules = []
         starting_room_option = "StartingRoom" + world_data.name.title().replace(" ", "")
@@ -843,13 +851,31 @@ class AreaData(NamedTuple):
             ASTParseError(init_method, "Missing assignment to self.rooms")
 
         area_name = eval(compile(area_name_expr, filename, "eval"))
-        world_rooms = [WorldRoomData.from_ast(area_name, key, value, filename)
-                 for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)]
-        doors = []
-        for room in world_rooms:
-            doors.extend(room.doors)
-        tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors, transport_rules[area_name])
-                         for room in world_rooms]
+        world_rooms = {room.name: room for room in (WorldRoomData.from_ast(area_name, key, value, filename)
+                                                    for key, value in zip(rooms_assign.keys,
+                                                                          rooms_assign.values,
+                                                                          strict=True))}
+        doors: List[DoorData] = []
+        for door in itertools.chain.from_iterable(room.doors.values() for room in world_rooms.values()):
+            doors.append(door)
+            if door.target_door_index:
+                print(door)
+                target_door = world_rooms[door.destination].doors[door.target_door_index]
+                if door.access_rule:
+                    if target_door.open_rule:
+                        access_rule = [','.join((rule, target_door.open_rule)) for rule in door.access_rule]
+                    else:
+                        access_rule = door.access_rule
+                else:
+                    if target_door.open_rule:
+                        access_rule = [target_door.open_rule]
+                    else:
+                        access_rule = []
+                doors.append(DoorData(door.source, target_door.destination, "", access_rule, True, None))
+
+        tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors,
+                                                              transport_rules[area_name])
+                         for room in world_rooms.values()]
         return cls(area_name, tracker_rooms)
 
     def into_json(self):

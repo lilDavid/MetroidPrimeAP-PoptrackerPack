@@ -81,6 +81,7 @@
                       [ "tower_of_light_climb_without_missiles" ],
                       [ "tower_of_light_climb_nsj" ],
                       [ "tower_chamber_no_gravity" ],
+                      [ "tower_chamber_no_space_jump" ],
                       [ "ruined_nursery_no_bombs" ],
                       [ "magma_pool_scan_dash" ],
                       [ "magma_pool_debris_jump" ],

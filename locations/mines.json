@@ -347,8 +347,6 @@
       {
         "name": "Research Access",
         "access_rules": [
-          "@Phazon Mines/Elite Research,@doors/IceBeam,$can_bomb,$can_boost,$can_space_jump,$can_scan",
-          "@Phazon Mines/Elite Research,@doors/IceBeam,[$trick|elite_research_spinner_no_boost|1],$can_bomb,$can_scan,$can_space_jump",
           "@Phazon Mines/Ore Processing,@doors/IceBeam"
         ]
       },
