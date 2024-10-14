@@ -635,6 +635,7 @@ class PickupData(NamedTuple):
         _, _, item_name = cls.split_check_name(check_name)
 
         access_rules: List[str] = []
+        trick_access_rules: List[str] = []
         for kwarg in pickup_data.keywords:
             if kwarg.arg == "rule_func":
                 if check_name in manual_location_rules:
@@ -642,7 +643,10 @@ class PickupData(NamedTuple):
                 else:
                     access_rules.extend(parse_access_rule(kwarg.value, filename) or "")
             if kwarg.arg == "tricks":
-                access_rules.extend(get_tricks(kwarg.value))
+                trick_access_rules.extend(get_tricks(kwarg.value))
+
+        if access_rules:
+            access_rules.extend(trick_access_rules)
 
         return cls(item_name, item_images.get(check_name), access_rules)
 
