@@ -19,8 +19,8 @@
           {
             "name": "Morph Track",
             "access_rules": [
-              "[$trick|fiery_shores_morphball_track_sj|1],$can_space_jump",
-              "$can_bomb"
+              "$can_bomb",
+              "[$trick|fiery_shores_morphball_track_sj|1],$can_space_jump"
             ]
           },
           {

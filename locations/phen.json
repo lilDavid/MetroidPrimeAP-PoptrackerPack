@@ -285,10 +285,7 @@
         "sections": [
           {
             "name": "",
-            "chest_unopened_img": "images/items/boostball.png",
-            "access_rules": [
-              "[$trick|phendrana_canyon_escape_no_items|1]"
-            ]
+            "chest_unopened_img": "images/items/boostball.png"
           }
         ],
         "access_rules": [
