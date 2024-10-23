@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Uses grep and sed to generate the location autotracking mappings as a Lua table
+# Currently generates wrong location mappings since we need names for all sections
 
 if [[ "$#" -lt 1 ]]; then
     >&2 echo "Usage: $0 apworld-path"

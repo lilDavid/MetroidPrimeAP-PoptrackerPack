@@ -8,7 +8,7 @@
         "name": "Antechamber",
         "sections": [
           {
-            "name": "",
+            "name": "On the pedestal",
             "chest_unopened_img": "images/items/icebeam.png"
           }
         ],
@@ -78,7 +78,7 @@
         "name": "Crossway",
         "sections": [
           {
-            "name": "",
+            "name": "Morph Ball elevator",
             "access_rules": [
               "$can_bomb,$can_boost,$can_spider,$can_super_missile,$can_scan",
               "[$trick|crossway_item_fewer_reqs|1],$can_morph_ball,$can_space_jump"
@@ -138,7 +138,7 @@
         "name": "Elder Chamber",
         "sections": [
           {
-            "name": "",
+            "name": "Plasma Beam bomb slot",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -211,7 +211,7 @@
         "name": "Gathering Hall",
         "sections": [
           {
-            "name": "",
+            "name": "Sandstone wall",
             "access_rules": [
               "$can_space_jump,$can_bomb",
               "$can_space_jump,$can_power_bomb",
@@ -230,7 +230,7 @@
         "name": "Hall of the Elders",
         "sections": [
           {
-            "name": "",
+            "name": "Ice Beam bomb slot",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "[$can_combat_ghosts],$can_power_beam,$can_bomb,$can_spider,$can_ice_beam,$can_space_jump",
@@ -250,7 +250,7 @@
         "name": "Hive Totem",
         "sections": [
           {
-            "name": "",
+            "name": "Hive Mecha",
             "chest_unopened_img": "images/items/missilelauncher.png",
             "access_rules": [
               "$can_power_beam",
@@ -267,7 +267,7 @@
         "name": "Magma Pool",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium wall",
             "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "$can_grapple,$can_heat,$can_power_bomb",
@@ -397,7 +397,7 @@
         "name": "Ruined Fountain",
         "sections": [
           {
-            "name": "",
+            "name": "Spider tracks",
             "access_rules": [
               "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
             ]
@@ -436,7 +436,7 @@
         "name": "Ruined Nursery",
         "sections": [
           {
-            "name": "",
+            "name": "Morph Ball maze",
             "access_rules": [
               "$can_bomb",
               "[$trick|ruined_nursery_no_bombs|3],$can_space_jump,$can_morph_ball"
@@ -582,7 +582,7 @@
         "name": "Tower Chamber",
         "sections": [
           {
-            "name": "",
+            "name": "Through the waters",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -606,7 +606,7 @@
         "name": "Tower of Light",
         "sections": [
           {
-            "name": "",
+            "name": "Weakened columns",
             "chest_unopened_img": "images/items/wavebuster.png",
             "access_rules": [
               "$can_climb_tower_of_light",
@@ -624,7 +624,7 @@
         "name": "Training Chamber Access",
         "sections": [
           {
-            "name": "",
+            "name": "Leaves",
             "access_rules": [
               "$can_morph_ball"
             ]
@@ -641,7 +641,7 @@
         "name": "Training Chamber",
         "sections": [
           {
-            "name": "",
+            "name": "Hidden spider track",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_boost,$can_spider,$can_bomb,$can_power_beam,[$can_combat_ghosts]"
@@ -657,7 +657,7 @@
         "name": "Transport Access North",
         "sections": [
           {
-            "name": "",
+            "name": "Behind Hive Mecha",
             "chest_unopened_img": "images/items/energytank.png"
           }
         ],
@@ -721,7 +721,7 @@
         "name": "Vault",
         "sections": [
           {
-            "name": "",
+            "name": "Open the locks",
             "access_rules": [
               "$can_bomb"
             ]
@@ -736,7 +736,7 @@
         "name": "Watery Hall Access",
         "sections": [
           {
-            "name": "",
+            "name": "Missile wall",
             "access_rules": [
               "$can_missile"
             ]

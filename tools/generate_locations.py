@@ -122,6 +122,77 @@ item_images = {
 }
 
 
+location_names = {
+    'Chozo Ruins: Ruined Fountain': "Spider tracks",
+    'Chozo Ruins: Vault': "Open the locks",
+    'Chozo Ruins: Training Chamber': "Hidden spider track",
+    'Chozo Ruins: Ruined Nursery': "Morph Ball maze",
+    'Chozo Ruins: Training Chamber Access': "Leaves",
+    'Chozo Ruins: Magma Pool': "Bendezium wall",
+    'Chozo Ruins: Tower of Light': "Weakened columns",
+    'Chozo Ruins: Tower Chamber': "Through the waters",
+    'Chozo Ruins: Transport Access North': "Behind Hive Mecha",
+    'Chozo Ruins: Gathering Hall': "Sandstone wall",
+    'Chozo Ruins: Hive Totem': "Hive Mecha",
+    'Chozo Ruins: Watery Hall Access': "Missile wall",
+    'Chozo Ruins: Hall of the Elders': "Ice Beam bomb slot",
+    'Chozo Ruins: Crossway': "Morph Ball elevator",
+    'Chozo Ruins: Elder Chamber': "Plasma Beam bomb slot",
+    'Chozo Ruins: Antechamber': "On the pedestal",
+    'Phendrana Drifts: Chozo Ice Temple': "Thaw the frozen waters",
+    'Phendrana Drifts: Ice Ruins West': "Below ice",
+    'Phendrana Drifts: Chapel of the Elders': "Sheegoth",
+    'Phendrana Drifts: Ruined Courtyard': "Morph Tunnel",
+    'Phendrana Drifts: Phendrana Canyon': "In the tower",
+    'Phendrana Drifts: Quarantine Cave': "Thardus",
+    'Phendrana Drifts: Research Lab Hydra': "Cordite column",
+    'Phendrana Drifts: Quarantine Monitor': "Swing to the door",
+    'Phendrana Drifts: Observatory': "Above hologram",
+    'Phendrana Drifts: Transport Access': "Encased in ice",
+    'Phendrana Drifts: Control Tower': "Collapse the tower",
+    'Phendrana Drifts: Research Core': "Deactivate the field",
+    'Phendrana Drifts: Frost Cave': "Under the ice",
+    'Phendrana Drifts: Storage Cave': "Bendezium wall",
+    'Phendrana Drifts: Security Cave': "At the top",
+    'Tallon Overworld: Landing Site': "Morph Ball tunnel",
+    'Tallon Overworld: Alcove': "Watch your step",
+    'Tallon Overworld: Frigate Crash Site': "Tangled roots",
+    'Tallon Overworld: Overgrown Cavern': "Venom Weed",
+    'Tallon Overworld: Root Cave': "Behind vines",
+    'Tallon Overworld: Artifact Temple': "Truly seek it",
+    'Tallon Overworld: Transport Tunnel B': "Under the bridge",
+    'Tallon Overworld: Arbor Chamber': "Top of the cave",
+    'Tallon Overworld: Cargo Freight Lift to Deck Gamma': "Elevator",
+    'Tallon Overworld: Biohazard Containment': "Cordite locker",
+    'Tallon Overworld: Hydro Access Tunnel': "Underwater bomb puzzle",
+    'Tallon Overworld: Great Tree Chamber': "Invisible platforms",
+    'Tallon Overworld: Life Grove Tunnel': "Boost Ball loop",
+    'Phazon Mines: Main Quarry': "Crane",
+    'Phazon Mines: Security Access A': "Bendezium gate",
+    'Phazon Mines: Storage Depot B': "Pillar rotation puzzle",
+    'Phazon Mines: Storage Depot A': "Deactivate the force field",
+    'Phazon Mines: Elite Control Access': "Explosive crate",
+    'Phazon Mines: Ventilation Shaft': "Turn on the system",
+    'Phazon Mines: Phazon Processing Center': "Bendezium wall",
+    'Phazon Mines: Processing Center Access': "Ahead of the gate",
+    'Phazon Mines: Elite Quarters': "Omega Pirate",
+    'Phazon Mines: Central Dynamo': "Morph Ball maze",
+    'Phazon Mines: Metroid Quarantine B': "Sandstone floor",
+    'Phazon Mines: Metroid Quarantine A': "Bendezium cave",
+    'Phazon Mines: Fungal Hall B': "Sandstone floor",
+    'Phazon Mines: Phazon Mining Tunnel': "Phazon maze",
+    'Phazon Mines: Fungal Hall Access': "Under a mushroom",
+    'Magmoor Caverns: Lava Lake': "Shatter the column",
+    'Magmoor Caverns: Triclops Pit': "Weakened column",
+    'Magmoor Caverns: Storage Cavern': "Through the pit",
+    'Magmoor Caverns: Transport Tunnel A': "Bomb jump puzzle",
+    'Magmoor Caverns: Warrior Shrine': "Statue's hands",
+    'Magmoor Caverns: Shore Tunnel': "Bendezium tunnel",
+    'Magmoor Caverns: Plasma Processing': "Rotating lift puzzle",
+    'Magmoor Caverns: Magmoor Workstation': "Channel door puzzle",
+}
+
+
 locks = {
     "Blue": "AnyBeam",
     "Wave": "WaveBeam",
@@ -633,6 +704,8 @@ class PickupData(NamedTuple):
         check_name: str = ast.literal_eval(pickup_data.args[0])
 
         _, _, item_name = cls.split_check_name(check_name)
+        if not item_name:
+            item_name = location_names[check_name]
 
         access_rules: List[str] = []
         trick_access_rules: List[str] = []
@@ -863,7 +936,6 @@ class AreaData(NamedTuple):
         for door in itertools.chain.from_iterable(room.doors.values() for room in world_rooms.values()):
             doors.append(door)
             if door.target_door_index:
-                print(door)
                 target_door = world_rooms[door.destination].doors[door.target_door_index]
                 if door.access_rule:
                     if target_door.open_rule:

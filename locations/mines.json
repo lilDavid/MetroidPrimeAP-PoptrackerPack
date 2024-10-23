@@ -8,7 +8,7 @@
         "name": "Central Dynamo",
         "sections": [
           {
-            "name": "",
+            "name": "Morph Ball maze",
             "chest_unopened_img": "images/items/powerbomb.png",
             "access_rules": [
               "$can_bomb"
@@ -62,7 +62,7 @@
         "name": "Elite Control Access",
         "sections": [
           {
-            "name": "",
+            "name": "Explosive crate",
             "access_rules": [
               "$can_morph_ball"
             ]
@@ -94,7 +94,7 @@
         "name": "Elite Quarters",
         "sections": [
           {
-            "name": "",
+            "name": "Omega Pirate",
             "chest_unopened_img": "images/items/phazonsuit.png",
             "access_rules": [
               "[$can_combat_omega_pirate],^$can_xray|2"
@@ -142,7 +142,7 @@
         "name": "Fungal Hall Access",
         "sections": [
           {
-            "name": "",
+            "name": "Under a mushroom",
             "access_rules": [
               "$can_morph_ball,$can_phazon",
               "[$trick|fungal_hall_access_no_phazon_suit|1],$can_morph_ball,$has_energy_tanks|1"
@@ -158,7 +158,7 @@
         "name": "Fungal Hall B",
         "sections": [
           {
-            "name": "",
+            "name": "Sandstone floor",
             "access_rules": [
               "$can_bomb",
               "$can_power_bomb"
@@ -175,7 +175,7 @@
         "name": "Main Quarry",
         "sections": [
           {
-            "name": "",
+            "name": "Crane",
             "access_rules": [
               "$can_morph_ball,$can_spider,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump",
               "[$trick|main_quarry_item_no_spider|2],$can_morph_ball,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
@@ -207,7 +207,7 @@
         "name": "Metroid Quarantine A",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium cave",
             "access_rules": [
               "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,^$can_xray",
               "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,^$can_xray"
@@ -223,7 +223,7 @@
         "name": "Metroid Quarantine B",
         "sections": [
           {
-            "name": "",
+            "name": "Sandstone floor",
             "access_rules": [
               "[$can_combat_mines],@Elite Quarters Access,$can_super_missile"
             ]
@@ -272,7 +272,7 @@
         "name": "Phazon Mining Tunnel",
         "sections": [
           {
-            "name": "",
+            "name": "Phazon maze",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "$can_phazon,$can_bomb"
@@ -290,7 +290,7 @@
         "name": "Phazon Processing Center",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium wall",
             "access_rules": [
               "$can_spider,$can_bomb,$can_space_jump,$can_power_bomb",
               "[$trick|phazon_processing_center_item_no_spider|1],$can_space_jump,$can_power_bomb"
@@ -308,7 +308,7 @@
         "name": "Processing Center Access",
         "sections": [
           {
-            "name": "",
+            "name": "Ahead of the gate",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_backwards_lower_mines",
@@ -373,7 +373,7 @@
         "name": "Security Access A",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium gate",
             "access_rules": [
               "$can_power_bomb"
             ]
@@ -395,7 +395,7 @@
         "name": "Storage Depot A",
         "sections": [
           {
-            "name": "",
+            "name": "Deactivate the force field",
             "chest_unopened_img": "images/items/flamethrower.png"
           }
         ],
@@ -407,7 +407,7 @@
         "name": "Storage Depot B",
         "sections": [
           {
-            "name": "",
+            "name": "Pillar rotation puzzle",
             "chest_unopened_img": "images/items/grapplebeam.png"
           }
         ],
@@ -445,7 +445,7 @@
         "name": "Ventilation Shaft",
         "sections": [
           {
-            "name": "",
+            "name": "Turn on the system",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_scan,$can_power_bomb,$can_space_jump"

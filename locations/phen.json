@@ -30,7 +30,7 @@
         "name": "Chapel of the Elders",
         "sections": [
           {
-            "name": "",
+            "name": "Sheegoth",
             "chest_unopened_img": "images/items/wavebeam.png",
             "access_rules": [
               "$can_space_jump",
@@ -55,7 +55,7 @@
         "name": "Chozo Ice Temple",
         "sections": [
           {
-            "name": "",
+            "name": "Thaw the frozen waters",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "$can_morph_ball,$can_space_jump,$can_melt_ice"
@@ -73,7 +73,7 @@
         "name": "Control Tower",
         "sections": [
           {
-            "name": "",
+            "name": "Collapse the tower",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_bomb",
@@ -112,7 +112,7 @@
         "name": "Frost Cave",
         "sections": [
           {
-            "name": "",
+            "name": "Under the ice",
             "access_rules": [
               "$can_grapple,$can_missile,$can_move_underwater",
               "[$trick|frost_cave_no_grapple|1],$can_missile,$can_space_jump,$can_move_underwater"
@@ -214,7 +214,7 @@
         "name": "Ice Ruins West",
         "sections": [
           {
-            "name": "",
+            "name": "Below ice",
             "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "$can_melt_ice,$can_space_jump,$can_missile"
@@ -266,7 +266,7 @@
         "name": "Observatory",
         "sections": [
           {
-            "name": "",
+            "name": "Above hologram",
             "chest_unopened_img": "images/items/supermissile.png",
             "access_rules": [
               "[$can_combat_labs],$_can_climb_observatory_via_puzzle",
@@ -284,7 +284,7 @@
         "name": "Phendrana Canyon",
         "sections": [
           {
-            "name": "",
+            "name": "In the tower",
             "chest_unopened_img": "images/items/boostball.png"
           }
         ],
@@ -358,7 +358,7 @@
         "name": "Quarantine Cave",
         "sections": [
           {
-            "name": "",
+            "name": "Thardus",
             "chest_unopened_img": "images/items/spiderball.png",
             "access_rules": [
               "[$can_combat_thardus],^$can_thermal"
@@ -375,7 +375,7 @@
         "name": "Quarantine Monitor",
         "sections": [
           {
-            "name": ""
+            "name": "Swing to the door"
           }
         ],
         "access_rules": [
@@ -396,7 +396,7 @@
         "name": "Research Core",
         "sections": [
           {
-            "name": "",
+            "name": "Deactivate the field",
             "chest_unopened_img": "images/items/thermalvisor.png",
             "access_rules": [
               "[$can_combat_labs],^$can_thermal,$can_scan,$can_wave_beam"
@@ -442,7 +442,7 @@
         "name": "Research Lab Hydra",
         "sections": [
           {
-            "name": "",
+            "name": "Cordite column",
             "access_rules": [
               "$can_super_missile,$can_scan"
             ]
@@ -457,7 +457,7 @@
         "name": "Ruined Courtyard",
         "sections": [
           {
-            "name": "",
+            "name": "Morph Tunnel",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$_can_reach_top_of_ruined_courtyard",
@@ -511,7 +511,7 @@
         "name": "Security Cave",
         "sections": [
           {
-            "name": "",
+            "name": "At the top",
             "chest_unopened_img": "images/items/powerbombexpansion.png"
           }
         ],
@@ -547,7 +547,7 @@
         "name": "Storage Cave",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium wall",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -570,7 +570,7 @@
         "name": "Transport Access",
         "sections": [
           {
-            "name": "",
+            "name": "Encased in ice",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_melt_ice"

@@ -5,7 +5,7 @@
       {
         "name": "Alcove",
         "sections": [
-          { "ref": "Tallon Overworld/Alcove/" }
+          { "ref": "Tallon Overworld/Alcove/Watch your step" }
         ],
         "map_locations": [
           {
@@ -23,10 +23,7 @@
       {
         "name": "Artifact Temple",
         "sections": [
-          {
-            "name": "Truly seek it",
-            "ref": "Tallon Overworld/Artifact Temple/"
-          }
+          { "ref": "Tallon Overworld/Artifact Temple/Truly seek it" }
         ],
         "map_locations": [
           {
@@ -44,7 +41,7 @@
       {
         "name": "Arbor Chamber",
         "sections": [
-          { "ref": "Tallon Overworld/Arbor Chamber/" }
+          { "ref": "Tallon Overworld/Arbor Chamber/Top of the cave" }
         ],
         "map_locations": [
           {
@@ -58,8 +55,7 @@
         "name": "Biohazard Containment",
         "sections": [
           {
-            "name": "Cordite locker",
-            "ref": "Tallon Overworld/Biohazard Containment/"
+            "ref": "Tallon Overworld/Biohazard Containment/Cordite locker"
           }
         ],
         "map_locations": [
@@ -78,7 +74,7 @@
       {
         "name": "Cargo Freight Lift to Deck Gamma",
         "sections": [
-          { "ref": "Tallon Overworld/Cargo Freight Lift to Deck Gamma/" }
+          { "ref": "Tallon Overworld/Cargo Freight Lift to Deck Gamma/Elevator" }
         ],
         "map_locations": [
           {
@@ -97,8 +93,7 @@
         "name": "Frigate Crash Site",
         "sections": [
           {
-            "name": "Tangled roots",
-            "ref": "Tallon Overworld/Frigate Crash Site/"
+            "ref": "Tallon Overworld/Frigate Crash Site/Tangled roots"
           }
         ],
         "map_locations": [
@@ -117,7 +112,7 @@
       {
         "name": "Great Tree Chamber",
         "sections": [
-          { "ref": "Tallon Overworld/Great Tree Chamber/" }
+          { "ref": "Tallon Overworld/Great Tree Chamber/Invisible platforms" }
         ],
         "map_locations": [
           {
@@ -136,8 +131,7 @@
         "name": "Hydro Access Tunnel",
         "sections": [
           {
-            "name": "Underwater bomb puzzle",
-            "ref": "Tallon Overworld/Hydro Access Tunnel/"
+            "ref": "Tallon Overworld/Hydro Access Tunnel/Underwater bomb puzzle"
           }
         ],
         "map_locations": [
@@ -157,8 +151,7 @@
         "name": "Landing Site",
         "sections": [
           {
-            "name": "Morph Ball tunnel",
-            "ref": "Tallon Overworld/Landing Site/"
+            "ref": "Tallon Overworld/Landing Site/Morph Ball tunnel"
           }
         ],
         "map_locations": [
@@ -178,8 +171,7 @@
         "name": "Life Grove Tunnel",
         "sections": [
           {
-            "name": "Boost loop",
-            "ref": "Tallon Overworld/Life Grove Tunnel/"
+            "ref": "Tallon Overworld/Life Grove Tunnel/Boost Ball loop"
           }
         ],
         "map_locations": [
@@ -213,7 +205,7 @@
       {
         "name": "Overgrown Cavern",
         "sections": [
-          { "ref": "Tallon Overworld/Overgrown Cavern/" }
+          { "ref": "Tallon Overworld/Overgrown Cavern/Venom Weed" }
         ],
         "map_locations": [
           {
@@ -231,10 +223,7 @@
       {
         "name": "Root Cave",
         "sections": [
-          {
-            "name": "Behind vines",
-            "ref": "Tallon Overworld/Root Cave/"
-          }
+          { "ref": "Tallon Overworld/Root Cave/Behind vines" }
         ],
         "map_locations": [
           {
@@ -248,8 +237,7 @@
         "name": "Transport Tunnel B",
         "sections": [
           {
-            "name": "Under the bridge",
-            "ref": "Tallon Overworld/Transport Tunnel B/"
+            "ref": "Tallon Overworld/Transport Tunnel B/Under the bridge"
           }
         ],
         "map_locations": [
@@ -428,7 +416,7 @@
       {
         "name": "Antechamber",
         "sections": [
-          { "ref": "Chozo Ruins/Antechamber/" }
+          { "ref": "Chozo Ruins/Antechamber/On the pedestal" }
         ],
         "map_locations": [
           {
@@ -478,10 +466,7 @@
       {
         "name": "Crossway",
         "sections": [
-          {
-            "name": "Morph Ball elevator",
-            "ref": "Chozo Ruins/Crossway/"
-          }
+          { "ref": "Chozo Ruins/Crossway/Morph Ball elevator" }
         ],
         "map_locations": [
           {
@@ -524,10 +509,7 @@
       {
         "name": "Elder Chamber",
         "sections": [
-          {
-            "name": "Plasma Beam bomb slot",
-            "ref": "Chozo Ruins/Elder Chamber/"
-          }
+          { "ref": "Chozo Ruins/Elder Chamber/Plasma Beam bomb slot" }
         ],
         "map_locations": [
           {
@@ -565,10 +547,7 @@
       {
         "name": "Hall of the Elders",
         "sections": [
-          {
-            "name": "Ice Beam bomb slot",
-            "ref": "Chozo Ruins/Hall of the Elders/"
-          }
+          { "ref": "Chozo Ruins/Hall of the Elders/Ice Beam bomb slot" }
         ],
         "map_locations": [
           {
@@ -581,10 +560,7 @@
       {
         "name": "Hive Totem",
         "sections": [
-          {
-            "name": "Hive Mecha",
-            "ref": "Chozo Ruins/Hive Totem/"
-          }
+          { "ref": "Chozo Ruins/Hive Totem/Hive Mecha" }
         ],
         "map_locations": [
           {
@@ -597,10 +573,7 @@
       {
         "name": "Gathering Hall",
         "sections": [
-          {
-            "name": "Sandstone wall",
-            "ref": "Chozo Ruins/Gathering Hall/"
-          }
+          { "ref": "Chozo Ruins/Gathering Hall/Sandstone wall" }
         ],
         "map_locations": [
           {
@@ -618,10 +591,7 @@
       {
         "name": "Magma Pool",
         "sections": [
-          {
-            "name": "Bendezium wall",
-            "ref": "Chozo Ruins/Magma Pool/"
-          }
+          { "ref": "Chozo Ruins/Magma Pool/Bendezium wall" }
         ],
         "map_locations": [
           {
@@ -686,10 +656,7 @@
       {
         "name": "Ruined Fountain",
         "sections": [
-          {
-            "name": "Spider tracks",
-            "ref": "Chozo Ruins/Ruined Fountain/"
-          }
+          { "ref": "Chozo Ruins/Ruined Fountain/Spider tracks" }
         ],
         "map_locations": [
           {
@@ -733,7 +700,7 @@
       {
         "name": "Ruined Nursery",
         "sections": [
-          { "ref": "Chozo Ruins/Ruined Nursery/" }
+          { "ref": "Chozo Ruins/Ruined Nursery/Morph Ball maze" }
         ],
         "map_locations": [
           {
@@ -807,7 +774,7 @@
         "name": "Tower Chamber",
         "sections": [
           {
-            "ref": "Chozo Ruins/Tower Chamber/"
+            "ref": "Chozo Ruins/Tower Chamber/Through the waters"
           }
         ],
         "map_locations": [
@@ -821,10 +788,7 @@
       {
         "name": "Tower of Light",
         "sections": [
-          {
-            "name": "Weakened columns",
-            "ref": "Chozo Ruins/Tower of Light/"
-          }
+          { "ref": "Chozo Ruins/Tower of Light/Weakened columns" }
         ],
         "map_locations": [
           {
@@ -837,10 +801,7 @@
       {
         "name": "Training Chamber",
         "sections": [
-          {
-            "name": "Hidden spider track",
-            "ref": "Chozo Ruins/Training Chamber/"
-          }
+          { "ref": "Chozo Ruins/Training Chamber/Hidden spider track" }
         ],
         "map_locations": [
           {
@@ -853,10 +814,7 @@
       {
         "name": "Training Chamber Access",
         "sections": [
-          {
-            "name": "Hidden tunnel",
-            "ref": "Chozo Ruins/Training Chamber Access/"
-          }
+          { "ref": "Chozo Ruins/Training Chamber Access/Hidden tunnel" }
         ],
         "map_locations": [
           {
@@ -869,10 +827,7 @@
       {
         "name": "Transport Access North",
         "sections": [
-          {
-            "name": "Behind Hive Mecha",
-            "ref": "Chozo Ruins/Transport Access North/"
-          }
+          { "ref": "Chozo Ruins/Transport Access North/Behind Hive Mecha" }
         ],
         "map_locations": [
           {
@@ -1039,10 +994,7 @@
       {
         "name": "Watery Hall Access",
         "sections": [
-          {
-            "name": "Missile wall",
-            "ref": "Chozo Ruins/Watery Hall Access/"
-          }
+          { "ref": "Chozo Ruins/Watery Hall Access/Missile wall" }
         ],
         "map_locations": [
           {
@@ -1055,10 +1007,7 @@
       {
         "name": "Vault",
         "sections": [
-          {
-            "name": "Open the locks",
-            "ref": "Chozo Ruins/Vault/"
-          }
+          { "ref": "Chozo Ruins/Vault/Open the locks" }
         ],
         "map_locations": [
           {
@@ -1101,10 +1050,7 @@
       {
         "name": "Lava Lake",
         "sections": [
-          {
-            "name": "Shatter the column",
-            "ref": "Magmoor Caverns/Lava Lake/"
-          }
+          { "ref": "Magmoor Caverns/Lava Lake/Shatter the column" }
         ],
         "map_locations": [
           {
@@ -1122,10 +1068,7 @@
       {
         "name": "Magmoor Workstation",
         "sections": [
-          {
-            "name": "Channel door puzzle",
-            "ref": "Magmoor Caverns/Magmoor Workstation/"
-          }
+          { "ref": "Magmoor Caverns/Magmoor Workstation/Channel door puzzle" }
         ],
         "map_locations": [
           {
@@ -1143,7 +1086,7 @@
       {
         "name": "Plasma Processing",
         "sections": [
-          { "ref": "Magmoor Caverns/Plasma Processing/" }
+          { "ref": "Magmoor Caverns/Plasma Processing/Rotating lift puzzle" }
         ],
         "map_locations": [
           {
@@ -1161,10 +1104,7 @@
       {
         "name": "Shore Tunnel",
         "sections": [
-          {
-            "name": "Bendezium tunnel",
-            "ref": "Magmoor Caverns/Shore Tunnel/"
-          }
+          { "ref": "Magmoor Caverns/Shore Tunnel/Bendezium tunnel" }
         ],
         "map_locations": [
           {
@@ -1177,10 +1117,7 @@
       {
         "name": "Storage Cavern",
         "sections": [
-          {
-            "name": "Through the pit",
-            "ref": "Magmoor Caverns/Storage Cavern/"
-          }
+          { "ref": "Magmoor Caverns/Storage Cavern/Through the pit" }
         ],
         "map_locations": [
           {
@@ -1198,10 +1135,7 @@
       {
         "name": "Transport Tunnel A",
         "sections": [
-          {
-            "name": "Bomb jump puzzle",
-            "ref": "Magmoor Caverns/Transport Tunnel A/"
-          }
+          { "ref": "Magmoor Caverns/Transport Tunnel A/Bomb jump puzzle" }
         ],
         "map_locations": [
           {
@@ -1389,10 +1323,7 @@
       {
         "name": "Triclops Pit",
         "sections": [
-          {
-            "name": "Weakened column",
-            "ref": "Magmoor Caverns/Triclops Pit/"
-          }
+          { "ref": "Magmoor Caverns/Triclops Pit/Weakened column" }
         ],
         "map_locations": [
           {
@@ -1410,7 +1341,7 @@
       {
         "name": "Warrior Shrine",
         "sections": [
-          { "ref": "Magmoor Caverns/Warrior Shrine/" }
+          { "ref": "Magmoor Caverns/Warrior Shrine/Statue's hands" }
         ],
         "map_locations": [
           {
@@ -1428,10 +1359,7 @@
       {
         "name": "Chapel of the Elders",
         "sections": [
-          {
-            "name": "Sheegoth",
-            "ref": "Phendrana Drifts/Chapel of the Elders/"
-          }
+          { "ref": "Phendrana Drifts/Chapel of the Elders/Sheegoth" }
         ],
         "map_locations": [
           {
@@ -1449,10 +1377,7 @@
       {
         "name": "Chozo Ice Temple",
         "sections": [
-          {
-            "name": "Thaw the frozen waters",
-            "ref": "Phendrana Drifts/Chozo Ice Temple/"
-          }
+          { "ref": "Phendrana Drifts/Chozo Ice Temple/Thaw the frozen waters" }
         ],
         "map_locations": [
           {
@@ -1470,10 +1395,7 @@
       {
         "name": "Control Tower",
         "sections": [
-          {
-            "name": "Collapse the tower",
-            "ref": "Phendrana Drifts/Control Tower/"
-          }
+          { "ref": "Phendrana Drifts/Control Tower/Collapse the tower" }
         ],
         "map_locations": [
           {
@@ -1491,10 +1413,7 @@
       {
         "name": "Frost Cave",
         "sections": [
-          {
-            "name": "Under the ice",
-            "ref": "Phendrana Drifts/Frost Cave/"
-          }
+          { "ref": "Phendrana Drifts/Frost Cave/Under the ice" }
         ],
         "map_locations": [
           {
@@ -1563,10 +1482,7 @@
       {
         "name": "Ice Ruins West",
         "sections": [
-          {
-            "name": "Below ice",
-            "ref": "Phendrana Drifts/Ice Ruins West/"
-          }
+          { "ref": "Phendrana Drifts/Ice Ruins West/Below ice" }
         ],
         "map_locations": [
           {
@@ -1584,10 +1500,7 @@
       {
         "name": "Observatory",
         "sections": [
-          {
-            "name": "Above hologram",
-            "ref": "Phendrana Drifts/Observatory/"
-          }
+          { "ref": "Phendrana Drifts/Observatory/Above hologram" }
         ],
         "map_locations": [
           {
@@ -1605,10 +1518,7 @@
       {
         "name": "Phendrana Canyon",
         "sections": [
-          {
-            "name": "In the tower",
-            "ref": "Phendrana Drifts/Phendrana Canyon/"
-          }
+          { "ref": "Phendrana Drifts/Phendrana Canyon/In the tower" }
         ],
         "map_locations": [
           {
@@ -1652,10 +1562,7 @@
       {
         "name": "Quarantine Cave",
         "sections": [
-          {
-            "name": "Thardus",
-            "ref": "Phendrana Drifts/Quarantine Cave/"
-          }
+          { "ref": "Phendrana Drifts/Quarantine Cave/Thardus" }
         ],
         "map_locations": [
           {
@@ -1673,7 +1580,7 @@
       {
         "name": "Quarantine Monitor",
         "sections": [
-          { "ref": "Phendrana Drifts/Quarantine Monitor/" }
+          { "ref": "Phendrana Drifts/Quarantine Monitor/Swing to the door" }
         ],
         "map_locations": [
           {
@@ -1691,10 +1598,7 @@
       {
         "name": "Research Core",
         "sections": [
-          {
-            "name": "Deactivate the field",
-            "ref": "Phendrana Drifts/Research Core/"
-          }
+          { "ref": "Phendrana Drifts/Research Core/Deactivate the field" }
         ],
         "map_locations": [
           {
@@ -1738,10 +1642,7 @@
       {
         "name": "Research Lab Hydra",
         "sections": [
-          {
-            "name": "Cordite column",
-            "ref": "Phendrana Drifts/Research Lab Hydra/"
-          }
+          { "ref": "Phendrana Drifts/Research Lab Hydra/Cordite column" }
         ],
         "map_locations": [
           {
@@ -1759,10 +1660,7 @@
       {
         "name": "Ruined Courtyard",
         "sections": [
-          {
-            "name": "Morph tunnel",
-            "ref": "Phendrana Drifts/Ruined Courtyard/"
-          }
+          { "ref": "Phendrana Drifts/Ruined Courtyard/Morph tunnel" }
         ],
         "map_locations": [
           {
@@ -1780,7 +1678,7 @@
       {
         "name": "Security Cave",
         "sections": [
-          { "ref": "Phendrana Drifts/Security Cave/" }
+          { "ref": "Phendrana Drifts/Security Cave/At the top" }
         ],
         "map_locations": [
           {
@@ -1793,10 +1691,7 @@
       {
         "name": "Storage Cave",
         "sections": [
-          {
-            "name": "Bendezium wall",
-            "ref": "Phendrana Drifts/Storage Cave/"
-          }
+          { "ref": "Phendrana Drifts/Storage Cave/Bendezium wall" }
         ],
         "map_locations": [
           {
@@ -1809,10 +1704,7 @@
       {
         "name": "Transport Access",
         "sections": [
-          {
-            "name": "Encased in ice",
-            "ref": "Phendrana Drifts/Transport Access/"
-          }
+          { "ref": "Phendrana Drifts/Transport Access/Encased in ice" }
         ],
         "map_locations": [
           {
@@ -1899,10 +1791,7 @@
       {
         "name": "Central Dynamo",
         "sections": [
-          {
-            "name": "Morph Ball maze",
-            "ref": "Phazon Mines/Central Dynamo/"
-          }
+          { "ref": "Phazon Mines/Central Dynamo/Morph Ball maze" }
         ],
         "map_locations": [
           {
@@ -1925,10 +1814,7 @@
       {
         "name": "Elite Control Access",
         "sections": [
-          {
-            "name": "Explosive crate",
-            "ref": "Phazon Mines/Elite Control Access/"
-          }
+          { "ref": "Phazon Mines/Elite Control Access/Explosive crate" }
         ],
         "map_locations": [
           {
@@ -1946,10 +1832,7 @@
       {
         "name": "Elite Quarters",
         "sections": [
-          {
-            "name": "Omega Pirate",
-            "ref": "Phazon Mines/Elite Quarters/"
-          }
+          { "ref": "Phazon Mines/Elite Quarters/Omega Pirate" }
         ],
         "map_locations": [
           {
@@ -2008,10 +1891,7 @@
       {
         "name": "Fungal Hall Access",
         "sections": [
-          {
-            "name": "Under a mushroom",
-            "ref": "Phazon Mines/Fungal Hall Access/"
-          }
+          { "ref": "Phazon Mines/Fungal Hall Access/Under a mushroom" }
         ],
         "map_locations": [
           {
@@ -2034,10 +1914,7 @@
       {
         "name": "Fungal Hall B",
         "sections": [
-          {
-            "name": "Sandstone floor",
-            "ref": "Phazon Mines/Fungal Hall B/"
-          }
+          { "ref": "Phazon Mines/Fungal Hall B/Sandstone floor" }
         ],
         "map_locations": [
           {
@@ -2060,10 +1937,7 @@
       {
         "name": "Main Quarry",
         "sections": [
-          {
-            "name": "Crane",
-            "ref": "Phazon Mines/Main Quarry/"
-          }
+          { "ref": "Phazon Mines/Main Quarry/Crane" }
         ],
         "map_locations": [
           {
@@ -2081,10 +1955,7 @@
       {
         "name": "Metroid Quarantine A",
         "sections": [
-          {
-            "name": "Bendezium cave",
-            "ref": "Phazon Mines/Metroid Quarantine A/"
-          }
+          { "ref": "Phazon Mines/Metroid Quarantine A/Bendezium cave" }
         ],
         "map_locations": [
           {
@@ -2107,10 +1978,7 @@
       {
         "name": "Metroid Quarantine B",
         "sections": [
-          {
-            "name": "Sandstone floor",
-            "ref": "Phazon Mines/Metroid Quarantine B/"
-          }
+          { "ref": "Phazon Mines/Metroid Quarantine B/Sandstone floor" }
         ],
         "map_locations": [
           {
@@ -2133,10 +2001,7 @@
       {
         "name": "Phazon Mining Tunnel",
         "sections": [
-          {
-            "name": "Phazon maze",
-            "ref": "Phazon Mines/Phazon Mining Tunnel/"
-          }
+          { "ref": "Phazon Mines/Phazon Mining Tunnel/Phazon maze" }
         ],
         "map_locations": [
           {
@@ -2159,10 +2024,7 @@
       {
         "name": "Phazon Processing Center",
         "sections": [
-          {
-            "name": "Bendezium wall",
-            "ref": "Phazon Mines/Phazon Processing Center/"
-          }
+          { "ref": "Phazon Mines/Phazon Processing Center/Bendezium wall" }
         ],
         "map_locations": [
           {
@@ -2180,7 +2042,7 @@
       {
         "name": "Processing Center Access",
         "sections": [
-          { "ref": "Phazon Mines/Processing Center Access/" }
+          { "ref": "Phazon Mines/Processing Center Access/Ahead of the gate" }
         ],
         "map_locations": [
           {
@@ -2278,10 +2140,7 @@
       {
         "name": "Security Access A",
         "sections": [
-          {
-            "name": "Bendezium gate",
-            "ref": "Phazon Mines/Security Access A/"
-          }
+          { "ref": "Phazon Mines/Security Access A/Bendezium gate" }
         ],
         "map_locations": [
           {
@@ -2299,7 +2158,7 @@
       {
         "name": "Storage Depot A",
         "sections": [
-          { "ref": "Phazon Mines/Storage Depot A/" }
+          { "ref": "Phazon Mines/Storage Depot A/Deactivate the force field" }
         ],
         "map_locations": [
           {
@@ -2317,7 +2176,7 @@
       {
         "name": "Storage Depot B",
         "sections": [
-          { "ref": "Phazon Mines/Storage Depot B/" }
+          { "ref": "Phazon Mines/Storage Depot B/Pillar rotation puzzle" }
         ],
         "map_locations": [
           {
@@ -2340,10 +2199,7 @@
       {
         "name": "Ventilation Shaft",
         "sections": [
-          {
-            "name": "Turn on the system",
-            "ref": "Phazon Mines/Ventilation Shaft/"
-          }
+          { "ref": "Phazon Mines/Ventilation Shaft/Turn on the system" }
         ],
         "map_locations": [
           {
@@ -2368,7 +2224,7 @@
         "sections": [
           {
             "name": "Tunnel",
-            "ref": "Tallon Overworld/Life Grove Tunnel/"
+            "ref": "Tallon Overworld/Life Grove Tunnel/Boost Ball loop"
           },
           {
             "name": "Start",
@@ -2392,15 +2248,15 @@
         "sections": [
           {
             "name": "Root Cave",
-            "ref": "Tallon Overworld/Root Cave/"
+            "ref": "Tallon Overworld/Root Cave/Behind vines"
           },
           {
             "name": "Arbor Chamber",
-            "ref": "Tallon Overworld/Arbor Chamber/"
+            "ref": "Tallon Overworld/Arbor Chamber/Top of the cave"
           },
           {
             "name": "Transport Tunnel B",
-            "ref": "Tallon Overworld/Transport Tunnel B/"
+            "ref": "Tallon Overworld/Transport Tunnel B/Under the bridge"
           }
         ],
         "map_locations": [
@@ -2437,15 +2293,15 @@
         "sections": [
           {
             "name": "Magma Pool",
-            "ref": "Chozo Ruins/Magma Pool/"
+            "ref": "Chozo Ruins/Magma Pool/Bendezium wall"
           },
           {
             "name": "Training Chamber Access",
-            "ref": "Chozo Ruins/Training Chamber Access/"
+            "ref": "Chozo Ruins/Training Chamber Access/Leaves"
           },
           {
             "name": "Training Chamber",
-            "ref": "Chozo Ruins/Training Chamber/"
+            "ref": "Chozo Ruins/Training Chamber/Hidden spider track"
           }
         ],
         "map_locations": [
@@ -2461,11 +2317,11 @@
         "sections": [
           {
             "name": "Ice Beam bomb slot",
-            "ref": "Chozo Ruins/Hall of the Elders/"
+            "ref": "Chozo Ruins/Hall of the Elders/Ice Beam bomb slot"
           },
           {
             "name": "Plasma Beam bomb slot",
-            "ref": "Chozo Ruins/Elder Chamber/"
+            "ref": "Chozo Ruins/Elder Chamber/Plasma Beam bomb slot"
           }
         ],
         "map_locations": [
@@ -2481,11 +2337,11 @@
         "sections": [
           {
             "name": "Hive Mecha",
-            "ref": "Chozo Ruins/Hive Totem/"
+            "ref": "Chozo Ruins/Hive Totem/Hive Mecha"
           },
           {
             "name": "Transport Access North",
-            "ref": "Chozo Ruins/Transport Access North/"
+            "ref": "Chozo Ruins/Transport Access North/Behind Hive Mecha"
           }
         ],
         "map_locations": [
@@ -2569,11 +2425,11 @@
         "sections": [
           {
             "name": "Weakened columns",
-            "ref": "Chozo Ruins/Tower of Light/"
+            "ref": "Chozo Ruins/Tower of Light/Weakened columns"
           },
           {
             "name": "Tower Chamber",
-            "ref": "Chozo Ruins/Tower Chamber/"
+            "ref": "Chozo Ruins/Tower Chamber/Tower Chamber"
           }
         ],
         "map_locations": [
@@ -2612,25 +2468,23 @@
         "name": "Fiery Shores",
         "sections": [
           {
-            "name": "Fiery Shores Morph Track",
+            "name": "Morph Track",
             "ref": "Magmoor Caverns/Fiery Shores/Morph Track"
           },
-          { "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel" },
+          {
+            "name": "Warrior Shrine Tunnel",
+            "ref": "Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel"
+          },
           {
             "name": "Warrior Shrine",
-            "ref": "Magmoor Caverns/Warrior Shrine/"
+            "ref": "Magmoor Caverns/Warrior Shrine/Statue's hands"
           },
           {
             "name": "Shore Tunnel",
-            "ref": "Magmoor Caverns/Shore Tunnel/"
+            "ref": "Magmoor Caverns/Shore Tunnel/Bendezium tunnel"
           }
         ],
         "map_locations": [
-          {
-            "map": "Magmoor Caverns",
-            "x": 414,
-            "y": 482
-          },
           {
             "map": "World Map",
             "x": 437,
@@ -2703,11 +2557,11 @@
         "sections": [
           {
             "name": "Security Cave",
-            "ref": "Phendrana Drifts/Security Cave/"
+            "ref": "Phendrana Drifts/Security Cave/At the top"
           },
           {
             "name": "Storage Cave",
-            "ref": "Phendrana Drifts/Storage Cave/"
+            "ref": "Phendrana Drifts/Storage Cave/Bendezium wall"
           }
         ],
         "map_locations": [
@@ -2724,11 +2578,11 @@
         "sections": [
           {
             "name": "Elite Control Access",
-            "ref": "Phazon Mines/Elite Control Access/"
+            "ref": "Phazon Mines/Elite Control Access/Explosive crate"
           },
           {
             "name": "Ventilation Shaft",
-            "ref": "Phazon Mines/Ventilation Shaft/"
+            "ref": "Phazon Mines/Ventilation Shaft/Turn on the system"
           }
         ],
         "map_locations": [
@@ -2752,7 +2606,7 @@
           },
           {
             "name": "Storage Depot A",
-            "ref": "Phazon Mines/Storage Depot A/"
+            "ref": "Phazon Mines/Storage Depot A/Deactivate the force field"
           }
         ],
         "map_locations": [
@@ -2768,11 +2622,11 @@
         "sections": [
           {
             "name": "Crane",
-            "ref": "Phazon Mines/Main Quarry/"
+            "ref": "Phazon Mines/Main Quarry/Crane"
           },
           {
-            "name": "Storage Access A",
-            "ref": "Phazon Mines/Storage Access A/"
+            "name": "Security Access A",
+            "ref": "Phazon Mines/Security Access A/"
           }
         ],
         "map_locations": [
@@ -2788,11 +2642,11 @@
         "sections": [
           {
             "name": "Bendezium wall",
-            "ref": "Phazon Mines/Phazon Processing Center/"
+            "ref": "Phazon Mines/Phazon Processing Center/Bendezium wall"
           },
           {
             "name": "Processing Center Access",
-            "ref": "Phazon Mines/Processing Center Access/"
+            "ref": "Phazon Mines/Processing Center Access/Ahead of the gate"
           }
         ],
         "map_locations": [

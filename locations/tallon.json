@@ -8,7 +8,7 @@
         "name": "Alcove",
         "sections": [
           {
-            "name": "",
+            "name": "Watch your step",
             "chest_unopened_img": "images/items/spacejumpboots.png",
             "access_rules": [
               "$can_space_jump",
@@ -26,7 +26,7 @@
         "name": "Arbor Chamber",
         "sections": [
           {
-            "name": ""
+            "name": "Top of the cave"
           }
         ],
         "access_rules": [
@@ -39,7 +39,7 @@
         "name": "Artifact Temple",
         "sections": [
           {
-            "name": "",
+            "name": "Truly seek it",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -51,7 +51,7 @@
         "name": "Biohazard Containment",
         "sections": [
           {
-            "name": "",
+            "name": "Cordite locker",
             "access_rules": [
               "$can_super_missile"
             ]
@@ -75,7 +75,7 @@
         "name": "Cargo Freight Lift to Deck Gamma",
         "sections": [
           {
-            "name": "",
+            "name": "Elevator",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_missile,^$can_crashed_frigate",
@@ -104,7 +104,7 @@
         "name": "Frigate Crash Site",
         "sections": [
           {
-            "name": "",
+            "name": "Tangled roots",
             "access_rules": [
               "$can_space_jump,$can_move_underwater",
               "[$trick|frigate_crash_site_scan_dash|3],$can_scan",
@@ -122,7 +122,7 @@
         "name": "Great Tree Chamber",
         "sections": [
           {
-            "name": ""
+            "name": "Invisible platforms"
           }
         ],
         "access_rules": [
@@ -154,7 +154,7 @@
         "name": "Hydro Access Tunnel",
         "sections": [
           {
-            "name": "",
+            "name": "Underwater bomb puzzle",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_bomb,$can_move_underwater",
@@ -174,7 +174,7 @@
         "name": "Landing Site",
         "sections": [
           {
-            "name": "",
+            "name": "Morph Ball tunnel",
             "access_rules": [
               "$can_morph_ball"
             ]
@@ -194,7 +194,7 @@
         "name": "Life Grove Tunnel",
         "sections": [
           {
-            "name": "",
+            "name": "Boost Ball loop",
             "access_rules": [
               "$can_power_bomb,$can_bomb,$can_boost"
             ]
@@ -229,7 +229,7 @@
         "name": "Overgrown Cavern",
         "sections": [
           {
-            "name": "",
+            "name": "Venom Weed",
             "access_rules": [
               "$can_morph_ball"
             ]
@@ -245,7 +245,7 @@
         "name": "Root Cave",
         "sections": [
           {
-            "name": "",
+            "name": "Behind vines",
             "access_rules": [
               "$can_space_jump,$can_grapple,^$can_xray",
               "[$trick|root_cave_arbor_chamber_no_grapple_xray|3],$can_space_jump,$can_scan"
@@ -347,7 +347,7 @@
         "name": "Transport Tunnel B",
         "sections": [
           {
-            "name": ""
+            "name": "Under the bridge"
           }
         ],
         "access_rules": [

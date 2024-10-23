@@ -59,7 +59,7 @@
         "name": "Lava Lake",
         "sections": [
           {
-            "name": "",
+            "name": "Shatter the column",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "$can_missile,$can_space_jump,@Magmoor Caverns/Lake Tunnel",
@@ -79,7 +79,7 @@
         "name": "Magmoor Workstation",
         "sections": [
           {
-            "name": "",
+            "name": "Channel door puzzle",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "^$can_thermal,$can_wave_beam,$can_scan,$can_morph_ball",
@@ -130,7 +130,7 @@
         "name": "Plasma Processing",
         "sections": [
           {
-            "name": "",
+            "name": "Rotating lift puzzle",
             "chest_unopened_img": "images/items/plasmabeam.png"
           }
         ],
@@ -155,7 +155,7 @@
         "name": "Shore Tunnel",
         "sections": [
           {
-            "name": "",
+            "name": "Bendezium tunnel",
             "chest_unopened_img": "images/items/icespreader.png",
             "access_rules": [
               "$can_power_bomb,$can_space_jump",
@@ -181,7 +181,7 @@
         "name": "Storage Cavern",
         "sections": [
           {
-            "name": ""
+            "name": "Through the pit"
           }
         ],
         "access_rules": [
@@ -237,7 +237,7 @@
         "name": "Transport Tunnel A",
         "sections": [
           {
-            "name": "",
+            "name": "Bomb jump puzzle",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_heat,$can_bomb"
@@ -268,7 +268,7 @@
         "name": "Triclops Pit",
         "sections": [
           {
-            "name": "",
+            "name": "Weakened column",
             "access_rules": [
               "^$can_xray,$can_space_jump,$can_missile",
               "[$trick|triclops_pit_item_no_missiles|1],$can_space_jump,^$can_xray,$can_charge_beam",
@@ -309,7 +309,7 @@
         "name": "Warrior Shrine",
         "sections": [
           {
-            "name": "",
+            "name": "Statue's hands",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
