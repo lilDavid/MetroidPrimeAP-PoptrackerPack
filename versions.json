@@ -56,6 +56,17 @@
                 "Fixed map displays for Burn Dome, Watery Hall Scan Puzzle, and Ventilation Shaft",
                 "Changed map location shapes: all items are now squares, and all elevators are now diamonds"
             ]
+        },
+        {
+            "package_version": "0.4.2",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.2/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "1102f0bcab00c458c6ed832308b91cf43ff46f4ed48f6cc48fefd3e67135c2bd",
+            "changelog": [
+                "Update logic to AP world version 0.4.3",
+                "Fix map locations for Elite Control Access, Lava Lake, Ice Ruins East, and Phendrana Shorelines",
+                "Fix logic rule showing Phendrana Canyon as always a sequence break",
+                "Fixed locations on maps failing to update when checked"
+            ]
         }
     ]
 }
