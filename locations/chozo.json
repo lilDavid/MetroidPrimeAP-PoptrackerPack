@@ -57,7 +57,7 @@
           }
         ],
         "access_rules": [
-          "@Chozo Ruins/Burn Dome Access"
+          "@Chozo Ruins/Burn Dome Access,$can_bomb"
         ]
       },
       {

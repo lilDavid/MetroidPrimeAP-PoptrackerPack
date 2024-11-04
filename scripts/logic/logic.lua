@@ -72,8 +72,12 @@ function can_bomb()
     return has_all({"MorphBall", "Bombs"})
 end
 
+function can_beam(beam)
+    return has_any({beam, "Progressive" .. beam})
+end
+
 function can_power_beam()
-    return has_any({"PowerBeam", "ProgressivePowerBeam"})
+    return can_beam("PowerBeam")
 end
 
 function can_power_bomb()
@@ -103,15 +107,15 @@ function can_super_missile()
 end
 
 function can_wave_beam()
-    return has_any({"WaveBeam", "ProgressiveWaveBeam"})
+    return can_beam("WaveBeam")
 end
 
 function can_ice_beam()
-    return has_any({"IceBeam", "ProgressiveIceBeam"})
+    return can_beam("IceBeam")
 end
 
 function can_plasma_beam()
-    return has_any({"PlasmaBeam", "ProgressivePlasmaBeam"})
+    return can_beam("PlasmaBeam")
 end
 
 function can_melt_ice()
@@ -297,6 +301,13 @@ function can_combat_ghosts()
         return can_charge_beam("PowerBeam") and can_power_beam()
             and can_xray(1) == AccessibilityLevel.Normal
     end
+end
+
+function can_combat_beam_pirates(beam)
+    if has("CombatLogic", 1) then
+        return true
+    end
+    return has()
 end
 
 

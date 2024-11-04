@@ -1566,20 +1566,38 @@
     ]
   },
   {
-    "codes": "elite_research_backwards_wall_boost,elite_research_backwards_wall_boost_no_spider",
+    "codes": "elite_research_backwards_wall_boost",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/elite_research_infinite_boost-red.png"
+        "img": "images/tricks/elite_research_backwards_wall_boost-red.png"
       },
       {
-        "img": "images/tricks/elite_research_infinite_boost.png",
+        "img": "images/tricks/elite_research_backwards_wall_boost.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/elite_research_infinite_boost.png"
+        "img": "images/tricks/elite_research_backwards_wall_boost.png"
+      }
+    ]
+  },
+  {
+    "codes": "elite_research_backwards_wall_boost_no_spider",
+    "type": "progressive",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider-red.png"
+      },
+      {
+        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/tricks/elite_research_backwards_wall_boost_no_spider.png"
       }
     ]
   },

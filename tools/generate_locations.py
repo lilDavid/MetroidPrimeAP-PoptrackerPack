@@ -340,6 +340,13 @@ from metroidprime.AreaNames import MetroidPrimeArea
 from metroidprime.RoomNames import RoomName
 
 
+class SuitUpgrade(Enum):
+    Power_Beam = "PowerBeam"
+    Ice_Beam = "IceBeam"
+    Wave_Beam = "WaveBeam"
+    Plasma_Beam = "PlasmaBeam"
+
+
 # AST parsing
 JsonValue = Union[str, int, float, List["JsonValue"], Dict[str, "JsonValue"], None]
 
@@ -454,7 +461,12 @@ class RuleConverter(ast.NodeTransformer):
         else:
             args: List[str] = []
             for arg in node.args[2:]:
-                value = ast.literal_eval(arg)
+                if type(arg) is ast.Constant:
+                    value = ast.literal_eval(arg)
+                elif type(arg) is ast.Attribute:
+                    value = eval(compile(ast.Expression(arg), self.filename, "eval")).value
+                else:
+                    raise ASTParseError(arg)
                 if type(value) is str:
                     args.append(value)
                 else:

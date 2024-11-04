@@ -137,7 +137,7 @@
           "@Tallon Overworld/Great Tree Chamber",
           "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost",
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
-          "@Tallon Overworld/Life Grove Tunnel,@doors/IceBeam,$can_power_bomb,$can_boost",
+          "@Tallon Overworld/Life Grove Tunnel,@doors/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
           "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
           "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam,$can_boost"
         ]
@@ -166,8 +166,7 @@
           "@Tallon Overworld/Biohazard Containment,^$can_crashed_frigate",
           "@Tallon Overworld/Biohazard Containment,[$trick|frigate_no_gravity|1],$can_bomb,$can_space_jump,$can_wave_beam,^$can_thermal",
           "@Tallon Overworld/Great Tree Hall,False",
-          "@Tallon Overworld/Great Tree Hall,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
-          "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam"
+          "@Tallon Overworld/Great Tree Hall,[$trick|great_tree_hall_skip_bars|3],$can_bomb"
         ]
       },
       {
@@ -222,7 +221,7 @@
           }
         ],
         "access_rules": [
-          "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost"
+          "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost,$can_bomb"
         ]
       },
       {
@@ -374,8 +373,8 @@
         "access_rules": [
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,False",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
-          "@Tallon Overworld/Hydro Access Tunnel,@doors/IceBeam,^$can_crashed_frigate",
-          "@Tallon Overworld/Hydro Access Tunnel,@doors/IceBeam,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
+          "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost,@doors/IceBeam",
+          "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost,@doors/IceBeam",
           "@Tallon Overworld/Transport to Phazon Mines East,@doors/IceBeam"
         ]
       },
