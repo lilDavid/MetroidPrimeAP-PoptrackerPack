@@ -609,8 +609,8 @@
         "map_locations": [
           {
             "map": "Chozo Ruins",
-            "x": 204,
-            "y": 262
+            "x": 205,
+            "y": 232
           }
         ]
       },
@@ -635,8 +635,8 @@
         "map_locations": [
           {
             "map": "Chozo Ruins",
-            "x": 205,
-            "y": 232
+            "x": 204,
+            "y": 262
           }
         ]
       },
