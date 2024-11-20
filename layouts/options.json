@@ -178,6 +178,7 @@
                       [ "mines_climb_shafts_no_spider" ],
                       [ "elite_research_spinner_no_boost" ],
                       [ "elite_research_backwards_wall_boost" ],
+                      [ "elite_research_backwards_wall_boost_no_spider" ],
                       [ "ventilation_shaft_hpbj" ],
                       [ "metroid_quarantine_a_no_spider" ],
                       [ "fungal_hall_access_no_phazon_suit" ],
