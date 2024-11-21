@@ -465,7 +465,7 @@
             "name": "Plated Beetle",
             "chest_unopened_img": "images/items/morphball.png",
             "access_rules": [
-              "$can_exit_ruined_shrine",
+              "@rules/can_exit_ruined_shrine",
               "[$trick|ruined_shrine_scan_dash_escape|1],$can_scan"
             ]
           },

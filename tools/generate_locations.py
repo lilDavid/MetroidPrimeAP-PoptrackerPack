@@ -226,6 +226,7 @@ override_functions = {
     "can_thermal": FunctionOverride.ACCESSIBILITY,
     "can_xray": FunctionOverride.ACCESSIBILITY,
     "can_crashed_frigate": FunctionOverride.ACCESSIBILITY,
+    "can_exit_ruined_shrine": FunctionOverride.LOCATION,
     "can_flaahgra": FunctionOverride.LOCATION,
     "can_warp_to_start": FunctionOverride.LOCATION,
 }
@@ -251,6 +252,9 @@ manual_location_rules = {
     "Chozo Ruins: Hive Totem": [
         "$can_power_beam",
         "RemoveHiveMecha",
+    ],
+    "Chozo Ruins: Ruined Fountain": [
+        "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
     ],
     "Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel": [
         "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine",
@@ -506,7 +510,7 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
 
         if type(rule_func.body) is ast.Call:
             if type(rule_func.body.func) is ast.Name:
-                return [f"${rule_func.body.func.id}"]
+                return [logic_function(rule_func.body.func.id)]
             raise NotImplementedError(ast.dump(rule_func.body.func))
 
         if type(rule_func.body) is not ast.BoolOp:
