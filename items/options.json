@@ -336,9 +336,11 @@
     "loop": true,
     "stages": [
       {
+        "img": "images/options/progressivebeams-off.png",
         "img_mods": "@disabled"
       },
       {
+        "img": "images/options/progressivebeams-on.png",
         "codes": "ProgressiveBeams"
       }
     ]

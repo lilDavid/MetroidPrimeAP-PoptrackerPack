@@ -73,7 +73,7 @@ function can_bomb()
 end
 
 function can_beam(beam)
-    return has_any({beam, "Progressive" .. beam})
+    return has(beam)
 end
 
 function can_power_beam()
@@ -100,10 +100,10 @@ function can_missile(expansions)
 end
 
 function can_super_missile()
-    return can_power_beam()
-        and can_missile()
-        and (has_all({"ChargeBeam", "SuperMissile"})
-            or has("ProgressivePowerBeam", 3))
+    local beam_requirement
+    if has("ProgressiveBeams") then beam_requirement = has("PowerBeam", 3)
+    else beam_requirement = has_all({"ChargeBeam", "SuperMissile"}) end
+    return can_power_beam() and can_missile() and beam_requirement
 end
 
 function can_wave_beam()
@@ -166,20 +166,17 @@ end
 
 function can_charge_beam(required_beam)
     if required_beam then
-        local progressive_beam = "Progressive" .. required_beam
-        return has_all({"ChargeBeam", required_beam}) or has(progressive_beam, 2)
+        if has("ProgressiveBeams") then return has(required_beam, 2)
+        else return has_all({"ChargeBeam", required_beam}) end
     end
 
     -- If no beam is required, check for Charge Beam or 2 of any progressive beam
-    if has("ChargeBeam") then
-        return true
-    end
-    for _, beam in ipairs({"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"}) do
-        if has("Progressive" .. beam, 2) then
-            return true
+    if has("ProgressiveBeams") then
+        for _, beam in ipairs({"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"}) do
+            if has(beam, 2) then return true end
         end
     end
-    return false
+    return has("ChargeBeam")
 end
 
 function can_charge_combo(required_beam)
@@ -188,13 +185,13 @@ function can_charge_combo(required_beam)
     end
 
     if required_beam == "WaveBeam" then
-        return can_missile(3) and (has("Wavebuster") or has("ProgressiveWaveBeam", 3))
+        return can_missile(3) and has("Wavebuster")
     end
     if required_beam == "IceBeam" then
-        return has("IceSpreader") or has("ProgressiveIceBeam", 3)
+        return has("IceSpreader")
     end
     if required_beam == "PlasmaBeam" then
-        return can_missile(3) and (has("PlasmaBeam") or has("ProgressivePlasmaBeam", 3))
+        return can_missile(3) and has("Flamethrower")
     end
 end
 

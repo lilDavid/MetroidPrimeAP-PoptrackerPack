@@ -21,27 +21,43 @@
   },
   {
     "name": "Power Beam",
-    "codes": "PowerBeam",
-    "img": "images/items/powerbeam.png",
-    "type": "toggle"
+    "codes": "PowerBeam, ProgressivePowerBeam",
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/powerbeam.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"}
+    ]
   },
   {
     "name": "Wave Beam",
     "codes": "WaveBeam",
-    "img": "images/items/wavebeam.png",
-    "type": "toggle"
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/wavebeam.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"}
+    ]
   },
   {
     "name": "Ice Beam",
     "codes": "IceBeam",
-    "img": "images/items/icebeam.png",
-    "type": "toggle"
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/icebeam.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"}
+    ]
   },
   {
     "name": "Plasma Beam",
     "codes": "PlasmaBeam",
-    "img": "images/items/plasmabeam.png",
-    "type": "toggle"
+    "type": "progressive",
+    "stages": [
+      {"img": "images/items/plasmabeam.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"},
+      {"img_mods": "overlay|images/items/cancharge.png"}
+    ]
   },
   {
     "name": "Charge Beam",
@@ -72,46 +88,6 @@
     "codes": "Flamethrower",
     "img": "images/items/flamethrower.png",
     "type": "toggle"
-  },
-  {
-    "name": "Progressive Power Beam",
-    "codes": "ProgressivePowerBeam",
-    "type": "progressive",
-    "stages": [
-      {"img": "images/items/powerbeam.png"},
-      {"img": "images/items/chargebeam.png"},
-      {"img": "images/items/supermissile.png"}
-    ]
-  },
-  {
-    "name": "Progressive Wave Beam",
-    "codes": "ProgressiveWaveBeam",
-    "type": "progressive",
-    "stages": [
-      {"img": "images/items/wavebeam.png"},
-      {"img": "images/items/chargewave.png"},
-      {"img": "images/items/wavebuster.png"}
-    ]
-  },
-  {
-    "name": "Progressive Ice Beam",
-    "codes": "ProgressiveIceBeam",
-    "type": "progressive",
-    "stages": [
-      {"img": "images/items/icebeam.png"},
-      {"img": "images/items/chargeice.png"},
-      {"img": "images/items/icespreader.png"}
-    ]
-  },
-  {
-    "name": "Progressive Plasma Beam",
-    "codes": "ProgressivePlasmaBeam",
-    "type": "progressive",
-    "stages": [
-      {"img": "images/items/plasmabeam.png"},
-      {"img": "images/items/chargeplasma.png"},
-      {"img": "images/items/flamethrower.png"}
-    ]
   },
   {
     "name": "Grapple Beam",

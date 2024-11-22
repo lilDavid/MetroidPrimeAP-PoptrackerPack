@@ -35,6 +35,7 @@ SLOT_DATA_MAPPING = {
             ["Sunchamber Lobby"] = 13,
         },
     },
+    ["progressive_beam_upgrades"] = "ProgressiveBeams",
     ["combat_logic_difficulty"] = "CombatLogic",
     ["elevator_randomization"] = "ElevatorsRandom",
     ["door_color_randomization"] = {

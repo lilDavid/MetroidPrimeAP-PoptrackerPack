@@ -25,6 +25,7 @@
                 [ "RemoveXRayRequirements" ],
                 [ "RemoveThermalRequirements" ],
                 [ "StartingRoom" ],
+                [ "ProgressiveBeams" ],
                 [ "CombatLogic" ],
                 [ "ElevatorsRandom" ],
                 [ "PreScanElevators" ]

@@ -47,7 +47,7 @@ function onClear(slot_data)
             if obj then
                 if v[2] == "toggle" then
                     obj.Active = false
-                elseif v[2] == "progressive" then
+                elseif v[2] == "progressive" or v[2] == "togglebeam" or v[2] == "progressivebeam" then
                     obj.CurrentStage = 0
                     obj.Active = false
                 elseif v[2] == "consumable" then
@@ -207,6 +207,23 @@ function onItem(index, item_id, item_name, player_number)
             end
         elseif v[2] == "consumable" then
             obj.AcquiredCount = obj.AcquiredCount + obj.Increment
+        elseif v[2] == "togglebeam" then
+            local progbeams = Tracker:FindObjectForCode("ProgressiveBeams")
+            -- If Progressive Beam Upgrades is on, ingore normal versions
+            if progbeams and progbeams.CurrentStage == 0 then
+                obj.Active = true
+                obj.CurrentStage = 1
+            end
+        elseif v[2] == "progressivebeam" then
+            local progbeams = Tracker:FindObjectForCode("ProgressiveBeams")
+            -- If Progressive Beam Upgrades is off, ignore progressive versions
+            if progbeams and progbeams.CurrentStage == 1 then
+                if obj.Active then
+                    obj.CurrentStage = obj.CurrentStage + 1
+                else
+                    obj.Active = true
+                end
+            end
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
         end
