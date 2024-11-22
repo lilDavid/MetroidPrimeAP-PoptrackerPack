@@ -320,10 +320,6 @@ end
 
 -- Data/ChozoRuins
 
-function can_exit_ruined_shrine()
-    return can_morph_ball() or can_space_jump()
-end
-
 function can_climb_sun_tower()
     return can_spider() and can_super_missile() and can_bomb()
 end
