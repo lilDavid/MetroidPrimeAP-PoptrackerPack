@@ -21,7 +21,7 @@
   },
   {
     "name": "Power Beam",
-    "codes": "PowerBeam, ProgressivePowerBeam",
+    "codes": "PowerBeam",
     "type": "progressive",
     "stages": [
       {"img": "images/items/powerbeam.png"},
