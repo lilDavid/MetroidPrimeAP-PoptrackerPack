@@ -78,6 +78,14 @@
                 "Fixed Hall of the Elders not autotracking",
                 "Fixed map displays for Main Plaza, Training Chamber Access, and Tower Chamber"
             ]
+        },
+        {
+            "package_version": "0.5.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "75954f3d3b5f5f2fe42d28194ec65c57d016944083286b3ed325829b8456b069",
+            "changelog": [
+                "Fixed combat logic bug making Phen access through mines display as a sequence break"
+            ]
         }
     ]
 }
