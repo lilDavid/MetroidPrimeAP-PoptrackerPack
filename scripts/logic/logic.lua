@@ -304,7 +304,7 @@ function can_combat_beam_pirates(beam)
     if has("CombatLogic", 1) then
         return true
     end
-    return has()
+    return has(beam)
 end
 
 
