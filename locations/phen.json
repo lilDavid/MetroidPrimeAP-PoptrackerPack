@@ -457,7 +457,7 @@
         "name": "Ruined Courtyard",
         "sections": [
           {
-            "name": "Morph Tunnel",
+            "name": "Morph tunnel",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$_can_reach_top_of_ruined_courtyard",

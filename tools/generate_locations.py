@@ -142,7 +142,7 @@ location_names = {
     'Phendrana Drifts: Chozo Ice Temple': "Thaw the frozen waters",
     'Phendrana Drifts: Ice Ruins West': "Below ice",
     'Phendrana Drifts: Chapel of the Elders': "Sheegoth",
-    'Phendrana Drifts: Ruined Courtyard': "Morph Tunnel",
+    'Phendrana Drifts: Ruined Courtyard': "Morph tunnel",
     'Phendrana Drifts: Phendrana Canyon': "In the tower",
     'Phendrana Drifts: Quarantine Cave': "Thardus",
     'Phendrana Drifts: Research Lab Hydra': "Cordite column",
