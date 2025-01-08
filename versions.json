@@ -86,6 +86,15 @@
             "changelog": [
                 "Fixed combat logic bug making Phen access through mines display as a sequence break"
             ]
+        },
+        {
+            "package_version": "0.5.2",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.2/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "821680d86c3fe8f8da9c5f208953fbe60b399fa550444a7cf3da0463ac9869e0",
+            "changelog": [
+                "Fixed Ruined Courtyard not being visible on maps",
+                "Corrected access rules for Furnace - Inside Furnace and Transport Tunnel E"
+            ]
         }
     ]
 }
