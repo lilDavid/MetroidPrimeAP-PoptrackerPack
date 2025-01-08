@@ -373,8 +373,7 @@
         "access_rules": [
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,False",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
-          "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost,@doors/IceBeam",
-          "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost,@doors/IceBeam",
+          "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,@doors/IceBeam",
           "@Tallon Overworld/Transport to Phazon Mines East,@doors/IceBeam"
         ]
       },

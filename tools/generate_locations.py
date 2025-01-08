@@ -752,8 +752,9 @@ class DoorData(NamedTuple):
     destination: str
     open_rule: str
     access_rule: List[str]
-    exclude_from_rando: bool
-    target_door_index: Optional[int]
+    exclude_from_rando: bool = False
+    target_door_index: Optional[int] = None
+    target_door_access_override: Optional[List[str]] = None
 
     @classmethod
     def from_ast(cls, door: ast.expr, source: str, filename: str):
@@ -764,6 +765,7 @@ class DoorData(NamedTuple):
         blast_shield = None
         exclude_from_rando = False
         target_door_index = None
+        target_door_access_override = None
         access_rule = None
         trick_rules: List[str] = []
         if (type(door.args[0]) is not ast.Attribute or type(door.args[0].value) is not ast.Name or
@@ -786,8 +788,6 @@ class DoorData(NamedTuple):
                 blast_shield = blast_shields[kwarg.value.attr]
             if kwarg.arg == "exclude_from_rando":
                 exclude_from_rando = ast.literal_eval(kwarg.value)
-            if kwarg.arg == "sub_region_door_index":
-                target_door_index = ast.literal_eval(kwarg.value)
             if kwarg.arg == "rule_func":
                 if (source, destination.value) in manual_door_rules:
                     access_rule = manual_door_rules[(source, destination.value)]
@@ -795,6 +795,10 @@ class DoorData(NamedTuple):
                     access_rule = parse_access_rule(kwarg.value, filename)
             if kwarg.arg == "tricks":
                 trick_rules.extend(get_tricks(kwarg.value))
+            if kwarg.arg == "sub_region_door_index":
+                target_door_index = ast.literal_eval(kwarg.value)
+            if kwarg.arg == "sub_region_access_override":
+                target_door_access_override = parse_access_rule(kwarg.value, filename)
         door_rule = []
         if door_type not in (None, "AnyBeam"):
             door_rule.append(f"@doors/{door_type}")
@@ -808,7 +812,7 @@ class DoorData(NamedTuple):
             access_rules = []
         access_rules.extend(",".join(door_rule + [rule]) for rule in trick_rules)
         return cls(source, destination.value, ",".join(door_rule), access_rules,
-                   exclude_from_rando, target_door_index)
+                   exclude_from_rando, target_door_index, target_door_access_override)
 
 
 class WorldRoomData(NamedTuple):
@@ -953,7 +957,12 @@ class AreaData(NamedTuple):
             doors.append(door)
             if door.target_door_index:
                 target_door = world_rooms[door.destination].doors[door.target_door_index]
-                if door.access_rule:
+                if door.target_door_access_override:
+                    if target_door.open_rule:
+                        access_rule = [','.join((rule, target_door.open_rule)) for rule in door.target_door_access_override]
+                    else:
+                        access_rule = door.target_door_access_override
+                elif door.access_rule:
                     if target_door.open_rule:
                         access_rule = [','.join((rule, target_door.open_rule)) for rule in door.access_rule]
                     else:
@@ -963,7 +972,7 @@ class AreaData(NamedTuple):
                         access_rule = [target_door.open_rule]
                     else:
                         access_rule = []
-                doors.append(DoorData(door.source, target_door.destination, "", access_rule, True, None))
+                doors.append(DoorData(door.source, target_door.destination, "", access_rule, True))
 
         tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors,
                                                               transport_rules[area_name])
