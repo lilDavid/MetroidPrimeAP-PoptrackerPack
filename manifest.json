@@ -3,7 +3,7 @@
     "author": "lil David",
     "game_name": "Metroid Prime",
     "package_uid": "MetroidPrime-Archipelago-lilDavid",
-    "package_version": "0.5.2",
+    "package_version": "0.5.3",
     "platform": "GameCube",
     "variants": {
       "standard": {
