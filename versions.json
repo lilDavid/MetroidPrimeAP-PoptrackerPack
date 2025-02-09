@@ -1,71 +1,20 @@
 {
     "versions": [
         {
-            "package_version": "0.1.0",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.0/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "cf91cc634bf62466bbfcc2f6ecf34246d5e562d2f729804a8cfb7c39dd7ebd10",
+            "package_version": "0.5.2",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.2/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "821680d86c3fe8f8da9c5f208953fbe60b399fa550444a7cf3da0463ac9869e0",
             "changelog": [
-                "Initial release"
+                "Fixed Ruined Courtyard not being visible on maps",
+                "Corrected access rules for Furnace - Inside Furnace and Transport Tunnel E"
             ]
         },
         {
-            "package_version": "0.1.1",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.1/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "9750d8033ca57b61528ab3fa2aafb83d1d2a70901b55b1f5619748e0e5b7d41d",
+            "package_version": "0.5.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "75954f3d3b5f5f2fe42d28194ec65c57d016944083286b3ed325829b8456b069",
             "changelog": [
-                "No longer assumes you start with Power Beam"
-            ]
-        },
-        {
-            "package_version": "0.2.0",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.2.0/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "53666d3eaf6e57900919ef5fad0550aab4c45e2e94eb3f05518dc0472255dba0",
-            "changelog": [
-                "Trickless logic",
-                "Options",
-                "Corrections for a few errors from previous versions",
-                "Report any logic inconsistencies you find!"
-            ]
-        },
-        {
-            "package_version": "0.3.0",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.3.0/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "3bbc7b65f44a04d993f8ab83dd4258a27baf4727f7c51d1c70ea16d45ffaca9c",
-            "changelog": [
-                "Elevator randomization",
-                "New item icons",
-                "Logic fixes"
-            ]
-        },
-        {
-            "package_version": "0.4.0",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.0/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "6e5fb31890da13952c75303739ea96322f1a862eb0c31b3ebde156966ca1db1f",
-            "changelog": [
-                "Trick Logic",
-                "Fewer option for X-Ray and Thermal Requirements",
-                "Fixed Magmoor Caverns: Lava Lake and Chozo Ruins: Ruined Nursery not appearing on the map",
-                "Fixed autotracking for certain options"
-            ]
-        },
-        {
-            "package_version": "0.4.1",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.1/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "e34d3f452d9d1f49b02ed701984feb108dcc9c3b29e7f9e11278beec2e8f1b0b",
-            "changelog": [
-                "Fixed map displays for Burn Dome, Watery Hall Scan Puzzle, and Ventilation Shaft",
-                "Changed map location shapes: all items are now squares, and all elevators are now diamonds"
-            ]
-        },
-        {
-            "package_version": "0.4.2",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.2/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "9a397c8462acc4fef67d0179e69cf98a95d7c323df0f89c45ef23764e85a6a8e",
-            "changelog": [
-                "Update logic to AP world version 0.4.3",
-                "Fix map locations for Elite Control Access, Lava Lake, Ice Ruins East, and Phendrana Shorelines",
-                "Fix logic rule showing Phendrana Canyon as always a sequence break",
-                "Fixed locations on maps failing to update when checked"
+                "Fixed combat logic bug making Phen access through mines display as a sequence break"
             ]
         },
         {
@@ -80,20 +29,71 @@
             ]
         },
         {
-            "package_version": "0.5.1",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.1/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "75954f3d3b5f5f2fe42d28194ec65c57d016944083286b3ed325829b8456b069",
+            "package_version": "0.4.2",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.2/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "9a397c8462acc4fef67d0179e69cf98a95d7c323df0f89c45ef23764e85a6a8e",
             "changelog": [
-                "Fixed combat logic bug making Phen access through mines display as a sequence break"
+                "Update logic to AP world version 0.4.3",
+                "Fix map locations for Elite Control Access, Lava Lake, Ice Ruins East, and Phendrana Shorelines",
+                "Fix logic rule showing Phendrana Canyon as always a sequence break",
+                "Fixed locations on maps failing to update when checked"
             ]
         },
         {
-            "package_version": "0.5.2",
-            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.2/MetroidPrimeAP_PopTrackerPack.zip",
-            "sha256": "821680d86c3fe8f8da9c5f208953fbe60b399fa550444a7cf3da0463ac9869e0",
+            "package_version": "0.4.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "e34d3f452d9d1f49b02ed701984feb108dcc9c3b29e7f9e11278beec2e8f1b0b",
             "changelog": [
-                "Fixed Ruined Courtyard not being visible on maps",
-                "Corrected access rules for Furnace - Inside Furnace and Transport Tunnel E"
+                "Fixed map displays for Burn Dome, Watery Hall Scan Puzzle, and Ventilation Shaft",
+                "Changed map location shapes: all items are now squares, and all elevators are now diamonds"
+            ]
+        },
+        {
+            "package_version": "0.4.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.4.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "6e5fb31890da13952c75303739ea96322f1a862eb0c31b3ebde156966ca1db1f",
+            "changelog": [
+                "Trick Logic",
+                "Fewer option for X-Ray and Thermal Requirements",
+                "Fixed Magmoor Caverns: Lava Lake and Chozo Ruins: Ruined Nursery not appearing on the map",
+                "Fixed autotracking for certain options"
+            ]
+        },
+        {
+            "package_version": "0.3.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.3.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "3bbc7b65f44a04d993f8ab83dd4258a27baf4727f7c51d1c70ea16d45ffaca9c",
+            "changelog": [
+                "Elevator randomization",
+                "New item icons",
+                "Logic fixes"
+            ]
+        },
+        {
+            "package_version": "0.2.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.2.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "53666d3eaf6e57900919ef5fad0550aab4c45e2e94eb3f05518dc0472255dba0",
+            "changelog": [
+                "Trickless logic",
+                "Options",
+                "Corrections for a few errors from previous versions",
+                "Report any logic inconsistencies you find!"
+            ]
+        },
+        {
+            "package_version": "0.1.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "9750d8033ca57b61528ab3fa2aafb83d1d2a70901b55b1f5619748e0e5b7d41d",
+            "changelog": [
+                "No longer assumes you start with Power Beam"
+            ]
+        },
+        {
+            "package_version": "0.1.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP_PopTrackerPack/releases/download/0.1.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "cf91cc634bf62466bbfcc2f6ecf34246d5e562d2f729804a8cfb7c39dd7ebd10",
+            "changelog": [
+                "Initial release"
             ]
         }
     ]
