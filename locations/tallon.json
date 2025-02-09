@@ -8,7 +8,6 @@
         "name": "Alcove",
         "sections": [
           {
-            "name": "Watch your step",
             "chest_unopened_img": "images/items/spacejumpboots.png",
             "access_rules": [
               "$can_space_jump",
@@ -25,9 +24,7 @@
       {
         "name": "Arbor Chamber",
         "sections": [
-          {
-            "name": "Top of the cave"
-          }
+          {}
         ],
         "access_rules": [
           "StartingRoomArborChamber",
@@ -39,7 +36,6 @@
         "name": "Artifact Temple",
         "sections": [
           {
-            "name": "Truly seek it",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -121,9 +117,7 @@
       {
         "name": "Great Tree Chamber",
         "sections": [
-          {
-            "name": "Invisible platforms"
-          }
+          {}
         ],
         "access_rules": [
           "@Tallon Overworld/Great Tree Hall,^$can_xray,$can_space_jump",
@@ -228,7 +222,6 @@
         "name": "Overgrown Cavern",
         "sections": [
           {
-            "name": "Venom Weed",
             "access_rules": [
               "$can_morph_ball"
             ]

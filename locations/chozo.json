@@ -8,7 +8,6 @@
         "name": "Antechamber",
         "sections": [
           {
-            "name": "On the pedestal",
             "chest_unopened_img": "images/items/icebeam.png"
           }
         ],
@@ -582,7 +581,6 @@
         "name": "Tower Chamber",
         "sections": [
           {
-            "name": "Through the waters",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
@@ -657,7 +655,6 @@
         "name": "Transport Access North",
         "sections": [
           {
-            "name": "Behind Hive Mecha",
             "chest_unopened_img": "images/items/energytank.png"
           }
         ],
@@ -721,7 +718,6 @@
         "name": "Vault",
         "sections": [
           {
-            "name": "Open the locks",
             "access_rules": [
               "$can_bomb"
             ]

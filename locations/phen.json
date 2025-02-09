@@ -55,7 +55,6 @@
         "name": "Chozo Ice Temple",
         "sections": [
           {
-            "name": "Thaw the frozen waters",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "$can_morph_ball,$can_space_jump,$can_melt_ice"
@@ -284,7 +283,6 @@
         "name": "Phendrana Canyon",
         "sections": [
           {
-            "name": "In the tower",
             "chest_unopened_img": "images/items/boostball.png"
           }
         ],
@@ -374,9 +372,7 @@
       {
         "name": "Quarantine Monitor",
         "sections": [
-          {
-            "name": "Swing to the door"
-          }
+          {}
         ],
         "access_rules": [
           "StartingRoomQuarantineMonitor",
@@ -511,7 +507,6 @@
         "name": "Security Cave",
         "sections": [
           {
-            "name": "At the top",
             "chest_unopened_img": "images/items/powerbombexpansion.png"
           }
         ],
@@ -570,7 +565,6 @@
         "name": "Transport Access",
         "sections": [
           {
-            "name": "Encased in ice",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_melt_ice"

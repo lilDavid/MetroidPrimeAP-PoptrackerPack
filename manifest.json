@@ -15,5 +15,6 @@
         "flags": ["ap"]
       }
     },
-    "versions_url": "https://raw.githubusercontent.com/lilDavid/MetroidPrimeAP-PoptrackerPack/main/versions.json"
+    "versions_url": "https://raw.githubusercontent.com/lilDavid/MetroidPrimeAP-PoptrackerPack/main/versions.json",
+    "target_poptracker_version": "0.30.0"
   }

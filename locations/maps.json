@@ -5,7 +5,7 @@
       {
         "name": "Alcove",
         "sections": [
-          { "ref": "Tallon Overworld/Alcove/Watch your step" }
+          { "ref": "Tallon Overworld/Alcove/" }
         ],
         "map_locations": [
           {
@@ -23,7 +23,7 @@
       {
         "name": "Artifact Temple",
         "sections": [
-          { "ref": "Tallon Overworld/Artifact Temple/Truly seek it" }
+          { "ref": "Tallon Overworld/Artifact Temple/" }
         ],
         "map_locations": [
           {
@@ -41,7 +41,7 @@
       {
         "name": "Arbor Chamber",
         "sections": [
-          { "ref": "Tallon Overworld/Arbor Chamber/Top of the cave" }
+          { "ref": "Tallon Overworld/Arbor Chamber/" }
         ],
         "map_locations": [
           {
@@ -112,7 +112,7 @@
       {
         "name": "Great Tree Chamber",
         "sections": [
-          { "ref": "Tallon Overworld/Great Tree Chamber/Invisible platforms" }
+          { "ref": "Tallon Overworld/Great Tree Chamber/" }
         ],
         "map_locations": [
           {
@@ -205,7 +205,7 @@
       {
         "name": "Overgrown Cavern",
         "sections": [
-          { "ref": "Tallon Overworld/Overgrown Cavern/Venom Weed" }
+          { "ref": "Tallon Overworld/Overgrown Cavern/" }
         ],
         "map_locations": [
           {
@@ -416,7 +416,7 @@
       {
         "name": "Antechamber",
         "sections": [
-          { "ref": "Chozo Ruins/Antechamber/On the pedestal" }
+          { "ref": "Chozo Ruins/Antechamber/" }
         ],
         "map_locations": [
           {
@@ -774,7 +774,7 @@
         "name": "Tower Chamber",
         "sections": [
           {
-            "ref": "Chozo Ruins/Tower Chamber/Through the waters"
+            "ref": "Chozo Ruins/Tower Chamber/"
           }
         ],
         "map_locations": [
@@ -827,7 +827,7 @@
       {
         "name": "Transport Access North",
         "sections": [
-          { "ref": "Chozo Ruins/Transport Access North/Behind Hive Mecha" }
+          { "ref": "Chozo Ruins/Transport Access North/" }
         ],
         "map_locations": [
           {
@@ -1007,7 +1007,7 @@
       {
         "name": "Vault",
         "sections": [
-          { "ref": "Chozo Ruins/Vault/Open the locks" }
+          { "ref": "Chozo Ruins/Vault/" }
         ],
         "map_locations": [
           {
@@ -1050,7 +1050,7 @@
       {
         "name": "Lava Lake",
         "sections": [
-          { "ref": "Magmoor Caverns/Lava Lake/Shatter the column" }
+          { "ref": "Magmoor Caverns/Lava Lake/Weakened column" }
         ],
         "map_locations": [
           {
@@ -1086,7 +1086,7 @@
       {
         "name": "Plasma Processing",
         "sections": [
-          { "ref": "Magmoor Caverns/Plasma Processing/Rotating lift puzzle" }
+          { "ref": "Magmoor Caverns/Plasma Processing/" }
         ],
         "map_locations": [
           {
@@ -1117,7 +1117,7 @@
       {
         "name": "Storage Cavern",
         "sections": [
-          { "ref": "Magmoor Caverns/Storage Cavern/Through the pit" }
+          { "ref": "Magmoor Caverns/Storage Cavern/" }
         ],
         "map_locations": [
           {
@@ -1341,7 +1341,7 @@
       {
         "name": "Warrior Shrine",
         "sections": [
-          { "ref": "Magmoor Caverns/Warrior Shrine/Statue's hands" }
+          { "ref": "Magmoor Caverns/Warrior Shrine/" }
         ],
         "map_locations": [
           {
@@ -1377,7 +1377,7 @@
       {
         "name": "Chozo Ice Temple",
         "sections": [
-          { "ref": "Phendrana Drifts/Chozo Ice Temple/Thaw the frozen waters" }
+          { "ref": "Phendrana Drifts/Chozo Ice Temple/" }
         ],
         "map_locations": [
           {
@@ -1518,7 +1518,7 @@
       {
         "name": "Phendrana Canyon",
         "sections": [
-          { "ref": "Phendrana Drifts/Phendrana Canyon/In the tower" }
+          { "ref": "Phendrana Drifts/Phendrana Canyon/" }
         ],
         "map_locations": [
           {
@@ -1580,7 +1580,7 @@
       {
         "name": "Quarantine Monitor",
         "sections": [
-          { "ref": "Phendrana Drifts/Quarantine Monitor/Swing to the door" }
+          { "ref": "Phendrana Drifts/Quarantine Monitor/" }
         ],
         "map_locations": [
           {
@@ -1678,7 +1678,7 @@
       {
         "name": "Security Cave",
         "sections": [
-          { "ref": "Phendrana Drifts/Security Cave/At the top" }
+          { "ref": "Phendrana Drifts/Security Cave/" }
         ],
         "map_locations": [
           {
@@ -1704,7 +1704,7 @@
       {
         "name": "Transport Access",
         "sections": [
-          { "ref": "Phendrana Drifts/Transport Access/Encased in ice" }
+          { "ref": "Phendrana Drifts/Transport Access/" }
         ],
         "map_locations": [
           {
@@ -1955,7 +1955,7 @@
       {
         "name": "Metroid Quarantine A",
         "sections": [
-          { "ref": "Phazon Mines/Metroid Quarantine A/Bendezium cave" }
+          { "ref": "Phazon Mines/Metroid Quarantine A/Bendezium cave wall" }
         ],
         "map_locations": [
           {
@@ -1978,7 +1978,7 @@
       {
         "name": "Metroid Quarantine B",
         "sections": [
-          { "ref": "Phazon Mines/Metroid Quarantine B/Sandstone floor" }
+          { "ref": "Phazon Mines/Metroid Quarantine B/Cordite tank" }
         ],
         "map_locations": [
           {
@@ -2042,7 +2042,7 @@
       {
         "name": "Processing Center Access",
         "sections": [
-          { "ref": "Phazon Mines/Processing Center Access/Ahead of the gate" }
+          { "ref": "Phazon Mines/Processing Center Access/" }
         ],
         "map_locations": [
           {
@@ -2158,7 +2158,7 @@
       {
         "name": "Storage Depot A",
         "sections": [
-          { "ref": "Phazon Mines/Storage Depot A/Deactivate the force field" }
+          { "ref": "Phazon Mines/Storage Depot A/" }
         ],
         "map_locations": [
           {
@@ -2176,7 +2176,7 @@
       {
         "name": "Storage Depot B",
         "sections": [
-          { "ref": "Phazon Mines/Storage Depot B/Pillar rotation puzzle" }
+          { "ref": "Phazon Mines/Storage Depot B/" }
         ],
         "map_locations": [
           {
@@ -2252,7 +2252,7 @@
           },
           {
             "name": "Arbor Chamber",
-            "ref": "Tallon Overworld/Arbor Chamber/Top of the cave"
+            "ref": "Tallon Overworld/Arbor Chamber/"
           },
           {
             "name": "Transport Tunnel B",
@@ -2341,7 +2341,7 @@
           },
           {
             "name": "Transport Access North",
-            "ref": "Chozo Ruins/Transport Access North/Behind Hive Mecha"
+            "ref": "Chozo Ruins/Transport Access North/"
           }
         ],
         "map_locations": [
@@ -2429,7 +2429,7 @@
           },
           {
             "name": "Tower Chamber",
-            "ref": "Chozo Ruins/Tower Chamber/Through the waters"
+            "ref": "Chozo Ruins/Tower Chamber/"
           }
         ],
         "map_locations": [
@@ -2477,7 +2477,7 @@
           },
           {
             "name": "Warrior Shrine",
-            "ref": "Magmoor Caverns/Warrior Shrine/Statue's hands"
+            "ref": "Magmoor Caverns/Warrior Shrine/"
           },
           {
             "name": "Shore Tunnel",
@@ -2557,7 +2557,7 @@
         "sections": [
           {
             "name": "Security Cave",
-            "ref": "Phendrana Drifts/Security Cave/At the top"
+            "ref": "Phendrana Drifts/Security Cave/"
           },
           {
             "name": "Storage Cave",
@@ -2606,7 +2606,7 @@
           },
           {
             "name": "Storage Depot A",
-            "ref": "Phazon Mines/Storage Depot A/Deactivate the force field"
+            "ref": "Phazon Mines/Storage Depot A/"
           }
         ],
         "map_locations": [
@@ -2646,7 +2646,7 @@
           },
           {
             "name": "Processing Center Access",
-            "ref": "Phazon Mines/Processing Center Access/Ahead of the gate"
+            "ref": "Phazon Mines/Processing Center Access/"
           }
         ],
         "map_locations": [

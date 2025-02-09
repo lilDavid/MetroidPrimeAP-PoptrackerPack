@@ -207,7 +207,7 @@
         "name": "Metroid Quarantine A",
         "sections": [
           {
-            "name": "Bendezium cave",
+            "name": "Bendezium cave wall",
             "access_rules": [
               "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,^$can_xray",
               "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,^$can_xray"
@@ -223,7 +223,7 @@
         "name": "Metroid Quarantine B",
         "sections": [
           {
-            "name": "Sandstone floor",
+            "name": "Cordite tank",
             "access_rules": [
               "[$can_combat_mines],[$can_combat_beam_pirates|PlasmaBeam],@Elite Quarters Access,$can_super_missile"
             ]
@@ -308,7 +308,6 @@
         "name": "Processing Center Access",
         "sections": [
           {
-            "name": "Ahead of the gate",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "$can_backwards_lower_mines",
@@ -397,7 +396,6 @@
         "name": "Storage Depot A",
         "sections": [
           {
-            "name": "Deactivate the force field",
             "chest_unopened_img": "images/items/flamethrower.png"
           }
         ],
@@ -409,7 +407,6 @@
         "name": "Storage Depot B",
         "sections": [
           {
-            "name": "Pillar rotation puzzle",
             "chest_unopened_img": "images/items/grapplebeam.png"
           }
         ],

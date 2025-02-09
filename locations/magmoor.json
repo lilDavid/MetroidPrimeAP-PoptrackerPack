@@ -59,7 +59,7 @@
         "name": "Lava Lake",
         "sections": [
           {
-            "name": "Shatter the column",
+            "name": "Weakened column",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "$can_missile,$can_space_jump,@Magmoor Caverns/Burning Trail",
@@ -130,7 +130,6 @@
         "name": "Plasma Processing",
         "sections": [
           {
-            "name": "Rotating lift puzzle",
             "chest_unopened_img": "images/items/plasmabeam.png"
           }
         ],
@@ -180,9 +179,7 @@
       {
         "name": "Storage Cavern",
         "sections": [
-          {
-            "name": "Through the pit"
-          }
+          {}
         ],
         "access_rules": [
           "@Magmoor Caverns/Triclops Pit,$can_heat,$can_morph_ball"
@@ -309,7 +306,6 @@
         "name": "Warrior Shrine",
         "sections": [
           {
-            "name": "Statue's hands",
             "chest_unopened_img": "images/items/artifacts0.png"
           }
         ],
