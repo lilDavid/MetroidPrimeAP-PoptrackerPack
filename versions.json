@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "0.5.3",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.3/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "6b53b30a39d11df9b2deb3c326867acb696d1cf58d8ed2d0da237e272dd758e2",
+            "changelog": [
+                "Updated logic to APworld 0.4.9-rc1",
+                "Changed several location names, partially reverting the change from 0.4.2"
+            ]
+        },
+        {
             "package_version": "0.5.2",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.2/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "821680d86c3fe8f8da9c5f208953fbe60b399fa550444a7cf3da0463ac9869e0",
