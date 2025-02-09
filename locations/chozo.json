@@ -399,7 +399,7 @@
           {
             "name": "Spider tracks",
             "access_rules": [
-              "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
+              "@Chozo Ruins/Sunchamber/Flaahgra,$can_spider"
             ]
           }
         ],
@@ -552,7 +552,7 @@
         "name": "Sunchamber",
         "sections": [
           {
-            "name": "Flaaghra",
+            "name": "Flaahgra",
             "chest_unopened_img": "images/items/variasuit.png",
             "access_rules": [
               "@rules/can_flaahgra"
@@ -762,7 +762,7 @@
             "access_rules": [
               "$can_move_underwater,$can_space_jump,@rules/can_flaahgra",
               "[$trick|watery_hall_no_gravity|1],$can_space_jump",
-              "[$trick|watery_hall_no_gravity_no_space_jump|2],"
+              "[$trick|watery_hall_no_gravity_no_space_jump|2]"
             ]
           }
         ],

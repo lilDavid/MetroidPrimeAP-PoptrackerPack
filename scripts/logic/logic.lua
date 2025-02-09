@@ -276,7 +276,7 @@ function can_combat_omega_pirate()
     return can_combat_generic(6, 3)
 end
 
-function can_combat_flaaghra()
+function can_combat_flaahgra()
     return has("StartingRoomSunchamberLobby")
         or can_combat_generic(2, 1, false)
 end

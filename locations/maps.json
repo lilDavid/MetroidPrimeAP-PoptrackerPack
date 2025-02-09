@@ -747,7 +747,7 @@
       {
         "name": "Sunchamber",
         "sections": [
-          { "ref": "Chozo Ruins/Sunchamber/Flaaghra" }
+          { "ref": "Chozo Ruins/Sunchamber/Flaahgra" }
         ],
         "map_locations": [
           {
@@ -2404,8 +2404,8 @@
         "name": "Sunchamber",
         "sections": [
           {
-            "name": "Flaaghra",
-            "ref": "Chozo Ruins/Sunchamber/Flaaghra"
+            "name": "Flaahgra",
+            "ref": "Chozo Ruins/Sunchamber/Flaahgra"
           },
           {
             "name": "Ghosts",

@@ -7,8 +7,8 @@
                 "access_rules": [
                     "StartingRoomSunchamberLobby,$can_bomb",
                     "StartingRoomSunchamberLobby,$can_power_bomb,$has_power_bomb_count|4",
-                    "@Chozo Ruins/Sunchamber,[$can_combat_flaaghra],$can_missile,$can_scan,$can_bomb",
-                    "@Chozo Ruins/Sunchamber,[$can_combat_flaaghra],$can_missile,$can_scan,$can_power_bomb,$has_power_bomb_count|4"
+                    "@Chozo Ruins/Sunchamber,[$can_combat_flaahgra],$can_missile,$can_scan,$can_bomb",
+                    "@Chozo Ruins/Sunchamber,[$can_combat_flaahgra],$can_missile,$can_scan,$can_power_bomb,$has_power_bomb_count|4"
                 ]
             },
             {

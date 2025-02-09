@@ -76,7 +76,7 @@ item_images = {
     'Chozo Ruins: Tower Chamber': ItemImage.ArtifactLifegiver,
     'Chozo Ruins: Transport Access North': ItemImage.EnergyTank,
     'Chozo Ruins: Hive Totem': ItemImage.MissileLauncher,
-    'Chozo Ruins: Sunchamber - Flaaghra': ItemImage.VariaSuit,
+    'Chozo Ruins: Sunchamber - Flaahgra': ItemImage.VariaSuit,
     'Chozo Ruins: Sunchamber - Ghosts': ItemImage.ArtifactWild,
     'Chozo Ruins: Watery Hall - Scan Puzzle': ItemImage.ChargeBeam,
     'Chozo Ruins: Burn Dome - Incinerator Drone': ItemImage.Bombs,
@@ -254,7 +254,7 @@ manual_location_rules = {
         "RemoveHiveMecha",
     ],
     "Chozo Ruins: Ruined Fountain": [
-        "@Chozo Ruins/Sunchamber/Flaaghra,$can_spider"
+        "@Chozo Ruins/Sunchamber/Flaahgra,$can_spider"
     ],
     "Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel": [
         "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine",
