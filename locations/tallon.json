@@ -10,12 +10,14 @@
           {
             "chest_unopened_img": "images/items/spacejumpboots.png",
             "access_rules": [
+              "NoLogic",
               "$can_space_jump",
               "[$trick|alcove_escape|1]"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Gully",
           "@Tallon Overworld/Landing Site,$can_space_jump",
           "@Tallon Overworld/Landing Site,[$trick|landing_site_scan_dash|1],$can_scan"
@@ -27,6 +29,7 @@
           {}
         ],
         "access_rules": [
+          "NoLogic",
           "StartingRoomArborChamber",
           "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,$can_grapple,^$can_xray,$can_space_jump",
           "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,[$trick|root_cave_arbor_chamber_no_grapple_xray|3],$can_space_jump,$can_scan"
@@ -40,6 +43,7 @@
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Temple Lobby"
         ]
       },
@@ -49,11 +53,13 @@
           {
             "name": "Cordite locker",
             "access_rules": [
+              "NoLogic",
               "$can_super_missile"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,^$can_crashed_frigate",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,[$trick|frigate_no_gravity|1],$can_bomb,$can_space_jump,$can_wave_beam,^$can_thermal",
           "@Tallon Overworld/Hydro Access Tunnel,$can_bomb,$can_move_underwater,$can_space_jump",
@@ -63,6 +69,7 @@
       {
         "name": "Canyon Cavern",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Landing Site",
           "@Tallon Overworld/Tallon Canyon"
         ]
@@ -74,6 +81,7 @@
             "name": "Elevator",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
+              "NoLogic",
               "$can_missile,^$can_crashed_frigate",
               "$can_charge_beam,^$can_crashed_frigate",
               "$can_missile,$can_crashed_frigate_backwards",
@@ -82,6 +90,7 @@
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Biohazard Containment,$can_crashed_frigate_backwards",
           "@Tallon Overworld/Biohazard Containment,[$trick|frigate_backwards_no_gravity|1],$can_morph_ball,$can_space_jump,$can_boost",
           "@Tallon Overworld/Frigate Access Tunnel,^$can_crashed_frigate",
@@ -91,6 +100,7 @@
       {
         "name": "Frigate Access Tunnel",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,$can_crashed_frigate_backwards",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,[$trick|frigate_backwards_no_gravity|1],$can_morph_ball,$can_space_jump,$can_boost",
           "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam"
@@ -102,6 +112,7 @@
           {
             "name": "Tangled roots",
             "access_rules": [
+              "NoLogic",
               "$can_space_jump,$can_move_underwater",
               "[$trick|frigate_crash_site_scan_dash|3],$can_scan",
               "[$trick|frigate_crash_site_slope_jump|1],$can_space_jump"
@@ -109,6 +120,7 @@
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Frigate Access Tunnel,@doors/IceBeam",
           "@Tallon Overworld/Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
           "@Tallon Overworld/Waterfall Cavern,@blastshields/Missile,$can_morph_ball"
@@ -120,6 +132,7 @@
           {}
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Great Tree Hall,^$can_xray,$can_space_jump",
           "@Tallon Overworld/Great Tree Hall,[$trick|great_tree_chamber_no_xray|1],$can_space_jump",
           "@Tallon Overworld/Great Tree Hall,[$trick|great_tree_chamber_nsj_no_xray|2],$can_bomb"
@@ -128,6 +141,7 @@
       {
         "name": "Great Tree Hall",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Great Tree Chamber",
           "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost",
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
@@ -139,6 +153,7 @@
       {
         "name": "Gully",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Landing Site,$can_space_jump",
           "@Tallon Overworld/Landing Site,[$trick|landing_site_scan_dash|1],$can_scan",
           "@Tallon Overworld/Tallon Canyon,$can_boost,$can_bomb"
@@ -151,12 +166,14 @@
             "name": "Underwater bomb puzzle",
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
+              "NoLogic",
               "$can_bomb,$can_move_underwater",
               "[$trick|hydro_access_tunnel_no_gravity|3],$can_boost"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Biohazard Containment,^$can_crashed_frigate",
           "@Tallon Overworld/Biohazard Containment,[$trick|frigate_no_gravity|1],$can_bomb,$can_space_jump,$can_wave_beam,^$can_thermal",
           "@Tallon Overworld/Great Tree Hall,False",
@@ -169,11 +186,13 @@
           {
             "name": "Morph Ball tunnel",
             "access_rules": [
+              "NoLogic",
               "$can_morph_ball"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "StartingRoomLandingSite",
           "@Tallon Overworld/Alcove,$can_space_jump",
           "@Tallon Overworld/Alcove,[$trick|alcove_escape|1]",
@@ -189,11 +208,13 @@
           {
             "name": "Boost Ball loop",
             "access_rules": [
+              "NoLogic",
               "$can_power_bomb,$can_bomb,$can_boost"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,$can_spider",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_no_spider_ball|1],$can_space_jump",
           "@Tallon Overworld/Life Grove,$can_power_bomb,$can_space_jump,$can_morph_ball,$can_power_beam"
@@ -210,11 +231,13 @@
             "name": "Underwater Spinner",
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
+              "NoLogic",
               "$can_boost,$can_bomb"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost,$can_bomb"
         ]
       },
@@ -223,11 +246,13 @@
         "sections": [
           {
             "access_rules": [
+              "NoLogic",
               "$can_morph_ball"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,False",
           "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,[$trick|frigate_crash_site_climb_to_overgrown_cavern|2],$can_bomb,$can_space_jump",
           "@Tallon Overworld/Transport Tunnel C,@doors/IceBeam"
@@ -239,12 +264,14 @@
           {
             "name": "Behind vines",
             "access_rules": [
+              "NoLogic",
               "$can_space_jump,$can_grapple,^$can_xray",
               "[$trick|root_cave_arbor_chamber_no_grapple_xray|3],$can_space_jump,$can_scan"
             ]
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Arbor Chamber",
           "@Tallon Overworld/Root Tunnel,@blastshields/Missile",
           "@Tallon Overworld/Transport Tunnel B"
@@ -253,6 +280,7 @@
       {
         "name": "Root Tunnel",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Root Cave,@blastshields/Missile",
           "@Tallon Overworld/Tallon Canyon"
         ]
@@ -260,6 +288,7 @@
       {
         "name": "Tallon Canyon",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Canyon Cavern",
           "@Tallon Overworld/Gully,$can_bomb,$can_space_jump",
           "@Tallon Overworld/Root Tunnel",
@@ -269,6 +298,7 @@
       {
         "name": "Temple Hall",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Landing Site",
           "@Tallon Overworld/Temple Security Station"
         ]
@@ -276,6 +306,7 @@
       {
         "name": "Temple Lobby",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Artifact Temple",
           "@Tallon Overworld/Temple Security Station,@blastshields/Missile"
         ]
@@ -283,6 +314,7 @@
       {
         "name": "Temple Security Station",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Temple Hall",
           "@Tallon Overworld/Temple Lobby,@blastshields/Missile"
         ]
@@ -290,6 +322,7 @@
       {
         "name": "Transport to Chozo Ruins East",
         "access_rules": [
+          "NoLogic",
           "StartingRoomTransportToChozoRuinsEast",
           "@Tallon Overworld/Transport Tunnel C,@doors/IceBeam",
           "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld East,$can_access_elevators",
@@ -299,6 +332,7 @@
       {
         "name": "Transport to Chozo Ruins South",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
           "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld South,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToChozoRuinsSouth"
@@ -307,6 +341,7 @@
       {
         "name": "Transport to Chozo Ruins West",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Transport Tunnel A",
           "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld North,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToChozoRuinsWest"
@@ -315,6 +350,7 @@
       {
         "name": "Transport to Magmoor Caverns East",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Transport Tunnel B",
           "ElevatorsNormal,@Magmoor Caverns/Transport to Tallon Overworld West,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToMagmoorCavernsEast"
@@ -323,6 +359,7 @@
       {
         "name": "Transport to Phazon Mines East",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam",
           "ElevatorsNormal,@Phazon Mines/Transport to Tallon Overworld South,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToPhazonMinesEast"
@@ -331,6 +368,7 @@
       {
         "name": "Transport Tunnel A",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Tallon Canyon",
           "@Tallon Overworld/Transport to Chozo Ruins West"
         ]
@@ -343,6 +381,7 @@
           }
         ],
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Root Cave",
           "@Tallon Overworld/Transport to Magmoor Caverns East"
         ]
@@ -350,6 +389,7 @@
       {
         "name": "Transport Tunnel C",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
           "@Tallon Overworld/Transport to Chozo Ruins East,@doors/IceBeam"
         ]
@@ -357,6 +397,7 @@
       {
         "name": "Transport Tunnel D",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam",
           "@Tallon Overworld/Transport to Chozo Ruins South,@doors/IceBeam"
         ]
@@ -364,6 +405,7 @@
       {
         "name": "Transport Tunnel E",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,False",
           "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
           "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,@doors/IceBeam",
@@ -373,6 +415,7 @@
       {
         "name": "Waterfall Cavern",
         "access_rules": [
+          "NoLogic",
           "@Tallon Overworld/Frigate Crash Site,@blastshields/Missile,$can_missile",
           "@Tallon Overworld/Landing Site"
         ]

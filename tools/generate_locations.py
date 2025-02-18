@@ -737,6 +737,9 @@ class PickupData(NamedTuple):
         if access_rules:
             access_rules.extend(trick_access_rules)
 
+        if access_rules:
+            access_rules.insert(0, "NoLogic")
+
         return cls(item_name, item_images.get(check_name), access_rules)
 
     def into_json(self):
@@ -872,6 +875,9 @@ class TrackerRoomData(NamedTuple):
         if world_data.name in transports:
             rules.append(f"ElevatorsNormal,{transports[world_data.name]},$can_access_elevators")
             rules.append(f"ElevatorsRandom,{f"{area} {world_data.name}".title().replace(" ", "")}")
+
+        if rules:
+            rules.insert(0, "NoLogic")
 
         return cls(world_data.name, world_data.pickups, rules)
 
