@@ -28,6 +28,7 @@
                 [ "ProgressiveBeams" ],
                 [ "CombatLogic" ],
                 [ "ElevatorsRandom" ],
+                [ "DoorRando" ],
                 [ "PreScanElevators" ]
               ]
             }

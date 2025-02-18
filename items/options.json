@@ -298,18 +298,18 @@
     "loop": true,
     "stages": [
       {
-        "img": "images/options/doors-normal",
+        "img": "images/options/doors-normal.png",
         "img_mods": "@disabled",
         "codes": "DoorRandoNone",
         "inherit_codes": false
       },
       {
-        "img": "images/options/doors-global",
+        "img": "images/options/doors-global.png",
         "codes": "DoorRando,DoorRandoGlobal",
         "inherit_codes": false
       },
       {
-        "img": "images/options/doors-regional",
+        "img": "images/options/doors-regional.png",
         "codes": "DoorRando,DoorRandoRegional",
         "inherit_codes": false
       }

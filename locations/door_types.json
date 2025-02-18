@@ -10,27 +10,19 @@
             },
             {
                 "name": "WaveBeam",
-                "access_rules": [ "$can_wave_beam" ]
+                "access_rules": [ "DoorRando", "$can_wave_beam" ]
             },
             {
                 "name": "IceBeam",
-                "access_rules": [ "$can_ice_beam" ]
+                "access_rules": [ "DoorRando", "$can_ice_beam" ]
             },
             {
                 "name": "PlasmaBeam",
-                "access_rules": [ "$can_plasma_beam" ]
+                "access_rules": [ "DoorRando", "$can_plasma_beam" ]
             },
             {
                 "name": "PowerBeam",
-                "access_rules": [ "$can_power_beam" ]
-            },
-            {
-                "name": "Missile",
-                "access_rules": [ "$can_missile" ]
-            },
-            {
-                "name": "Bomb",
-                "access_rules": [ "$can_bomb" ]
+                "access_rules": [ "DoorRando", "$can_power_beam" ]
             }
         ]
     },
@@ -67,7 +59,7 @@
             },
             {
                 "name": "Missile",
-                "access_rules": [ "$can_missile" ]
+                "access_rules": [ "DoorRando", "$can_missile" ]
             }
         ]
     }
