@@ -413,10 +413,6 @@
         "visibility_rules": "DoorRandoRegional",
         "sections": [
           {
-            "name": "Any Beam",
-            "hosted_item": "DoorsTallonBlue"
-          },
-          {
             "name": "Ice Beam",
             "hosted_item": "DoorsTallonIce"
           },
@@ -1055,10 +1051,6 @@
         "visibility_rules": "DoorRandoRegional",
         "sections": [
           {
-            "name": "Any Beam",
-            "hosted_item": "DoorsRuinsBlue"
-          },
-          {
             "name": "Wave Beam",
             "hosted_item": "DoorsRuinsWave"
           },
@@ -1411,10 +1403,6 @@
         "name": "Door Colors",
         "visibility_rules": "DoorRandoRegional",
         "sections": [
-          {
-            "name": "Any Beam",
-            "hosted_item": "DoorsMagmoorBlue"
-          },
           {
             "name": "Wave Beam",
             "hosted_item": "DoorsMagmoorWave"
@@ -1876,10 +1864,6 @@
         "visibility_rules": "DoorRandoRegional",
         "sections": [
           {
-            "name": "Any Beam",
-            "hosted_item": "DoorsPhenBlue"
-          },
-          {
             "name": "Wave Beam",
             "hosted_item": "DoorsPhenWave"
           },
@@ -2338,10 +2322,6 @@
         "name": "Door Colors",
         "visibility_rules": "DoorRandoRegional",
         "sections": [
-          {
-            "name": "Any Beam",
-            "hosted_item": "DoorsMinesBlue"
-          },
           {
             "name": "Wave Beam",
             "hosted_item": "DoorsMinesWave"
@@ -2838,10 +2818,6 @@
         "visibility_rules": "DoorRandoGlobal",
         "sections": [
           {
-            "name": "Any Beam",
-            "hosted_item": "DoorsGlobalBlue"
-          },
-          {
             "name": "Wave Beam",
             "hosted_item": "DoorsGlobalWave"
           },
@@ -2932,7 +2908,6 @@
       {
         "name": "Tallon Overworld Doors",
         "sections": [
-          { "ref": "Tallon Map/Door Colors/Any Beam" },
           { "ref": "Tallon Map/Door Colors/Ice Beam" },
           { "ref": "Tallon Map/Door Colors/Plasma Beam" }
         ],
@@ -2950,7 +2925,6 @@
       {
         "name": "Chozo Ruins Doors",
         "sections": [
-          { "ref": "Chozo Map/Door Colors/Any Beam" },
           { "ref": "Chozo Map/Door Colors/Wave Beam" },
           { "ref": "Chozo Map/Door Colors/Ice Beam" }
         ],
@@ -2968,7 +2942,6 @@
       {
         "name": "Magmoor Caverns Doors",
         "sections": [
-          { "ref": "Magmoor Map/Door Colors/Any Beam" },
           { "ref": "Magmoor Map/Door Colors/Wave Beam" },
           { "ref": "Magmoor Map/Door Colors/Ice Beam" },
           { "ref": "Magmoor Map/Door Colors/Plasma Beam" }
@@ -2987,7 +2960,6 @@
       {
         "name": "Phendrana Drifts Doors",
         "sections": [
-          { "ref": "Phen Map/Door Colors/Any Beam" },
           { "ref": "Phen Map/Door Colors/Wave Beam" },
           { "ref": "Phen Map/Door Colors/Ice Beam" },
           { "ref": "Phen Map/Door Colors/Plasma Beam" }
@@ -3006,7 +2978,6 @@
       {
         "name": "Phazon Mines Doors",
         "sections": [
-          { "ref": "Mines Map/Door Colors/Any Beam" },
           { "ref": "Mines Map/Door Colors/Wave Beam" },
           { "ref": "Mines Map/Door Colors/Ice Beam" },
           { "ref": "Mines Map/Door Colors/Plasma Beam" }
