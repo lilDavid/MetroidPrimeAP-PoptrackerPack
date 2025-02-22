@@ -407,6 +407,38 @@
             "border_thickness": 5
           }
         ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoRegional",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsTallonBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsTallonWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsTallonIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsTallonPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 650,
+            "y": 128,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          }
+        ]
       }
     ]
   },
@@ -1021,6 +1053,38 @@
             "y": 95
           }
         ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoRegional",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsRuinsBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsRuinsWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsRuinsIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsRuinsPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 627,
+            "y": 133,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          }
+        ]
       }
     ]
   },
@@ -1348,6 +1412,38 @@
             "map": "Magmoor Caverns",
             "x": 378,
             "y": 448
+          }
+        ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoRegional",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsMagmoorBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsMagmoorWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsMagmoorIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsMagmoorPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 471,
+            "y": 157,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 5
           }
         ]
       }
@@ -1782,6 +1878,38 @@
             "border_thickness": 5
           }
         ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoRegional",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsPhenBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsPhenWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsPhenIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsPhenPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 532,
+            "y": 149,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 5
+          }
+        ]
       }
     ]
   },
@@ -2211,6 +2339,62 @@
             "map": "Mines Sublevel 1",
             "x": 281,
             "y": 285
+          }
+        ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoRegional",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsMinesBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsMinesWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsMinesIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsMinesPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 810,
+            "y": 95,
+            "shape": "diamond",
+            "size": 30,
+            "border_thickness": 6
+          },
+          {
+            "map": "Mines Surface",
+            "x": 655,
+            "y": 85,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 577,
+            "y": 85,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 693,
+            "y": 88,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
           }
         ]
       }
@@ -2654,6 +2838,197 @@
             "map": "World Map",
             "x": 635,
             "y": 545
+          }
+        ]
+      },
+      {
+        "name": "Door Colors",
+        "visibility_rules": "DoorRandoGlobal",
+        "sections": [
+          {
+            "name": "Any Beam",
+            "hosted_item": "DoorsGlobalBlue"
+          },
+          {
+            "name": "Wave Beam",
+            "hosted_item": "DoorsGlobalWave"
+          },
+          {
+            "name": "Ice Beam",
+            "hosted_item": "DoorsGlobalIce"
+          },
+          {
+            "name": "Plasma Beam",
+            "hosted_item": "DoorsGlobalPlasma"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 879,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
+          },
+          {
+            "map": "Tallon Overworld",
+            "x": 650,
+            "y": 128,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Chozo Ruins",
+            "x": 627,
+            "y": 133,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Magmoor Caverns",
+            "x": 471,
+            "y": 157,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 5
+          },
+          {
+            "map": "Phendrana Drifts",
+            "x": 532,
+            "y": 149,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 5
+          },
+          {
+            "map": "Phazon Mines",
+            "x": 810,
+            "y": 95,
+            "shape": "diamond",
+            "size": 30,
+            "border_thickness": 6
+          },
+          {
+            "map": "Mines Surface",
+            "x": 655,
+            "y": 85,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 577,
+            "y": 85,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 693,
+            "y": 88,
+            "shape": "diamond",
+            "size": 15,
+            "border_thickness": 4
+          }
+        ]
+      },
+      {
+        "name": "Tallon Overworld Doors",
+        "sections": [
+          { "ref": "Tallon Map/Door Colors/Any Beam" },
+          { "ref": "Tallon Map/Door Colors/Wave Beam" },
+          { "ref": "Tallon Map/Door Colors/Ice Beam" },
+          { "ref": "Tallon Map/Door Colors/Plasma Beam" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 921,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
+          }
+        ]
+      },
+      {
+        "name": "Chozo Ruins Doors",
+        "sections": [
+          { "ref": "Chozo Map/Door Colors/Any Beam" },
+          { "ref": "Chozo Map/Door Colors/Wave Beam" },
+          { "ref": "Chozo Map/Door Colors/Ice Beam" },
+          { "ref": "Chozo Map/Door Colors/Plasma Beam" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 879,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Caverns Doors",
+        "sections": [
+          { "ref": "Magmoor Map/Door Colors/Any Beam" },
+          { "ref": "Magmoor Map/Door Colors/Wave Beam" },
+          { "ref": "Magmoor Map/Door Colors/Ice Beam" },
+          { "ref": "Magmoor Map/Door Colors/Plasma Beam" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 839,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Drifts Doors",
+        "sections": [
+          { "ref": "Phen Map/Door Colors/Any Beam" },
+          { "ref": "Phen Map/Door Colors/Wave Beam" },
+          { "ref": "Phen Map/Door Colors/Ice Beam" },
+          { "ref": "Phen Map/Door Colors/Plasma Beam" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 799,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
+          }
+        ]
+      },
+      {
+        "name": "Phazon Mines Doors",
+        "sections": [
+          { "ref": "Mines Map/Door Colors/Any Beam" },
+          { "ref": "Mines Map/Door Colors/Wave Beam" },
+          { "ref": "Mines Map/Door Colors/Ice Beam" },
+          { "ref": "Mines Map/Door Colors/Plasma Beam" }
+        ],
+        "map_locations": [
+          {
+            "map": "World Map",
+            "x": 962,
+            "y": 170,
+            "shape": "diamond",
+            "size": 25,
+            "border_thickness": 6
           }
         ]
       }

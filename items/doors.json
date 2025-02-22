@@ -1,0 +1,290 @@
+[
+  {
+    "codes": "DoorsGlobalBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsGlobalWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsGlobalIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsGlobalPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsTallonBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsTallonWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsTallonIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsTallonPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsRuinsBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsRuinsWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsRuinsIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsRuinsPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMagmoorBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMagmoorWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMagmoorIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMagmoorPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsPhenBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsPhenWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsPhenIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsPhenPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMinesBlue",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMinesWave",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMinesIce",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  },
+  {
+    "codes": "DoorsMinesPlasma",
+    "type": "progressive",
+    "loop": true,
+    "stages": [
+      { "img": "images/doors/blue.png" },
+      { "img": "images/doors/wave.png" },
+      { "img": "images/doors/ice.png" },
+      { "img": "images/doors/plasma.png" },
+      { "img": "images/doors/power.png" }
+    ]
+  }
+]
