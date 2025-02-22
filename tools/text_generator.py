@@ -1,3 +1,4 @@
+from argparse import ArgumentParser
 from pathlib import Path
 from typing import Dict
 import sys
@@ -129,4 +130,15 @@ def create_trick_images(trick_name: str):
     red.save(TRICK_NAME_PATH / f"{filename}-red.png")
 
 
-create_trick_images(sys.argv[1])
+parser = ArgumentParser()
+parser.add_argument("string", type=str)
+parser.add_argument("out", nargs="?", type=Path)
+parser.add_argument("--trick")
+
+args = parser.parse_args()
+if args.trick:
+    create_trick_images(args.string)
+else:
+    print(args.string, args.out)
+    text_img = build_image(args.string)
+    text_img.save(args.out or "text.png")

@@ -417,10 +417,6 @@
             "hosted_item": "DoorsTallonBlue"
           },
           {
-            "name": "Wave Beam",
-            "hosted_item": "DoorsTallonWave"
-          },
-          {
             "name": "Ice Beam",
             "hosted_item": "DoorsTallonIce"
           },
@@ -1069,10 +1065,6 @@
           {
             "name": "Ice Beam",
             "hosted_item": "DoorsRuinsIce"
-          },
-          {
-            "name": "Plasma Beam",
-            "hosted_item": "DoorsRuinsPlasma"
           }
         ],
         "map_locations": [
@@ -2941,7 +2933,6 @@
         "name": "Tallon Overworld Doors",
         "sections": [
           { "ref": "Tallon Map/Door Colors/Any Beam" },
-          { "ref": "Tallon Map/Door Colors/Wave Beam" },
           { "ref": "Tallon Map/Door Colors/Ice Beam" },
           { "ref": "Tallon Map/Door Colors/Plasma Beam" }
         ],
@@ -2961,8 +2952,7 @@
         "sections": [
           { "ref": "Chozo Map/Door Colors/Any Beam" },
           { "ref": "Chozo Map/Door Colors/Wave Beam" },
-          { "ref": "Chozo Map/Door Colors/Ice Beam" },
-          { "ref": "Chozo Map/Door Colors/Plasma Beam" }
+          { "ref": "Chozo Map/Door Colors/Ice Beam" }
         ],
         "map_locations": [
           {

@@ -60,18 +60,6 @@
     ]
   },
   {
-    "codes": "DoorsTallonWave",
-    "type": "progressive",
-    "loop": true,
-    "stages": [
-      { "img": "images/doors/blue.png" },
-      { "img": "images/doors/wave.png" },
-      { "img": "images/doors/ice.png" },
-      { "img": "images/doors/plasma.png" },
-      { "img": "images/doors/power.png" }
-    ]
-  },
-  {
     "codes": "DoorsTallonIce",
     "type": "progressive",
     "loop": true,
@@ -121,18 +109,6 @@
   },
   {
     "codes": "DoorsRuinsIce",
-    "type": "progressive",
-    "loop": true,
-    "stages": [
-      { "img": "images/doors/blue.png" },
-      { "img": "images/doors/wave.png" },
-      { "img": "images/doors/ice.png" },
-      { "img": "images/doors/plasma.png" },
-      { "img": "images/doors/power.png" }
-    ]
-  },
-  {
-    "codes": "DoorsRuinsPlasma",
     "type": "progressive",
     "loop": true,
     "stages": [
