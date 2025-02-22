@@ -10,7 +10,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsGlobalBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsGlobalBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsGlobalBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsGlobalBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsGlobalBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsGlobalBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -24,7 +25,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsGlobalWaveWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsGlobalWaveIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsGlobalWavePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsGlobalWavePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsGlobalWavePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsGlobalWaveBomb", "inherit_codes": false }
     ]
   },
   {
@@ -38,7 +40,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsGlobalIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsGlobalIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsGlobalIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsGlobalIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsGlobalIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsGlobalIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -52,7 +55,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsGlobalPlasmaWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsGlobalPlasmaIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsGlobalPlasmaPlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsGlobalPlasmaPower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsGlobalPlasmaPower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsGlobalPlasmaBomb", "inherit_codes": false }
     ]
   },
   {
@@ -66,7 +70,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsTallonBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsTallonBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsTallonBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsTallonBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsTallonBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsTallonBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -80,7 +85,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsTallonIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsTallonIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsTallonIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsTallonIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsTallonIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsTallonIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -94,7 +100,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsTallonPlasmaWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsTallonPlasmaIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsTallonPlasmaPlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsTallonPlasmaPower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsTallonPlasmaPower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsTallonPlasmaBomb", "inherit_codes": false }
     ]
   },
   {
@@ -108,7 +115,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsRuinsBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsRuinsBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsRuinsBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsRuinsBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsRuinsBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsRuinsBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -122,7 +130,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsRuinsWaveWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsRuinsWaveIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsRuinsWavePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsRuinsWavePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsRuinsWavePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsRuinsWaveBomb", "inherit_codes": false }
     ]
   },
   {
@@ -136,7 +145,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsRuinsIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsRuinsIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsRuinsIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsRuinsIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsRuinsIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsRuinsIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -150,7 +160,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMagmoorBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMagmoorBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMagmoorBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMagmoorBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMagmoorBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMagmoorBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -164,7 +175,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMagmoorWaveWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMagmoorWaveIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMagmoorWavePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMagmoorWavePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMagmoorWavePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMagmoorWaveBomb", "inherit_codes": false }
     ]
   },
   {
@@ -178,7 +190,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMagmoorIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMagmoorIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMagmoorIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMagmoorIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMagmoorIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMagmoorIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -192,7 +205,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMagmoorPlasmaWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMagmoorPlasmaIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMagmoorPlasmaPlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMagmoorPlasmaPower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMagmoorPlasmaPower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMagmoorPlasmaBomb", "inherit_codes": false }
     ]
   },
   {
@@ -206,7 +220,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsPhenBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsPhenBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsPhenBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsPhenBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsPhenBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsPhenBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -220,7 +235,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsPhenWaveWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsPhenWaveIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsPhenWavePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsPhenWavePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsPhenWavePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsPhenWaveBomb", "inherit_codes": false }
     ]
   },
   {
@@ -234,7 +250,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsPhenIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsPhenIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsPhenIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsPhenIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsPhenIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsPhenIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -248,7 +265,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsPhenPlasmaWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsPhenPlasmaIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsPhenPlasmaPlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsPhenPlasmaPower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsPhenPlasmaPower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsPhenIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -262,7 +280,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMinesBlueWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMinesBlueIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMinesBluePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMinesBluePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMinesBluePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMinesBlueBomb", "inherit_codes": false }
     ]
   },
   {
@@ -276,7 +295,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMinesWaveWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMinesWaveIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMinesWavePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMinesWavePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMinesWavePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMinesWaveBomb", "inherit_codes": false }
     ]
   },
   {
@@ -290,7 +310,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMinesIceWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMinesIceIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMinesIcePlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMinesIcePower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMinesIcePower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMinesIceBomb", "inherit_codes": false }
     ]
   },
   {
@@ -304,7 +325,8 @@
       { "img": "images/doors/wave.png", "codes": "DoorsMinesPlasmaWave", "inherit_codes": false },
       { "img": "images/doors/ice.png", "codes": "DoorsMinesPlasmaIce", "inherit_codes": false },
       { "img": "images/doors/plasma.png", "codes": "DoorsMinesPlasmaPlasma", "inherit_codes": false },
-      { "img": "images/doors/power.png", "codes": "DoorsMinesPlasmaPower", "inherit_codes": false }
+      { "img": "images/doors/power.png", "codes": "DoorsMinesPlasmaPower", "inherit_codes": false },
+      { "img": "images/doors/bomb.png", "codes": "DoorsMinesPlasmaBomb", "inherit_codes": false }
     ]
   }
 ]
