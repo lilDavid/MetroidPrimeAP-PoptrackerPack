@@ -31,8 +31,8 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomArborChamber",
-          "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,$can_grapple,^$can_xray,$can_space_jump",
-          "@Tallon Overworld/Root Cave,@doors/PlasmaBeam,[$trick|root_cave_arbor_chamber_no_grapple_xray|3],$can_space_jump,$can_scan"
+          "@Tallon Overworld/Root Cave,@doors/Tallon Overworld/PlasmaBeam,$can_grapple,^$can_xray,$can_space_jump",
+          "@Tallon Overworld/Root Cave,@doors/Tallon Overworld/PlasmaBeam,[$trick|root_cave_arbor_chamber_no_grapple_xray|3],$can_space_jump,$can_scan"
         ]
       },
       {
@@ -103,7 +103,7 @@
           "NoLogic",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,$can_crashed_frigate_backwards",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,[$trick|frigate_backwards_no_gravity|1],$can_morph_ball,$can_space_jump,$can_boost",
-          "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam"
+          "@Tallon Overworld/Frigate Crash Site,@doors/Tallon Overworld/IceBeam"
         ]
       },
       {
@@ -121,8 +121,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Frigate Access Tunnel,@doors/IceBeam",
-          "@Tallon Overworld/Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
+          "@Tallon Overworld/Frigate Access Tunnel,@doors/Tallon Overworld/IceBeam",
+          "@Tallon Overworld/Overgrown Cavern,@doors/Tallon Overworld/IceBeam,$can_morph_ball",
           "@Tallon Overworld/Waterfall Cavern,@blastshields/Missile,$can_morph_ball"
         ]
       },
@@ -145,9 +145,9 @@
           "@Tallon Overworld/Great Tree Chamber",
           "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost",
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
-          "@Tallon Overworld/Life Grove Tunnel,@doors/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
-          "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
-          "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam,$can_boost"
+          "@Tallon Overworld/Life Grove Tunnel,@doors/Tallon Overworld/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
+          "@Tallon Overworld/Transport Tunnel D,@doors/Tallon Overworld/IceBeam",
+          "@Tallon Overworld/Transport Tunnel E,@doors/Tallon Overworld/IceBeam,$can_boost"
         ]
       },
       {
@@ -215,8 +215,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,$can_spider",
-          "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_no_spider_ball|1],$can_space_jump",
+          "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,$can_spider",
+          "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,[$trick|great_tree_hall_no_spider_ball|1],$can_space_jump",
           "@Tallon Overworld/Life Grove,$can_power_bomb,$can_space_jump,$can_morph_ball,$can_power_beam"
         ]
       },
@@ -253,9 +253,9 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,False",
-          "@Tallon Overworld/Frigate Crash Site,@doors/IceBeam,[$trick|frigate_crash_site_climb_to_overgrown_cavern|2],$can_bomb,$can_space_jump",
-          "@Tallon Overworld/Transport Tunnel C,@doors/IceBeam"
+          "@Tallon Overworld/Frigate Crash Site,@doors/Tallon Overworld/IceBeam,False",
+          "@Tallon Overworld/Frigate Crash Site,@doors/Tallon Overworld/IceBeam,[$trick|frigate_crash_site_climb_to_overgrown_cavern|2],$can_bomb,$can_space_jump",
+          "@Tallon Overworld/Transport Tunnel C,@doors/Tallon Overworld/IceBeam"
         ]
       },
       {
@@ -324,7 +324,7 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomTransportToChozoRuinsEast",
-          "@Tallon Overworld/Transport Tunnel C,@doors/IceBeam",
+          "@Tallon Overworld/Transport Tunnel C,@doors/Tallon Overworld/IceBeam",
           "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld East,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToChozoRuinsEast"
         ]
@@ -333,7 +333,7 @@
         "name": "Transport to Chozo Ruins South",
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Transport Tunnel D,@doors/IceBeam",
+          "@Tallon Overworld/Transport Tunnel D,@doors/Tallon Overworld/IceBeam",
           "ElevatorsNormal,@Chozo Ruins/Transport to Tallon Overworld South,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToChozoRuinsSouth"
         ]
@@ -360,7 +360,7 @@
         "name": "Transport to Phazon Mines East",
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Transport Tunnel E,@doors/IceBeam",
+          "@Tallon Overworld/Transport Tunnel E,@doors/Tallon Overworld/IceBeam",
           "ElevatorsNormal,@Phazon Mines/Transport to Tallon Overworld South,$can_access_elevators",
           "ElevatorsRandom,TallonOverworldTransportToPhazonMinesEast"
         ]
@@ -390,26 +390,26 @@
         "name": "Transport Tunnel C",
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Overgrown Cavern,@doors/IceBeam,$can_morph_ball",
-          "@Tallon Overworld/Transport to Chozo Ruins East,@doors/IceBeam"
+          "@Tallon Overworld/Overgrown Cavern,@doors/Tallon Overworld/IceBeam,$can_morph_ball",
+          "@Tallon Overworld/Transport to Chozo Ruins East,@doors/Tallon Overworld/IceBeam"
         ]
       },
       {
         "name": "Transport Tunnel D",
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Great Tree Hall,@doors/IceBeam",
-          "@Tallon Overworld/Transport to Chozo Ruins South,@doors/IceBeam"
+          "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam",
+          "@Tallon Overworld/Transport to Chozo Ruins South,@doors/Tallon Overworld/IceBeam"
         ]
       },
       {
         "name": "Transport Tunnel E",
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,False",
-          "@Tallon Overworld/Great Tree Hall,@doors/IceBeam,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
-          "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,@doors/IceBeam",
-          "@Tallon Overworld/Transport to Phazon Mines East,@doors/IceBeam"
+          "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,False",
+          "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,[$trick|great_tree_hall_skip_bars|3],$can_bomb",
+          "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,@doors/Tallon Overworld/IceBeam",
+          "@Tallon Overworld/Transport to Phazon Mines East,@doors/Tallon Overworld/IceBeam"
         ]
       },
       {

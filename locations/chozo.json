@@ -69,8 +69,8 @@
         "name": "Crossway Access South",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Crossway,@doors/IceBeam",
-          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$can_combat_ghosts],$can_power_beam"
+          "@Chozo Ruins/Crossway,@doors/Chozo Ruins/IceBeam",
+          "@Chozo Ruins/Hall of the Elders,@doors/Chozo Ruins/IceBeam,[$can_combat_ghosts],$can_power_beam"
         ]
       },
       {
@@ -95,8 +95,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Crossway Access South,@doors/IceBeam,$can_morph_ball",
-          "@Chozo Ruins/Crossway Access West,@doors/WaveBeam,$can_morph_ball",
+          "@Chozo Ruins/Crossway Access South,@doors/Chozo Ruins/IceBeam,$can_morph_ball",
+          "@Chozo Ruins/Crossway Access West,@doors/Chozo Ruins/WaveBeam,$can_morph_ball",
           "@Chozo Ruins/Elder Hall Access,@blastshields/Missile"
         ]
       },
@@ -145,8 +145,8 @@
         "name": "East Furnace Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Furnace,@doors/IceBeam,$can_space_jump",
-          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$can_combat_ghosts],$can_power_beam"
+          "@Chozo Ruins/Furnace,@doors/Chozo Ruins/IceBeam,$can_space_jump",
+          "@Chozo Ruins/Hall of the Elders,@doors/Chozo Ruins/IceBeam,[$can_combat_ghosts],$can_power_beam"
         ]
       },
       {
@@ -159,8 +159,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$can_combat_ghosts],$can_bomb,$can_plasma_beam,$can_space_jump,$can_spider",
-          "@Chozo Ruins/Hall of the Elders,@doors/IceBeam,[$trick|hall_of_elders_elder_chamber_no_spider|1],$can_bomb,$can_plasma_beam,$can_space_jump,$can_power_beam,[$can_combat_ghosts]"
+          "@Chozo Ruins/Hall of the Elders,@doors/Chozo Ruins/IceBeam,[$can_combat_ghosts],$can_bomb,$can_plasma_beam,$can_space_jump,$can_spider",
+          "@Chozo Ruins/Hall of the Elders,@doors/Chozo Ruins/IceBeam,[$trick|hall_of_elders_elder_chamber_no_spider|1],$can_bomb,$can_plasma_beam,$can_space_jump,$can_power_beam,[$can_combat_ghosts]"
         ]
       },
       {
@@ -217,7 +217,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Crossway Access West,$can_morph_ball",
-          "@Chozo Ruins/East Furnace Access,@doors/IceBeam",
+          "@Chozo Ruins/East Furnace Access,@doors/Chozo Ruins/IceBeam",
           "@Chozo Ruins/West Furnace Access,$can_spider,$can_bomb",
           "@Chozo Ruins/West Furnace Access,[$trick|furnace_no_spider_ball|1],$can_bomb"
         ]
@@ -266,9 +266,9 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Crossway Access South,@doors/IceBeam,$can_morph_ball",
-          "@Chozo Ruins/East Furnace Access,@doors/IceBeam",
-          "@Chozo Ruins/Elder Chamber,@doors/IceBeam",
+          "@Chozo Ruins/Crossway Access South,@doors/Chozo Ruins/IceBeam,$can_morph_ball",
+          "@Chozo Ruins/East Furnace Access,@doors/Chozo Ruins/IceBeam",
+          "@Chozo Ruins/Elder Chamber,@doors/Chozo Ruins/IceBeam",
           "@Chozo Ruins/Elder Hall Access",
           "@Chozo Ruins/Reflecting Pool Access"
         ]
@@ -310,7 +310,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Meditation Fountain",
-          "@Chozo Ruins/Training Chamber Access,@doors/WaveBeam"
+          "@Chozo Ruins/Training Chamber Access,@doors/Chozo Ruins/WaveBeam"
         ]
       },
       {
@@ -427,7 +427,7 @@
           "@Chozo Ruins/Antechamber",
           "@Chozo Ruins/Reflecting Pool Access",
           "@Chozo Ruins/Save Station 3,@blastshields/Missile,$can_bomb",
-          "@Chozo Ruins/Transport Access South,@doors/IceBeam"
+          "@Chozo Ruins/Transport Access South,@doors/Chozo Ruins/IceBeam"
         ]
       },
       {
@@ -657,19 +657,19 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomTowerChamber",
-          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,$can_move_underwater,$can_space_jump",
-          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,[$trick|tower_chamber_no_gravity|1],$can_space_jump",
-          "@Chozo Ruins/Tower of Light,@doors/WaveBeam,[$trick|tower_chamber_no_space_jump|1],$can_bomb,$can_move_underwater"
+          "@Chozo Ruins/Tower of Light,@doors/Chozo Ruins/WaveBeam,$can_move_underwater,$can_space_jump",
+          "@Chozo Ruins/Tower of Light,@doors/Chozo Ruins/WaveBeam,[$trick|tower_chamber_no_gravity|1],$can_space_jump",
+          "@Chozo Ruins/Tower of Light,@doors/Chozo Ruins/WaveBeam,[$trick|tower_chamber_no_space_jump|1],$can_bomb,$can_move_underwater"
         ]
       },
       {
         "name": "Tower of Light Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,$can_spider,$can_boost",
-          "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,[$trick|ruined_shrine_upper_door_no_spider_ball|1],$can_space_jump",
-          "@Chozo Ruins/Ruined Shrine,@doors/WaveBeam,[$trick|ruined_shrine_upper_door_scan_dash|3],$can_scan",
-          "@Chozo Ruins/Tower of Light,@doors/WaveBeam"
+          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,$can_spider,$can_boost",
+          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,[$trick|ruined_shrine_upper_door_no_spider_ball|1],$can_space_jump",
+          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,[$trick|ruined_shrine_upper_door_scan_dash|3],$can_scan",
+          "@Chozo Ruins/Tower of Light,@doors/Chozo Ruins/WaveBeam"
         ]
       },
       {
@@ -688,8 +688,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Tower Chamber,@doors/WaveBeam",
-          "@Chozo Ruins/Tower of Light Access,@doors/WaveBeam"
+          "@Chozo Ruins/Tower Chamber,@doors/Chozo Ruins/WaveBeam",
+          "@Chozo Ruins/Tower of Light Access,@doors/Chozo Ruins/WaveBeam"
         ]
       },
       {
@@ -705,10 +705,10 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Magma Pool,@doors/WaveBeam,$can_grapple,$can_heat",
-          "@Chozo Ruins/Magma Pool,@doors/WaveBeam,[$trick|magma_pool_scan_dash|2],$can_space_jump,$can_scan",
-          "@Chozo Ruins/Magma Pool,@doors/WaveBeam,[$trick|magma_pool_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2",
-          "@Chozo Ruins/Training Chamber,@doors/WaveBeam"
+          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,$can_grapple,$can_heat",
+          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,[$trick|magma_pool_scan_dash|2],$can_space_jump,$can_scan",
+          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,[$trick|magma_pool_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2",
+          "@Chozo Ruins/Training Chamber,@doors/Chozo Ruins/WaveBeam"
         ]
       },
       {
@@ -726,7 +726,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Piston Tunnel,$can_morph_ball",
-          "@Chozo Ruins/Training Chamber Access,@doors/WaveBeam"
+          "@Chozo Ruins/Training Chamber Access,@doors/Chozo Ruins/WaveBeam"
         ]
       },
       {
@@ -747,9 +747,9 @@
         "name": "Transport Access South",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,$can_boost,$can_bomb",
-          "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
-          "@Chozo Ruins/Reflecting Pool,@doors/IceBeam,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
           "@Chozo Ruins/Transport to Tallon Overworld South"
         ]
       },

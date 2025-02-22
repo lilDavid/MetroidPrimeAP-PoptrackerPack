@@ -46,9 +46,9 @@
         "name": "Geothermal Core",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/North Core Tunnel,@doors/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/North Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
           "@Magmoor Caverns/Plasma Processing",
-          "@Magmoor Caverns/South Core Tunnel,@doors/WaveBeam,$can_space_jump"
+          "@Magmoor Caverns/South Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump"
         ]
       },
       {
@@ -98,8 +98,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/South Core Tunnel,@doors/WaveBeam,$can_space_jump",
-          "@Magmoor Caverns/Transport Tunnel C,@doors/WaveBeam",
+          "@Magmoor Caverns/South Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/Transport Tunnel C,@doors/Magmoor Caverns/WaveBeam",
           "@Magmoor Caverns/Workstation Tunnel,$can_power_bomb"
         ]
       },
@@ -126,8 +126,8 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Geothermal Core,$can_space_jump",
-          "@Magmoor Caverns/Twin Fires,@doors/WaveBeam,$can_space_jump,$has_energy_tanks|2",
-          "@Magmoor Caverns/Twin Fires,@doors/WaveBeam,$can_grapple"
+          "@Magmoor Caverns/Twin Fires,@doors/Magmoor Caverns/WaveBeam,$can_space_jump,$has_energy_tanks|2",
+          "@Magmoor Caverns/Twin Fires,@doors/Magmoor Caverns/WaveBeam,$can_grapple"
         ]
       },
       {
@@ -149,8 +149,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Geothermal Core,@doors/IceBeam,$can_bomb,$can_boost,$can_grapple,$can_spider,$can_space_jump",
-          "@Magmoor Caverns/Geothermal Core,@doors/IceBeam,[$trick|geothermal_core_no_grapple_spider|2],$can_bomb,$can_boost,$can_space_jump"
+          "@Magmoor Caverns/Geothermal Core,@doors/Magmoor Caverns/IceBeam,$can_bomb,$can_boost,$can_grapple,$can_spider,$can_space_jump",
+          "@Magmoor Caverns/Geothermal Core,@doors/Magmoor Caverns/IceBeam,[$trick|geothermal_core_no_grapple_spider|2],$can_bomb,$can_boost,$can_space_jump"
         ]
       },
       {
@@ -219,7 +219,7 @@
         "name": "Transport to Phazon Mines West",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Workstation Tunnel,@doors/IceBeam,$can_power_bomb",
+          "@Magmoor Caverns/Workstation Tunnel,@doors/Magmoor Caverns/IceBeam,$can_power_bomb",
           "ElevatorsNormal,@Phazon Mines/Transport to Magmoor Caverns South,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToPhazonMinesWest"
         ]
@@ -238,7 +238,7 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Save Station Magmoor B,@blastshields/Missile",
-          "@Magmoor Caverns/Transport Tunnel C,@doors/WaveBeam",
+          "@Magmoor Caverns/Transport Tunnel C,@doors/Magmoor Caverns/WaveBeam",
           "ElevatorsNormal,@Phendrana Drifts/Transport to Magmoor Caverns South,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToPhendranaDriftsSouth"
         ]
@@ -287,8 +287,8 @@
         "name": "Transport Tunnel C",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Magmoor Workstation,@doors/WaveBeam,$can_space_jump",
-          "@Magmoor Caverns/Transport to Phendrana Drifts South,@doors/WaveBeam"
+          "@Magmoor Caverns/Magmoor Workstation,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/Transport to Phendrana Drifts South,@doors/Magmoor Caverns/WaveBeam"
         ]
       },
       {
@@ -330,7 +330,7 @@
         "name": "Twin Fires",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/North Core Tunnel,@doors/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/North Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
           "@Magmoor Caverns/Twin Fires Tunnel,$can_heat,$can_spider",
           "@Magmoor Caverns/Twin Fires Tunnel,[$trick|twin_fires_tunnel_no_spider|2],$can_bomb,$can_space_jump",
           "@Magmoor Caverns/Twin Fires Tunnel,[$trick|cross_twin_fires_suitless|2],$can_space_jump,$has_energy_tanks|2"
@@ -357,7 +357,7 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Magmoor Workstation,$can_space_jump",
-          "@Magmoor Caverns/Transport to Phazon Mines West,@doors/IceBeam"
+          "@Magmoor Caverns/Transport to Phazon Mines West,@doors/Magmoor Caverns/IceBeam"
         ]
       }
     ]

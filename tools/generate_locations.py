@@ -760,7 +760,7 @@ class DoorData(NamedTuple):
     target_door_access_override: Optional[List[str]] = None
 
     @classmethod
-    def from_ast(cls, door: ast.expr, source: str, filename: str):
+    def from_ast(cls, door: ast.expr, area: str, source: str, filename: str):
         if (type(door) is not ast.Call or type(door.func) is not ast.Name or
             door.func.id != "DoorData"):
             raise ASTParseError(door, "Door item is not from DoorData constructor")
@@ -804,7 +804,7 @@ class DoorData(NamedTuple):
                 target_door_access_override = parse_access_rule(kwarg.value, filename)
         door_rule = []
         if door_type not in (None, "AnyBeam"):
-            door_rule.append(f"@doors/{door_type}")
+            door_rule.append(f"@doors/{area}/{door_type}")
         if blast_shield is not None:
             door_rule.append(f"@blastshields/{blast_shield}")
         if access_rule:
@@ -847,7 +847,7 @@ class WorldRoomData(NamedTuple):
                 if type(keyword.value) is not ast.Dict:
                     raise ValueError("Kwarg doors is not a dict")
                 for key, value in zip(keyword.value.keys, keyword.value.values, strict=True):
-                    doors[ast.literal_eval(key)] = DoorData.from_ast(value, f"{area}/{room_name}", filename)
+                    doors[ast.literal_eval(key)] = DoorData.from_ast(value, area, f"{area}/{room_name}", filename)
 
         return cls(room_name, pickups, doors)
 

@@ -1,66 +1,257 @@
 [
-    {
-        "name": "doors",
-        "children": [
-            {
-                "name": "None"
-            },
-            {
-                "name": "AnyBeam"
-            },
-            {
-                "name": "WaveBeam",
-                "access_rules": [ "DoorRando", "$can_wave_beam" ]
-            },
-            {
-                "name": "IceBeam",
-                "access_rules": [ "DoorRando", "$can_ice_beam" ]
-            },
-            {
-                "name": "PlasmaBeam",
-                "access_rules": [ "DoorRando", "$can_plasma_beam" ]
-            },
-            {
-                "name": "PowerBeam",
-                "access_rules": [ "DoorRando", "$can_power_beam" ]
-            }
+  {
+    "name": "doors",
+    "children": [
+      {
+        "name": "None"
+      },
+      {
+        "name": "AnyBeam"
+      },
+      {
+        "name": "Tallon Overworld",
+        "sections": [
+          {
+            "name": "IceBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_ice_beam",
+              "DoorsGlobalIceWave,$can_wave_beam",
+              "DoorsGlobalIceIce,$can_ice_beam",
+              "DoorsGlobalIcePlasma,$can_plasma_beam",
+              "DoorsGlobalIcePower,$can_power_beam",
+              "DoorsTallonIceWave,$can_wave_beam",
+              "DoorsTallonIceIce,$can_ice_beam",
+              "DoorsTallonIcePlasma,$can_plasma_beam",
+              "DoorsTallonIcePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "PlasmaBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_plasma_beam",
+              "DoorsGlobalPlasmaWave,$can_wave_beam",
+              "DoorsGlobalPlasmaIce,$can_ice_beam",
+              "DoorsGlobalPlasmaPlasma,$can_plasma_beam",
+              "DoorsGlobalPlasmaPower,$can_power_beam",
+              "DoorsTallonPlasmaWave,$can_wave_beam",
+              "DoorsTallonPlasmaIce,$can_ice_beam",
+              "DoorsTallonPlasmaPlasma,$can_plasma_beam",
+              "DoorsTallonPlasmaPower,$can_power_beam"
+            ]
+          }
         ]
-    },
-    {
-        "name": "blastshields",
-        "children": [
-            {
-                "name": "Bomb",
-                "access_rules": [ "$can_bomb" ]
-            },
-            {
-                "name": "ChargeBeam",
-                "access_rules": [ "$can_charge_beam" ]
-            },
-            {
-                "name": "Flamethrower",
-                "access_rules": [ "$can_charge_combo|PlasmaBeam" ]
-            },
-            {
-                "name": "IceSpreader",
-                "access_rules": [ "$can_charge_combo|IceBeam" ]
-            },
-            {
-                "name": "Wavebuster",
-                "access_rules": [ "$can_charge_combo|WaveBeam" ]
-            },
-            {
-                "name": "PowerBomb",
-                "access_rules": [ "$can_power_bomb" ]
-            },
-            {
-                "name": "SuperMissile",
-                "access_rules": [ "$can_super_missile" ]
-            },
-            {
-                "name": "Missile",
-                "access_rules": [ "DoorRando", "$can_missile" ]
-            }
+      },
+      {
+        "name": "Chozo Ruins",
+        "sections": [
+          {
+            "name": "WaveBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_wave_beam",
+              "DoorsGlobalWaveWave,$can_wave_beam",
+              "DoorsGlobalWaveIce,$can_ice_beam",
+              "DoorsGlobalWavePlasma,$can_plasma_beam",
+              "DoorsGlobalWavePower,$can_power_beam",
+              "DoorsRuinsWaveWave,$can_wave_beam",
+              "DoorsRuinsWaveIce,$can_ice_beam",
+              "DoorsRuinsWavePlasma,$can_plasma_beam",
+              "DoorsRuinsWavePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "IceBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_ice_beam",
+              "DoorsGlobalIceWave,$can_wave_beam",
+              "DoorsGlobalIceIce,$can_ice_beam",
+              "DoorsGlobalIcePlasma,$can_plasma_beam",
+              "DoorsGlobalIcePower,$can_power_beam",
+              "DoorsRuinsIceWave,$can_wave_beam",
+              "DoorsRuinsIceIce,$can_ice_beam",
+              "DoorsRuinsIcePlasma,$can_plasma_beam",
+              "DoorsRuinsIcePower,$can_power_beam"
+            ]
+          }
         ]
-    }
+      },
+      {
+        "name": "Magmoor Caverns",
+        "sections": [
+          {
+            "name": "WaveBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_wave_beam",
+              "DoorsGlobalWaveWave,$can_wave_beam",
+              "DoorsGlobalWaveIce,$can_ice_beam",
+              "DoorsGlobalWavePlasma,$can_plasma_beam",
+              "DoorsGlobalWavePower,$can_power_beam",
+              "DoorsMagmoorWaveWave,$can_wave_beam",
+              "DoorsMagmoorWaveIce,$can_ice_beam",
+              "DoorsMagmoorWavePlasma,$can_plasma_beam",
+              "DoorsMagmoorWavePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "IceBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_ice_beam",
+              "DoorsGlobalIceWave,$can_wave_beam",
+              "DoorsGlobalIceIce,$can_ice_beam",
+              "DoorsGlobalIcePlasma,$can_plasma_beam",
+              "DoorsGlobalIcePower,$can_power_beam",
+              "DoorsMagmoorIceWave,$can_wave_beam",
+              "DoorsMagmoorIceIce,$can_ice_beam",
+              "DoorsMagmoorIcePlasma,$can_plasma_beam",
+              "DoorsMagmoorIcePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "PlasmaBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_plasma_beam",
+              "DoorsGlobalPlasmaWave,$can_wave_beam",
+              "DoorsGlobalPlasmaIce,$can_ice_beam",
+              "DoorsGlobalPlasmaPlasma,$can_plasma_beam",
+              "DoorsGlobalPlasmaPower,$can_power_beam",
+              "DoorsMagmoorPlasmaWave,$can_wave_beam",
+              "DoorsMagmoorPlasmaIce,$can_ice_beam",
+              "DoorsMagmoorPlasmaPlasma,$can_plasma_beam",
+              "DoorsMagmoorPlasmaPower,$can_power_beam"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Drifts",
+        "sections": [
+          {
+            "name": "WaveBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_wave_beam",
+              "DoorsGlobalWaveWave,$can_wave_beam",
+              "DoorsGlobalWaveIce,$can_ice_beam",
+              "DoorsGlobalWavePlasma,$can_plasma_beam",
+              "DoorsGlobalWavePower,$can_power_beam",
+              "DoorsPhenWaveWave,$can_wave_beam",
+              "DoorsPhenWaveIce,$can_ice_beam",
+              "DoorsPhenWavePlasma,$can_plasma_beam",
+              "DoorsPhenWavePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "IceBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_ice_beam",
+              "DoorsGlobalIceWave,$can_wave_beam",
+              "DoorsGlobalIceIce,$can_ice_beam",
+              "DoorsGlobalIcePlasma,$can_plasma_beam",
+              "DoorsGlobalIcePower,$can_power_beam",
+              "DoorsPhenIceWave,$can_wave_beam",
+              "DoorsPhenIceIce,$can_ice_beam",
+              "DoorsPhenIcePlasma,$can_plasma_beam",
+              "DoorsPhenIcePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "PlasmaBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_plasma_beam",
+              "DoorsGlobalPlasmaWave,$can_wave_beam",
+              "DoorsGlobalPlasmaIce,$can_ice_beam",
+              "DoorsGlobalPlasmaPlasma,$can_plasma_beam",
+              "DoorsGlobalPlasmaPower,$can_power_beam",
+              "DoorsPhenPlasmaWave,$can_wave_beam",
+              "DoorsPhenPlasmaIce,$can_ice_beam",
+              "DoorsPhenPlasmaPlasma,$can_plasma_beam",
+              "DoorsPhenPlasmaPower,$can_power_beam"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Phazon Mines",
+        "sections": [
+          {
+            "name": "WaveBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_wave_beam",
+              "DoorsGlobalWaveWave,$can_wave_beam",
+              "DoorsGlobalWaveIce,$can_ice_beam",
+              "DoorsGlobalWavePlasma,$can_plasma_beam",
+              "DoorsGlobalWavePower,$can_power_beam",
+              "DoorsMinesWaveWave,$can_wave_beam",
+              "DoorsMinesWaveIce,$can_ice_beam",
+              "DoorsMinesWavePlasma,$can_plasma_beam",
+              "DoorsMinesWavePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "IceBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_ice_beam",
+              "DoorsGlobalIceWave,$can_wave_beam",
+              "DoorsGlobalIceIce,$can_ice_beam",
+              "DoorsGlobalIcePlasma,$can_plasma_beam",
+              "DoorsGlobalIcePower,$can_power_beam",
+              "DoorsMinesIceWave,$can_wave_beam",
+              "DoorsMinesIceIce,$can_ice_beam",
+              "DoorsMinesIcePlasma,$can_plasma_beam",
+              "DoorsMinesIcePower,$can_power_beam"
+            ]
+          },
+          {
+            "name": "PlasmaBeam",
+            "access_rules": [
+              "DoorRandoNone,$can_plasma_beam",
+              "DoorsGlobalPlasmaWave,$can_wave_beam",
+              "DoorsGlobalPlasmaIce,$can_ice_beam",
+              "DoorsGlobalPlasmaPlasma,$can_plasma_beam",
+              "DoorsGlobalPlasmaPower,$can_power_beam",
+              "DoorsMinesPlasmaWave,$can_wave_beam",
+              "DoorsMinesPlasmaIce,$can_ice_beam",
+              "DoorsMinesPlasmaPlasma,$can_plasma_beam",
+              "DoorsMinesPlasmaPower,$can_power_beam"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "blastshields",
+    "children": [
+      {
+        "name": "Bomb",
+        "access_rules": [ "$can_bomb" ]
+      },
+      {
+        "name": "ChargeBeam",
+        "access_rules": [ "$can_charge_beam" ]
+      },
+      {
+        "name": "Flamethrower",
+        "access_rules": [ "$can_charge_combo|PlasmaBeam" ]
+      },
+      {
+        "name": "IceSpreader",
+        "access_rules": [ "$can_charge_combo|IceBeam" ]
+      },
+      {
+        "name": "Wavebuster",
+        "access_rules": [ "$can_charge_combo|WaveBeam" ]
+      },
+      {
+        "name": "PowerBomb",
+        "access_rules": [ "$can_power_bomb" ]
+      },
+      {
+        "name": "SuperMissile",
+        "access_rules": [ "$can_super_missile" ]
+      },
+      {
+        "name": "Missile",
+        "access_rules": [ "DoorRando", "$can_missile" ]
+      }
+    ]
+  }
 ]
