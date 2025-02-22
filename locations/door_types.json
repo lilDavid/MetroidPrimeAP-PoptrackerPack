@@ -250,7 +250,7 @@
       },
       {
         "name": "Missile",
-        "access_rules": [ "DoorRando", "$can_missile" ]
+        "access_rules": [ "$can_missile" ]
       }
     ]
   }
