@@ -1,5 +1,6 @@
 DEBUG = true
 ENABLE_DEBUG_LOG = true
+IS_ITEMS_ONLY = Tracker.ActiveVariantUID == "var_itemsonly"
 
 ScriptHost:LoadScript("scripts/utils.lua")
 ScriptHost:LoadScript("scripts/progressivebeams.lua")
