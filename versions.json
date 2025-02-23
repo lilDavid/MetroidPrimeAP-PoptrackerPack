@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "0.6.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.6.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "3fd623e45e86cdfec3496dbf54d4a63f778d8281b8b4a497a6107c52b9977f3c",
+            "changelog": [
+                "Added support for door color randomization",
+                "Added Disable Logic tracker option"
+            ]
+        },
+        {
             "package_version": "0.5.3",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.5.3/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "6b53b30a39d11df9b2deb3c326867acb696d1cf58d8ed2d0da237e272dd758e2",
