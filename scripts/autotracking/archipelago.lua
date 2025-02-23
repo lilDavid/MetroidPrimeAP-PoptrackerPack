@@ -4,6 +4,7 @@
 -- addition it will keep track of what items are local items and which one are remote using the globals LOCAL_ITEMS and GLOBAL_ITEMS
 -- this is useful since remote items will not reset but local items might
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/level_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/option_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/trick_mapping.lua")
@@ -12,6 +13,10 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
+
+NOT_CONNECTED = -1
+
+ForceUpdateTab = false
 
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -97,6 +102,17 @@ function onClear(slot_data)
         obj.CurrentStage = 1
         print(string.format("onClear: setting trick %s to default", v))
     end
+
+    if SLOT_DATA == nil then return end
+
+    local player = Archipelago.PlayerNumber or NOT_CONNECTED
+    local team = Archipelago.TeamNumber or 0
+
+    if player ~= NOT_CONNECTED then
+        RoomPacket = "metroidprime_level_"..team.."_"..player
+        Archipelago:SetNotify({RoomPacket})
+    end
+
     -- set options
     for k, v in pairs(SLOT_DATA) do
         local option = SLOT_DATA_MAPPING[k]
@@ -277,21 +293,22 @@ function onLocation(location_id, location_name)
     end
 end
 
--- called when a locations is scouted
-function onScout(location_id, location_name, item_id, item_name, item_player)
+function onNotify(key, value, old_value)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-        print(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name,
-            item_player))
+        print(string.format("called onNotify: %s, %s, %s", key, value, old_value))
     end
-    -- not implemented yet :(
+    if value == old_value and not ForceUpdateTab then return end
+    if key == RoomPacket then
+        updateMap(value)
+        ForceUpdateTab = false
+    end
 end
 
--- called when a bounce message is received 
-function onBounce(json)
-    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-        print(string.format("called onBounce: %s", dump_table(json)))
-    end
-    -- your code goes here
+function updateMap(value)
+    if not has("AutoTab") then return end
+    local level = LEVEL_MAPPING[value]
+    if not level then return end
+    Tracker:UiHint("ActivateTab", level)
 end
 
 -- add AP callbacks
@@ -303,5 +320,10 @@ end
 if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     Archipelago:AddLocationHandler("location handler", onLocation)
 end
+if AUTOTRACKER_ENABLE_LEVEL_TRACKING then
+    Archipelago:AddSetReplyHandler("notify handler", onNotify)
+end
 -- Archipelago:AddScoutHandler("scout handler", onScout)
 -- Archipelago:AddBouncedHandler("bounce handler", onBounce)
+
+ScriptHost:AddWatchForCode("Auto tab update", "AutoTab", function() ForceUpdateTab = true end)

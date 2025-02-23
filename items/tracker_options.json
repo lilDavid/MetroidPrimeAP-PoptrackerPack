@@ -1,0 +1,12 @@
+[
+  {
+    "codes": "NoLogic",
+    "type": "toggle",
+    "img": "images/items/combatvisor.png"
+  },
+  {
+    "codes": "AutoTab",
+    "type": "toggle",
+    "img": "images/items/scanvisor.png"
+  }
+]
