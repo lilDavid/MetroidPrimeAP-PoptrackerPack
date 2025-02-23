@@ -225,6 +225,7 @@ class FunctionOverride(Enum):
 override_functions = {
     "can_thermal": FunctionOverride.ACCESSIBILITY,
     "can_xray": FunctionOverride.ACCESSIBILITY,
+    "can_crashed_frigate_front": FunctionOverride.ACCESSIBILITY,
     "can_crashed_frigate": FunctionOverride.ACCESSIBILITY,
     "can_exit_ruined_shrine": FunctionOverride.LOCATION,
     "can_flaahgra": FunctionOverride.LOCATION,

@@ -331,11 +331,18 @@ end
 
 -- Data/TallonOverworld
 
-function can_crashed_frigate()
-    if not (can_bomb() and can_space_jump() and can_wave_beam() and can_move_underwater()) then
+function can_crashed_frigate_front()
+    if not (can_morph_ball() and can_wave_beam() and (can_move_underwater() or can_space_jump())) then
         return AccessibilityLevel.None
     end
     return can_thermal()
+end
+
+function can_crashed_frigate()
+    if not (can_bomb() and can_space_jump() and can_move_underwater()) then
+        return AccessibilityLevel.None
+    end
+    return can_crashed_frigate_front()
 end
 
 function can_crashed_frigate_backwards()

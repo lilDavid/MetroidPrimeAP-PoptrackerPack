@@ -82,8 +82,8 @@
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "NoLogic",
-              "$can_missile,^$can_crashed_frigate",
-              "$can_charge_beam,^$can_crashed_frigate",
+              "$can_missile,^$can_crashed_frigate_front",
+              "$can_charge_beam,^$can_crashed_frigate_front",
               "$can_missile,$can_crashed_frigate_backwards",
               "$can_charge_beam,$can_crashed_frigate_backwards"
             ]
@@ -93,7 +93,7 @@
           "NoLogic",
           "@Tallon Overworld/Biohazard Containment,$can_crashed_frigate_backwards",
           "@Tallon Overworld/Biohazard Containment,[$trick|frigate_backwards_no_gravity|1],$can_morph_ball,$can_space_jump,$can_boost",
-          "@Tallon Overworld/Frigate Access Tunnel,^$can_crashed_frigate",
+          "@Tallon Overworld/Frigate Access Tunnel,^$can_crashed_frigate_front",
           "@Tallon Overworld/Frigate Access Tunnel,[$trick|frigate_no_gravity|1],$can_bomb,$can_space_jump,$can_wave_beam,^$can_thermal"
         ]
       },
