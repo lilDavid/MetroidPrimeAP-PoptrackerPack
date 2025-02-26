@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "0.6.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.6.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "703141a3181ced64c8091fb93a077e24bed22a0cecd233d7a8bad360013146ac",
+            "changelog": [
+                "Updated logic rules",
+                "Added Auto Tab tracker option"
+            ]
+        },
+        {
             "package_version": "0.6.0",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.6.0/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "3fd623e45e86cdfec3496dbf54d4a63f778d8281b8b4a497a6107c52b9977f3c",
