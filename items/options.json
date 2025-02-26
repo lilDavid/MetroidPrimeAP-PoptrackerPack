@@ -344,10 +344,5 @@
         "codes": "ProgressiveBeams"
       }
     ]
-  },
-  {
-    "codes": "NoLogic",
-    "type": "toggle",
-    "img": "images/items/combatvisor.png"
   }
 ]
