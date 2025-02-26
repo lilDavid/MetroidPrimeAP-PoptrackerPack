@@ -575,7 +575,7 @@
         "access_rules": [
           "NoLogic",
           "@Phendrana Drifts/Phendrana's Edge,$can_grapple,$can_morph_ball,$can_space_jump",
-          "@Phendrana Drifts/Phendrana's Edge,[$trick|phendranas_edge_security_cavern_no_grapple|1],$can_grapple,$can_morph_ball,$can_space_jump"
+          "@Phendrana Drifts/Phendrana's Edge,[$trick|phendranas_edge_security_cavern_no_grapple|1],$can_morph_ball,$can_space_jump"
         ]
       },
       {
