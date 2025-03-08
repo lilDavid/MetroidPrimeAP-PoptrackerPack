@@ -13,8 +13,6 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
-REQUIRED_MISSILE_LAUNCHER = false
-REQUIRED_PB_LAUNCHER = false
 
 NOT_CONNECTED = -1
 
@@ -151,14 +149,6 @@ function onClear(slot_data)
             end
         end
     end
-    local chargebeam = Tracker:FindObjectForCode("ChargeBeam")
-    if chargebeam then
-        if SLOT_DATA["progressive_beam_upgrades"] and SLOT_DATA["progressive_beam_upgrades"] == 1 then
-            chargebeam.Icon = nil
-        else
-            chargebeam.Icon = "images/items/chargebeam.png:@disabled"
-        end
-    end
     local trick_deny_list = SLOT_DATA["trick_deny_list"]
     if trick_deny_list ~= nil then
         for _, trick_name in ipairs(trick_deny_list) do
@@ -193,8 +183,24 @@ function onClear(slot_data)
             end
         end
     end
-    REQUIRED_MISSILE_LAUNCHER = SLOT_DATA["missile_launcher"] and SLOT_DATA["missile_launcher"] > 0
-    REQUIRED_PB_LAUNCHER = SLOT_DATA["main_power_bomb"] and SLOT_DATA["main_power_bomb"] > 0
+
+    -- change progressive beam option based on slot data
+    local prog_beams = Tracker:FindObjectForCode("ProgressiveBeams")
+    if prog_beams then
+        prog_beams.CurrentStage = (SLOT_DATA["progressive_beam_upgrades"] and SLOT_DATA["progressive_beam_upgrades"] > 0) and 1 or 0
+    end
+
+    -- change required missile launcher option based on slot data
+    local required_ml = Tracker:FindObjectForCode("RequiredMissileLauncher")
+    if required_ml then
+        required_ml.CurrentStage = (SLOT_DATA["missile_launcher"] and SLOT_DATA["missile_launcher"] > 0) and 1 or 0
+    end
+
+    -- change required missile launcher option based on slot data
+    local required_pbl = Tracker:FindObjectForCode("RequiredPBLauncher")
+    if required_pbl then
+        required_pbl.CurrentStage = (SLOT_DATA["main_power_bomb"] and SLOT_DATA["main_power_bomb"] > 0) and 1 or 0
+    end
 end
 
 -- called when an item gets collected
@@ -235,20 +241,6 @@ function onItem(index, item_id, item_name, player_number)
             end
         elseif v[2] == "consumable" then
             obj.AcquiredCount = obj.AcquiredCount + obj.Increment
-
-            -- detect if required launcher is on and activate the launcher icon
-            if v[1] == "MissileExpansion" and not REQUIRED_MISSILE_LAUNCHER then
-                local ml = Tracker:FindObjectForCode("MissileLauncher")
-                if ml then
-                    ml.Active = obj.AcquiredCount > 0
-                end
-            end
-            if v[1] == "PowerBombExpansion" and not REQUIRED_PB_LAUNCHER then
-                local pl = Tracker:FindObjectForCode("PowerBomb")
-                if pl then
-                    pl.Active = obj.AcquiredCount > 0
-                end
-            end
         elseif v[2] == "togglebeam" then
             local progbeams = Tracker:FindObjectForCode("ProgressiveBeams")
             -- If Progressive Beam Upgrades is on, ingore normal versions

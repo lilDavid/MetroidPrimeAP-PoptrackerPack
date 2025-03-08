@@ -20,6 +20,7 @@
     ]
   },
   {
+    "codes": "RequiredMissileLauncher",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -35,6 +36,7 @@
     ]
   },
   {
+    "codes": "RequiredPBLauncher",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
