@@ -183,24 +183,6 @@ function onClear(slot_data)
             end
         end
     end
-
-    -- change progressive beam option based on slot data
-    local prog_beams = Tracker:FindObjectForCode("ProgressiveBeams")
-    if prog_beams then
-        prog_beams.CurrentStage = (SLOT_DATA["progressive_beam_upgrades"] and SLOT_DATA["progressive_beam_upgrades"] > 0) and 1 or 0
-    end
-
-    -- change required missile launcher option based on slot data
-    local required_ml = Tracker:FindObjectForCode("RequiredMissileLauncher")
-    if required_ml then
-        required_ml.CurrentStage = (SLOT_DATA["missile_launcher"] and SLOT_DATA["missile_launcher"] > 0) and 1 or 0
-    end
-
-    -- change required missile launcher option based on slot data
-    local required_pbl = Tracker:FindObjectForCode("RequiredPBLauncher")
-    if required_pbl then
-        required_pbl.CurrentStage = (SLOT_DATA["main_power_bomb"] and SLOT_DATA["main_power_bomb"] > 0) and 1 or 0
-    end
 end
 
 -- called when an item gets collected

@@ -1,3 +1,18 @@
+function ProgressiveBeamWatcher(code)
+	local progressive_beams = Tracker:FindObjectForCode("ProgressiveBeams")
+	local charge_beam = Tracker:FindObjectForCode("ChargeBeam")
+    if progressive_beams == nil or charge_beam == nil then return end
+
+    if progressive_beams.CurrentStage == 1 then
+        charge_beam.Icon = nil
+    elseif code == "ProgressiveBeams" then
+        -- Force a state change to restore the icon
+        local stage = charge_beam.CurrentStage
+        charge_beam.CurrentStage = 100
+        charge_beam.CurrentStage = stage
+    end
+end
+
 function BeamWatcher(combo_code)
     return function(code)
         local progressivebeams = Tracker:FindObjectForCode("ProgressiveBeams")
@@ -32,6 +47,9 @@ function ChargeComboWatcher(beam_code)
         end
     end
 end
+
+ScriptHost:AddWatchForCode("ProgressiveBeamOption", "ProgressiveBeams", ProgressiveBeamWatcher)
+ScriptHost:AddWatchForCode("ProgressiveBeamCharge", "ChargeBeam", ProgressiveBeamWatcher)
 
 ScriptHost:AddWatchForCode("ProgPower", "PowerBeam", BeamWatcher("SuperMissile"))
 ScriptHost:AddWatchForCode("ProgWave", "WaveBeam", BeamWatcher("Wavebuster"))
