@@ -4,8 +4,19 @@
     "background": "#000000",
     "content": [
       {
-        "type": "layout",
-        "key": "items"
+        "type": "itemgrid",
+        "item_margin": "4, 4",
+        "margin": "10, 10",
+        "h_alignment": "stretch",
+        "item_size": 50,
+        "rows": [
+          [ "PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam", "ChargeBeam" ],
+          [ "SuperMissile", "Wavebuster", "IceSpreader", "Flamethrower", "MissileLauncher" ],
+          [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
+          [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
+          [ "PowerSuit", "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump" ],
+          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "", "Artifacts" ]
+        ]
       }
     ]
   }
