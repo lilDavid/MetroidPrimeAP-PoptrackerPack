@@ -3,11 +3,10 @@
 -- it will also load the AP slot data in the global SLOT_DATA, keep track of the current index of on_item messages in CUR_INDEX
 -- addition it will keep track of what items are local items and which one are remote using the globals LOCAL_ITEMS and GLOBAL_ITEMS
 -- this is useful since remote items will not reset but local items might
-ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/level_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/option_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/trick_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/ap/item_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/ap/location_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/ap/option_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/ap/trick_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil

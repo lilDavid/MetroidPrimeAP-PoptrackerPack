@@ -8,11 +8,11 @@
     "variants": {
       "standard": {
         "display_name": "Standard - Map Tracker",
-        "flags": ["ap"]
+        "flags": ["ap", "uat"]
       },
       "var_itemsonly": {
         "display_name": "Standard - Items Only",
-        "flags": ["ap"]
+        "flags": ["ap", "uat"]
       }
     },
     "versions_url": "https://raw.githubusercontent.com/lilDavid/MetroidPrimeAP-PoptrackerPack/main/versions.json",
