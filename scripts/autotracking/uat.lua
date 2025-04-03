@@ -61,6 +61,22 @@ local updateProgressiveToggles = function(store, vars)
     end
 end
 
+local updateArtifacts = function(store, vars)
+    print("updateProgressiveToggles")
+    local o = Tracker:FindObjectForCode("Artifacts")
+    if o == nil then return end
+    o.AcquiredCount = 0
+    for _, var in ipairs(vars) do
+        local val = store:ReadVariable(var)
+        local result = "+0"
+        if type(val) == "number" and val > 0 or type(val) == "boolean" and val then
+            o.AcquiredCount = o.AcquiredCount + 1
+            result = "+1"
+        end
+        print(var .. " = " .. tostring(val) .. " -> " .. result)
+    end
+end
+
 local updateLocations = function(store, vars)
     print("updateLocations")
     -- if the variable is not named the same as the location
@@ -114,6 +130,20 @@ ScriptHost:AddVariableWatch("consumables", {
     "inventory/power_bomb_expansion",
     "inventory/energy_tank",
 }, updateConsumables)
+ScriptHost:AddVariableWatch("artifacts", {
+    "inventory/artifacts/truth",
+    "inventory/artifacts/strength",
+    "inventory/artifacts/elder",
+    "inventory/artifacts/wild",
+    "inventory/artifacts/lifegiver",
+    "inventory/artifacts/warrior",
+    "inventory/artifacts/chozo",
+    "inventory/artifacts/nature",
+    "inventory/artifacts/sun",
+    "inventory/artifacts/world",
+    "inventory/artifacts/spirit",
+    "inventory/artifacts/newborn",
+}, updateArtifacts)
 -- ScriptHost:AddVariableWatch("progressive", {"c"}, updateProgressiveToggles)
 -- ScriptHost:AddVariableWatch("locations", {"Example Location 1/Example Section 1"}, updateLocations)
 ScriptHost:AddVariableWatch("variables", {
