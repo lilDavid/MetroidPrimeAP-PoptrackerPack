@@ -9,7 +9,7 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Lake Tunnel,$can_heat",
-          "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/",
+          "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
           "@Magmoor Caverns/Save Station Magmoor A,@blastshields/Missile",
           "@Magmoor Caverns/Transport to Chozo Ruins North"
         ]
@@ -58,7 +58,7 @@
           "@Magmoor Caverns/Burning Trail",
           "@Magmoor Caverns/Lava Lake,$can_heat,$can_bomb",
           "@Magmoor Caverns/Lava Lake,$can_heat,$can_power_bomb",
-          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/"
+          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
         ]
       },
       {
@@ -70,15 +70,15 @@
             "access_rules": [
               "NoLogic",
               "$can_missile,$can_space_jump,@Magmoor Caverns/Burning Trail",
-              "[$trick|lava_lake_item_missiles_only|1],$can_missile,@Magmoor Caverns/Burning Trail/",
-              "[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/"
+              "[$trick|lava_lake_item_missiles_only|1],$can_missile,@Magmoor Caverns/Burning Trail",
+              "[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
             ]
           }
         ],
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Lake Tunnel,$can_heat",
-          "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/",
+          "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
           "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_morph_ball",
           "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_space_jump"
         ]
@@ -136,7 +136,7 @@
           "NoLogic",
           "@Magmoor Caverns/Lava Lake,$can_heat,$can_bomb",
           "@Magmoor Caverns/Lava Lake,$can_heat,$can_power_bomb",
-          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/",
+          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
           "@Magmoor Caverns/Triclops Pit,$can_heat"
         ]
       },

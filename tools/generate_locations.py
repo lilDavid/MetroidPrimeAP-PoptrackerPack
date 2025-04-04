@@ -270,10 +270,10 @@ manual_trick_rules = {
         "$can_missile,$has|MissileExpansion|8,$can_bomb"
     ],
     "lava_lake_item_suitless": [
-        "$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail/"
+        "$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
     ],
     "lava_lake_item_missiles_only": [
-        "$can_missile,@Magmoor Caverns/Burning Trail/"
+        "$can_missile,@Magmoor Caverns/Burning Trail"
     ],
     "elite_research_backwards_wall_boost_no_spider": [
         # elite_research_backwards_wall_boost and mines_climb_shafts_no_spider
