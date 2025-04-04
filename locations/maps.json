@@ -2908,8 +2908,8 @@
       {
         "name": "Tallon Overworld Doors",
         "sections": [
-          { "ref": "Tallon Map/Door Colors/Ice Beam" },
-          { "ref": "Tallon Map/Door Colors/Plasma Beam" }
+          { "name": "Ice Beam", "ref": "Tallon Map/Door Colors/Ice Beam" },
+          { "name": "Plasma Beam", "ref": "Tallon Map/Door Colors/Plasma Beam" }
         ],
         "map_locations": [
           {
@@ -2925,8 +2925,8 @@
       {
         "name": "Chozo Ruins Doors",
         "sections": [
-          { "ref": "Chozo Map/Door Colors/Wave Beam" },
-          { "ref": "Chozo Map/Door Colors/Ice Beam" }
+          { "name": "Wave Beam", "ref": "Chozo Map/Door Colors/Wave Beam" },
+          { "name": "Ice Beam", "ref": "Chozo Map/Door Colors/Ice Beam" }
         ],
         "map_locations": [
           {
@@ -2942,9 +2942,9 @@
       {
         "name": "Magmoor Caverns Doors",
         "sections": [
-          { "ref": "Magmoor Map/Door Colors/Wave Beam" },
-          { "ref": "Magmoor Map/Door Colors/Ice Beam" },
-          { "ref": "Magmoor Map/Door Colors/Plasma Beam" }
+          { "name": "Wave Beam", "ref": "Magmoor Map/Door Colors/Wave Beam" },
+          { "name": "Ice Beam", "ref": "Magmoor Map/Door Colors/Ice Beam" },
+          { "name": "Plasma Beam", "ref": "Magmoor Map/Door Colors/Plasma Beam" }
         ],
         "map_locations": [
           {
@@ -2960,9 +2960,9 @@
       {
         "name": "Phendrana Drifts Doors",
         "sections": [
-          { "ref": "Phen Map/Door Colors/Wave Beam" },
-          { "ref": "Phen Map/Door Colors/Ice Beam" },
-          { "ref": "Phen Map/Door Colors/Plasma Beam" }
+          { "name": "Wave Beam", "ref": "Phen Map/Door Colors/Wave Beam" },
+          { "name": "Ice Beam", "ref": "Phen Map/Door Colors/Ice Beam" },
+          { "name": "Plasma Beam", "ref": "Phen Map/Door Colors/Plasma Beam" }
         ],
         "map_locations": [
           {
@@ -2978,9 +2978,9 @@
       {
         "name": "Phazon Mines Doors",
         "sections": [
-          { "ref": "Mines Map/Door Colors/Wave Beam" },
-          { "ref": "Mines Map/Door Colors/Ice Beam" },
-          { "ref": "Mines Map/Door Colors/Plasma Beam" }
+          { "name": "Wave Beam", "ref": "Mines Map/Door Colors/Wave Beam" },
+          { "name": "Ice Beam", "ref": "Mines Map/Door Colors/Ice Beam" },
+          { "name": "Plasma Beam", "ref": "Mines Map/Door Colors/Plasma Beam" }
         ],
         "map_locations": [
           {
