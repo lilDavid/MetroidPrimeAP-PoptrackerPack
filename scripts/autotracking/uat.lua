@@ -12,6 +12,7 @@
 -- Alternatively try-catch (pcall) can be used to handle unexpected values.
 
 ScriptHost:LoadScript("scripts/autotracking/uat/item_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/uat/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/uat/variable_mapping.lua")
 
 local updateToggles = function(store, vars)
@@ -79,15 +80,19 @@ end
 
 local updateLocations = function(store, vars)
     print("updateLocations")
-    -- if the variable is not named the same as the location
-    -- you'll have to map them to actual section names
-    -- if you use one boolean per chest
-    -- you'll have to sum them up or remember the old value
     for _, var in ipairs(vars) do
-        local o = Tracker:FindObjectForCode("@"..var) -- grab section
-        local val = store:ReadVariable(var)
-        ---@cast o LocationSection
-        o.AvailableChestCount = o.ChestCount - val -- in this case val = that many chests are looted
+        local mapped_name = LOCATION_MAPPING[var]
+        if mapped_name == nil then
+            print(var .. ": Did not map to location name")
+        else
+            local o = Tracker:FindObjectForCode(mapped_name)
+            local val = store:ReadVariable(var)
+            -- If the pickup isn't already checked then set it
+            if o ~= nil and o.AvailableChestCount ~= 0 and val then
+                o.AvailableChestCount = 0
+                print(var .. " = " .. tostring(val) .. " -> " .. mapped_name)
+            end
+        end
     end
 end
 
@@ -145,7 +150,108 @@ ScriptHost:AddVariableWatch("artifacts", {
     "inventory/Artifact of Newborn",
 }, updateArtifacts)
 -- ScriptHost:AddVariableWatch("progressive", {"c"}, updateProgressiveToggles)
--- ScriptHost:AddVariableWatch("locations", {"Example Location 1/Example Section 1"}, updateLocations)
+ScriptHost:AddVariableWatch("locations", {
+    "pickups/Chozo Ruins/Main Plaza/Half-Pipe",
+    "pickups/Chozo Ruins/Main Plaza/Grapple Ledge",
+    "pickups/Chozo Ruins/Main Plaza/Tree",
+    "pickups/Chozo Ruins/Main Plaza/Locked Door",
+    "pickups/Chozo Ruins/Ruined Fountain",
+    "pickups/Chozo Ruins/Ruined Shrine/Plated Beetle",
+    "pickups/Chozo Ruins/Ruined Shrine/Half-Pipe",
+    "pickups/Chozo Ruins/Ruined Shrine/Lower Tunnel",
+    "pickups/Chozo Ruins/Vault",
+    "pickups/Chozo Ruins/Training Chamber",
+    "pickups/Chozo Ruins/Ruined Nursery",
+    "pickups/Chozo Ruins/Training Chamber Access",
+    "pickups/Chozo Ruins/Magma Pool",
+    "pickups/Chozo Ruins/Tower of Light",
+    "pickups/Chozo Ruins/Tower Chamber",
+    "pickups/Chozo Ruins/Ruined Gallery/Missile Wall",
+    "pickups/Chozo Ruins/Ruined Gallery/Tunnel",
+    "pickups/Chozo Ruins/Transport Access North",
+    "pickups/Chozo Ruins/Gathering Hall",
+    "pickups/Chozo Ruins/Hive Totem",
+    "pickups/Chozo Ruins/Sunchamber/Flaahgra",
+    "pickups/Chozo Ruins/Sunchamber/Ghosts",
+    "pickups/Chozo Ruins/Watery Hall Access",
+    "pickups/Chozo Ruins/Watery Hall/Scan Puzzle",
+    "pickups/Chozo Ruins/Watery Hall/Underwater",
+    "pickups/Chozo Ruins/Dynamo/Lower",
+    "pickups/Chozo Ruins/Dynamo/Spider Track",
+    "pickups/Chozo Ruins/Burn Dome/Missile",
+    "pickups/Chozo Ruins/Burn Dome/Incinerator Drone",
+    "pickups/Chozo Ruins/Furnace/Spider Tracks",
+    "pickups/Chozo Ruins/Furnace/Inside Furnace",
+    "pickups/Chozo Ruins/Hall of the Elders",
+    "pickups/Chozo Ruins/Crossway",
+    "pickups/Chozo Ruins/Elder Chamber",
+    "pickups/Chozo Ruins/Antechamber",
+    "pickups/Phendrana Drifts/Phendrana Shorelines/Behind Ice",
+    "pickups/Phendrana Drifts/Phendrana Shorelines/Spider Track",
+    "pickups/Phendrana Drifts/Chozo Ice Temple",
+    "pickups/Phendrana Drifts/Ice Ruins West",
+    "pickups/Phendrana Drifts/Ice Ruins East/Behind Ice",
+    "pickups/Phendrana Drifts/Ice Ruins East/Spider Track",
+    "pickups/Phendrana Drifts/Chapel of the Elders",
+    "pickups/Phendrana Drifts/Ruined Courtyard",
+    "pickups/Phendrana Drifts/Phendrana Canyon",
+    "pickups/Phendrana Drifts/Quarantine Cave",
+    "pickups/Phendrana Drifts/Research Lab Hydra",
+    "pickups/Phendrana Drifts/Quarantine Monitor",
+    "pickups/Phendrana Drifts/Observatory",
+    "pickups/Phendrana Drifts/Transport Access",
+    "pickups/Phendrana Drifts/Control Tower",
+    "pickups/Phendrana Drifts/Research Core",
+    "pickups/Phendrana Drifts/Frost Cave",
+    "pickups/Phendrana Drifts/Research Lab Aether/Tank",
+    "pickups/Phendrana Drifts/Research Lab Aether/Morph Track",
+    "pickups/Phendrana Drifts/Gravity Chamber/Underwater",
+    "pickups/Phendrana Drifts/Gravity Chamber/Grapple Ledge",
+    "pickups/Phendrana Drifts/Storage Cave",
+    "pickups/Phendrana Drifts/Security Cave",
+    "pickups/Tallon Overworld/Landing Site",
+    "pickups/Tallon Overworld/Alcove",
+    "pickups/Tallon Overworld/Frigate Crash Site",
+    "pickups/Tallon Overworld/Overgrown Cavern",
+    "pickups/Tallon Overworld/Root Cave",
+    "pickups/Tallon Overworld/Artifact Temple",
+    "pickups/Tallon Overworld/Transport Tunnel B",
+    "pickups/Tallon Overworld/Arbor Chamber",
+    "pickups/Tallon Overworld/Cargo Freight Lift to Deck Gamma",
+    "pickups/Tallon Overworld/Biohazard Containment",
+    "pickups/Tallon Overworld/Hydro Access Tunnel",
+    "pickups/Tallon Overworld/Great Tree Chamber",
+    "pickups/Tallon Overworld/Life Grove Tunnel",
+    "pickups/Tallon Overworld/Life Grove/Start",
+    "pickups/Tallon Overworld/Life Grove/Underwater Spinner",
+    "pickups/Phazon Mines/Main Quarry",
+    "pickups/Phazon Mines/Security Access A",
+    "pickups/Phazon Mines/Storage Depot B",
+    "pickups/Phazon Mines/Storage Depot A",
+    "pickups/Phazon Mines/Elite Research/Phazon Elite",
+    "pickups/Phazon Mines/Elite Research/Laser",
+    "pickups/Phazon Mines/Elite Control Access",
+    "pickups/Phazon Mines/Ventilation Shaft",
+    "pickups/Phazon Mines/Phazon Processing Center",
+    "pickups/Phazon Mines/Processing Center Access",
+    "pickups/Phazon Mines/Elite Quarters",
+    "pickups/Phazon Mines/Central Dynamo",
+    "pickups/Phazon Mines/Metroid Quarantine B",
+    "pickups/Phazon Mines/Metroid Quarantine A",
+    "pickups/Phazon Mines/Fungal Hall B",
+    "pickups/Phazon Mines/Phazon Mining Tunnel",
+    "pickups/Phazon Mines/Fungal Hall Access",
+    "pickups/Magmoor Caverns/Lava Lake",
+    "pickups/Magmoor Caverns/Triclops Pit",
+    "pickups/Magmoor Caverns/Storage Cavern",
+    "pickups/Magmoor Caverns/Transport Tunnel A",
+    "pickups/Magmoor Caverns/Warrior Shrine",
+    "pickups/Magmoor Caverns/Shore Tunnel",
+    "pickups/Magmoor Caverns/Fiery Shores/Morph Track",
+    "pickups/Magmoor Caverns/Fiery Shores/Warrior Shrine Tunnel",
+    "pickups/Magmoor Caverns/Plasma Processing",
+    "pickups/Magmoor Caverns/Magmoor Workstation",
+}, updateLocations)
 ScriptHost:AddVariableWatch("variables", {
     "Current Area"
 }, updateVariables)

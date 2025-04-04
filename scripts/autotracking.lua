@@ -18,7 +18,5 @@ end
 print("---------------------------------------------------------------------")
 print("")
 
-ScriptHost:LoadScript("scripts/autotracking/level_mapping.lua")
-
 ScriptHost:LoadScript("scripts/autotracking/archipelago.lua")
 ScriptHost:LoadScript("scripts/autotracking/uat.lua")

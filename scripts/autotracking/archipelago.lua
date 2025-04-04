@@ -7,6 +7,7 @@ ScriptHost:LoadScript("scripts/autotracking/ap/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/option_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/trick_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/level_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
