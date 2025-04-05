@@ -62,19 +62,22 @@ local updateProgressiveToggles = function(store, vars)
     end
 end
 
+local artifacts = {}
+
 local updateArtifacts = function(store, vars)
-    print("updateProgressiveToggles")
+    print("updateArtifacts")
+    for _, var in ipairs(vars) do
+        local val = store:ReadVariable(var)
+        artifacts[var] = type(val) == "number" and val > 0 or type(val) == "boolean" and val
+        print(var .. " = " .. tostring(val) .. " -> " .. artifacts[var])
+    end
     local o = Tracker:FindObjectForCode("Artifacts")
     if o == nil then return end
     o.AcquiredCount = 0
-    for _, var in ipairs(vars) do
-        local val = store:ReadVariable(var)
-        local result = "+0"
-        if type(val) == "number" and val > 0 or type(val) == "boolean" and val then
+    for _, acquired in pairs(artifacts) do
+        if acquired then
             o.AcquiredCount = o.AcquiredCount + 1
-            result = "+1"
         end
-        print(var .. " = " .. tostring(val) .. " -> " .. result)
     end
 end
 
