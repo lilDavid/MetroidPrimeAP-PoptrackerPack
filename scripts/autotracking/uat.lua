@@ -47,14 +47,13 @@ end
 local updateProgressiveToggles = function(store, vars)
     print("updateProgressiveToggles")
     for _, var in ipairs(vars) do
-        local o = Tracker:FindObjectForCode(var)
+        local item_name = ITEM_MAPPING[var]
+        local o = Tracker:FindObjectForCode(item_name)
         local val = store:ReadVariable(var)
         ---@cast o JsonItem
-        if type(val) == "table" and type(val[2]) == "number" then
-            if type(val[1]) == "number" then o.Active = val[1]>0
-            else o.Active = not(not val[1])
-            end
-            o.CurrentStage = val[2]
+        if type(val) == "number" then
+            o.Active = val > 0
+            o.CurrentStage = val
         else
             o.Active = false
         end
@@ -111,10 +110,6 @@ local updateVariables = function(store, vars)
 end
 
 ScriptHost:AddVariableWatch("toggles", {
-    "inventory/Power Beam",
-    "inventory/Ice Beam",
-    "inventory/Wave Beam",
-    "inventory/Plasma Beam",
     "inventory/Scan Visor",
     "inventory/Morph Ball Bomb",
     "inventory/Flamethrower",
@@ -152,7 +147,12 @@ ScriptHost:AddVariableWatch("artifacts", {
     "inventory/Artifact of Spirit",
     "inventory/Artifact of Newborn",
 }, updateArtifacts)
--- ScriptHost:AddVariableWatch("progressive", {"c"}, updateProgressiveToggles)
+ScriptHost:AddVariableWatch("progressive", {
+    "inventory/Power Beam",
+    "inventory/Ice Beam",
+    "inventory/Wave Beam",
+    "inventory/Plasma Beam",
+}, updateProgressiveToggles)
 ScriptHost:AddVariableWatch("locations", {
     "pickups/Chozo Ruins/Main Plaza/Half-Pipe",
     "pickups/Chozo Ruins/Main Plaza/Grapple Ledge",

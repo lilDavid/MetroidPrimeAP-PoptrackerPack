@@ -187,8 +187,8 @@ local relay_trackers = nil
 
 metroid_prime_interface.VerifyFunc = function(self)
     local game_id, revision = table.unpack(GameCube:Read({
-        {GameCube.BaseAddress, 6},
-        {GameCube.BaseAddress + 6, "u8"}
+        {GameCube.GameIDAddress, 6},
+        {GameCube.GameIDAddress + 7, "u8"}
     }))
     return game_id == "GM8E01" and revision == 0
 end
@@ -220,7 +220,7 @@ local function UpdateRelayCache()
             read_list[2 * i + 2] = {world_state + 8, "u32", 0}
         end
         local result = GameCube:Read(read_list)
-        for i = 0, 7 do
+        for i = 0, 6 do
             local mlvl = result[2 * i + 1]
             if mlvl == nil then
                 print("mlvl " .. i .. " was nil")
