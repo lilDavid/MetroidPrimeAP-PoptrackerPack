@@ -1,4 +1,4 @@
-ITEM_MAPPING = {
+AP_ITEM_MAPPING = {
     [5031000] = {"PowerBeam", "togglebeam"},
     [5031001] = {"IceBeam", "togglebeam"},
     [5031002] = {"WaveBeam", "togglebeam"},

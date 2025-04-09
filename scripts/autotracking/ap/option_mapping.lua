@@ -1,4 +1,4 @@
-SLOT_DATA_MAPPING = {
+AP_SLOT_DATA_MAPPING = {
     ["required_artifacts"] = {
         ["name"] = "RequiredArtifacts",
         ["offset"] = 1,

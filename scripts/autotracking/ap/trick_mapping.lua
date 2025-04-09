@@ -1,4 +1,4 @@
-TRICK_MAPPING = {
+AP_TRICK_MAPPING = {
     ["Alcove Escape"] = "alcove_escape",
     ["Landing Site Scan Dash"] = "landing_site_scan_dash",
     ["Frigate No Gravity"] = "frigate_no_gravity",

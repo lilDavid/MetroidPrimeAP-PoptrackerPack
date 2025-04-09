@@ -1,4 +1,4 @@
-LOCATION_MAPPING = {
+UAT_LOCATION_MAPPING = {
     ["pickups/Chozo Ruins/Main Plaza/Half-Pipe"] = "@Chozo Ruins/Main Plaza/Half-Pipe",
     ["pickups/Chozo Ruins/Main Plaza/Grapple Ledge"] = "@Chozo Ruins/Main Plaza/Grapple Ledge",
     ["pickups/Chozo Ruins/Main Plaza/Tree"] = "@Chozo Ruins/Main Plaza/Tree",

@@ -1,4 +1,4 @@
-LOCATION_MAPPING = {
+AP_LOCATION_MAPPING = {
     [5031100] = {"@Chozo Ruins/Main Plaza/Half-Pipe"},
     [5031101] = {"@Chozo Ruins/Main Plaza/Grapple Ledge"},
     [5031102] = {"@Chozo Ruins/Main Plaza/Tree"},

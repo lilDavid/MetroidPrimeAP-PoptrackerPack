@@ -1,4 +1,4 @@
-LEVEL_MAPPING = {
+AP_LEVEL_MAPPING = {
     [0] = nil,
     [3241871825] = "World Map",  -- Impact Crater
     [2831049361] = "Phendrana Drifts",

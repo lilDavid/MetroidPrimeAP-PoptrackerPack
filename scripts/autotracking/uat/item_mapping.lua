@@ -1,4 +1,4 @@
-ITEM_MAPPING = {
+UAT_ITEM_MAPPING = {
     ["inventory/Power Beam"] = "PowerBeam",
     ["inventory/Ice Beam"] = "IceBeam",
     ["inventory/Wave Beam"] = "WaveBeam",

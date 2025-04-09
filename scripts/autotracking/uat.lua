@@ -18,7 +18,7 @@ ScriptHost:LoadScript("scripts/autotracking/uat/variable_mapping.lua")
 local updateToggles = function(store, vars)
     print("updateToggles")
     for _, var in ipairs(vars) do
-        local item_name = ITEM_MAPPING[var]
+        local item_name = UAT_ITEM_MAPPING[var]
         local o = Tracker:FindObjectForCode(item_name)
         local val = store:ReadVariable(var)
         ---@cast o JsonItem
@@ -33,7 +33,7 @@ end
 local updateConsumables = function(store, vars)
     print("updateConsumables")
     for _, var in ipairs(vars) do
-        local item_name = ITEM_MAPPING[var]
+        local item_name = UAT_ITEM_MAPPING[var]
         local o = Tracker:FindObjectForCode(item_name)
         local val = store:ReadVariable(var)
         ---@cast o JsonItem
@@ -47,7 +47,7 @@ end
 local updateProgressiveToggles = function(store, vars)
     print("updateProgressiveToggles")
     for _, var in ipairs(vars) do
-        local item_name = ITEM_MAPPING[var]
+        local item_name = UAT_ITEM_MAPPING[var]
         local o = Tracker:FindObjectForCode(item_name)
         local val = store:ReadVariable(var)
         ---@cast o JsonItem
@@ -83,7 +83,7 @@ end
 local updateLocations = function(store, vars)
     print("updateLocations")
     for _, var in ipairs(vars) do
-        local mapped_name = LOCATION_MAPPING[var]
+        local mapped_name = UAT_LOCATION_MAPPING[var]
         if mapped_name == nil then
             print(var .. ": Did not map to location name")
         else
@@ -101,7 +101,7 @@ end
 local updateVariables = function(store, vars)
     for _, var in ipairs(vars) do
         local val = store:ReadVariable(var)
-        local fn = VARIABLE_MAPPING[var]
+        local fn = UAT_VARIABLE_MAPPING[var]
         if fn then
             local result = fn(var, val)
             print(var .. " = " .. tostring(val) .. " -> " .. tostring(result))

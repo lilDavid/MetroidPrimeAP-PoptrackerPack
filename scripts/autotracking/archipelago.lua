@@ -7,7 +7,7 @@ ScriptHost:LoadScript("scripts/autotracking/ap/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/option_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/trick_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/level_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/ap/level_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -25,7 +25,7 @@ function onClear(slot_data)
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     -- reset locations
-    for _, v in pairs(LOCATION_MAPPING) do
+    for _, v in pairs(AP_LOCATION_MAPPING) do
         if v[1] then
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                 print(string.format("onClear: clearing location %s", v[1]))
@@ -43,7 +43,7 @@ function onClear(slot_data)
         end
     end
     -- reset items
-    for _, v in pairs(ITEM_MAPPING) do
+    for _, v in pairs(AP_ITEM_MAPPING) do
         if v[1] and v[2] then
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                 print(string.format("onClear: clearing item %s of type %s", v[1], v[2]))
@@ -69,7 +69,7 @@ function onClear(slot_data)
     GLOBAL_ITEMS = {}
 
     -- reset options
-    for k, v in pairs(SLOT_DATA_MAPPING) do
+    for k, v in pairs(AP_SLOT_DATA_MAPPING) do
         local obj
         local default
         local name
@@ -97,7 +97,7 @@ function onClear(slot_data)
             print(string.format("onClear: unknown option %s", name))
         end
     end
-    for _, v in pairs(TRICK_MAPPING) do
+    for _, v in pairs(AP_TRICK_MAPPING) do
         local obj = Tracker:FindObjectForCode(v)
         obj.CurrentStage = 1
         print(string.format("onClear: setting trick %s to default", v))
@@ -115,7 +115,7 @@ function onClear(slot_data)
 
     -- set options
     for k, v in pairs(SLOT_DATA) do
-        local option = SLOT_DATA_MAPPING[k]
+        local option = AP_SLOT_DATA_MAPPING[k]
         if type(v) == "boolean" then
             if v then v = 1 else v = 0 end
         end
@@ -152,7 +152,7 @@ function onClear(slot_data)
     local trick_deny_list = SLOT_DATA["trick_deny_list"]
     if trick_deny_list ~= nil then
         for _, trick_name in ipairs(trick_deny_list) do
-            local trick_id = TRICK_MAPPING[trick_name]
+            local trick_id = AP_TRICK_MAPPING[trick_name]
             if trick_id == nil then
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                     print(string.format("onClear: unknown trick %s", trick_name))
@@ -169,7 +169,7 @@ function onClear(slot_data)
     local trick_allow_list = SLOT_DATA["trick_allow_list"]
     if trick_allow_list ~= nil then
         for _, trick_name in ipairs(trick_allow_list) do
-            local trick_id = TRICK_MAPPING[trick_name]
+            local trick_id = AP_TRICK_MAPPING[trick_name]
             if trick_id == nil then
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                     print(string.format("onClear: unknown trick %s", trick_name))
@@ -198,7 +198,7 @@ function onItem(index, item_id, item_name, player_number)
     end
     local is_local = player_number == Archipelago.PlayerNumber
     CUR_INDEX = index;
-    local v = ITEM_MAPPING[item_id]
+    local v = AP_ITEM_MAPPING[item_id]
     if not v then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: could not find item mapping for id %s", item_id))
@@ -274,7 +274,7 @@ function onLocation(location_id, location_name)
     if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
         return
     end
-    local v = LOCATION_MAPPING[location_id]
+    local v = AP_LOCATION_MAPPING[location_id]
     if not v and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("onLocation: could not find location mapping for id %s", location_id))
     end
@@ -306,7 +306,7 @@ end
 
 function updateMap(value)
     if not has("AutoTab") then return end
-    local level = LEVEL_MAPPING[value]
+    local level = AP_LEVEL_MAPPING[value]
     if not level then return end
     Tracker:UiHint("ActivateTab", level)
 end

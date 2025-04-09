@@ -1,4 +1,4 @@
-VARIABLE_MAPPING = {
+UAT_VARIABLE_MAPPING = {
     ["Current Area"] = function(name, value)
         local level = value
         if not level then return nil end
