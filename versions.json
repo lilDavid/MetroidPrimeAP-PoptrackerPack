@@ -1,6 +1,16 @@
 {
     "versions": [
         {
+            "package_version": "0.7.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.7.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "7b3e48bf1cae1abe196e52286a1eb2bb0b1141c8228b4420d3d54ce4dff367d8",
+            "changelog": [
+                "Improvements to tracking experience with Progressive Beam Upgrades and required mains",
+                "Updated maps and Morph Ball item icons",
+                "Added support for UAT"
+            ]
+        },
+        {
             "package_version": "0.6.1",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.6.1/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "703141a3181ced64c8091fb93a077e24bed22a0cecd233d7a8bad360013146ac",

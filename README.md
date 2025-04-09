@@ -18,7 +18,7 @@ Note that door colors are not automatically tracked to avoid spoilers.
 If you decide to play Randovania, or some other form of Metroid Prime randomizer, you can autotrack using UAT instead
 by using the [GameCube UAT Bridge](https://github.com/lilDavid/GameCube-UAT-Bridge) program. With it, this pack can
 autotrack for either Dolphin or a real Wii or Wii U using Nintendont. The script to use for that is at
-https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/blob/main/gcn-uat-metroidprime.lua
+[/gcn-uat-metroidprime.lua](https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/blob/main/gcn-uat-metroidprime.lua)
 
 ## Credits
 
