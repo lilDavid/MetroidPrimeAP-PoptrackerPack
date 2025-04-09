@@ -17,7 +17,8 @@
     "codes": "MissileExpansion",
     "img": "images/items/missileexpansion.png",
     "type": "consumable",
-    "max_quantity": 50
+    "max_quantity": 250,
+    "increment": 5
   },
   {
     "name": "Power Beam",
