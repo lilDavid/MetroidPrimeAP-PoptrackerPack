@@ -147,7 +147,7 @@
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
           "@Tallon Overworld/Life Grove Tunnel,@doors/Tallon Overworld/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
           "@Tallon Overworld/Transport Tunnel D,@doors/Tallon Overworld/IceBeam",
-          "@Tallon Overworld/Transport Tunnel E,@doors/Tallon Overworld/IceBeam,$can_boost"
+          "@Tallon Overworld/Transport Tunnel E,@doors/Tallon Overworld/IceBeam,$can_boost,$can_space_jump"
         ]
       },
       {
