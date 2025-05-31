@@ -661,30 +661,14 @@ def read_trick_data(tree: ast.AST, filename: str) -> List[TrickData]:
     return tricks
 
 
-tricks_file = data_path / "Tricks.py"
-with open(tricks_file, "r") as stream:
-    content = stream.read()
-
-data_ast = ast.parse(content)
-try:
-    trick_list = read_trick_data(data_ast, tricks_file)
-except ASTParseError as e:
-    raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
-except Exception as e:
-    raise Exception(f"Could not parse tricks") from e
-
-tracker_tricks: Dict[str, TrackerTrickData] = {}
-for trick in trick_list:
-    if trick.name not in tracker_tricks:
-        tracker_tricks[trick.name] = TrackerTrickData(trick.name, [])
-    tracker_tricks[trick.name].codes.append(trick.id)
-
-with open(items / "tricks.json", "w") as stream:
-   json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
-
-tricks = {trick.id: trick.access_rule for trick in trick_list}
+trick_list: list[TrickData]
+tricks: dict[str, list[str]] | None = None
 
 def get_tricks(tree: ast.expr):
+    global tricks
+    if tricks is None:
+        tricks = {trick.id: trick.access_rule for trick in trick_list}
+
     if type(tree) is not ast.List:
         raise ASTParseError(tree, "Expected list")
 
@@ -996,6 +980,27 @@ class AreaData(NamedTuple):
 
 
 # Parse files
+
+tricks_file = data_path / "Tricks.py"
+with open(tricks_file, "r") as stream:
+    content = stream.read()
+
+data_ast = ast.parse(content)
+try:
+    trick_list = read_trick_data(data_ast, tricks_file)
+except ASTParseError as e:
+    raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
+except Exception as e:
+    raise Exception(f"Could not parse tricks") from e
+
+tracker_tricks: Dict[str, TrackerTrickData] = {}
+for trick in trick_list:
+    if trick.name not in tracker_tricks:
+        tracker_tricks[trick.name] = TrackerTrickData(trick.name, [])
+    tracker_tricks[trick.name].codes.append(trick.id)
+
+
+areas: dict[str, AreaData] = {}
 for short_name, data_name in areas:
     input = (data_path / data_name).with_suffix(".py")
     output = (locations / short_name).with_suffix(".json")
@@ -1006,11 +1011,18 @@ for short_name, data_name in areas:
     data_ast = ast.parse(content)
     # print(ast.dump(data_ast, indent=2))
     try:
-        result = AreaData.from_ast(data_ast, input.name)
+        areas[short_name] = AreaData.from_ast(data_ast, input.name)
     except ASTParseError as e:
         raise Exception(f"Could not parse {input.name}:\n{ast.dump(e.tree)}") from e
     except Exception as e:
         raise Exception(f"Could not parse {input.name}") from e
 
+
+# Handle data
+
+with open(items / "tricks.json", "w") as stream:
+   json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
+
+for short_name, area_data in areas.items():
     with open(output, "w") as stream:
-       json.dump(result.into_json(), stream, indent=2)
+       json.dump(area_data.into_json(), stream, indent=2)
