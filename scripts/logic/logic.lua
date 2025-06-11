@@ -93,10 +93,11 @@ end
 
 function can_missile(expansions)
     if expansions == nil or expansions < 1 then expansions = 1 end
+    local count = 5 * expansions
     if has("MainMissile") then
-        return has("MissileLauncher") and has("MissileExpansion", expansions - 1)
+        return has("MissileLauncher") and has("MissileExpansion", count - 1)
     end
-    return has("MissileExpansion", expansions)
+    return has("MissileExpansion", count)
 end
 
 function can_super_missile()
