@@ -29,6 +29,7 @@
                 [ "CombatLogic" ],
                 [ "ElevatorsRandom" ],
                 [ "DoorRando" ],
+                [ "BlastShieldRando" ],
                 [ "PreScanElevators" ]
               ]
             }

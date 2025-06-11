@@ -8,7 +8,8 @@ import json
 from pathlib import Path
 import importlib.util
 import sys
-from typing import Dict, Iterable, List, NamedTuple, Optional, Set, Union
+from typing import TYPE_CHECKING, Dict, Iterable, List, NamedTuple, Optional, Set, Union
+import warnings
 
 
 pack = Path(__file__).parents[1]
@@ -205,13 +206,13 @@ locks = {
 }
 
 blast_shields = {
-    "Bomb": "Bomb",
-    "Charge_Beam": "ChargeBeam",
-    "Flamethrower": "Flamethrower",
-    "Ice_Spreader": "IceSpreader",
-    "Wavebuster": "Wavebuster",
-    "Power_Bomb": "PowerBomb",
-    "Super_Missile": "SuperMissile",
+    # "Bomb": "Bomb",
+    # "Charge_Beam": "ChargeBeam",
+    # "Flamethrower": "Flamethrower",
+    # "Ice_Spreader": "IceSpreader",
+    # "Wavebuster": "Wavebuster",
+    # "Power_Bomb": "PowerBomb",
+    # "Super_Missile": "SuperMissile",
     "Missile": "Missile",
     "None_": None,
 }
@@ -341,8 +342,9 @@ def import_file(path: Path):
 import_file(data_path / "AreaNames.py")
 import_file(data_path / "RoomNames.py")
 
-from metroidprime.AreaNames import MetroidPrimeArea
-from metroidprime.RoomNames import RoomName
+if not TYPE_CHECKING:
+    from metroidprime.AreaNames import MetroidPrimeArea
+    from metroidprime.RoomNames import RoomName
 
 
 class SuitUpgrade(Enum):
@@ -735,9 +737,85 @@ class PickupData(NamedTuple):
         })
 
 
+class BlastShieldAreaData(NamedTuple):
+    area: str
+    doors: dict[tuple[str, str], bool]
+
+    @classmethod
+    def from_ast(cls, area: ast.expr, filename):
+        if (type(area) is not ast.Call or type(area.func) is not ast.Name or
+            area.func.id != "BlastShieldArea"):
+            raise ASTParseError(area, "Expected BlastShieldArea constructor")
+
+        name: str | None = None
+        doors: dict[tuple[str, str], bool] = {}
+        for keyword in area.keywords:
+            value = keyword.value
+            if keyword.arg == "area":
+                if (type(value) is not ast.Attribute or type(value.value) is not ast.Name or
+                    value.value.id != "MetroidPrimeArea"):
+                    raise ASTParseError(value, "Expected area name")
+                name = eval(compile(ast.Expression(value), filename, "eval")).value
+            if keyword.arg == "regions":
+                if (type(value) is not ast.List):
+                    raise ASTParseError(value, "Expected list")
+                for region in value.elts:
+                    if (type(region) is not ast.Call or type(region.func) is not ast.Name or
+                        region.func.id != "BlastShieldRegion"):
+                        raise ASTParseError(region, "Expected BlastShieldRegion constructor")
+                    region_doors: Iterable[tuple[str, str]]
+                    can_lock = False
+                    for keyword in region.keywords:
+                        if keyword.arg == "doors":
+                            if type(keyword.value) is not ast.Dict:
+                                raise ASTParseError(keyword.value, "Expected dictionary")
+                            sources = []
+                            destinations = []
+                            for room in keyword.value.keys:
+                                if (type(room) is not ast.Attribute or type(room.value) is not ast.Name or
+                                    room.value.id != "RoomName"):
+                                    raise ASTParseError(room, "Expected RoomName")
+                                sources.append(eval(compile(ast.Expression(room), filename, "eval")).value)
+                            for room in keyword.value.values:
+                                if (type(room) is not ast.Attribute or type(room.value) is not ast.Name or
+                                    room.value.id != "RoomName"):
+                                    raise ASTParseError(room, "Expected RoomName")
+                                destinations.append(eval(compile(ast.Expression(room), filename, "eval")).value)
+                            region_doors = (tuple(sorted(ends)) for ends in zip(sources, destinations, strict=True))
+                        if keyword.arg == "can_be_locked":
+                            can_lock = ast.literal_eval(keyword.value)
+                    for src, dst in region_doors:
+                        ends = tuple(sorted((src, dst)))
+                        if not doors.get(ends):
+                            doors[ends] = can_lock
+        if name is None:
+            raise ASTParseError(area, "Expected area name")
+        return cls(name, doors)
+
+
+def read_blast_shield_data(tree: ast.AST, filename: str) -> list[BlastShieldAreaData]:
+    if type(tree) is not ast.Module:
+        raise ASTParseError(tree, "Tree is not a module")
+    module: ast.Module = tree
+
+    areas: list[BlastShieldAreaData] = []
+    for statement in module.body:
+        if type(statement) is not ast.FunctionDef or not statement.name.startswith("__"):
+            continue
+        if type(statement.body[0]) is not ast.Return:
+            raise ASTParseError(statement, "Expected return")
+        return_value = statement.body[0].value
+        areas.append(BlastShieldAreaData.from_ast(return_value, filename))
+    return areas
+
+
+blast_shield_eligible_doors: dict[str, dict[tuple[str, str], bool]]
+
 class DoorData(NamedTuple):
     source: str
     destination: str
+    color: str | None
+    blast_shield: str | None
     open_rule: str
     access_rule: List[str]
     exclude_from_rando: bool = False
@@ -749,7 +827,8 @@ class DoorData(NamedTuple):
         if (type(door) is not ast.Call or type(door.func) is not ast.Name or
             door.func.id != "DoorData"):
             raise ASTParseError(door, "Door item is not from DoorData constructor")
-        door_type = None
+        default_lock = "AnyBeam"
+        lock = None
         blast_shield = None
         exclude_from_rando = False
         target_door_index = None
@@ -766,8 +845,10 @@ class DoorData(NamedTuple):
                     type(kwarg.value.value) is not ast.Name or
                     kwarg.value.value.id != "DoorLockType"):
                     raise ASTParseError(kwarg.value, "Door lock is not a DoorLockType")
-                if kwarg.arg == "lock" or door_type is None:
-                    door_type = locks[kwarg.value.attr]
+                if kwarg.arg == "lock":
+                    lock = locks[kwarg.value.attr]
+                if kwarg.arg == "defaultLock":
+                    default_lock = locks[kwarg.value.attr]
             if kwarg.arg == "blast_shield":
                 if (type(kwarg.value) is not ast.Attribute or
                     type(kwarg.value.value) is not ast.Name or
@@ -787,11 +868,16 @@ class DoorData(NamedTuple):
                 target_door_index = ast.literal_eval(kwarg.value)
             if kwarg.arg == "sub_region_access_override":
                 target_door_access_override = parse_access_rule(kwarg.value, filename)
+        door_type = lock or default_lock
         door_rule = []
-        if door_type not in (None, "AnyBeam"):
+        src, dest = source.split('/')[-1], destination.value
+        ends = tuple(sorted((src, dest)))
+        if exclude_from_rando and blast_shield == "Missile":
+            door_rule = ["$can_missile"]
+        elif blast_shield == "Missile" or ends in blast_shield_eligible_doors[area]:
+            door_rule = [f"$can_open|{area}|{src}|{dest}"]
+        elif door_type not in (None, "AnyBeam"):
             door_rule.append(f"@doors/{area}/{door_type}")
-        if blast_shield is not None:
-            door_rule.append(f"@blastshields/{blast_shield}")
         if access_rule:
             access_rules = [",".join(door_rule + [rule]) for rule in access_rule]
         elif door_rule:
@@ -799,7 +885,7 @@ class DoorData(NamedTuple):
         else:
             access_rules = []
         access_rules.extend(",".join(door_rule + [rule]) for rule in trick_rules)
-        return cls(source, destination.value, ",".join(door_rule), access_rules,
+        return cls(source, destination.value, door_type, blast_shield, ",".join(door_rule), access_rules,
                    exclude_from_rando, target_door_index, target_door_access_override)
 
 
@@ -877,6 +963,8 @@ class TrackerRoomData(NamedTuple):
 class AreaData(NamedTuple):
     name: str
     rooms: List[TrackerRoomData]
+    missile_doors: set[tuple[str, str]]
+    mixitup_doors: dict[tuple[str, str], str | tuple[str, str]]
 
     @classmethod
     def from_ast(cls, tree: ast.AST, filename: str):
@@ -963,12 +1051,48 @@ class AreaData(NamedTuple):
                         access_rule = [target_door.open_rule]
                     else:
                         access_rule = []
-                doors.append(DoorData(door.source, target_door.destination, "", access_rule, True))
+                doors.append(DoorData(door.source, target_door.destination, target_door.color, target_door.blast_shield, "", access_rule, True))
 
-        tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors,
-                                                              transport_rules[area_name])
+        missile_doors = set()
+        blast_shield_rando_doors: dict[tuple[str, str], str | tuple[str, str]] = {}
+        for door in doors:
+            if door.exclude_from_rando:
+                continue
+
+            source, destination = door.source.split("/")[-1], door.destination
+            ends = tuple(sorted((source, destination)))
+            door_type = None
+            if door.blast_shield == "Missile":
+                door_type = "Missile"
+                missile_doors.add(ends)
+                if door.color != "AnyBeam":
+                    warnings.warn(f"Door type conflict for {ends}: Missile, {door.color}")
+            else:
+                door_type = door.color
+
+            if ends not in blast_shield_eligible_doors[area_name]:
+                continue
+
+            entry = blast_shield_rando_doors.get(ends)
+            if entry is None:
+                blast_shield_rando_doors[ends] = door_type
+            elif "Missile" in (entry, door_type) and "AnyBeam" in (entry, door_type):
+                blast_shield_rando_doors[ends] = "Missile"
+            elif entry != door_type:
+                if type(entry) is str:
+                    sides = [entry, entry]
+                    sides[(source, destination) != ends] = door_type
+                    blast_shield_rando_doors[ends] = tuple(sides)
+                else:
+                    sides = list(entry)
+                    idx = (source, destination) != ends
+                    sides[idx] = door_type
+                    if entry != sides:
+                        warnings.warn(f"Door type conflict for {(source, destination)}: {entry[idx]}, {sides[idx]}")
+
+        tracker_rooms = [TrackerRoomData.from_world_room_data(area_name, room, doors, transport_rules[area_name])
                          for room in world_rooms.values()]
-        return cls(area_name, tracker_rooms)
+        return cls(area_name, tracker_rooms, missile_doors, blast_shield_rando_doors)
 
     def into_json(self):
         return [omit_empty_lists_and_null({
@@ -1000,10 +1124,24 @@ for trick in trick_list:
     tracker_tricks[trick.name].codes.append(trick.id)
 
 
-areas: dict[str, AreaData] = {}
+blast_shield_file = data_path / "BlastShieldRegions.py"
+with open(blast_shield_file, "r") as stream:
+    content = stream.read()
+
+blast_shield_eligible_doors = {}
+data_ast = ast.parse(content)
+try:
+    for data in read_blast_shield_data(data_ast, blast_shield_file):
+        blast_shield_eligible_doors[data.area] = data.doors
+except ASTParseError as e:
+    raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
+except Exception as e:
+    raise Exception(f"Could not parse tricks") from e
+
+
+area_data: dict[str, AreaData] = {}
 for short_name, data_name in areas:
     input = (data_path / data_name).with_suffix(".py")
-    output = (locations / short_name).with_suffix(".json")
 
     with open(input, "r") as stream:
         content = stream.read()
@@ -1011,7 +1149,7 @@ for short_name, data_name in areas:
     data_ast = ast.parse(content)
     # print(ast.dump(data_ast, indent=2))
     try:
-        areas[short_name] = AreaData.from_ast(data_ast, input.name)
+        area_data[short_name] = AreaData.from_ast(data_ast, input.name)
     except ASTParseError as e:
         raise Exception(f"Could not parse {input.name}:\n{ast.dump(e.tree)}") from e
     except Exception as e:
@@ -1023,6 +1161,28 @@ for short_name, data_name in areas:
 with open(items / "tricks.json", "w") as stream:
    json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
 
-for short_name, area_data in areas.items():
+for short_name, area in area_data.items():
+    output = (locations / short_name).with_suffix(".json")
     with open(output, "w") as stream:
-       json.dump(area_data.into_json(), stream, indent=2)
+       json.dump(area.into_json(), stream, indent=2)
+
+doors_lua = Path(__file__).parents[1] / 'scripts/logic/door_data.lua'
+with (open(doors_lua, "w") as stream):
+    print("MISSILE_DOORS = {", file=stream)
+    for short_name, area in area_data.items():
+        print(f'    ["{area.name}"] = {{', file=stream)
+        for door in sorted(area.missile_doors):
+            print(f'        ["{door[0]}|{door[1]}"] = true,', file=stream)
+        print(f"    }},", file=stream)
+    print("}\n", file=stream)
+    print("MIX_IT_UP_DOORS = {", file=stream)
+    for short_name, area in area_data.items():
+        print(f'    ["{area.name}"] = {{', file=stream)
+        for door, door_type in sorted(area.mixitup_doors.items()):
+            if type(door_type) is str:
+                door_record = f'{{"{door_type}", nil}}'
+            else:
+                door_record = f'{{"{door_type[0]}", "{door_type[1]}"}}'
+            print(f'        ["{door[0]}|{door[1]}"] = {door_record},', file=stream)
+        print(f"    }},", file=stream)
+    print("}", file=stream)

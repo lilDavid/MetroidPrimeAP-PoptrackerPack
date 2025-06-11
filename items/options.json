@@ -323,6 +323,29 @@
     "loop": true,
     "stages": [
       {
+        "img": "images/options/blastshields-none.png",
+        "img_mods": "@disabled",
+        "codes": "BlastShieldsNone",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/blastshields-missiles.png",
+        "codes": "BlastShieldRando,BlastShieldsMissiles",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/blastshields-mixitup.png",
+        "codes": "BlastShieldRando,BlastShieldsMixItUp",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
         "img": "images/options/prescan-off.png",
         "img_mods": "@disabled"
       },

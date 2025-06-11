@@ -10,8 +10,8 @@
           "NoLogic",
           "@Magmoor Caverns/Lake Tunnel,$can_heat",
           "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
-          "@Magmoor Caverns/Save Station Magmoor A,@blastshields/Missile",
-          "@Magmoor Caverns/Transport to Chozo Ruins North"
+          "@Magmoor Caverns/Save Station Magmoor A,$can_open|Magmoor Caverns|Save Station Magmoor A|Burning Trail",
+          "@Magmoor Caverns/Transport to Chozo Ruins North,$can_open|Magmoor Caverns|Transport to Chozo Ruins North|Burning Trail"
         ]
       },
       {
@@ -37,8 +37,8 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Shore Tunnel,$can_heat",
-          "@Magmoor Caverns/Transport Tunnel B,$can_heat,$can_morph_ball",
-          "@Magmoor Caverns/Transport Tunnel B,[$trick|transport_tunnel_b_damage_boost|1],$can_heat",
+          "@Magmoor Caverns/Transport Tunnel B,$can_open|Magmoor Caverns|Transport Tunnel B|Fiery Shores,$can_heat,$can_morph_ball",
+          "@Magmoor Caverns/Transport Tunnel B,$can_open|Magmoor Caverns|Transport Tunnel B|Fiery Shores,[$trick|transport_tunnel_b_damage_boost|1],$can_heat",
           "@Magmoor Caverns/Warrior Shrine,$can_heat,$can_power_bomb,$can_bomb"
         ]
       },
@@ -46,7 +46,7 @@
         "name": "Geothermal Core",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/North Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/North Core Tunnel,$can_open|Magmoor Caverns|North Core Tunnel|Geothermal Core,$can_space_jump",
           "@Magmoor Caverns/Plasma Processing",
           "@Magmoor Caverns/South Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump"
         ]
@@ -56,9 +56,9 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Burning Trail",
-          "@Magmoor Caverns/Lava Lake,$can_heat,$can_bomb",
-          "@Magmoor Caverns/Lava Lake,$can_heat,$can_power_bomb",
-          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Lake Tunnel,$can_heat,$can_bomb",
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Lake Tunnel,$can_heat,$can_power_bomb",
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
         ]
       },
       {
@@ -77,10 +77,10 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Lake Tunnel,$can_heat",
-          "@Magmoor Caverns/Lake Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
-          "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_morph_ball",
-          "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_space_jump"
+          "@Magmoor Caverns/Lake Tunnel,$can_open|Magmoor Caverns|Lake Tunnel|Lava Lake,$can_heat",
+          "@Magmoor Caverns/Lake Tunnel,$can_open|Magmoor Caverns|Lake Tunnel|Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
+          "@Magmoor Caverns/Pit Tunnel,$can_open|Magmoor Caverns|Pit Tunnel|Lava Lake,$can_heat,$can_morph_ball",
+          "@Magmoor Caverns/Pit Tunnel,$can_open|Magmoor Caverns|Pit Tunnel|Lava Lake,$can_heat,$can_space_jump"
         ]
       },
       {
@@ -98,9 +98,9 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/South Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
-          "@Magmoor Caverns/Transport Tunnel C,@doors/Magmoor Caverns/WaveBeam",
-          "@Magmoor Caverns/Workstation Tunnel,$can_power_bomb"
+          "@Magmoor Caverns/South Core Tunnel,$can_open|Magmoor Caverns|South Core Tunnel|Magmoor Workstation,$can_space_jump",
+          "@Magmoor Caverns/Transport Tunnel C,$can_open|Magmoor Caverns|Transport Tunnel C|Magmoor Workstation",
+          "@Magmoor Caverns/Workstation Tunnel,$can_open|Magmoor Caverns|Workstation Tunnel|Magmoor Workstation,$can_power_bomb"
         ]
       },
       {
@@ -109,8 +109,8 @@
           "NoLogic",
           "@Magmoor Caverns/Monitor Tunnel,$can_heat",
           "@Magmoor Caverns/Shore Tunnel,$can_heat",
-          "@Magmoor Caverns/Transport Tunnel A,$can_heat,$can_bomb",
-          "@Magmoor Caverns/Warrior Shrine,$can_heat"
+          "@Magmoor Caverns/Transport Tunnel A,$can_open|Magmoor Caverns|Transport Tunnel A|Monitor Station,$can_heat,$can_bomb",
+          "@Magmoor Caverns/Warrior Shrine,$can_open|Magmoor Caverns|Warrior Shrine|Monitor Station,$can_heat"
         ]
       },
       {
@@ -125,7 +125,7 @@
         "name": "North Core Tunnel",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Geothermal Core,$can_space_jump",
+          "@Magmoor Caverns/Geothermal Core,$can_open|Magmoor Caverns|Geothermal Core|North Core Tunnel,$can_space_jump",
           "@Magmoor Caverns/Twin Fires,@doors/Magmoor Caverns/WaveBeam,$can_space_jump,$has_energy_tanks|2",
           "@Magmoor Caverns/Twin Fires,@doors/Magmoor Caverns/WaveBeam,$can_grapple"
         ]
@@ -134,9 +134,9 @@
         "name": "Pit Tunnel",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Lava Lake,$can_heat,$can_bomb",
-          "@Magmoor Caverns/Lava Lake,$can_heat,$can_power_bomb",
-          "@Magmoor Caverns/Lava Lake,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Pit Tunnel,$can_heat,$can_bomb",
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Pit Tunnel,$can_heat,$can_power_bomb",
+          "@Magmoor Caverns/Lava Lake,$can_open|Magmoor Caverns|Lava Lake|Pit Tunnel,[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
           "@Magmoor Caverns/Triclops Pit,$can_heat"
         ]
       },
@@ -157,14 +157,14 @@
         "name": "Save Station Magmoor A",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Burning Trail,@blastshields/Missile"
+          "@Magmoor Caverns/Burning Trail,$can_open|Magmoor Caverns|Burning Trail|Save Station Magmoor A"
         ]
       },
       {
         "name": "Save Station Magmoor B",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Transport to Phendrana Drifts South,@blastshields/Missile"
+          "@Magmoor Caverns/Transport to Phendrana Drifts South,$can_missile"
         ]
       },
       {
@@ -193,7 +193,7 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/Geothermal Core,$can_space_jump",
-          "@Magmoor Caverns/Magmoor Workstation"
+          "@Magmoor Caverns/Magmoor Workstation,$can_open|Magmoor Caverns|Magmoor Workstation|South Core Tunnel"
         ]
       },
       {
@@ -203,14 +203,14 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Triclops Pit,$can_heat,$can_morph_ball"
+          "@Magmoor Caverns/Triclops Pit,$can_open|Magmoor Caverns|Triclops Pit|Storage Cavern,$can_heat,$can_morph_ball"
         ]
       },
       {
         "name": "Transport to Chozo Ruins North",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Burning Trail",
+          "@Magmoor Caverns/Burning Trail,$can_open|Magmoor Caverns|Burning Trail|Transport to Chozo Ruins North",
           "ElevatorsNormal,@Chozo Ruins/Transport to Magmoor Caverns North,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToChozoRuinsNorth"
         ]
@@ -228,7 +228,7 @@
         "name": "Transport to Phendrana Drifts North",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Transport Tunnel A,$can_heat,$can_bomb",
+          "@Magmoor Caverns/Transport Tunnel A,$can_open|Magmoor Caverns|Transport Tunnel A|Transport to Phendrana Drifts North,$can_heat,$can_bomb",
           "ElevatorsNormal,@Phendrana Drifts/Transport to Magmoor Caverns West,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToPhendranaDriftsNorth"
         ]
@@ -237,7 +237,7 @@
         "name": "Transport to Phendrana Drifts South",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Save Station Magmoor B,@blastshields/Missile",
+          "@Magmoor Caverns/Save Station Magmoor B,$can_open|Magmoor Caverns|Save Station Magmoor B|Transport to Phendrana Drifts South",
           "@Magmoor Caverns/Transport Tunnel C,@doors/Magmoor Caverns/WaveBeam",
           "ElevatorsNormal,@Phendrana Drifts/Transport to Magmoor Caverns South,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToPhendranaDriftsSouth"
@@ -249,9 +249,9 @@
           "NoLogic",
           "@Magmoor Caverns/Transport Tunnel B,$can_heat,$can_morph_ball",
           "@Magmoor Caverns/Transport Tunnel B,[$trick|transport_tunnel_b_damage_boost|1],$can_heat",
-          "@Magmoor Caverns/Twin Fires Tunnel,$can_heat,$can_spider",
-          "@Magmoor Caverns/Twin Fires Tunnel,$can_heat,$can_move_underwater",
-          "@Magmoor Caverns/Twin Fires Tunnel,$can_heat,$can_space_jump",
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Transport to Tallon Overworld West,$can_heat,$can_spider",
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Transport to Tallon Overworld West,$can_heat,$can_move_underwater",
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Transport to Tallon Overworld West,$can_heat,$can_space_jump",
           "ElevatorsNormal,@Tallon Overworld/Transport to Magmoor Caverns East,$can_access_elevators",
           "ElevatorsRandom,MagmoorCavernsTransportToTallonOverworldWest"
         ]
@@ -270,16 +270,16 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Monitor Station,$can_heat",
-          "@Magmoor Caverns/Transport to Phendrana Drifts North"
+          "@Magmoor Caverns/Monitor Station,$can_open|Magmoor Caverns|Monitor Station|Transport Tunnel A,$can_heat",
+          "@Magmoor Caverns/Transport to Phendrana Drifts North,$can_open|Magmoor Caverns|Transport to Phendrana Drifts North|Transport Tunnel A"
         ]
       },
       {
         "name": "Transport Tunnel B",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Fiery Shores,$can_heat,$can_bomb",
-          "@Magmoor Caverns/Fiery Shores,$can_heat,$can_grapple",
+          "@Magmoor Caverns/Fiery Shores,$can_open|Magmoor Caverns|Fiery Shores|Transport Tunnel B,$can_heat,$can_bomb",
+          "@Magmoor Caverns/Fiery Shores,$can_open|Magmoor Caverns|Fiery Shores|Transport Tunnel B,$can_heat,$can_grapple",
           "@Magmoor Caverns/Transport to Tallon Overworld West"
         ]
       },
@@ -287,7 +287,7 @@
         "name": "Transport Tunnel C",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Magmoor Workstation,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
+          "@Magmoor Caverns/Magmoor Workstation,$can_open|Magmoor Caverns|Magmoor Workstation|Transport Tunnel C,$can_space_jump",
           "@Magmoor Caverns/Transport to Phendrana Drifts South,@doors/Magmoor Caverns/WaveBeam"
         ]
       },
@@ -314,16 +314,16 @@
           "@Magmoor Caverns/Monitor Tunnel,$can_heat",
           "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_morph_ball",
           "@Magmoor Caverns/Pit Tunnel,$can_heat,$can_space_jump",
-          "@Magmoor Caverns/Storage Cavern,$can_heat"
+          "@Magmoor Caverns/Storage Cavern,$can_open|Magmoor Caverns|Storage Cavern|Triclops Pit,$can_heat"
         ]
       },
       {
         "name": "Twin Fires Tunnel",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Transport to Tallon Overworld West",
-          "@Magmoor Caverns/Twin Fires,$can_space_jump,$has_energy_tanks|2",
-          "@Magmoor Caverns/Twin Fires,$can_grapple"
+          "@Magmoor Caverns/Transport to Tallon Overworld West,$can_open|Magmoor Caverns|Transport to Tallon Overworld West|Twin Fires Tunnel",
+          "@Magmoor Caverns/Twin Fires,$can_open|Magmoor Caverns|Twin Fires|Twin Fires Tunnel,$can_space_jump,$has_energy_tanks|2",
+          "@Magmoor Caverns/Twin Fires,$can_open|Magmoor Caverns|Twin Fires|Twin Fires Tunnel,$can_grapple"
         ]
       },
       {
@@ -331,9 +331,9 @@
         "access_rules": [
           "NoLogic",
           "@Magmoor Caverns/North Core Tunnel,@doors/Magmoor Caverns/WaveBeam,$can_space_jump",
-          "@Magmoor Caverns/Twin Fires Tunnel,$can_heat,$can_spider",
-          "@Magmoor Caverns/Twin Fires Tunnel,[$trick|twin_fires_tunnel_no_spider|2],$can_bomb,$can_space_jump",
-          "@Magmoor Caverns/Twin Fires Tunnel,[$trick|cross_twin_fires_suitless|2],$can_space_jump,$has_energy_tanks|2"
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Twin Fires,$can_heat,$can_spider",
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Twin Fires,[$trick|twin_fires_tunnel_no_spider|2],$can_bomb,$can_space_jump",
+          "@Magmoor Caverns/Twin Fires Tunnel,$can_open|Magmoor Caverns|Twin Fires Tunnel|Twin Fires,[$trick|cross_twin_fires_suitless|2],$can_space_jump,$has_energy_tanks|2"
         ]
       },
       {
@@ -346,17 +346,17 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomWarriorShrine",
-          "@Magmoor Caverns/Monitor Station,$can_heat,$can_space_jump,$can_boost",
-          "@Magmoor Caverns/Monitor Station,[$trick|warrior_shrine_no_boost|1],$can_space_jump",
-          "@Magmoor Caverns/Monitor Station,[$trick|warrior_shrine_scan_only|2],$can_scan",
-          "@Magmoor Caverns/Monitor Station,[$trick|warrior_shrine_no_items|2]"
+          "@Magmoor Caverns/Monitor Station,$can_open|Magmoor Caverns|Monitor Station|Warrior Shrine,$can_heat,$can_space_jump,$can_boost",
+          "@Magmoor Caverns/Monitor Station,$can_open|Magmoor Caverns|Monitor Station|Warrior Shrine,[$trick|warrior_shrine_no_boost|1],$can_space_jump",
+          "@Magmoor Caverns/Monitor Station,$can_open|Magmoor Caverns|Monitor Station|Warrior Shrine,[$trick|warrior_shrine_scan_only|2],$can_scan",
+          "@Magmoor Caverns/Monitor Station,$can_open|Magmoor Caverns|Monitor Station|Warrior Shrine,[$trick|warrior_shrine_no_items|2]"
         ]
       },
       {
         "name": "Workstation Tunnel",
         "access_rules": [
           "NoLogic",
-          "@Magmoor Caverns/Magmoor Workstation,$can_space_jump",
+          "@Magmoor Caverns/Magmoor Workstation,$can_open|Magmoor Caverns|Magmoor Workstation|Workstation Tunnel,$can_space_jump",
           "@Magmoor Caverns/Transport to Phazon Mines West,@doors/Magmoor Caverns/IceBeam"
         ]
       }

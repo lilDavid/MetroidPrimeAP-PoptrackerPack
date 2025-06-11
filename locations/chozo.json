@@ -13,17 +13,17 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,$can_boost,$can_bomb",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,[$trick|reflecting_pool_nsj_climb|3],$can_bomb"
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Antechamber,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Antechamber,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Antechamber,[$trick|reflecting_pool_nsj_climb|3],$can_bomb"
         ]
       },
       {
         "name": "Arboretum Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Arboretum,@blastshields/Missile",
-          "@Chozo Ruins/Ruined Fountain"
+          "@Chozo Ruins/Arboretum,$can_open|Chozo Ruins|Arboretum|Arboretum Access",
+          "@Chozo Ruins/Ruined Fountain,$can_open|Chozo Ruins|Ruined Fountain|Arboretum Access"
         ]
       },
       {
@@ -31,9 +31,9 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomArboretum",
-          "@Chozo Ruins/Arboretum Access",
-          "@Chozo Ruins/Gathering Hall Access,@blastshields/Missile",
-          "@Chozo Ruins/Sunchamber Lobby,False"
+          "@Chozo Ruins/Arboretum Access,$can_open|Chozo Ruins|Arboretum Access|Arboretum",
+          "@Chozo Ruins/Gathering Hall Access,$can_open|Chozo Ruins|Gathering Hall Access|Arboretum",
+          "@Chozo Ruins/Sunchamber Lobby,$can_open|Chozo Ruins|Sunchamber Lobby|Arboretum,False"
         ]
       },
       {
@@ -41,7 +41,7 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomBurnDomeAccess",
-          "@Chozo Ruins/Burn Dome",
+          "@Chozo Ruins/Burn Dome,$can_open|Chozo Ruins|Burn Dome|Burn Dome Access",
           "@Chozo Ruins/Energy Core,$can_bomb"
         ]
       },
@@ -62,7 +62,7 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Burn Dome Access,$can_bomb"
+          "@Chozo Ruins/Burn Dome Access,$can_open|Chozo Ruins|Burn Dome Access|Burn Dome,$can_bomb"
         ]
       },
       {
@@ -77,7 +77,7 @@
         "name": "Crossway Access West",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Crossway",
+          "@Chozo Ruins/Crossway,$can_open|Chozo Ruins|Crossway|Crossway Access West",
           "@Chozo Ruins/Furnace,$can_morph_ball"
         ]
       },
@@ -96,8 +96,8 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Crossway Access South,@doors/Chozo Ruins/IceBeam,$can_morph_ball",
-          "@Chozo Ruins/Crossway Access West,@doors/Chozo Ruins/WaveBeam,$can_morph_ball",
-          "@Chozo Ruins/Elder Hall Access,@blastshields/Missile"
+          "@Chozo Ruins/Crossway Access West,$can_open|Chozo Ruins|Crossway Access West|Crossway,$can_morph_ball",
+          "@Chozo Ruins/Elder Hall Access,$can_open|Chozo Ruins|Elder Hall Access|Crossway"
         ]
       },
       {
@@ -105,8 +105,8 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Dynamo",
-          "@Chozo Ruins/Watery Hall,@blastshields/Missile,$can_scan,$can_power_bomb",
-          "@Chozo Ruins/Watery Hall,@blastshields/Missile,$can_scan,$can_bomb"
+          "@Chozo Ruins/Watery Hall,$can_open|Chozo Ruins|Watery Hall|Dynamo Access,$can_scan,$can_power_bomb",
+          "@Chozo Ruins/Watery Hall,$can_open|Chozo Ruins|Watery Hall|Dynamo Access,$can_scan,$can_bomb"
         ]
       },
       {
@@ -137,15 +137,15 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Energy Core Access",
-          "@Chozo Ruins/Gathering Hall,$can_morph_ball",
-          "@Chozo Ruins/Gathering Hall,$can_space_jump"
+          "@Chozo Ruins/Gathering Hall,$can_open|Chozo Ruins|Gathering Hall|East Atrium,$can_morph_ball",
+          "@Chozo Ruins/Gathering Hall,$can_open|Chozo Ruins|Gathering Hall|East Atrium,$can_space_jump"
         ]
       },
       {
         "name": "East Furnace Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Furnace,@doors/Chozo Ruins/IceBeam,$can_space_jump",
+          "@Chozo Ruins/Furnace,$can_open|Chozo Ruins|Furnace|East Furnace Access,$can_space_jump",
           "@Chozo Ruins/Hall of the Elders,@doors/Chozo Ruins/IceBeam,[$can_combat_ghosts],$can_power_beam"
         ]
       },
@@ -167,8 +167,8 @@
         "name": "Elder Hall Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Crossway,@blastshields/Missile,$can_boost",
-          "@Chozo Ruins/Crossway,@blastshields/Missile,[$trick|crossway_hpbj|3],$can_bomb",
+          "@Chozo Ruins/Crossway,$can_open|Chozo Ruins|Crossway|Elder Hall Access,$can_boost",
+          "@Chozo Ruins/Crossway,$can_open|Chozo Ruins|Crossway|Elder Hall Access,[$trick|crossway_hpbj|3],$can_bomb",
           "@Chozo Ruins/Hall of the Elders,[$can_combat_ghosts],$can_boost,$can_missile,$can_space_jump"
         ]
       },
@@ -177,7 +177,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/East Atrium",
-          "@Chozo Ruins/Energy Core"
+          "@Chozo Ruins/Energy Core,$can_open|Chozo Ruins|Energy Core|Energy Core Access"
         ]
       },
       {
@@ -185,7 +185,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Burn Dome Access,$can_bomb",
-          "@Chozo Ruins/Energy Core Access",
+          "@Chozo Ruins/Energy Core Access,$can_open|Chozo Ruins|Energy Core Access|Energy Core",
           "@Chozo Ruins/West Furnace Access"
         ]
       },
@@ -217,7 +217,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Crossway Access West,$can_morph_ball",
-          "@Chozo Ruins/East Furnace Access,@doors/Chozo Ruins/IceBeam",
+          "@Chozo Ruins/East Furnace Access,$can_open|Chozo Ruins|East Furnace Access|Furnace",
           "@Chozo Ruins/West Furnace Access,$can_spider,$can_bomb",
           "@Chozo Ruins/West Furnace Access,[$trick|furnace_no_spider_ball|1],$can_bomb"
         ]
@@ -226,8 +226,8 @@
         "name": "Gathering Hall Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Arboretum,@blastshields/Missile",
-          "@Chozo Ruins/Gathering Hall,@blastshields/Missile"
+          "@Chozo Ruins/Arboretum,$can_open|Chozo Ruins|Arboretum|Gathering Hall Access",
+          "@Chozo Ruins/Gathering Hall,$can_open|Chozo Ruins|Gathering Hall|Gathering Hall Access"
         ]
       },
       {
@@ -245,10 +245,10 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/East Atrium",
+          "@Chozo Ruins/East Atrium,$can_open|Chozo Ruins|East Atrium|Gathering Hall",
           "@Chozo Ruins/Gathering Hall Access",
-          "@Chozo Ruins/Save Station 2,@blastshields/Missile",
-          "@Chozo Ruins/Watery Hall Access"
+          "@Chozo Ruins/Save Station 2,$can_open|Chozo Ruins|Save Station 2|Gathering Hall",
+          "@Chozo Ruins/Watery Hall Access,$can_open|Chozo Ruins|Watery Hall Access|Gathering Hall"
         ]
       },
       {
@@ -270,7 +270,7 @@
           "@Chozo Ruins/East Furnace Access,@doors/Chozo Ruins/IceBeam",
           "@Chozo Ruins/Elder Chamber,@doors/Chozo Ruins/IceBeam",
           "@Chozo Ruins/Elder Hall Access",
-          "@Chozo Ruins/Reflecting Pool Access"
+          "@Chozo Ruins/Reflecting Pool Access,$can_open|Chozo Ruins|Reflecting Pool Access|Hall of the Elders"
         ]
       },
       {
@@ -288,8 +288,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Totem Access",
-          "@Chozo Ruins/Transport Access North,@blastshields/Missile,$can_bomb"
+          "@Chozo Ruins/Totem Access,$can_open|Chozo Ruins|Totem Access|Hive Totem",
+          "@Chozo Ruins/Transport Access North,$can_open|Chozo Ruins|Transport Access North|Hive Totem,$can_bomb"
         ]
       },
       {
@@ -309,8 +309,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Meditation Fountain",
-          "@Chozo Ruins/Training Chamber Access,@doors/Chozo Ruins/WaveBeam"
+          "@Chozo Ruins/Meditation Fountain,$can_open|Chozo Ruins|Meditation Fountain|Magma Pool",
+          "@Chozo Ruins/Training Chamber Access,$can_open|Chozo Ruins|Training Chamber Access|Magma Pool"
         ]
       },
       {
@@ -352,12 +352,12 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Nursery Access",
+          "@Chozo Ruins/Nursery Access,$can_open|Chozo Ruins|Nursery Access|Main Plaza",
           "@Chozo Ruins/Piston Tunnel,$can_morph_ball",
           "@Chozo Ruins/Plaza Access",
-          "@Chozo Ruins/Ruined Fountain Access,$can_morph_ball",
-          "@Chozo Ruins/Ruined Shrine Access,@blastshields/Missile",
-          "@Chozo Ruins/Ruins Entrance"
+          "@Chozo Ruins/Ruined Fountain Access,$can_open|Chozo Ruins|Ruined Fountain Access|Main Plaza,$can_morph_ball",
+          "@Chozo Ruins/Ruined Shrine Access,$can_open|Chozo Ruins|Ruined Shrine Access|Main Plaza",
+          "@Chozo Ruins/Ruins Entrance,$can_open|Chozo Ruins|Ruins Entrance|Main Plaza"
         ]
       },
       {
@@ -371,17 +371,17 @@
         "name": "Meditation Fountain",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Magma Pool,$has_energy_tanks|1,VariaSuit",
-          "@Chozo Ruins/Magma Pool,$has_energy_tanks|1,GravitySuit",
-          "@Chozo Ruins/Magma Pool,$has_energy_tanks|1,PhazonSuit",
-          "@Chozo Ruins/Ruined Fountain"
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Meditation Fountain,$has_energy_tanks|1,VariaSuit",
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Meditation Fountain,$has_energy_tanks|1,GravitySuit",
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Meditation Fountain,$has_energy_tanks|1,PhazonSuit",
+          "@Chozo Ruins/Ruined Fountain,$can_open|Chozo Ruins|Ruined Fountain|Meditation Fountain"
         ]
       },
       {
         "name": "North Atrium",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Ruined Gallery",
+          "@Chozo Ruins/Ruined Gallery,$can_open|Chozo Ruins|Ruined Gallery|North Atrium",
           "@Chozo Ruins/Ruined Nursery"
         ]
       },
@@ -390,7 +390,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Eyon Tunnel",
-          "@Chozo Ruins/Main Plaza"
+          "@Chozo Ruins/Main Plaza,$can_open|Chozo Ruins|Main Plaza|Nursery Access"
         ]
       },
       {
@@ -407,16 +407,16 @@
           "NoLogic",
           "@Chozo Ruins/Main Plaza,False",
           "@Chozo Ruins/Main Plaza,[$trick|vault_via_plaza|1],$can_space_jump",
-          "@Chozo Ruins/Vault"
+          "@Chozo Ruins/Vault,$can_open|Chozo Ruins|Vault|Plaza Access"
         ]
       },
       {
         "name": "Reflecting Pool Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Hall of the Elders,[$can_combat_ghosts],$can_bomb,$can_spider,$can_wave_beam,$can_space_jump",
-          "@Chozo Ruins/Hall of the Elders,[$trick|hall_of_elders_reflecting_pool_no_spider|1],$can_space_jump,$can_wave_beam,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
-          "@Chozo Ruins/Hall of the Elders,[$trick|hall_of_elders_reflecting_pool_no_wave_beam|2],$can_space_jump,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
+          "@Chozo Ruins/Hall of the Elders,$can_open|Chozo Ruins|Hall of the Elders|Reflecting Pool Access,[$can_combat_ghosts],$can_bomb,$can_spider,$can_wave_beam,$can_space_jump",
+          "@Chozo Ruins/Hall of the Elders,$can_open|Chozo Ruins|Hall of the Elders|Reflecting Pool Access,[$trick|hall_of_elders_reflecting_pool_no_spider|1],$can_space_jump,$can_wave_beam,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
+          "@Chozo Ruins/Hall of the Elders,$can_open|Chozo Ruins|Hall of the Elders|Reflecting Pool Access,[$trick|hall_of_elders_reflecting_pool_no_wave_beam|2],$can_space_jump,$can_bomb,$can_power_beam,[$can_combat_ghosts]",
           "@Chozo Ruins/Reflecting Pool"
         ]
       },
@@ -424,17 +424,17 @@
         "name": "Reflecting Pool",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Antechamber",
+          "@Chozo Ruins/Antechamber,$can_open|Chozo Ruins|Antechamber|Reflecting Pool",
           "@Chozo Ruins/Reflecting Pool Access",
-          "@Chozo Ruins/Save Station 3,@blastshields/Missile,$can_bomb",
-          "@Chozo Ruins/Transport Access South,@doors/Chozo Ruins/IceBeam"
+          "@Chozo Ruins/Save Station 3,$can_open|Chozo Ruins|Save Station 3|Reflecting Pool,$can_bomb",
+          "@Chozo Ruins/Transport Access South,$can_open|Chozo Ruins|Transport Access South|Reflecting Pool"
         ]
       },
       {
         "name": "Ruined Fountain Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Main Plaza",
+          "@Chozo Ruins/Main Plaza,$can_open|Chozo Ruins|Main Plaza|Ruined Fountain Access",
           "@Chozo Ruins/Ruined Fountain"
         ]
       },
@@ -452,8 +452,8 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomRuinedFountain",
-          "@Chozo Ruins/Arboretum Access",
-          "@Chozo Ruins/Meditation Fountain",
+          "@Chozo Ruins/Arboretum Access,$can_open|Chozo Ruins|Arboretum Access|Ruined Fountain",
+          "@Chozo Ruins/Meditation Fountain,$can_open|Chozo Ruins|Meditation Fountain|Ruined Fountain",
           "@Chozo Ruins/Ruined Fountain Access,$can_morph_ball"
         ]
       },
@@ -478,7 +478,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Map Station",
-          "@Chozo Ruins/North Atrium",
+          "@Chozo Ruins/North Atrium,$can_open|Chozo Ruins|North Atrium|Ruined Gallery",
           "@Chozo Ruins/Totem Access"
         ]
       },
@@ -505,7 +505,7 @@
         "name": "Ruined Shrine Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Main Plaza,@blastshields/Missile",
+          "@Chozo Ruins/Main Plaza,$can_open|Chozo Ruins|Main Plaza|Ruined Shrine Access",
           "@Chozo Ruins/Ruined Shrine,$can_morph_ball",
           "@Chozo Ruins/Ruined Shrine,$can_space_jump",
           "@Chozo Ruins/Ruined Shrine,[$trick|ruined_shrine_scan_dash_escape|1],$can_scan"
@@ -542,15 +542,15 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Ruined Shrine Access",
-          "@Chozo Ruins/Tower of Light Access"
+          "@Chozo Ruins/Tower of Light Access,$can_open|Chozo Ruins|Tower of Light Access|Ruined Shrine"
         ]
       },
       {
         "name": "Ruins Entrance",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Main Plaza",
-          "@Chozo Ruins/Transport to Tallon Overworld North"
+          "@Chozo Ruins/Main Plaza,$can_open|Chozo Ruins|Main Plaza|Ruins Entrance",
+          "@Chozo Ruins/Transport to Tallon Overworld North,$can_open|Chozo Ruins|Transport to Tallon Overworld North|Ruins Entrance"
         ]
       },
       {
@@ -566,16 +566,16 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomSaveStation2",
-          "@Chozo Ruins/Gathering Hall,@blastshields/Missile"
+          "@Chozo Ruins/Gathering Hall,$can_open|Chozo Ruins|Gathering Hall|Save Station 2"
         ]
       },
       {
         "name": "Save Station 3",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,$can_boost,$can_bomb",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
-          "@Chozo Ruins/Reflecting Pool,@blastshields/Missile,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Save Station 3,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Save Station 3,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Save Station 3,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
           "@Chozo Ruins/Transport to Tallon Overworld East"
         ]
       },
@@ -607,9 +607,9 @@
         "access_rules": [
           "NoLogic",
           "StartingRoomSunchamberLobby",
-          "@Chozo Ruins/Arboretum,@blastshields/Missile,$can_scan,$can_bomb",
-          "@Chozo Ruins/Arboretum,@blastshields/Missile,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump",
-          "@Chozo Ruins/Arboretum,@blastshields/Missile,[$trick|arboretum_scan_gate_skip|1],$can_bomb",
+          "@Chozo Ruins/Arboretum,$can_open|Chozo Ruins|Arboretum|Sunchamber Lobby,$can_scan,$can_bomb",
+          "@Chozo Ruins/Arboretum,$can_open|Chozo Ruins|Arboretum|Sunchamber Lobby,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$can_space_jump",
+          "@Chozo Ruins/Arboretum,$can_open|Chozo Ruins|Arboretum|Sunchamber Lobby,[$trick|arboretum_scan_gate_skip|1],$can_bomb",
           "@Chozo Ruins/Sunchamber Access"
         ]
       },
@@ -643,7 +643,7 @@
         "name": "Totem Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Hive Totem",
+          "@Chozo Ruins/Hive Totem,$can_open|Chozo Ruins|Hive Totem|Totem Access",
           "@Chozo Ruins/Ruined Gallery"
         ]
       },
@@ -666,9 +666,9 @@
         "name": "Tower of Light Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,$can_spider,$can_boost",
-          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,[$trick|ruined_shrine_upper_door_no_spider_ball|1],$can_space_jump",
-          "@Chozo Ruins/Ruined Shrine,@doors/Chozo Ruins/WaveBeam,[$trick|ruined_shrine_upper_door_scan_dash|3],$can_scan",
+          "@Chozo Ruins/Ruined Shrine,$can_open|Chozo Ruins|Ruined Shrine|Tower of Light Access,$can_spider,$can_boost",
+          "@Chozo Ruins/Ruined Shrine,$can_open|Chozo Ruins|Ruined Shrine|Tower of Light Access,[$trick|ruined_shrine_upper_door_no_spider_ball|1],$can_space_jump",
+          "@Chozo Ruins/Ruined Shrine,$can_open|Chozo Ruins|Ruined Shrine|Tower of Light Access,[$trick|ruined_shrine_upper_door_scan_dash|3],$can_scan",
           "@Chozo Ruins/Tower of Light,@doors/Chozo Ruins/WaveBeam"
         ]
       },
@@ -705,10 +705,10 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,$can_grapple,$can_heat",
-          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,[$trick|magma_pool_scan_dash|2],$can_space_jump,$can_scan",
-          "@Chozo Ruins/Magma Pool,@doors/Chozo Ruins/WaveBeam,[$trick|magma_pool_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2",
-          "@Chozo Ruins/Training Chamber,@doors/Chozo Ruins/WaveBeam"
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Training Chamber Access,$can_grapple,$can_heat",
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Training Chamber Access,[$trick|magma_pool_scan_dash|2],$can_space_jump,$can_scan",
+          "@Chozo Ruins/Magma Pool,$can_open|Chozo Ruins|Magma Pool|Training Chamber Access,[$trick|magma_pool_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2",
+          "@Chozo Ruins/Training Chamber,$can_open|Chozo Ruins|Training Chamber|Training Chamber Access"
         ]
       },
       {
@@ -726,7 +726,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Piston Tunnel,$can_morph_ball",
-          "@Chozo Ruins/Training Chamber Access,@doors/Chozo Ruins/WaveBeam"
+          "@Chozo Ruins/Training Chamber Access,$can_open|Chozo Ruins|Training Chamber Access|Training Chamber"
         ]
       },
       {
@@ -738,18 +738,18 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Hive Totem,@blastshields/Missile,$can_power_beam",
-          "@Chozo Ruins/Hive Totem,@blastshields/Missile,RemoveHiveMecha",
-          "@Chozo Ruins/Transport to Magmoor Caverns North"
+          "@Chozo Ruins/Hive Totem,$can_open|Chozo Ruins|Hive Totem|Transport Access North,$can_power_beam",
+          "@Chozo Ruins/Hive Totem,$can_open|Chozo Ruins|Hive Totem|Transport Access North,RemoveHiveMecha",
+          "@Chozo Ruins/Transport to Magmoor Caverns North,$can_open|Chozo Ruins|Transport to Magmoor Caverns North|Transport Access North"
         ]
       },
       {
         "name": "Transport Access South",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,$can_boost,$can_bomb",
-          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
-          "@Chozo Ruins/Reflecting Pool,@doors/Chozo Ruins/IceBeam,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Transport Access South,$can_boost,$can_bomb",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Transport Access South,[$trick|reflecting_pool_space_jump_climb|1],$can_space_jump",
+          "@Chozo Ruins/Reflecting Pool,$can_open|Chozo Ruins|Reflecting Pool|Transport Access South,[$trick|reflecting_pool_nsj_climb|3],$can_bomb",
           "@Chozo Ruins/Transport to Tallon Overworld South"
         ]
       },
@@ -758,8 +758,8 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Sun Tower",
-          "@Chozo Ruins/Transport Access North,$can_morph_ball",
-          "@Chozo Ruins/Vault Access,$can_morph_ball",
+          "@Chozo Ruins/Transport Access North,$can_open|Chozo Ruins|Transport Access North|Transport to Magmoor Caverns North,$can_morph_ball",
+          "@Chozo Ruins/Vault Access,$can_open|Chozo Ruins|Vault Access|Transport to Magmoor Caverns North,$can_morph_ball",
           "ElevatorsNormal,@Magmoor Caverns/Transport to Chozo Ruins North,$can_access_elevators",
           "ElevatorsRandom,ChozoRuinsTransportToMagmoorCavernsNorth"
         ]
@@ -777,7 +777,7 @@
         "name": "Transport to Tallon Overworld North",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Ruins Entrance",
+          "@Chozo Ruins/Ruins Entrance,$can_open|Chozo Ruins|Ruins Entrance|Transport to Tallon Overworld North",
           "ElevatorsNormal,@Tallon Overworld/Transport to Chozo Ruins West,$can_access_elevators",
           "ElevatorsRandom,ChozoRuinsTransportToTallonOverworldNorth"
         ]
@@ -795,7 +795,7 @@
         "name": "Vault Access",
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Transport to Magmoor Caverns North",
+          "@Chozo Ruins/Transport to Magmoor Caverns North,$can_open|Chozo Ruins|Transport to Magmoor Caverns North|Vault Access",
           "@Chozo Ruins/Vault"
         ]
       },
@@ -811,7 +811,7 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Plaza Access",
+          "@Chozo Ruins/Plaza Access,$can_open|Chozo Ruins|Plaza Access|Vault",
           "@Chozo Ruins/Vault Access,$can_morph_ball"
         ]
       },
@@ -828,8 +828,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Gathering Hall",
-          "@Chozo Ruins/Watery Hall,@blastshields/Missile"
+          "@Chozo Ruins/Gathering Hall,$can_open|Chozo Ruins|Gathering Hall|Watery Hall Access",
+          "@Chozo Ruins/Watery Hall,$can_open|Chozo Ruins|Watery Hall|Watery Hall Access"
         ]
       },
       {
@@ -855,8 +855,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Chozo Ruins/Dynamo Access,@blastshields/Missile,$can_bomb",
-          "@Chozo Ruins/Watery Hall Access,@blastshields/Missile"
+          "@Chozo Ruins/Dynamo Access,$can_open|Chozo Ruins|Dynamo Access|Watery Hall,$can_bomb",
+          "@Chozo Ruins/Watery Hall Access,$can_open|Chozo Ruins|Watery Hall Access|Watery Hall"
         ]
       },
       {

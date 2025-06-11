@@ -4,8 +4,6 @@ IS_ITEMS_ONLY = Tracker.ActiveVariantUID == "var_itemsonly"
 
 ScriptHost:LoadScript("scripts/utils.lua")
 
-ScriptHost:LoadScript("scripts/logic/logic.lua")
-
 ScriptHost:LoadScript("scripts/options/requiredmains.lua")
 ScriptHost:LoadScript("scripts/options/progressivebeams.lua")
 
@@ -26,6 +24,7 @@ Tracker:AddLocations("locations/tallon.json")
 Tracker:AddLocations("locations/mines.json")
 Tracker:AddLocations("locations/magmoor.json")
 Tracker:AddLocations("locations/maps.json")
+Tracker:AddLocations("locations/blast_shields.json")
 
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/maps.json")
@@ -33,6 +32,10 @@ Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 Tracker:AddLayouts("layouts/options.json")
 Tracker:AddLayouts("layouts/tracker_options.json")
+
+ScriptHost:LoadScript("scripts/logic/logic.lua")
+ScriptHost:LoadScript("scripts/logic/door_data.lua")
+ScriptHost:LoadScript("scripts/logic/blast_shield_rando.lua")
 
 if PopVersion and PopVersion >= "0.18.0" then
     ScriptHost:LoadScript("scripts/autotracking.lua")

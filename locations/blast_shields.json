@@ -1,0 +1,2911 @@
+[
+  {
+    "name": "Tallon Blast Shields",
+    "visibility_rules": "BlastShieldRando",
+    "children": [
+      {
+        "name": "Alcove - Landing Site",
+        "access_rules": [
+          "@Tallon Overworld/Alcove",
+          "@Tallon Overworld/Landing Site"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Alcove|Landing Site}",
+              "BlastShield|Tallon Overworld|Alcove|Landing Site"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Alcove|Landing Site",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 313,
+            "y": 202,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Canyon Cavern - Landing Site",
+        "access_rules": [
+          "@Tallon Overworld/Canyon Cavern",
+          "@Tallon Overworld/Landing Site"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Canyon Cavern|Landing Site}",
+              "BlastShield|Tallon Overworld|Canyon Cavern|Landing Site"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Canyon Cavern|Landing Site",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 259,
+            "y": 238,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Frigate Crash Site - Waterfall Cavern",
+        "access_rules": [
+          "@Tallon Overworld/Frigate Crash Site",
+          "@Tallon Overworld/Waterfall Cavern"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Frigate Crash Site|Waterfall Cavern}",
+              "BlastShield|Tallon Overworld|Frigate Crash Site|Waterfall Cavern"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Frigate Crash Site|Waterfall Cavern",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 379,
+            "y": 164,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Root Cave - Root Tunnel",
+        "access_rules": [
+          "@Tallon Overworld/Root Cave",
+          "@Tallon Overworld/Root Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Root Cave|Root Tunnel}",
+              "BlastShield|Tallon Overworld|Root Cave|Root Tunnel"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Root Cave|Root Tunnel",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 96,
+            "y": 258,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Chamber - Great Tree Hall",
+        "access_rules": [
+          "@Tallon Overworld/Great Tree Chamber",
+          "@Tallon Overworld/Great Tree Hall"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Great Tree Chamber|Great Tree Hall}",
+              "BlastShield|Tallon Overworld|Great Tree Chamber|Great Tree Hall"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Great Tree Chamber|Great Tree Hall",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 588,
+            "y": 392,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Hall - Transport Tunnel D",
+        "access_rules": [
+          "@Tallon Overworld/Great Tree Hall",
+          "@Tallon Overworld/Transport Tunnel D"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Great Tree Hall|Transport Tunnel D}",
+              "BlastShield|Tallon Overworld|Great Tree Hall|Transport Tunnel D"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Great Tree Hall|Transport Tunnel D",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 562,
+            "y": 373,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Hall - Transport Tunnel E",
+        "access_rules": [
+          "@Tallon Overworld/Great Tree Hall",
+          "@Tallon Overworld/Transport Tunnel E"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Great Tree Hall|Transport Tunnel E}",
+              "BlastShield|Tallon Overworld|Great Tree Hall|Transport Tunnel E"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Great Tree Hall|Transport Tunnel E",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 570,
+            "y": 417,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Landing Site - Temple Hall",
+        "access_rules": [
+          "@Tallon Overworld/Landing Site",
+          "@Tallon Overworld/Temple Hall"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Landing Site|Temple Hall}",
+              "BlastShield|Tallon Overworld|Landing Site|Temple Hall"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Landing Site|Temple Hall",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 276,
+            "y": 286,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Landing Site - Waterfall Cavern",
+        "access_rules": [
+          "@Tallon Overworld/Landing Site",
+          "@Tallon Overworld/Waterfall Cavern"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Landing Site|Waterfall Cavern}",
+              "BlastShield|Tallon Overworld|Landing Site|Waterfall Cavern"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Landing Site|Waterfall Cavern",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 340,
+            "y": 216,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Root Cave - Transport Tunnel B",
+        "access_rules": [
+          "@Tallon Overworld/Root Cave",
+          "@Tallon Overworld/Transport Tunnel B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Root Cave|Transport Tunnel B}",
+              "BlastShield|Tallon Overworld|Root Cave|Transport Tunnel B"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Root Cave|Transport Tunnel B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 76,
+            "y": 285,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Root Tunnel - Tallon Canyon",
+        "access_rules": [
+          "@Tallon Overworld/Root Tunnel",
+          "@Tallon Overworld/Tallon Canyon"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Root Tunnel|Tallon Canyon}",
+              "BlastShield|Tallon Overworld|Root Tunnel|Tallon Canyon"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Root Tunnel|Tallon Canyon",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 154,
+            "y": 258,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Temple Lobby - Temple Security Station",
+        "access_rules": [
+          "@Tallon Overworld/Temple Lobby",
+          "@Tallon Overworld/Temple Security Station"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Tallon Overworld|Temple Lobby|Temple Security Station}",
+              "BlastShield|Tallon Overworld|Temple Lobby|Temple Security Station"
+            ],
+            "hosted_item": "BlastShield|Tallon Overworld|Temple Lobby|Temple Security Station",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 286,
+            "y": 389,
+            "shape": "diamond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chozo Blast Shields",
+    "visibility_rules": "BlastShieldRando",
+    "children": [
+      {
+        "name": "Antechamber - Reflecting Pool",
+        "access_rules": [
+          "@Chozo Ruins/Antechamber",
+          "@Chozo Ruins/Reflecting Pool"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Antechamber|Reflecting Pool}",
+              "BlastShield|Chozo Ruins|Antechamber|Reflecting Pool"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Antechamber|Reflecting Pool"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 655,
+            "y": 451,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Arboretum - Arboretum Access",
+        "access_rules": [
+          "@Chozo Ruins/Arboretum",
+          "@Chozo Ruins/Arboretum Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Arboretum|Arboretum Access}",
+              "BlastShield|Chozo Ruins|Arboretum|Arboretum Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Arboretum|Arboretum Access"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 305,
+            "y": 320,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Arboretum - Gathering Hall Access",
+        "access_rules": [
+          "@Chozo Ruins/Arboretum",
+          "@Chozo Ruins/Gathering Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Arboretum|Gathering Hall Access}",
+              "BlastShield|Chozo Ruins|Arboretum|Gathering Hall Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Arboretum|Gathering Hall Access"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 357,
+            "y": 319,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Arboretum - Sunchamber Lobby",
+        "access_rules": [
+          "@Chozo Ruins/Arboretum",
+          "@Chozo Ruins/Sunchamber Lobby"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Arboretum|Sunchamber Lobby}",
+              "BlastShield|Chozo Ruins|Arboretum|Sunchamber Lobby"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Arboretum|Sunchamber Lobby"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 317,
+            "y": 281,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Arboretum Access - Ruined Fountain",
+        "access_rules": [
+          "@Chozo Ruins/Arboretum Access",
+          "@Chozo Ruins/Ruined Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Arboretum Access|Ruined Fountain}",
+              "BlastShield|Chozo Ruins|Arboretum Access|Ruined Fountain"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Arboretum Access|Ruined Fountain",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 287,
+            "y": 293,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Burn Dome - Burn Dome Access",
+        "access_rules": [
+          "@Chozo Ruins/Burn Dome",
+          "@Chozo Ruins/Burn Dome Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Burn Dome|Burn Dome Access}",
+              "BlastShield|Chozo Ruins|Burn Dome|Burn Dome Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Burn Dome|Burn Dome Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 507,
+            "y": 273,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Crossway - Crossway Access West",
+        "access_rules": [
+          "@Chozo Ruins/Crossway",
+          "@Chozo Ruins/Crossway Access West"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Crossway|Crossway Access West}",
+              "BlastShield|Chozo Ruins|Crossway|Crossway Access West"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Crossway|Crossway Access West",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 623,
+            "y": 300,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Crossway - Elder Hall Access",
+        "access_rules": [
+          "@Chozo Ruins/Crossway",
+          "@Chozo Ruins/Elder Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Crossway|Elder Hall Access}",
+              "BlastShield|Chozo Ruins|Crossway|Elder Hall Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Crossway|Elder Hall Access"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 678,
+            "y": 309,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Dynamo Access - Watery Hall",
+        "access_rules": [
+          "@Chozo Ruins/Dynamo Access",
+          "@Chozo Ruins/Watery Hall"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Dynamo Access|Watery Hall}",
+              "BlastShield|Chozo Ruins|Dynamo Access|Watery Hall"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Dynamo Access|Watery Hall"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 420,
+            "y": 256,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "East Atrium - Gathering Hall",
+        "access_rules": [
+          "@Chozo Ruins/East Atrium",
+          "@Chozo Ruins/Gathering Hall"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|East Atrium|Gathering Hall}",
+              "BlastShield|Chozo Ruins|East Atrium|Gathering Hall"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|East Atrium|Gathering Hall",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 422,
+            "y": 318,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "East Furnace Access - Furnace",
+        "access_rules": [
+          "@Chozo Ruins/East Furnace Access",
+          "@Chozo Ruins/Furnace"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|East Furnace Access|Furnace}",
+              "BlastShield|Chozo Ruins|East Furnace Access|Furnace"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|East Furnace Access|Furnace",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 576,
+            "y": 382,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Energy Core - Energy Core Access",
+        "access_rules": [
+          "@Chozo Ruins/Energy Core",
+          "@Chozo Ruins/Energy Core Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Energy Core|Energy Core Access}",
+              "BlastShield|Chozo Ruins|Energy Core|Energy Core Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Energy Core|Energy Core Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 467,
+            "y": 358,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall - Gathering Hall Access",
+        "access_rules": [
+          "@Chozo Ruins/Gathering Hall",
+          "@Chozo Ruins/Gathering Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Gathering Hall|Gathering Hall Access}",
+              "BlastShield|Chozo Ruins|Gathering Hall|Gathering Hall Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Gathering Hall|Gathering Hall Access",
+            "visibility_rules": "False"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 386,
+            "y": 324,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall - Save Station 2",
+        "access_rules": [
+          "@Chozo Ruins/Gathering Hall",
+          "@Chozo Ruins/Save Station 2"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Gathering Hall|Save Station 2}",
+              "BlastShield|Chozo Ruins|Gathering Hall|Save Station 2"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Gathering Hall|Save Station 2",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 403,
+            "y": 348,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall - Watery Hall Access",
+        "access_rules": [
+          "@Chozo Ruins/Gathering Hall",
+          "@Chozo Ruins/Watery Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Gathering Hall|Watery Hall Access}",
+              "BlastShield|Chozo Ruins|Gathering Hall|Watery Hall Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Gathering Hall|Watery Hall Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 407,
+            "y": 301,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Hall of the Elders - Reflecting Pool Access",
+        "access_rules": [
+          "@Chozo Ruins/Hall of the Elders",
+          "@Chozo Ruins/Reflecting Pool Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Hall of the Elders|Reflecting Pool Access}",
+              "BlastShield|Chozo Ruins|Hall of the Elders|Reflecting Pool Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Hall of the Elders|Reflecting Pool Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 656,
+            "y": 395,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem - Totem Access",
+        "access_rules": [
+          "@Chozo Ruins/Hive Totem",
+          "@Chozo Ruins/Totem Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Hive Totem|Totem Access}",
+              "BlastShield|Chozo Ruins|Hive Totem|Totem Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Hive Totem|Totem Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 157,
+            "y": 62,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem - Transport Access North",
+        "access_rules": [
+          "@Chozo Ruins/Hive Totem",
+          "@Chozo Ruins/Transport Access North"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Hive Totem|Transport Access North}",
+              "BlastShield|Chozo Ruins|Hive Totem|Transport Access North"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Hive Totem|Transport Access North",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 186,
+            "y": 32,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool - Meditation Fountain",
+        "access_rules": [
+          "@Chozo Ruins/Magma Pool",
+          "@Chozo Ruins/Meditation Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Magma Pool|Meditation Fountain}",
+              "BlastShield|Chozo Ruins|Magma Pool|Meditation Fountain"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Magma Pool|Meditation Fountain",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 251,
+            "y": 345,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza - Nursery Access",
+        "access_rules": [
+          "@Chozo Ruins/Main Plaza",
+          "@Chozo Ruins/Nursery Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Main Plaza|Nursery Access}",
+              "BlastShield|Chozo Ruins|Main Plaza|Nursery Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Main Plaza|Nursery Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 173,
+            "y": 209,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool - Training Chamber Access",
+        "access_rules": [
+          "@Chozo Ruins/Magma Pool",
+          "@Chozo Ruins/Training Chamber Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Magma Pool|Training Chamber Access}",
+              "BlastShield|Chozo Ruins|Magma Pool|Training Chamber Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Magma Pool|Training Chamber Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 237,
+            "y": 394,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza - Ruined Fountain Access",
+        "access_rules": [
+          "@Chozo Ruins/Main Plaza",
+          "@Chozo Ruins/Ruined Fountain Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Main Plaza|Ruined Fountain Access}",
+              "BlastShield|Chozo Ruins|Main Plaza|Ruined Fountain Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Main Plaza|Ruined Fountain Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 213,
+            "y": 256,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza - Ruined Shrine Access",
+        "access_rules": [
+          "@Chozo Ruins/Main Plaza",
+          "@Chozo Ruins/Ruined Shrine Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Main Plaza|Ruined Shrine Access}",
+              "BlastShield|Chozo Ruins|Main Plaza|Ruined Shrine Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Main Plaza|Ruined Shrine Access"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 173,
+            "y": 252,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Plaza - Ruins Entrance",
+        "access_rules": [
+          "@Chozo Ruins/Main Plaza",
+          "@Chozo Ruins/Ruins Entrance"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Main Plaza|Ruins Entrance}",
+              "BlastShield|Chozo Ruins|Main Plaza|Ruins Entrance"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Main Plaza|Ruins Entrance",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 192,
+            "y": 290,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Meditation Fountain - Ruined Fountain",
+        "access_rules": [
+          "@Chozo Ruins/Meditation Fountain",
+          "@Chozo Ruins/Ruined Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Meditation Fountain|Ruined Fountain}",
+              "BlastShield|Chozo Ruins|Meditation Fountain|Ruined Fountain"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Meditation Fountain|Ruined Fountain",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 278,
+            "y": 314,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "North Atrium - Ruined Gallery",
+        "access_rules": [
+          "@Chozo Ruins/North Atrium",
+          "@Chozo Ruins/Ruined Gallery"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|North Atrium|Ruined Gallery}",
+              "BlastShield|Chozo Ruins|North Atrium|Ruined Gallery"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|North Atrium|Ruined Gallery",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 122,
+            "y": 125,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Plaza Access - Vault",
+        "access_rules": [
+          "@Chozo Ruins/Plaza Access",
+          "@Chozo Ruins/Vault"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Plaza Access|Vault}",
+              "BlastShield|Chozo Ruins|Plaza Access|Vault"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Plaza Access|Vault",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 244,
+            "y": 162,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Reflecting Pool - Save Station 3",
+        "access_rules": [
+          "@Chozo Ruins/Reflecting Pool",
+          "@Chozo Ruins/Save Station 3"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Reflecting Pool|Save Station 3}",
+              "BlastShield|Chozo Ruins|Reflecting Pool|Save Station 3"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Reflecting Pool|Save Station 3"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 629,
+            "y": 651,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Reflecting Pool - Transport Access South",
+        "access_rules": [
+          "@Chozo Ruins/Reflecting Pool",
+          "@Chozo Ruins/Transport Access South"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Reflecting Pool|Transport Access South}",
+              "BlastShield|Chozo Ruins|Reflecting Pool|Transport Access South"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Reflecting Pool|Transport Access South",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 642,
+            "y": 478,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ruined Shrine - Tower of Light Access",
+        "access_rules": [
+          "@Chozo Ruins/Ruined Shrine",
+          "@Chozo Ruins/Tower of Light Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Ruined Shrine|Tower of Light Access}",
+              "BlastShield|Chozo Ruins|Ruined Shrine|Tower of Light Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Ruined Shrine|Tower of Light Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 62,
+            "y": 253,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ruins Entrance - Transport to Tallon Overworld North",
+        "access_rules": [
+          "@Chozo Ruins/Ruins Entrance",
+          "@Chozo Ruins/Transport to Tallon Overworld North"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Ruins Entrance|Transport to Tallon Overworld North}",
+              "BlastShield|Chozo Ruins|Ruins Entrance|Transport to Tallon Overworld North"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Ruins Entrance|Transport to Tallon Overworld North",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 180,
+            "y": 326,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber - Training Chamber Access",
+        "access_rules": [
+          "@Chozo Ruins/Training Chamber",
+          "@Chozo Ruins/Training Chamber Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Training Chamber|Training Chamber Access}",
+              "BlastShield|Chozo Ruins|Training Chamber|Training Chamber Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Training Chamber|Training Chamber Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 206,
+            "y": 373,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Transport Access North - Transport to Magmoor Caverns North",
+        "access_rules": [
+          "@Chozo Ruins/Transport Access North",
+          "@Chozo Ruins/Transport to Magmoor Caverns North"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Transport Access North|Transport to Magmoor Caverns North}",
+              "BlastShield|Chozo Ruins|Transport Access North|Transport to Magmoor Caverns North"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Transport Access North|Transport to Magmoor Caverns North",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 225,
+            "y": 23,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Transport to Magmoor Caverns North - Vault Access",
+        "access_rules": [
+          "@Chozo Ruins/Transport to Magmoor Caverns North",
+          "@Chozo Ruins/Vault Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Transport to Magmoor Caverns North|Vault Access}",
+              "BlastShield|Chozo Ruins|Transport to Magmoor Caverns North|Vault Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Transport to Magmoor Caverns North|Vault Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 243,
+            "y": 42,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall - Watery Hall Access",
+        "access_rules": [
+          "@Chozo Ruins/Watery Hall",
+          "@Chozo Ruins/Watery Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Chozo Ruins|Watery Hall|Watery Hall Access}",
+              "BlastShield|Chozo Ruins|Watery Hall|Watery Hall Access"
+            ],
+            "hosted_item": "BlastShield|Chozo Ruins|Watery Hall|Watery Hall Access",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Chozo Ruins",
+            "x": 407,
+            "y": 244,
+            "shape": "diamond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Magmoor Blast Shields",
+    "visibility_rules": "BlastShieldRando",
+    "children": [
+      {
+        "name": "Burning Trail - Save Station Magmoor A",
+        "access_rules": [
+          "@Magmoor Caverns/Burning Trail",
+          "@Magmoor Caverns/Save Station Magmoor A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Burning Trail|Save Station Magmoor A}",
+              "BlastShield|Magmoor Caverns|Burning Trail|Save Station Magmoor A"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Burning Trail|Save Station Magmoor A",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 102,
+            "y": 117,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Save Station Magmoor B - Transport to Phendrana Drifts South",
+        "access_rules": [
+          "@Magmoor Caverns/Save Station Magmoor B",
+          "@Magmoor Caverns/Transport to Phendrana Drifts South"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Save Station Magmoor B|Transport to Phendrana Drifts South}",
+              "BlastShield|Magmoor Caverns|Save Station Magmoor B|Transport to Phendrana Drifts South"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Save Station Magmoor B|Transport to Phendrana Drifts South",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 378,
+            "y": 905,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Burning Trail - Transport to Chozo Ruins North",
+        "access_rules": [
+          "@Magmoor Caverns/Burning Trail",
+          "@Magmoor Caverns/Transport to Chozo Ruins North"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Burning Trail|Transport to Chozo Ruins North}",
+              "BlastShield|Magmoor Caverns|Burning Trail|Transport to Chozo Ruins North"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Burning Trail|Transport to Chozo Ruins North",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 81,
+            "y": 62,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Fiery Shores - Transport Tunnel B",
+        "access_rules": [
+          "@Magmoor Caverns/Fiery Shores",
+          "@Magmoor Caverns/Transport Tunnel B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Fiery Shores|Transport Tunnel B}",
+              "BlastShield|Magmoor Caverns|Fiery Shores|Transport Tunnel B"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Fiery Shores|Transport Tunnel B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 411,
+            "y": 556,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Geothermal Core - North Core Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Geothermal Core",
+          "@Magmoor Caverns/North Core Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Geothermal Core|North Core Tunnel}",
+              "BlastShield|Magmoor Caverns|Geothermal Core|North Core Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Geothermal Core|North Core Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 391,
+            "y": 826,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Lake Tunnel - Lava Lake",
+        "access_rules": [
+          "@Magmoor Caverns/Lake Tunnel",
+          "@Magmoor Caverns/Lava Lake"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Lake Tunnel|Lava Lake}",
+              "BlastShield|Magmoor Caverns|Lake Tunnel|Lava Lake"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Lake Tunnel|Lava Lake",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 124,
+            "y": 230,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Lava Lake - Pit Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Lava Lake",
+          "@Magmoor Caverns/Pit Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Lava Lake|Pit Tunnel}",
+              "BlastShield|Magmoor Caverns|Lava Lake|Pit Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Lava Lake|Pit Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 224,
+            "y": 278,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation - South Core Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Magmoor Workstation",
+          "@Magmoor Caverns/South Core Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Magmoor Workstation|South Core Tunnel}",
+              "BlastShield|Magmoor Caverns|Magmoor Workstation|South Core Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Magmoor Workstation|South Core Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 489,
+            "y": 881,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation - Transport Tunnel C",
+        "access_rules": [
+          "@Magmoor Caverns/Magmoor Workstation",
+          "@Magmoor Caverns/Transport Tunnel C"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Magmoor Workstation|Transport Tunnel C}",
+              "BlastShield|Magmoor Caverns|Magmoor Workstation|Transport Tunnel C"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Magmoor Workstation|Transport Tunnel C",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 433,
+            "y": 918,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation - Workstation Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Magmoor Workstation",
+          "@Magmoor Caverns/Workstation Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Magmoor Workstation|Workstation Tunnel}",
+              "BlastShield|Magmoor Caverns|Magmoor Workstation|Workstation Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Magmoor Workstation|Workstation Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 466,
+            "y": 956,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Monitor Station - Transport Tunnel A",
+        "access_rules": [
+          "@Magmoor Caverns/Monitor Station",
+          "@Magmoor Caverns/Transport Tunnel A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Monitor Station|Transport Tunnel A}",
+              "BlastShield|Magmoor Caverns|Monitor Station|Transport Tunnel A"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Monitor Station|Transport Tunnel A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 276,
+            "y": 443,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Monitor Station - Warrior Shrine",
+        "access_rules": [
+          "@Magmoor Caverns/Monitor Station",
+          "@Magmoor Caverns/Warrior Shrine"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Monitor Station|Warrior Shrine}",
+              "BlastShield|Magmoor Caverns|Monitor Station|Warrior Shrine"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Monitor Station|Warrior Shrine",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 347,
+            "y": 437,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Storage Cavern - Triclops Pit",
+        "access_rules": [
+          "@Magmoor Caverns/Storage Cavern",
+          "@Magmoor Caverns/Triclops Pit"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Storage Cavern|Triclops Pit}",
+              "BlastShield|Magmoor Caverns|Storage Cavern|Triclops Pit"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Storage Cavern|Triclops Pit",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 166,
+            "y": 440,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel A - Transport to Phendrana Drifts North",
+        "access_rules": [
+          "@Magmoor Caverns/Transport Tunnel A",
+          "@Magmoor Caverns/Transport to Phendrana Drifts North"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Transport Tunnel A|Transport to Phendrana Drifts North}",
+              "BlastShield|Magmoor Caverns|Transport Tunnel A|Transport to Phendrana Drifts North"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Transport Tunnel A|Transport to Phendrana Drifts North",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 227,
+            "y": 443,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Transport to Tallon Overworld West - Twin Fires Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Transport to Tallon Overworld West",
+          "@Magmoor Caverns/Twin Fires Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Transport to Tallon Overworld West|Twin Fires Tunnel}",
+              "BlastShield|Magmoor Caverns|Transport to Tallon Overworld West|Twin Fires Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Transport to Tallon Overworld West|Twin Fires Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 411,
+            "y": 639,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Twin Fires - Twin Fires Tunnel",
+        "access_rules": [
+          "@Magmoor Caverns/Twin Fires",
+          "@Magmoor Caverns/Twin Fires Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Magmoor Caverns|Twin Fires|Twin Fires Tunnel}",
+              "BlastShield|Magmoor Caverns|Twin Fires|Twin Fires Tunnel"
+            ],
+            "hosted_item": "BlastShield|Magmoor Caverns|Twin Fires|Twin Fires Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Magmoor Caverns",
+            "x": 379,
+            "y": 688,
+            "shape": "diamond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Phen Blast Shields",
+    "visibility_rules": "BlastShieldRando",
+    "children": [
+      {
+        "name": "Canyon Entryway - Ice Ruins West",
+        "access_rules": [
+          "@Phendrana Drifts/Canyon Entryway",
+          "@Phendrana Drifts/Ice Ruins West"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Canyon Entryway|Ice Ruins West}",
+              "BlastShield|Phendrana Drifts|Canyon Entryway|Ice Ruins West"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Canyon Entryway|Ice Ruins West"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 271,
+            "y": 294,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Control Tower - East Tower",
+        "access_rules": [
+          "@Phendrana Drifts/Control Tower",
+          "@Phendrana Drifts/East Tower"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Control Tower|East Tower}",
+              "BlastShield|Phendrana Drifts|Control Tower|East Tower"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Control Tower|East Tower",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 341,
+            "y": 584,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Courtyard Entryway - Ice Ruins West",
+        "access_rules": [
+          "@Phendrana Drifts/Courtyard Entryway",
+          "@Phendrana Drifts/Ice Ruins West"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Courtyard Entryway|Ice Ruins West}",
+              "BlastShield|Phendrana Drifts|Courtyard Entryway|Ice Ruins West"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Courtyard Entryway|Ice Ruins West",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 316,
+            "y": 300,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Frost Cave - Upper Edge Tunnel",
+        "access_rules": [
+          "@Phendrana Drifts/Frost Cave",
+          "@Phendrana Drifts/Upper Edge Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Frost Cave|Upper Edge Tunnel}",
+              "BlastShield|Phendrana Drifts|Frost Cave|Upper Edge Tunnel"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Frost Cave|Upper Edge Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 418,
+            "y": 920,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Frost Cave Access - Frozen Pike",
+        "access_rules": [
+          "@Phendrana Drifts/Frost Cave Access",
+          "@Phendrana Drifts/Frozen Pike"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Frost Cave Access|Frozen Pike}",
+              "BlastShield|Phendrana Drifts|Frost Cave Access|Frozen Pike"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Frost Cave Access|Frozen Pike",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 447,
+            "y": 745,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Hunter Cave - Lower Edge Tunnel",
+        "access_rules": [
+          "@Phendrana Drifts/Hunter Cave",
+          "@Phendrana Drifts/Lower Edge Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Hunter Cave|Lower Edge Tunnel}",
+              "BlastShield|Phendrana Drifts|Hunter Cave|Lower Edge Tunnel"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Hunter Cave|Lower Edge Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 465,
+            "y": 909,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins Access - Phendrana Shorelines",
+        "access_rules": [
+          "@Phendrana Drifts/Ice Ruins Access",
+          "@Phendrana Drifts/Phendrana Shorelines"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Ice Ruins Access|Phendrana Shorelines}",
+              "BlastShield|Phendrana Drifts|Ice Ruins Access|Phendrana Shorelines"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Ice Ruins Access|Phendrana Shorelines",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 327,
+            "y": 172,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins West - Ruins Entryway",
+        "access_rules": [
+          "@Phendrana Drifts/Ice Ruins West",
+          "@Phendrana Drifts/Ruins Entryway"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Ice Ruins West|Ruins Entryway}",
+              "BlastShield|Phendrana Drifts|Ice Ruins West|Ruins Entryway"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Ice Ruins West|Ruins Entryway",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 299,
+            "y": 244,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Observatory - Save Station D",
+        "access_rules": [
+          "@Phendrana Drifts/Observatory",
+          "@Phendrana Drifts/Save Station D"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Observatory|Save Station D}",
+              "BlastShield|Phendrana Drifts|Observatory|Save Station D"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Observatory|Save Station D",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 279,
+            "y": 692,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Observatory - West Tower Entrance",
+        "access_rules": [
+          "@Phendrana Drifts/Observatory",
+          "@Phendrana Drifts/West Tower Entrance"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Observatory|West Tower Entrance}",
+              "BlastShield|Phendrana Drifts|Observatory|West Tower Entrance"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Observatory|West Tower Entrance",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 280,
+            "y": 629,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Observatory Access - Research Lab Hydra",
+        "access_rules": [
+          "@Phendrana Drifts/Observatory Access",
+          "@Phendrana Drifts/Research Lab Hydra"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Observatory Access|Research Lab Hydra}",
+              "BlastShield|Phendrana Drifts|Observatory Access|Research Lab Hydra"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Observatory Access|Research Lab Hydra",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 298,
+            "y": 596,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines - Plaza Walkway",
+        "access_rules": [
+          "@Phendrana Drifts/Phendrana Shorelines",
+          "@Phendrana Drifts/Plaza Walkway"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Phendrana Shorelines|Plaza Walkway}",
+              "BlastShield|Phendrana Drifts|Phendrana Shorelines|Plaza Walkway"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Phendrana Shorelines|Plaza Walkway",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 320,
+            "y": 200,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines - Ruins Entryway",
+        "access_rules": [
+          "@Phendrana Drifts/Phendrana Shorelines",
+          "@Phendrana Drifts/Ruins Entryway"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Phendrana Shorelines|Ruins Entryway}",
+              "BlastShield|Phendrana Drifts|Phendrana Shorelines|Ruins Entryway"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Phendrana Shorelines|Ruins Entryway",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 291,
+            "y": 202,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines - Shoreline Entrance",
+        "access_rules": [
+          "@Phendrana Drifts/Phendrana Shorelines",
+          "@Phendrana Drifts/Shoreline Entrance"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Phendrana Shorelines|Shoreline Entrance}",
+              "BlastShield|Phendrana Drifts|Phendrana Shorelines|Shoreline Entrance"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Phendrana Shorelines|Shoreline Entrance",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 298,
+            "y": 124,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Shorelines - Temple Entryway",
+        "access_rules": [
+          "@Phendrana Drifts/Phendrana Shorelines",
+          "@Phendrana Drifts/Temple Entryway"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Phendrana Shorelines|Temple Entryway}",
+              "BlastShield|Phendrana Drifts|Phendrana Shorelines|Temple Entryway"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Phendrana Shorelines|Temple Entryway",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 251,
+            "y": 150,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Pike Access - Research Core",
+        "access_rules": [
+          "@Phendrana Drifts/Pike Access",
+          "@Phendrana Drifts/Research Core"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Pike Access|Research Core}",
+              "BlastShield|Phendrana Drifts|Pike Access|Research Core"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Pike Access|Research Core",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 427,
+            "y": 725,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Access - Ruined Courtyard",
+        "access_rules": [
+          "@Phendrana Drifts/Quarantine Access",
+          "@Phendrana Drifts/Ruined Courtyard"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Quarantine Access|Ruined Courtyard}",
+              "BlastShield|Phendrana Drifts|Quarantine Access|Ruined Courtyard"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Quarantine Access|Ruined Courtyard",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 355,
+            "y": 373,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Cave - South Quarantine Tunnel",
+        "access_rules": [
+          "@Phendrana Drifts/Quarantine Cave",
+          "@Phendrana Drifts/South Quarantine Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Quarantine Cave|South Quarantine Tunnel}",
+              "BlastShield|Phendrana Drifts|Quarantine Cave|South Quarantine Tunnel"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Quarantine Cave|South Quarantine Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 479,
+            "y": 534,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Research Core Access - Research Lab Aether",
+        "access_rules": [
+          "@Phendrana Drifts/Research Core Access",
+          "@Phendrana Drifts/Research Lab Aether"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Research Core Access|Research Lab Aether}",
+              "BlastShield|Phendrana Drifts|Research Core Access|Research Lab Aether"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Research Core Access|Research Lab Aether",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 353,
+            "y": 678,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ruined Courtyard - Save Station A",
+        "access_rules": [
+          "@Phendrana Drifts/Ruined Courtyard",
+          "@Phendrana Drifts/Save Station A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Ruined Courtyard|Save Station A}",
+              "BlastShield|Phendrana Drifts|Ruined Courtyard|Save Station A"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Ruined Courtyard|Save Station A",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 275,
+            "y": 373,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ruined Courtyard - Specimen Storage",
+        "access_rules": [
+          "@Phendrana Drifts/Ruined Courtyard",
+          "@Phendrana Drifts/Specimen Storage"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Ruined Courtyard|Specimen Storage}",
+              "BlastShield|Phendrana Drifts|Ruined Courtyard|Specimen Storage"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Ruined Courtyard|Specimen Storage",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 322,
+            "y": 405,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Transport Access - Transport to Magmoor Caverns South",
+        "access_rules": [
+          "@Phendrana Drifts/Transport Access",
+          "@Phendrana Drifts/Transport to Magmoor Caverns South"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|Transport Access|Transport to Magmoor Caverns South}",
+              "BlastShield|Phendrana Drifts|Transport Access|Transport to Magmoor Caverns South"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|Transport Access|Transport to Magmoor Caverns South",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 446,
+            "y": 651,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "West Tower - West Tower Entrance",
+        "access_rules": [
+          "@Phendrana Drifts/West Tower",
+          "@Phendrana Drifts/West Tower Entrance"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phendrana Drifts|West Tower|West Tower Entrance}",
+              "BlastShield|Phendrana Drifts|West Tower|West Tower Entrance"
+            ],
+            "hosted_item": "BlastShield|Phendrana Drifts|West Tower|West Tower Entrance",
+            "visibility_rules": "BlastShieldsMissiles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phendrana Drifts",
+            "x": 293,
+            "y": 598,
+            "shape": "diamond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mines Blast Shields",
+    "visibility_rules": "BlastShieldRando",
+    "children": [
+      {
+        "name": "Central Dynamo - Quarantine Access A",
+        "access_rules": [
+          "@Phazon Mines/Central Dynamo",
+          "@Phazon Mines/Quarantine Access A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Central Dynamo|Quarantine Access A}",
+              "BlastShield|Phazon Mines|Central Dynamo|Quarantine Access A"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Central Dynamo|Quarantine Access A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 575,
+            "y": 672,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 448,
+            "y": 228,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elevator A - Elevator Access A",
+        "access_rules": [
+          "@Phazon Mines/Elevator A",
+          "@Phazon Mines/Elevator Access A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elevator A|Elevator Access A}",
+              "BlastShield|Phazon Mines|Elevator A|Elevator Access A"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elevator A|Elevator Access A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 334,
+            "y": 162,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 192,
+            "y": 149,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elevator Access A - Ore Processing",
+        "access_rules": [
+          "@Phazon Mines/Elevator Access A",
+          "@Phazon Mines/Ore Processing"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elevator Access A|Ore Processing}",
+              "BlastShield|Phazon Mines|Elevator Access A|Ore Processing"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elevator Access A|Ore Processing",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 348,
+            "y": 157,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 206,
+            "y": 143,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elevator Access B - Metroid Quarantine A",
+        "access_rules": [
+          "@Phazon Mines/Elevator Access B",
+          "@Phazon Mines/Metroid Quarantine A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elevator Access B|Metroid Quarantine A}",
+              "BlastShield|Phazon Mines|Elevator Access B|Metroid Quarantine A"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elevator Access B|Metroid Quarantine A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 293,
+            "y": 497,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 171,
+            "y": 55,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Control - Elite Control Access",
+        "access_rules": [
+          "@Phazon Mines/Elite Control",
+          "@Phazon Mines/Elite Control Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Control|Elite Control Access}",
+              "BlastShield|Phazon Mines|Elite Control|Elite Control Access"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Control|Elite Control Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 390,
+            "y": 642,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 269,
+            "y": 196,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Control - Maintenance Tunnel",
+        "access_rules": [
+          "@Phazon Mines/Elite Control",
+          "@Phazon Mines/Maintenance Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Control|Maintenance Tunnel}",
+              "BlastShield|Phazon Mines|Elite Control|Maintenance Tunnel"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Control|Maintenance Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 324,
+            "y": 725,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 202,
+            "y": 282,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Control - Ventilation Shaft",
+        "access_rules": [
+          "@Phazon Mines/Elite Control",
+          "@Phazon Mines/Ventilation Shaft"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Control|Ventilation Shaft}",
+              "BlastShield|Phazon Mines|Elite Control|Ventilation Shaft"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Control|Ventilation Shaft",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 389,
+            "y": 683,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 267,
+            "y": 239,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Quarters - Processing Center Access",
+        "access_rules": [
+          "@Phazon Mines/Elite Quarters",
+          "@Phazon Mines/Processing Center Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Quarters|Processing Center Access}",
+              "BlastShield|Phazon Mines|Elite Quarters|Processing Center Access"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Quarters|Processing Center Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 195,
+            "y": 1227,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 176,
+            "y": 344,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Quarters Access - Metroid Quarantine B",
+        "access_rules": [
+          "@Phazon Mines/Elite Quarters Access",
+          "@Phazon Mines/Metroid Quarantine B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Quarters Access|Metroid Quarantine B}",
+              "BlastShield|Phazon Mines|Elite Quarters Access|Metroid Quarantine B"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Quarters Access|Metroid Quarantine B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 462,
+            "y": 1338,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 443,
+            "y": 456,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Elite Research - Security Access B",
+        "access_rules": [
+          "@Phazon Mines/Elite Research",
+          "@Phazon Mines/Security Access B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Elite Research|Security Access B}",
+              "BlastShield|Phazon Mines|Elite Research|Security Access B"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Elite Research|Security Access B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 277,
+            "y": 273,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 135,
+            "y": 259,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall A - Fungal Hall Access",
+        "access_rules": [
+          "@Phazon Mines/Fungal Hall A",
+          "@Phazon Mines/Fungal Hall Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Fungal Hall A|Fungal Hall Access}",
+              "BlastShield|Phazon Mines|Fungal Hall A|Fungal Hall Access"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Fungal Hall A|Fungal Hall Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 235,
+            "y": 980,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 215,
+            "y": 97,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall A - Phazon Mining Tunnel",
+        "access_rules": [
+          "@Phazon Mines/Fungal Hall A",
+          "@Phazon Mines/Phazon Mining Tunnel"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Fungal Hall A|Phazon Mining Tunnel}",
+              "BlastShield|Phazon Mines|Fungal Hall A|Phazon Mining Tunnel"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Fungal Hall A|Phazon Mining Tunnel",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 401,
+            "y": 1070,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 380,
+            "y": 188,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall B - Quarantine Access B",
+        "access_rules": [
+          "@Phazon Mines/Fungal Hall B",
+          "@Phazon Mines/Quarantine Access B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Fungal Hall B|Quarantine Access B}",
+              "BlastShield|Phazon Mines|Fungal Hall B|Quarantine Access B"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Fungal Hall B|Quarantine Access B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 673,
+            "y": 1194,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 653,
+            "y": 314,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry - Quarry Access",
+        "access_rules": [
+          "@Phazon Mines/Main Quarry",
+          "@Phazon Mines/Quarry Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Main Quarry|Quarry Access}",
+              "BlastShield|Phazon Mines|Main Quarry|Quarry Access"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Main Quarry|Quarry Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 620,
+            "y": 174,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 475,
+            "y": 163,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry - Security Access A",
+        "access_rules": [
+          "@Phazon Mines/Main Quarry",
+          "@Phazon Mines/Security Access A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Main Quarry|Security Access A}",
+              "BlastShield|Phazon Mines|Main Quarry|Security Access A"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Main Quarry|Security Access A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 577,
+            "y": 307,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 435,
+            "y": 294,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Main Quarry - Waste Disposal",
+        "access_rules": [
+          "@Phazon Mines/Main Quarry",
+          "@Phazon Mines/Waste Disposal"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Main Quarry|Waste Disposal}",
+              "BlastShield|Phazon Mines|Main Quarry|Waste Disposal"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Main Quarry|Waste Disposal",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 485,
+            "y": 187,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 341,
+            "y": 175,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Maintenance Tunnel - Phazon Processing Center",
+        "access_rules": [
+          "@Phazon Mines/Maintenance Tunnel",
+          "@Phazon Mines/Phazon Processing Center"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Maintenance Tunnel|Phazon Processing Center}",
+              "BlastShield|Phazon Mines|Maintenance Tunnel|Phazon Processing Center"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Maintenance Tunnel|Phazon Processing Center",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 272,
+            "y": 782,
+            "shape": "diamond"
+          },
+          {
+            "map": "Phazon Mines",
+            "x": 282,
+            "y": 1107,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 150,
+            "y": 340,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 2",
+            "x": 262,
+            "y": 224,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine A - Quarantine Access A",
+        "access_rules": [
+          "@Phazon Mines/Metroid Quarantine A",
+          "@Phazon Mines/Quarantine Access A"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Metroid Quarantine A|Quarantine Access A}",
+              "BlastShield|Phazon Mines|Metroid Quarantine A|Quarantine Access A"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Metroid Quarantine A|Quarantine Access A",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 467,
+            "y": 657,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Sublevel 1",
+            "x": 344,
+            "y": 215,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ore Processing - Research Access",
+        "access_rules": [
+          "@Phazon Mines/Ore Processing",
+          "@Phazon Mines/Research Access"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Ore Processing|Research Access}",
+              "BlastShield|Phazon Mines|Ore Processing|Research Access"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Ore Processing|Research Access",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 345,
+            "y": 205,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 203,
+            "y": 194,
+            "shape": "diamond"
+          }
+        ]
+      },
+      {
+        "name": "Ore Processing - Storage Depot B",
+        "access_rules": [
+          "@Phazon Mines/Ore Processing",
+          "@Phazon Mines/Storage Depot B"
+        ],
+        "sections": [
+          {
+            "name": "Blast Shield",
+            "access_rules": [
+              "{UnknownDoor|Phazon Mines|Ore Processing|Storage Depot B}",
+              "BlastShield|Phazon Mines|Ore Processing|Storage Depot B"
+            ],
+            "hosted_item": "BlastShield|Phazon Mines|Ore Processing|Storage Depot B",
+            "visibility_rules": "BlastShieldsMixItUp"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Phazon Mines",
+            "x": 339,
+            "y": 91,
+            "shape": "diamond"
+          },
+          {
+            "map": "Mines Surface",
+            "x": 195,
+            "y": 80,
+            "shape": "diamond"
+          }
+        ]
+      }
+    ]
+  }
+]
