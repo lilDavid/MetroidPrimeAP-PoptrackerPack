@@ -8,5 +8,10 @@
     "codes": "AutoTab",
     "type": "toggle",
     "img": "images/items/scanvisor.png"
+  },
+  {
+    "codes": "Softlocks",
+    "type": "toggle",
+    "img": "images/items/spacejumpboots.png"
   }
 ]

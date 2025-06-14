@@ -38,7 +38,8 @@
             "access_rules": [
               "NoLogic",
               "$can_space_jump",
-              "[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam"
+              "[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam",
+              "{}"
             ]
           }
         ],
@@ -128,7 +129,8 @@
             "access_rules": [
               "NoLogic",
               "$can_grapple,$can_missile,$can_move_underwater",
-              "[$trick|frost_cave_no_grapple|1],$can_missile,$can_space_jump,$can_move_underwater"
+              "[$trick|frost_cave_no_grapple|1],$can_missile,$can_space_jump,$can_move_underwater",
+              "{}"
             ]
           }
         ],
@@ -165,7 +167,8 @@
             "access_rules": [
               "NoLogic",
               "$can_move_underwater,$can_space_jump,$can_melt_ice,$can_grapple",
-              "[$trick|gravity_chamber_no_grapple_plasma|2],$can_space_jump,$can_move_underwater"
+              "[$trick|gravity_chamber_no_grapple_plasma|2],$can_space_jump,$can_move_underwater",
+              "{$can_melt_ice}"
             ]
           }
         ],
@@ -243,7 +246,8 @@
             "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "NoLogic",
-              "$can_melt_ice,$can_space_jump,$can_missile"
+              "$can_melt_ice,$can_space_jump,$can_missile",
+              "{SpaceJump, $can_missile}"
             ]
           }
         ],
@@ -303,7 +307,9 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_labs],$_can_climb_observatory_via_puzzle",
-              "[$trick|observatory_puzzle_skip|2],$can_space_jump,$can_scan"
+              "[$trick|observatory_puzzle_skip|2],$can_space_jump,$can_scan",
+              "{ScanVisor,SpaceJump,BoostBall}",
+              "{TricksEasy,ScanVisor,SpaceJump}"
             ]
           }
         ],
@@ -333,7 +339,8 @@
             "name": "Behind Ice",
             "access_rules": [
               "NoLogic",
-              "$can_melt_ice"
+              "$can_melt_ice",
+              "{}"
             ]
           },
           {
@@ -341,7 +348,8 @@
             "access_rules": [
               "NoLogic",
               "$can_bomb,$can_spider,$can_super_missile,$can_scan,$can_space_jump",
-              "[$trick|shorelines_spider_track_no_sj|2],$can_bomb,$can_spider,$can_super_missile,$can_scan"
+              "[$trick|shorelines_spider_track_no_sj|2],$can_bomb,$can_spider,$can_super_missile,$can_scan",
+              "{}"
             ]
           }
         ],
@@ -443,7 +451,8 @@
             "chest_unopened_img": "images/items/thermalvisor.png",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_labs],^$can_thermal,$can_scan,$can_wave_beam"
+              "[$can_combat_labs],^$can_thermal,$can_scan,$can_wave_beam",
+              "{}"
             ]
           }
         ],
@@ -470,14 +479,16 @@
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_labs],$can_missile"
+              "[$can_combat_labs],$can_missile",
+              "{}"
             ]
           },
           {
             "name": "Morph Track",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_labs],$can_bomb,$can_space_jump"
+              "[$can_combat_labs],$can_bomb,$can_space_jump",
+              "{}"
             ]
           }
         ],
@@ -494,7 +505,8 @@
             "name": "Cordite column",
             "access_rules": [
               "NoLogic",
-              "$can_super_missile,$can_scan"
+              "$can_super_missile,$can_scan",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -636,7 +648,8 @@
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "NoLogic",
-              "$can_melt_ice"
+              "$can_melt_ice",
+              "{}"
             ]
           }
         ],

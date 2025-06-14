@@ -22,7 +22,8 @@
             "access_rules": [
               "NoLogic",
               "$can_bomb",
-              "[$trick|fiery_shores_morphball_track_sj|1],$can_space_jump"
+              "[$trick|fiery_shores_morphball_track_sj|1],$can_space_jump",
+              "{}"
             ]
           },
           {
@@ -71,7 +72,8 @@
               "NoLogic",
               "$can_missile,$can_space_jump,@Magmoor Caverns/Burning Trail",
               "[$trick|lava_lake_item_missiles_only|1],$can_missile,@Magmoor Caverns/Burning Trail",
-              "[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail"
+              "[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
+              "{XRayVisor,@Magmoor Caverns/Burning Trail}"
             ]
           }
         ],
@@ -92,7 +94,8 @@
             "access_rules": [
               "NoLogic",
               "^$can_thermal,$can_wave_beam,$can_scan,$can_morph_ball",
-              "[$trick|magmoor_workstation_no_thermal|1],$can_scan,$can_wave_beam,$can_morph_ball"
+              "[$trick|magmoor_workstation_no_thermal|1],$can_scan,$can_wave_beam,$can_morph_ball",
+              "{}"
             ]
           }
         ],
@@ -305,7 +308,10 @@
               "[$trick|triclops_pit_item_no_xray|2],$can_space_jump,$can_missile",
               "[$trick|triclops_pit_item_no_xray|2],$can_space_jump,$can_charge_beam",
               "[$trick|triclops_pit_item_no_sj_no_xray|2],$can_missile",
-              "[$trick|triclops_pit_item_no_sj_no_xray|2],$can_charge_beam"
+              "[$trick|triclops_pit_item_no_sj_no_xray|2],$can_charge_beam",
+              "{XRayVisor}",
+              "{$can_missile}",
+              "{$trick|triclops_pit_item_no_missiles|1}"
             ]
           }
         ],

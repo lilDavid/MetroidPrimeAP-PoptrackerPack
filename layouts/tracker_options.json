@@ -38,6 +38,24 @@
             "v_alignment": "center"
           }
         ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+          {
+            "type": "item",
+            "item": "Softlocks",
+            "max_height": 32,
+            "max_width": 32,
+            "margin": 4
+          },
+          {
+            "type": "text",
+            "text": "Softlocks",
+            "v_alignment": "center"
+          }
+        ]
       }
     ]
   }

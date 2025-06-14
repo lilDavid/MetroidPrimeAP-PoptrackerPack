@@ -193,6 +193,94 @@ location_names = {
     'Magmoor Caverns: Magmoor Workstation': "Channel door puzzle",
 }
 
+scoutable_locations: dict[str, str | list[str]] = {
+    "Chozo Ruins: Main Plaza - Half-Pipe": "",
+    "Chozo Ruins: Main Plaza - Grapple Ledge": "",
+    "Chozo Ruins: Main Plaza - Tree": "TricksMedium",
+    "Chozo Ruins: Main Plaza - Locked Door": "",
+    "Chozo Ruins: Ruined Fountain": "",
+    "Chozo Ruins: Ruined Shrine - Plated Beetle": "",
+    # "Chozo Ruins: Ruined Shrine - Half-Pipe": "TricksEasy",
+    "Chozo Ruins: Vault": "",
+    "Chozo Ruins: Training Chamber": "",
+    "Chozo Ruins: Ruined Nursery": "",
+    "Chozo Ruins: Magma Pool": "XRayVisor",
+    "Chozo Ruins: Tower of Light": "$can_missile(3)",
+    "Chozo Ruins: Tower Chamber": "TricksEasy",
+    "Chozo Ruins: Ruined Gallery - Missile Wall": "XRayVisor",
+    "Chozo Ruins: Gathering Hall": ["SpaceJump"],
+    "Chozo Ruins: Hive Totem": "",
+    "Chozo Ruins: Watery Hall Access": "XRayVisor",
+    "Chozo Ruins: Watery Hall - Scan Puzzle": "",
+    "Chozo Ruins: Watery Hall - Underwater": ["TricksEasy,ScanVisor,EnergyTank", "SpaceJump,ScanVisor,EnergyTank"],
+    "Chozo Ruins: Dynamo - Lower": "",
+    "Chozo Ruins: Furnace - Spider Tracks": "",
+    "Phendrana Drifts: Phendrana Shorelines - Behind Ice": "",
+    "Phendrana Drifts: Phendrana Shorelines - Spider Track": "",
+    "Phendrana Drifts: Ice Ruins West": "SpaceJump, $can_missile",
+    # "Phendrana Drifts: Ice Ruins East - Spider Track": "",
+    "Phendrana Drifts: Chapel of the Elders": "",
+    "Phendrana Drifts: Research Lab Hydra": "XRayVisor",
+    "Phendrana Drifts: Observatory": ["ScanVisor,SpaceJump,BoostBall", "TricksEasy,ScanVisor,SpaceJump"],
+    "Phendrana Drifts: Transport Access": "",
+    "Phendrana Drifts: Research Core": "",
+    "Phendrana Drifts: Frost Cave": "",
+    "Phendrana Drifts: Research Lab Aether - Tank": "",
+    "Phendrana Drifts: Research Lab Aether - Morph Track": "",
+    "Phendrana Drifts: Gravity Chamber - Grapple Ledge": "$can_melt_ice",
+    "Tallon Overworld: Landing Site": "",
+    # "Tallon Overworld: Alcove": "",  # Redundant
+    "Tallon Overworld: Frigate Crash Site": "",
+    # "Tallon Overworld: Overgrown Cavern": "",
+    "Tallon Overworld: Cargo Freight Lift to Deck Gamma": "",
+    "Tallon Overworld: Biohazard Containment": "XRayVisor",
+    # "Tallon Overworld: Life Grove - Underwater Spinner": "$can_boost,$can_bomb",  # Redundant
+    "Phazon Mines: Main Quarry": "^$can_thermal,$can_wave_beam,$can_scan",
+    # "Phazon Mines: Storage Depot A": "",
+    "Phazon Mines: Elite Research - Laser": "XRayVisor",
+    "Phazon Mines: Elite Control Access": "",
+    "Phazon Mines: Ventilation Shaft": "",
+    "Phazon Mines: Phazon Processing Center": "XRayVisor",
+    "Phazon Mines: Processing Center Access": "",
+    "Phazon Mines: Central Dynamo": "",
+    "Phazon Mines: Metroid Quarantine B": "XRayVisor",
+    "Phazon Mines: Metroid Quarantine A": [
+        "$can_scan,$can_power_bomb,$can_space_jump,^$can_xray",
+        "$can_backwards_lower_mines,$can_power_bomb"
+    ],
+    "Phazon Mines: Fungal Hall B": "XRayVisor",
+    "Phazon Mines: Phazon Mining Tunnel": "",
+    "Phazon Mines: Fungal Hall Access": "",
+    "Magmoor Caverns: Lava Lake": ["XRayVisor,@Magmoor Caverns/Burning Trail"],
+    "Magmoor Caverns: Triclops Pit": ["XRayVisor", "$can_missile", "$trick|triclops_pit_item_no_missiles|1"],
+    "Magmoor Caverns: Fiery Shores - Morph Track": "",
+    "Magmoor Caverns: Magmoor Workstation": "",
+}
+
+# FIXME: Needs more time in the oven
+softlockable_locations = {
+    "Chozo Ruins: Ruined Shrine - Plated Beetle": "Softlocks",
+    "Chozo Ruins: Burn Dome - Incinerator Drone": "Softlocks",
+    "Phendrana Drifts: Quarantine Cave": "Softlocks",  # Escaping not actually required by world logic?
+    "Phendrana Drifts: Control Tower": "Softlocks,SpaceJump,$can_missile",
+    "Phendrana Drifts: Research Core": "Softlocks,ScanVisor",
+    "Phendrana Drifts: Research Lab Aether - Morph Track": "SpaceJump",  # Bombs shouldn't be required for this
+    "Phendrana Drifts: Frost Cave": [
+        "Softlocks,$can_grapple,$can_missile",
+        "Softlocks,$trick|frost_cave_no_grapple|1,$can_missile,SpaceJump",
+    ],
+    "Phendrana Drifts: Gravity Chamber - Underwater": "Softlocks,SpaceJump",
+    "Phendrana Drifts: Gravity Chamber - Grapple Ledge": [
+        "@Phendrana Drifts/Lake Tunnel,$can_space_jump,$can_melt_ice,$can_grapple",
+        "@Phendrana Drifts/Lake Tunnel,$trick|gravity_chamber_no_grapple_plasma|2,$can_space_jump",
+    ],
+    "Tallon Overworld: Alcove": "Softlocks",
+    "Tallon Overworld: Life Grove - Start": "Softlocks",
+    "Tallon Overworld: Life Grove - Underwater Spinner": "Softlocks,$can_boost,$can_bomb",
+    "Magmoor Caverns: Lava Lake": "Softlocks,$can_missile,@Magmoor Caverns/Burning Trail",
+    "Magmoor Caverns: Fiery Shores - Warrior Shrine Tunnel": "Softlocks,$can_bomb,@Magmoor Caverns/Warrior Shrine",
+}
+
 
 locks = {
     "Blue": "AnyBeam",
@@ -721,11 +809,29 @@ class PickupData(NamedTuple):
             if kwarg.arg == "tricks":
                 trick_access_rules.extend(get_tricks(kwarg.value))
 
-        if access_rules:
-            access_rules.extend(trick_access_rules)
+        # ool_rules: list[str]
+        # ool_rule = softlockable_locations.get(check_name)
+        # if ool_rule == None:
+        #     ool_rules = []
+        # if type(ool_rule) is str:
+        #     ool_rules = [ool_rule]
+        # if type(ool_rule) is list:
+        #     ool_rules = ool_rule
+
+        scout_rules: list[str]
+        scout_rule = scoutable_locations.get(check_name)
+        if scout_rule == None:
+            scout_rules = []
+        if type(scout_rule) is str:
+            scout_rules = [scout_rule]
+        if type(scout_rule) is list:
+            scout_rules = scout_rule
 
         if access_rules:
+            access_rules.extend(trick_access_rules)
             access_rules.insert(0, "NoLogic")
+            # access_rules.extend(f"[{rule}]" for rule in ool_rules)
+            access_rules.extend(f"{{{rule}}}" for rule in scout_rules)
 
         return cls(item_name, item_images.get(check_name), access_rules)
 

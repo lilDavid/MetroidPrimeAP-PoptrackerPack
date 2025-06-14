@@ -54,7 +54,8 @@
             "name": "Cordite locker",
             "access_rules": [
               "NoLogic",
-              "$can_super_missile"
+              "$can_super_missile",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -85,7 +86,8 @@
               "$can_missile,^$can_crashed_frigate_front",
               "$can_charge_beam,^$can_crashed_frigate_front",
               "$can_missile,$can_crashed_frigate_backwards",
-              "$can_charge_beam,$can_crashed_frigate_backwards"
+              "$can_charge_beam,$can_crashed_frigate_backwards",
+              "{}"
             ]
           }
         ],
@@ -115,7 +117,8 @@
               "NoLogic",
               "$can_space_jump,$can_move_underwater",
               "[$trick|frigate_crash_site_scan_dash|3],$can_scan",
-              "[$trick|frigate_crash_site_slope_jump|1],$can_space_jump"
+              "[$trick|frigate_crash_site_slope_jump|1],$can_space_jump",
+              "{}"
             ]
           }
         ],
@@ -187,7 +190,8 @@
             "name": "Morph Ball tunnel",
             "access_rules": [
               "NoLogic",
-              "$can_morph_ball"
+              "$can_morph_ball",
+              "{}"
             ]
           }
         ],

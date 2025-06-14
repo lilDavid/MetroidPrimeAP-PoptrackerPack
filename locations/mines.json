@@ -12,7 +12,8 @@
             "chest_unopened_img": "images/items/powerbomb.png",
             "access_rules": [
               "NoLogic",
-              "$can_bomb"
+              "$can_bomb",
+              "{}"
             ]
           }
         ],
@@ -72,7 +73,8 @@
             "name": "Explosive crate",
             "access_rules": [
               "NoLogic",
-              "$can_morph_ball"
+              "$can_morph_ball",
+              "{}"
             ]
           }
         ],
@@ -135,7 +137,8 @@
             "access_rules": [
               "NoLogic",
               "$can_bomb,$can_boost,$can_space_jump,$can_scan,[$can_combat_beam_pirates|PowerBeam]",
-              "[$trick|elite_research_spinner_no_boost|1],$can_bomb,$can_scan,$can_space_jump,[$can_combat_beam_pirates|PowerBeam]"
+              "[$trick|elite_research_spinner_no_boost|1],$can_bomb,$can_scan,$can_space_jump,[$can_combat_beam_pirates|PowerBeam]",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -163,7 +166,8 @@
             "access_rules": [
               "NoLogic",
               "$can_morph_ball,$can_phazon",
-              "[$trick|fungal_hall_access_no_phazon_suit|1],$can_morph_ball,$has_energy_tanks|1"
+              "[$trick|fungal_hall_access_no_phazon_suit|1],$can_morph_ball,$has_energy_tanks|1",
+              "{}"
             ]
           }
         ],
@@ -181,7 +185,8 @@
             "access_rules": [
               "NoLogic",
               "$can_bomb",
-              "$can_power_bomb"
+              "$can_power_bomb",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -200,7 +205,8 @@
             "access_rules": [
               "NoLogic",
               "$can_morph_ball,$can_spider,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump",
-              "[$trick|main_quarry_item_no_spider|2],$can_morph_ball,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump"
+              "[$trick|main_quarry_item_no_spider|2],$can_morph_ball,$can_bomb,^$can_thermal,$can_wave_beam,$can_scan,$can_space_jump",
+              "{^$can_thermal,$can_wave_beam,$can_scan}"
             ]
           }
         ],
@@ -236,7 +242,9 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_mines],$can_scan,$can_power_bomb,$can_space_jump,^$can_xray",
-              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,^$can_xray"
+              "[$can_combat_mines],$can_backwards_lower_mines,$can_power_bomb,$can_space_jump,^$can_xray",
+              "{$can_scan,$can_power_bomb,$can_space_jump,^$can_xray}",
+              "{$can_backwards_lower_mines,$can_power_bomb}"
             ]
           }
         ],
@@ -253,7 +261,8 @@
             "name": "Cordite tank",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_mines],[$can_combat_beam_pirates|PlasmaBeam],@Elite Quarters Access,$can_super_missile"
+              "[$can_combat_mines],[$can_combat_beam_pirates|PlasmaBeam],@Elite Quarters Access,$can_super_missile",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -309,7 +318,8 @@
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "NoLogic",
-              "$can_phazon,$can_bomb"
+              "$can_phazon,$can_bomb",
+              "{}"
             ]
           }
         ],
@@ -329,7 +339,8 @@
             "access_rules": [
               "NoLogic",
               "$can_spider,$can_bomb,$can_space_jump,$can_power_bomb",
-              "[$trick|phazon_processing_center_item_no_spider|1],$can_space_jump,$can_power_bomb"
+              "[$trick|phazon_processing_center_item_no_spider|1],$can_space_jump,$can_power_bomb",
+              "{XRayVisor}"
             ]
           }
         ],
@@ -349,7 +360,8 @@
             "access_rules": [
               "NoLogic",
               "$can_backwards_lower_mines",
-              "@Elite Quarters"
+              "@Elite Quarters",
+              "{}"
             ]
           }
         ],
@@ -502,7 +514,8 @@
             "chest_unopened_img": "images/items/energytank.png",
             "access_rules": [
               "NoLogic",
-              "$can_scan,$can_power_bomb,$can_space_jump"
+              "$can_scan,$can_power_bomb,$can_space_jump",
+              "{}"
             ]
           }
         ],
