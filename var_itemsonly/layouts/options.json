@@ -11,9 +11,7 @@
         [ "RequiredArtifacts" ],
         [ "MainMissile" ],
         [ "MainPowerBomb" ],
-        [ "ProgressiveBeams" ],
-        [ "ElevatorsRandom" ],
-        [ "DoorRando" ]
+        [ "ProgressiveBeams" ]
       ]
     }
   }
