@@ -205,7 +205,7 @@ scoutable_locations: dict[str, str | list[str]] = {
     "Chozo Ruins: Training Chamber": "",
     "Chozo Ruins: Ruined Nursery": "",
     "Chozo Ruins: Magma Pool": "XRayVisor",
-    "Chozo Ruins: Tower of Light": "$can_missile(3)",
+    "Chozo Ruins: Tower of Light": "$can_missile|3",
     "Chozo Ruins: Tower Chamber": "TricksEasy",
     "Chozo Ruins: Ruined Gallery - Missile Wall": "XRayVisor",
     "Chozo Ruins: Gathering Hall": ["SpaceJump"],

@@ -697,7 +697,7 @@
               "$can_climb_tower_of_light",
               "[$trick|tower_of_light_climb_without_missiles|1],$can_space_jump,$can_scan",
               "[$trick|tower_of_light_climb_nsj|3],$can_missile,$has|MissileExpansion|8,$can_bomb",
-              "{$can_missile(3)}"
+              "{$can_missile|3}"
             ]
           }
         ],

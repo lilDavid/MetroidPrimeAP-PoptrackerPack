@@ -92,6 +92,7 @@ function can_spider()
 end
 
 function can_missile(expansions)
+    expansions = tonumber(expansions)
     if expansions == nil or expansions < 1 then expansions = 1 end
     local count = 5 * expansions
     if has("MainMissile") then
