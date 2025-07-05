@@ -533,6 +533,7 @@
               "NoLogic",
               "@rules/can_exit_ruined_shrine",
               "[$trick|ruined_shrine_scan_dash_escape|1],$can_scan",
+              "Softlocks,[]",
               "{}"
             ]
           },

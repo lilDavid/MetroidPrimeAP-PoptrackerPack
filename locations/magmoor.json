@@ -31,7 +31,8 @@
             "chest_unopened_img": "images/items/powerbombexpansion.png",
             "access_rules": [
               "NoLogic",
-              "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine"
+              "$can_power_bomb,$can_bomb,@Magmoor Caverns/Warrior Shrine",
+              "Softlocks,$can_bomb,@Magmoor Caverns/Warrior Shrine,[]"
             ]
           }
         ],
@@ -73,6 +74,7 @@
               "$can_missile,$can_space_jump,@Magmoor Caverns/Burning Trail",
               "[$trick|lava_lake_item_missiles_only|1],$can_missile,@Magmoor Caverns/Burning Trail",
               "[$trick|lava_lake_item_suitless|2],$can_missile,$can_space_jump,$has_energy_tanks|4,$can_heat,@Magmoor Caverns/Burning Trail",
+              "Softlocks,$can_missile,@Magmoor Caverns/Burning Trail,[]",
               "{XRayVisor,@Magmoor Caverns/Burning Trail}"
             ]
           }

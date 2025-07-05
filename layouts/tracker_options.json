@@ -52,7 +52,7 @@
           },
           {
             "type": "text",
-            "text": "Softlocks",
+            "text": "Show Softlocks",
             "v_alignment": "center"
           }
         ]

@@ -12,7 +12,8 @@
             "access_rules": [
               "NoLogic",
               "$can_space_jump",
-              "[$trick|alcove_escape|1]"
+              "[$trick|alcove_escape|1]",
+              "Softlocks,[]"
             ]
           }
         ],
@@ -236,7 +237,8 @@
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "NoLogic",
-              "$can_boost,$can_bomb"
+              "$can_boost,$can_bomb",
+              "Softlocks,$can_boost,$can_bomb,[]"
             ]
           }
         ],

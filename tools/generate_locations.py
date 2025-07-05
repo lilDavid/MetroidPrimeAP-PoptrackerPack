@@ -257,8 +257,7 @@ scoutable_locations: dict[str, str | list[str]] = {
     "Magmoor Caverns: Magmoor Workstation": "",
 }
 
-# FIXME: Needs more time in the oven
-softlockable_locations = {
+softlockable_locations: dict[str, str | list[str]] = {
     "Chozo Ruins: Ruined Shrine - Plated Beetle": "Softlocks",
     "Chozo Ruins: Burn Dome - Incinerator Drone": "Softlocks",
     "Phendrana Drifts: Quarantine Cave": "Softlocks",  # Escaping not actually required by world logic?
@@ -809,14 +808,14 @@ class PickupData(NamedTuple):
             if kwarg.arg == "tricks":
                 trick_access_rules.extend(get_tricks(kwarg.value))
 
-        # ool_rules: list[str]
-        # ool_rule = softlockable_locations.get(check_name)
-        # if ool_rule == None:
-        #     ool_rules = []
-        # if type(ool_rule) is str:
-        #     ool_rules = [ool_rule]
-        # if type(ool_rule) is list:
-        #     ool_rules = ool_rule
+        ool_rules: list[str]
+        ool_rule = softlockable_locations.get(check_name)
+        if ool_rule == None:
+            ool_rules = []
+        if type(ool_rule) is str:
+            ool_rules = [ool_rule]
+        if type(ool_rule) is list:
+            ool_rules = ool_rule
 
         scout_rules: list[str]
         scout_rule = scoutable_locations.get(check_name)
@@ -830,7 +829,7 @@ class PickupData(NamedTuple):
         if access_rules:
             access_rules.extend(trick_access_rules)
             access_rules.insert(0, "NoLogic")
-            # access_rules.extend(f"[{rule}]" for rule in ool_rules)
+            access_rules.extend(f"{rule},[]" for rule in ool_rules)
             access_rules.extend(f"{{{rule}}}" for rule in scout_rules)
 
         return cls(item_name, item_images.get(check_name), access_rules)

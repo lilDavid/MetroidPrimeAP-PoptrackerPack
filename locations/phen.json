@@ -86,7 +86,8 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_bomb",
-              "[$trick|control_tower_item_no_plasma|1],$can_bomb,$can_missile,$can_space_jump"
+              "[$trick|control_tower_item_no_plasma|1],$can_bomb,$can_missile,$can_space_jump",
+              "Softlocks,SpaceJump,$can_missile,[]"
             ]
           }
         ],
@@ -130,6 +131,8 @@
               "NoLogic",
               "$can_grapple,$can_missile,$can_move_underwater",
               "[$trick|frost_cave_no_grapple|1],$can_missile,$can_space_jump,$can_move_underwater",
+              "Softlocks,$can_grapple,$can_missile,[]",
+              "Softlocks,$trick|frost_cave_no_grapple|1,$can_missile,SpaceJump,[]",
               "{}"
             ]
           }
@@ -159,7 +162,8 @@
             "chest_unopened_img": "images/items/gravitysuit.png",
             "access_rules": [
               "NoLogic",
-              "$can_move_underwater,$can_space_jump"
+              "$can_move_underwater,$can_space_jump",
+              "Softlocks,SpaceJump,[]"
             ]
           },
           {
@@ -168,6 +172,8 @@
               "NoLogic",
               "$can_move_underwater,$can_space_jump,$can_melt_ice,$can_grapple",
               "[$trick|gravity_chamber_no_grapple_plasma|2],$can_space_jump,$can_move_underwater",
+              "@Phendrana Drifts/Lake Tunnel,$can_space_jump,$can_melt_ice,$can_grapple,[]",
+              "@Phendrana Drifts/Lake Tunnel,$trick|gravity_chamber_no_grapple_plasma|2,$can_space_jump,[]",
               "{$can_melt_ice}"
             ]
           }
@@ -411,7 +417,8 @@
             "chest_unopened_img": "images/items/spiderball.png",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_thardus],^$can_thermal"
+              "[$can_combat_thardus],^$can_thermal",
+              "Softlocks,[]"
             ]
           }
         ],
@@ -452,6 +459,7 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_labs],^$can_thermal,$can_scan,$can_wave_beam",
+              "Softlocks,ScanVisor,[]",
               "{}"
             ]
           }
@@ -488,6 +496,7 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_labs],$can_bomb,$can_space_jump",
+              "SpaceJump,[]",
               "{}"
             ]
           }
