@@ -1,6 +1,20 @@
 {
     "versions": [
         {
+            "package_version": "1.0.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.0/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "edf6a660d84c52f9ae045b7f641149f8568d7d287fb1476d82e93a1ddfbb18a2",
+            "changelog": [
+                "Added blast shield rando",
+                "Added AP hint highlighting",
+                "Added blue scoutable locations",
+                "Added tricks that are always sequence breaks, including softlocks",
+                "Added final bosses to the map",
+                "Hid more unnecessary things in items only variant",
+                "Small logic fixes"
+            ]
+        },
+        {
             "package_version": "0.7.0",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/0.7.0/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "7b3e48bf1cae1abe196e52286a1eb2bb0b1141c8228b4420d3d54ce4dff367d8",
