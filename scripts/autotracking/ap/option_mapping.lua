@@ -4,6 +4,7 @@ AP_SLOT_DATA_MAPPING = {
         ["offset"] = 1,
         ["default"] = 12
     },
+    ["final_bosses"] = "FinalBoss",
     ["missile_launcher"] = "MainMissile",
     ["main_power_bomb"] = "MainPowerBomb",
     ["non_varia_heat_damage"] = "NonVariaHeatDamage",

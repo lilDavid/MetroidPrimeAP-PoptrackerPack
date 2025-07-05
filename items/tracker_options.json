@@ -13,5 +13,11 @@
     "codes": "Softlocks",
     "type": "toggle",
     "img": "images/items/spacejumpboots.png"
+  },
+  {
+    "codes": "ShowGoal",
+    "type": "toggle",
+    "initial_active_state": true,
+    "img": "images/items/artifacts0.png"
   }
 ]

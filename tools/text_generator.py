@@ -95,13 +95,15 @@ def get_character(character: str):
     return padded_glyph
 
 
-def build_image(text: str, *, tracking: int = 0):
+def build_image(text: str, *, min_width: int = 0, tracking: int = 0):
+    if min_width < 1:
+        min_width = 1
     if text == "":
-        return Image.new("RGBA", (1, 20), (0, 0, 0, 0)).convert("P")
+        return Image.new("RGBA", (min_width, 20), (0, 0, 0, 0)).convert("P")
 
     glyphs = list(map(get_character, text))
     width = sum(glyph.width for glyph in glyphs) + tracking * (len(text) - 1)
-    string = Image.new("RGBA", (width, 20), (0, 0, 0, 0))
+    string = Image.new("RGBA", (max(width, min_width), 20), (0, 0, 0, 0))
     x = 0
     for glyph in glyphs:
         string.paste(glyph, (x, 1))
@@ -111,8 +113,8 @@ def build_image(text: str, *, tracking: int = 0):
 
 TRICK_NAME_PATH = Path(__file__).parents[1] / "images/tricks"
 
-def create_trick_images(trick_name: str):
-    white = build_image(trick_name)
+def create_trick_images(trick_name: str, *, min_width: int = 0):
+    white = build_image(trick_name, min_width=min_width)
 
     whitepalette = white.getpalette("RGBA")
     redpalette = []
@@ -133,12 +135,13 @@ def create_trick_images(trick_name: str):
 parser = ArgumentParser()
 parser.add_argument("string", type=str)
 parser.add_argument("out", nargs="?", type=Path)
-parser.add_argument("--trick")
+parser.add_argument("-w", "--width", type=int, default=0)
+parser.add_argument("-t", "--trick")
 
 args = parser.parse_args()
 if args.trick:
-    create_trick_images(args.string)
+    create_trick_images(args.string, min_width=args.width)
 else:
     print(args.string, args.out)
-    text_img = build_image(args.string)
+    text_img = build_image(args.string, min_width=args.width)
     text_img.save(args.out or "text.png")

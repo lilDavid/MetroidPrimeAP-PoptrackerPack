@@ -2813,6 +2813,53 @@
           }
         ]
       },
+
+      {
+        "name": "Final Bosses",
+        "access_rules": ["@Tallon Overworld/Artifact Temple,$has_required_artifact_count,[$can_missile]"],
+        "visibility_rules": ["ShowGoal"],
+        "sections": [
+          {
+            "name": "Meta Ridley",
+            "hosted_item": "MetaRidley",
+            "access_rules": [
+              "$can_missile,[$can_combat_ridley],[PlasmaBeam]",
+              "$can_missile,[$can_combat_ridley],[$can_super_missile]"
+            ],
+            "visibility_rules": "FinalBossRidley"
+          },
+          {
+            "name": "Metroid Prime",
+            "hosted_item": "MetroidPrime",
+            "access_rules": [
+              "PhazonSuit,PowerBeam,WaveBeam,IceBeam,PlasmaBeam"
+            ],
+            "visibility_rules": "FinalBossPrime"
+          },
+          {
+            "name": "Goal",
+            "access_rules": "",
+            "visibility_rules": "FinalBossNone",
+            "chest_unopened_img": "images/items/artifacts0.png",
+            "chest_opened_img": "images/checked.png"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "Tallon Overworld",
+            "x": 287,
+            "y": 494,
+            "size": 20
+          },
+          {
+            "map": "World Map",
+            "x": 585,
+            "y": 432,
+            "size": 36
+          }
+        ]
+      },
+
       {
         "name": "Door Colors",
         "visibility_rules": "DoorRandoGlobal",

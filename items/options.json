@@ -20,6 +20,18 @@
     ]
   },
   {
+    "codes": "FinalBoss",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/options/goal-both.png", "codes": "FinalBossRidley,FinalBossPrime", "inherit_codes": false },
+      { "img": "images/options/goal-ridley.png", "codes": "FinalBossRidley", "inherit_codes": false  },
+      { "img": "images/options/goal-prime.png", "codes": "FinalBossPrime", "inherit_codes": false  },
+      { "img": "images/options/goal-none.png", "codes": "FinalBossNone", "inherit_codes": false  }
+    ]
+  },
+  {
     "codes": "RequiredMissileLauncher",
     "type": "progressive",
     "allow_disabled": false,

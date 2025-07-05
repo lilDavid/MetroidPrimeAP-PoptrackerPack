@@ -59,9 +59,9 @@ end
 -- Logic
 
 function has_required_artifact_count()
-    local requirement = Tracker:ProviderCountForCode("RequiredArtifacts")
+    local requirement = Tracker:FindObjectForCode("RequiredArtifacts").CurrentStage + 1
     local count = Tracker:ProviderCountForCode("Artifacts")
-    return (tonumber(count) >= tonumber(requirement))
+    return count >= requirement
 end
 
 function can_boost()

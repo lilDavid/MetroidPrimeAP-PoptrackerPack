@@ -9,24 +9,6 @@
         "content": [
           {
             "type": "item",
-            "item": "NoLogic",
-            "max_height": 32,
-            "max_width": 32,
-            "margin": 4
-          },
-          {
-            "type": "text",
-            "text": "Disable Logic",
-            "v_alignment": "center"
-          }
-        ]
-      },
-      {
-        "type": "array",
-        "orientation": "horizontal",
-        "content": [
-          {
-            "type": "item",
             "item": "AutoTab",
             "max_height": 32,
             "max_width": 32,
@@ -45,6 +27,24 @@
         "content": [
           {
             "type": "item",
+            "item": "NoLogic",
+            "max_height": 32,
+            "max_width": 32,
+            "margin": 4
+          },
+          {
+            "type": "text",
+            "text": "Disable Logic",
+            "v_alignment": "center"
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+          {
+            "type": "item",
             "item": "Softlocks",
             "max_height": 32,
             "max_width": 32,
@@ -53,6 +53,24 @@
           {
             "type": "text",
             "text": "Show Softlocks",
+            "v_alignment": "center"
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+          {
+            "type": "item",
+            "item": "ShowGoal",
+            "max_height": 32,
+            "max_width": 32,
+            "margin": 4
+          },
+          {
+            "type": "text",
+            "text": "Show Final Bosses",
             "v_alignment": "center"
           }
         ]

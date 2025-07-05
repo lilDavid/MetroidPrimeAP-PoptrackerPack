@@ -9,6 +9,7 @@
       "item_size": "400, 20",
       "rows": [
         [ "RequiredArtifacts" ],
+        [ "FinalBoss" ],
         [ "MainMissile" ],
         [ "MainPowerBomb" ],
         [ "ProgressiveBeams" ]
