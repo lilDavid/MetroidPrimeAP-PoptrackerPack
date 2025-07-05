@@ -20,7 +20,7 @@
 
 ---Currently running PopTracker version as string "x.y.z".
 ---@type string
-PopVersion = "0.31.0"
+PopVersion = "0.32.0"
 -- Actual value comes from the program, not from here, but try to keep in sync with API version here.
 
 ---Set to true or an array of strings to get more error or debug output.
@@ -86,6 +86,7 @@ function Tracker:FindObjectForCode(code) end
 function Tracker:UiHint(name, value) end
 
 ---pause evaluating logic rules when set to true
+---NOTE: Since failing to set BulkUpdate back to false will stop PopTracker from updating, make sure your code between setting BulkUpdate is error resistant (for example by using pcall).
 ---@type boolean
 Tracker.BulkUpdate = false
 
@@ -480,6 +481,17 @@ AccessibilityLevel = {
     Cleared = 7,
 }
 
+---- Highlight (enum) ----
+
+---@enum highlight
+Highlight = {
+    Avoid = -1,
+    None = 0,
+    NoPriority = 1,
+    Unspecified = 2,
+    Priority = 3,
+}
+
 
 ---- LuaItem ----
 
@@ -725,3 +737,8 @@ LocationSection.AccessibilityLevel = 0
 ---Read-only, returning the full id as string such as "Location/Section"
 ---@type string
 LocationSection.FullID = ""
+
+---Read/write current highlight state of the section. One of the `Highlight` constants.
+---Since PopTracker 0.32.0.
+---@type highlight
+LocationSection.Highlight = 0

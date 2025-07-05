@@ -9,14 +9,42 @@ ScriptHost:LoadScript("scripts/autotracking/ap/option_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/trick_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/ap/level_mapping.lua")
 
+if Highlight then
+    HINT_STATUS_MAPPING = {
+        [20] = Highlight.Avoid,
+        [40] = Highlight.None,
+        [10] = Highlight.NoPriority,
+        [0] = Highlight.Unspecified,
+        [30] = Highlight.Priority,
+    }
+else
+    HINT_STATUS_MAPPING = {}
+end
+
 CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 
-NOT_CONNECTED = -1
+local AUTOTRACKER_CONNECTED = 3
+local AP_TEAM_NONE = -1
 
 ForceUpdateTab = false
+
+function getDataStorageKey(key)
+    local player = Archipelago.PlayerNumber
+    local team = Archipelago.TeamNumber
+
+    if AutoTracker:GetConnectionState("AP") ~= AUTOTRACKER_CONNECTED
+        or team == nil or team == AP_TEAM_NONE
+        or player == nil
+    then
+        print("Tried to call getDataStorageKey while not connected to AP server")
+        return nil
+    end
+
+    return string.format("%s_%s_%s", key, team, player)
+end
 
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -34,6 +62,9 @@ function onClear(slot_data)
             if obj then
                 if v[1]:sub(1, 1) == "@" then
                     obj.AvailableChestCount = obj.ChestCount
+                    if obj.Highlight then
+                        obj.Highlight = Highlight.None
+                    end
                 else
                     obj.Active = false
                 end
@@ -105,13 +136,9 @@ function onClear(slot_data)
 
     if SLOT_DATA == nil then return end
 
-    local player = Archipelago.PlayerNumber or NOT_CONNECTED
-    local team = Archipelago.TeamNumber or 0
-
-    if player ~= NOT_CONNECTED then
-        RoomPacket = "metroidprime_level_"..team.."_"..player
-        Archipelago:SetNotify({RoomPacket})
-    end
+    local data_storage_keys = { getDataStorageKey("_read_hints"), getDataStorageKey("metroidprime_level") }
+    Archipelago:SetNotify(data_storage_keys)
+    Archipelago:Get(data_storage_keys)
 
     -- set options
     for k, v in pairs(SLOT_DATA) do
@@ -293,14 +320,70 @@ function onLocation(location_id, location_name)
     end
 end
 
-function onNotify(key, value, old_value)
+function onDataStorageUpdate(key, value, old_value)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-        print(string.format("called onNotify: %s, %s, %s", key, value, old_value))
+        print(string.format("called onDataStorageUpdate: %s, %s, %s", key, value, old_value))
     end
-    if value == old_value and not ForceUpdateTab then return end
-    if key == RoomPacket then
+    if key == getDataStorageKey("_read_hints") then
+        updateHints(value)
+    elseif key == getDataStorageKey("metroidprime_level") then
+        if value == old_value and not ForceUpdateTab then return end
         updateMap(value)
         ForceUpdateTab = false
+    end
+end
+
+function updateHints(hints)
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then return end
+    for _, hint in ipairs(hints) do
+        if hint.finding_player == Archipelago.PlayerNumber then
+            updateHint(hint)
+        end
+    end
+end
+
+function updateHint(hint)
+    -- get the highlight enum value for the hint status
+    local hint_status = hint.status
+    local highlight_code = nil
+    if hint_status then
+        highlight_code = HINT_STATUS_MAPPING[hint_status]
+    end
+
+    if not highlight_code then
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print(string.format("updateHint: unknown hint status %s for hint on location id %s", hint.status, hint.location))
+        end
+        -- try to "recover" by checking hint.found (older AP versions without hint.status)
+        if hint.found == true then
+            highlight_code = Highlight.None
+        elseif hint.found == false then
+            highlight_code = Highlight.Unspecified
+        else
+            return
+        end
+    end
+
+    -- get the location mapping for the location id
+    local mapping_entry = AP_LOCATION_MAPPING[hint.location]
+    if not mapping_entry then
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print(string.format("updateHint: could not find location mapping for id %s", hint.location))
+        end
+        return
+    end
+    for _, location_code in pairs(mapping_entry) do
+        -- skip hosted items, they don't support Highlight
+        if location_code and location_code:sub(1, 1) == "@" then
+            -- find the location object
+            local obj = Tracker:FindObjectForCode(location_code)
+            -- check if we got the location and if it supports Highlight
+            if obj and obj.Highlight then
+                obj.Highlight = highlight_code
+            elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                print(string.format("updateHint: could update section %s (obj doesn't support Highlight)", location_code))
+            end
+        end
     end
 end
 
@@ -321,7 +404,8 @@ if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     Archipelago:AddLocationHandler("location handler", onLocation)
 end
 if AUTOTRACKER_ENABLE_LEVEL_TRACKING then
-    Archipelago:AddSetReplyHandler("notify handler", onNotify)
+    Archipelago:AddRetrievedHandler("retrieved handler", onDataStorageUpdate)
+    Archipelago:AddSetReplyHandler("set reply handler", onDataStorageUpdate)
 end
 -- Archipelago:AddScoutHandler("scout handler", onScout)
 -- Archipelago:AddBouncedHandler("bounce handler", onBounce)
