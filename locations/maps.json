@@ -2832,7 +2832,7 @@
             "name": "Metroid Prime",
             "hosted_item": "MetroidPrime",
             "access_rules": [
-              "PhazonSuit,PowerBeam,WaveBeam,IceBeam,PlasmaBeam"
+              "PhazonSuit,PowerBeam,WaveBeam,IceBeam,PlasmaBeam,[^$can_thermal|1],[^$can_xray|1],[$can_combat_prime]"
             ],
             "visibility_rules": "FinalBossPrime"
           },
