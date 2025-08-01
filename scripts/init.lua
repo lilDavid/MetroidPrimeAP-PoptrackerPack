@@ -2,11 +2,6 @@ DEBUG = false
 ENABLE_DEBUG_LOG = DEBUG
 IS_ITEMS_ONLY = Tracker.ActiveVariantUID == "var_itemsonly"
 
-ScriptHost:LoadScript("scripts/utils.lua")
-
-ScriptHost:LoadScript("scripts/options/requiredmains.lua")
-ScriptHost:LoadScript("scripts/options/progressivebeams.lua")
-
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/options.json")
 Tracker:AddItems("items/tricks.json")
@@ -34,6 +29,11 @@ Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 Tracker:AddLayouts("layouts/options.json")
 Tracker:AddLayouts("layouts/tracker_options.json")
+
+ScriptHost:LoadScript("scripts/utils.lua")
+
+ScriptHost:LoadScript("scripts/options/requiredmains.lua")
+ScriptHost:LoadScript("scripts/options/progressivebeams.lua")
 
 if not IS_ITEMS_ONLY then
     ScriptHost:LoadScript("scripts/logic/logic.lua")

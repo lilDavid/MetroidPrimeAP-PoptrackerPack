@@ -127,7 +127,7 @@
     "codes": "PowerBombExpansion",
     "img": "images/items/powerbombexpansion.png",
     "type": "consumable",
-    "max_quantity": 4
+    "max_quantity": 8
   },
   {
     "name": "Combat Visor",
