@@ -151,7 +151,7 @@
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
           "@Tallon Overworld/Life Grove Tunnel,@doors/Tallon Overworld/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
           "@Tallon Overworld/Transport Tunnel D,$can_open|Tallon Overworld|Transport Tunnel D|Great Tree Hall",
-          "@Tallon Overworld/Transport Tunnel E,$can_open|Tallon Overworld|Transport Tunnel E|Great Tree Hall,$can_boost"
+          "@Tallon Overworld/Transport Tunnel E,$can_open|Tallon Overworld|Transport Tunnel E|Great Tree Hall,$can_boost,$can_space_jump"
         ]
       },
       {

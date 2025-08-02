@@ -144,7 +144,7 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Phazon Mines/Research Access,@doors/Phazon Mines/IceBeam,$can_spider,@Research Access",
+          "@Phazon Mines/Research Access,@doors/Phazon Mines/IceBeam,False",
           "@Phazon Mines/Research Access,@doors/Phazon Mines/IceBeam,[$trick|elite_research_backwards_wall_boost_no_spider|3],$can_boost,$can_space_jump,$can_wave_beam",
           "@Phazon Mines/Research Access,@doors/Phazon Mines/IceBeam,[$trick|elite_research_backwards_wall_boost|1],$can_boost",
           "@Phazon Mines/Security Access B,$can_open|Phazon Mines|Security Access B|Elite Research"
