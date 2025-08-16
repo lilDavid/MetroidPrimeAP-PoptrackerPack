@@ -1,6 +1,16 @@
 {
     "versions": [
         {
+            "package_version": "1.0.1",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.1/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "e3d2d9405589b167976366951242ffca00a44732fc57e3d37a204d5000c6b6e4",
+            "changelog": [
+                "Updated logic to AP world version 0.5.0",
+                "Fixed logic for Metroid Prime and Omega Pirate",
+                "Fixed option tracking"
+            ]
+        },
+        {
             "package_version": "1.0.0",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.0/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "edf6a660d84c52f9ae045b7f641149f8568d7d287fb1476d82e93a1ddfbb18a2",
