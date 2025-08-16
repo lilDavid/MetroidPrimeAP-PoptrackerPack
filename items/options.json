@@ -1,11 +1,10 @@
 [
   {
-    "codes": "RequiredArtifacts",
     "type": "progressive",
     "allow_disabled": false,
     "initial_stage_idx": 11,
     "stages": [
-      { "img": "images/options/requiredartifacts-1.png" },
+      { "img": "images/options/requiredartifacts-1.png", "codes": "RequiredArtifacts" },
       { "img": "images/options/requiredartifacts-2.png" },
       { "img": "images/options/requiredartifacts-3.png" },
       { "img": "images/options/requiredartifacts-4.png" },
@@ -20,19 +19,17 @@
     ]
   },
   {
-    "codes": "FinalBoss",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "stages": [
-      { "img": "images/options/goal-both.png", "codes": "FinalBossRidley,FinalBossPrime", "inherit_codes": false },
+      { "img": "images/options/goal-both.png", "codes": "FinalBoss,FinalBossRidley,FinalBossPrime", "inherit_codes": false },
       { "img": "images/options/goal-ridley.png", "codes": "FinalBossRidley", "inherit_codes": false  },
       { "img": "images/options/goal-prime.png", "codes": "FinalBossPrime", "inherit_codes": false  },
       { "img": "images/options/goal-none.png", "codes": "FinalBossNone", "inherit_codes": false  }
     ]
   },
   {
-    "codes": "RequiredMissileLauncher",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -43,12 +40,11 @@
       },
       {
         "img": "images/options/missilelauncher-on.png",
-        "codes": "MainMissile"
+        "codes": "RequiredMissileLauncher,MainMissile"
       }
     ]
   },
   {
-    "codes": "RequiredPBLauncher",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -59,7 +55,7 @@
       },
       {
         "img": "images/options/mainpb-on.png",
-        "codes": "MainPowerBomb"
+        "codes": "RequiredPBLauncher,MainPowerBomb"
       }
     ]
   },
@@ -94,7 +90,6 @@
     ]
   },
   {
-    "codes": "Tricks",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -107,7 +102,7 @@
       },
       {
         "img": "images/options/tricks-easy.png",
-        "codes": "TricksEasy",
+        "codes": "Tricks,TricksEasy",
         "inherit_codes": false
       },
       {
@@ -154,13 +149,13 @@
   },
   {
     "type": "progressive",
-    "codes": "RemoveXRayRequirements",
     "allow_disabled": false,
     "loop": true,
     "stages": [
       {
         "img": "images/options/xray-all.png",
-        "img_mods": "@disabled"
+        "img_mods": "@disabled",
+        "codes": "RemoveXRayRequirements"
       },
       {
         "img": "images/options/xray-few.png"
@@ -172,13 +167,13 @@
   },
   {
     "type": "progressive",
-    "codes": "RemoveThermalRequirements",
     "allow_disabled": false,
     "loop": true,
     "stages": [
       {
         "img": "images/options/thermal-all.png",
-        "img_mods": "@disabled"
+        "img_mods": "@disabled",
+        "codes": "RemoveThermalRequirements"
       },
       {
         "img": "images/options/thermal-few.png"
@@ -189,14 +184,13 @@
     ]
   },
   {
-    "codes": "StartingRoom",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "stages": [
       {
         "img": "images/options/start-landingsite.png",
-        "codes": "StartingRoomLandingSite",
+        "codes": "StartingRoom,StartingRoomLandingSite",
         "inherit_codes": false
       },
       {
@@ -268,14 +262,13 @@
   },
   {
     "type": "progressive",
-    "codes": "CombatLogic",
     "allow_disabled": false,
     "loop": true,
     "stages": [
       {
         "img": "images/options/combat-normal.png",
         "img_mods": "@disabled",
-        "codes": "CombatLogicNormal"
+        "codes": "CombatLogic,CombatLogicNormal"
       },
       {
         "img": "images/options/combat-minimal.png",
@@ -307,7 +300,6 @@
   },
   {
     "type": "progressive",
-    "codes": "DoorRando",
     "allow_disabled": false,
     "loop": true,
     "stages": [

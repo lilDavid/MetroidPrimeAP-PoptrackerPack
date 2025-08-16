@@ -1205,7 +1205,7 @@ class AreaData(NamedTuple):
             "name": self.name,
             "chest_unopened_img": ItemImage.MissileExpansion.filename(),
             "chest_opened_img": "images/checked.png",
-            "children": [room.into_json() for room in self.rooms]
+            "children": [room.into_json() for room in self.rooms],
         })]
 
 

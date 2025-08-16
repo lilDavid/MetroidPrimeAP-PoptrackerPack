@@ -1,8 +1,8 @@
 AP_SLOT_DATA_MAPPING = {
     ["required_artifacts"] = {
         ["name"] = "RequiredArtifacts",
-        ["offset"] = 1,
-        ["default"] = 12
+        ["offset"] = -1,
+        ["default"] = 11
     },
     ["final_bosses"] = "FinalBoss",
     ["missile_launcher"] = "MainMissile",
@@ -11,7 +11,7 @@ AP_SLOT_DATA_MAPPING = {
     ["remove_hive_mecha"] = "RemoveHiveMecha",
     ["trick_difficulty"] = {
         ["name"] = "Tricks",
-        ["offset"] = -1
+        ["offset"] = 1
     },
     ["backwards_lower_mines"] = "BackwardsLowerMines",
     ["flaahgra_power_bombs"] = "FlaahgraPowerBombs",
@@ -39,13 +39,7 @@ AP_SLOT_DATA_MAPPING = {
     ["progressive_beam_upgrades"] = "ProgressiveBeams",
     ["combat_logic_difficulty"] = "CombatLogic",
     ["elevator_randomization"] = "ElevatorsRandom",
-    ["door_color_randomization"] = {
-        ["name"] = "DoorRando",
-        ["mapping"] = {
-            ["None"] = 0,
-            ["Global"] = 1,
-            ["Regional"] = 2,
-        },
-    },
+    ["door_color_randomization"] = "DoorRando",
+    ["blast_shield_randomization"] = "BlastShieldRando",
     ["pre_scan_elevators"] = "PreScanElevators",
 }
