@@ -275,7 +275,10 @@ function can_combat_thardus()
 end
 
 function can_combat_omega_pirate()
-    return can_combat_generic(6, 3)
+    local accessibility = can_xray(2)
+    if accessibility == AccessibilityLevel.None then return AccessibilityLevel.None end
+    if can_combat_generic(6, 3) then return accessibility end
+    return AccessibilityLevel.SequenceBreak
 end
 
 function can_combat_flaahgra()

@@ -98,7 +98,7 @@
         "name": "Elite Quarters Access",
         "access_rules": [
           "NoLogic",
-          "@Phazon Mines/Elite Quarters,@doors/Phazon Mines/PlasmaBeam,[$can_combat_omega_pirate]",
+          "@Phazon Mines/Elite Quarters,@doors/Phazon Mines/PlasmaBeam,^$can_combat_omega_pirate",
           "@Phazon Mines/Metroid Quarantine B,$can_open|Phazon Mines|Metroid Quarantine B|Elite Quarters Access,[$can_combat_mines],[$can_combat_beam_pirates|PlasmaBeam],$can_spider,$can_grapple,$can_space_jump,$can_scan",
           "@Phazon Mines/Metroid Quarantine B,$can_open|Phazon Mines|Metroid Quarantine B|Elite Quarters Access,[$trick|metroid_quarantine_b_no_spider_grapple|2],$can_space_jump,$can_scan"
         ]
@@ -111,7 +111,7 @@
             "chest_unopened_img": "images/items/phazonsuit.png",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_omega_pirate]"
+              "^$can_combat_omega_pirate"
             ]
           }
         ],
@@ -367,7 +367,7 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Phazon Mines/Elite Quarters,$can_open|Phazon Mines|Elite Quarters|Processing Center Access,[$can_combat_omega_pirate],$can_scan",
+          "@Phazon Mines/Elite Quarters,$can_open|Phazon Mines|Elite Quarters|Processing Center Access,^$can_combat_omega_pirate,$can_scan",
           "@Phazon Mines/Phazon Processing Center,@doors/Phazon Mines/PlasmaBeam,$can_phazon",
           "@Phazon Mines/Phazon Processing Center,@doors/Phazon Mines/PlasmaBeam,[$trick|phazon_processing_center_no_phazon_suit|1]"
         ]

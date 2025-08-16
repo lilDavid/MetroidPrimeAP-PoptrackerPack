@@ -318,6 +318,7 @@ override_functions = {
     "can_exit_ruined_shrine": FunctionOverride.LOCATION,
     "can_flaahgra": FunctionOverride.LOCATION,
     "can_warp_to_start": FunctionOverride.LOCATION,
+    "can_combat_omega_pirate": FunctionOverride.ACCESSIBILITY,
 }
 
 
