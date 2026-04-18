@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 from collections.abc import Iterable
 from enum import Enum, StrEnum
 from pathlib import Path
-from typing import TYPE_CHECKING, NamedTuple
+from typing import TYPE_CHECKING, NamedTuple, cast
 
 pack = Path(__file__).parents[1]
 locations = pack / "locations"
@@ -437,14 +437,21 @@ def omit_empty_lists_and_null(object: dict[str, JsonValue]) -> dict[str, JsonVal
 def load_starting_rooms(options: list[dict[str, JsonValue]]):
     starting_room_data: list[dict[str, JsonValue]] | None = None
     for option in options:
-        if option.get("codes") == "StartingRoom":
-            starting_room_data = option["stages"]
+        stages = cast(list | None, option.get("stages"))
+        if stages is None:
+            continue
+        for stage in stages:
+            codes = cast(dict, stage).get("codes")
+            if codes is not None and "StartingRoom" in cast(str, codes).split(","):
+                starting_room_data = stages
+                break
+
     if starting_room_data is None:
         raise ValueError("No starting room data")
 
     starting_rooms: set[str] = set()
     for room in starting_room_data:
-        starting_rooms.add(room["codes"])
+        starting_rooms.add(cast(str, room["codes"]).split(",")[-1])
     return starting_rooms
 
 
