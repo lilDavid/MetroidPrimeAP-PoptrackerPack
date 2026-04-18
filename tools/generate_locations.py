@@ -7,9 +7,10 @@ import json
 import sys
 import warnings
 from argparse import ArgumentParser
+from collections.abc import Iterable
 from enum import Enum, StrEnum
 from pathlib import Path
-from typing import TYPE_CHECKING, Dict, Iterable, List, NamedTuple, Optional, Set, Union
+from typing import TYPE_CHECKING, NamedTuple
 
 pack = Path(__file__).parents[1]
 locations = pack / "locations"
@@ -426,22 +427,22 @@ class SuitUpgrade(Enum):
 
 
 # AST parsing
-JsonValue = Union[str, int, float, List["JsonValue"], Dict[str, "JsonValue"], None]
+JsonValue = str | int | float | list["JsonValue"] | dict[str, "JsonValue"] | None
 
 
-def omit_empty_lists_and_null(object: Dict[str, JsonValue]) -> Dict[str, JsonValue]:
+def omit_empty_lists_and_null(object: dict[str, JsonValue]) -> dict[str, JsonValue]:
     return {k: v for k, v in object.items() if v not in (None, [])}
 
 
-def load_starting_rooms(options: List[Dict[str, JsonValue]]):
-    starting_room_data: Optional[List[Dict[str, JsonValue]]] = None
+def load_starting_rooms(options: list[dict[str, JsonValue]]):
+    starting_room_data: list[dict[str, JsonValue]] | None = None
     for option in options:
         if option.get("codes") == "StartingRoom":
             starting_room_data = option["stages"]
     if starting_room_data is None:
         raise ValueError("No starting room data")
 
-    starting_rooms: Set[str] = set()
+    starting_rooms: set[str] = set()
     for room in starting_room_data:
         starting_rooms.add(room["codes"])
     return starting_rooms
@@ -473,7 +474,7 @@ def validate_prime_world_node(world: ast.expr):
         raise ASTParseError(world, "Expected name")
 
 
-def logic_function(function_name: str, full_rule: Optional[str] = None):
+def logic_function(function_name: str, full_rule: str | None = None):
     override_type = override_functions.get(function_name)
     if override_type == FunctionOverride.LOCATION:
         return f"@rules/{function_name}"
@@ -487,7 +488,7 @@ def logic_function(function_name: str, full_rule: Optional[str] = None):
 
 
 class RuleConverter(ast.NodeTransformer):
-    collected_rules: Dict[str, None]
+    collected_rules: dict[str, None]
     rule_list_name: str
     filename: str
 
@@ -537,7 +538,7 @@ class RuleConverter(ast.NodeTransformer):
             else:
                 rule = logic_function(function_name)
         else:
-            args: List[str] = []
+            args: list[str] = []
             for arg in node.args[2:]:
                 if type(arg) is ast.Constant:
                     value = ast.literal_eval(arg)
@@ -595,7 +596,7 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
 
         # The index is the combination of conditions. Combinations which satisfy the access rule are
         # expressed in PopTracker's format; otherwise, the value at that index is None.
-        truth_table: List[Optional[str]] = []
+        truth_table: list[str | None] = []
 
         # To test the item combinations, first convert the AP function calls to dict[str, int]
         # lookups for *this* code to run, recording conditions used on the way.
@@ -617,7 +618,7 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
 
         # Exclude rules that are implied by another rule: if an earlier combination with a subset of
         # the conditions satisfies the access rule, this combination is redundant.
-        dnf: List[str] = []
+        dnf: list[str] = []
         for i, rule in enumerate(truth_table):
             if rule is None:
                 continue
@@ -641,7 +642,7 @@ class TrickData(NamedTuple):
 
     id: str
     name: str
-    access_rule: List[str]
+    access_rule: list[str]
 
     @classmethod
     def from_ast(cls, statement: ast.stmt, filename: str):
@@ -678,7 +679,7 @@ class TrickData(NamedTuple):
         if trick_id in manual_trick_rules:
             access_rule = manual_trick_rules[trick_id]
         else:
-            rule_expr: Optional[ast.expr]
+            rule_expr: ast.expr | None
             if len(statement.value.args) > 3:
                 rule_expr = statement.value.args[3]
             else:
@@ -702,9 +703,9 @@ class TrickData(NamedTuple):
 
 class TrackerTrickData(NamedTuple):
     name: str
-    codes: List[str]
+    codes: list[str]
 
-    def json_item(self) -> Dict[str, JsonValue]:
+    def json_item(self) -> dict[str, JsonValue]:
         return {
             "codes": ",".join(self.codes),
             "type": "progressive",
@@ -725,12 +726,12 @@ class TrackerTrickData(NamedTuple):
         }
 
 
-def read_trick_data(tree: ast.AST, filename: str) -> List[TrickData]:
+def read_trick_data(tree: ast.AST, filename: str) -> list[TrickData]:
     if type(tree) is not ast.Module:
         raise ASTParseError(tree, "Tree is not a module")
     module: ast.Module = tree
 
-    class_def: Optional[ast.ClassDef] = None
+    class_def: ast.ClassDef | None = None
     for statement in module.body:
         if type(statement) is ast.ClassDef and statement.name == "Tricks":
             class_def = statement
@@ -753,7 +754,7 @@ def get_tricks(tree: ast.expr):
     if type(tree) is not ast.List:
         raise ASTParseError(tree, "Expected list")
 
-    access_rules: List[str] = []
+    access_rules: list[str] = []
     for element in tree.elts:
         if type(element) is not ast.Attribute or type(element.value) is not ast.Name or element.value.id != "Tricks":
             raise ASTParseError("Expected Tricks attribute access")
@@ -763,8 +764,8 @@ def get_tricks(tree: ast.expr):
 
 class PickupData(NamedTuple):
     name: str
-    image: Optional[ItemImage]
-    access_rules: List[str]
+    image: ItemImage | None
+    access_rules: list[str]
 
     @staticmethod
     def split_check_name(check: str):
@@ -791,8 +792,8 @@ class PickupData(NamedTuple):
         if not item_name:
             item_name = location_names.get(check_name)
 
-        access_rules: List[str] = []
-        trick_access_rules: List[str] = []
+        access_rules: list[str] = []
+        trick_access_rules: list[str] = []
         for kwarg in pickup_data.keywords:
             if kwarg.arg == "rule_func":
                 if check_name in manual_location_rules:
@@ -930,10 +931,10 @@ class DoorData(NamedTuple):
     color: str | None
     blast_shield: str | None
     open_rule: str
-    access_rule: List[str]
+    access_rule: list[str]
     exclude_from_rando: bool = False
-    target_door_index: Optional[int] = None
-    target_door_access_override: Optional[List[str]] = None
+    target_door_index: int | None = None
+    target_door_access_override: list[str] | None = None
 
     @classmethod
     def from_ast(cls, door: ast.expr, area: str, source: str, filename: str):
@@ -946,7 +947,7 @@ class DoorData(NamedTuple):
         target_door_index = None
         target_door_access_override = None
         access_rule = None
-        trick_rules: List[str] = []
+        trick_rules: list[str] = []
         if (
             type(door.args[0]) is not ast.Attribute
             or type(door.args[0].value) is not ast.Name
@@ -1019,8 +1020,8 @@ class DoorData(NamedTuple):
 
 class WorldRoomData(NamedTuple):
     name: str
-    pickups: List[PickupData]
-    doors: Dict[int, DoorData]  # Doors whose sources are this room
+    pickups: list[PickupData]
+    doors: dict[int, DoorData]  # Doors whose sources are this room
 
     @classmethod
     def from_ast(cls, area: str, name: ast.expr, room_data: ast.expr, filename: str):
@@ -1032,8 +1033,8 @@ class WorldRoomData(NamedTuple):
         if type(room_data) is not ast.Call or type(room_data.func) is not ast.Name or room_data.func.id != "RoomData":
             raise ASTParseError(room_data, "Room not assigned to RoomData object")
 
-        pickups: List[PickupData] = []
-        doors: Dict[int, DoorData] = {}
+        pickups: list[PickupData] = []
+        doors: dict[int, DoorData] = {}
         for keyword in room_data.keywords:
             if keyword.arg == "pickups":
                 if type(keyword.value) is not ast.List:
@@ -1051,12 +1052,12 @@ class WorldRoomData(NamedTuple):
 
 class TrackerRoomData(NamedTuple):
     name: str
-    pickups: List[PickupData]
-    access_rules: List[str]
+    pickups: list[PickupData]
+    access_rules: list[str]
 
     @classmethod
     def from_world_room_data(
-        cls, area: str, world_data: WorldRoomData, all_doors: Iterable[DoorData], transports: Dict[str, str]
+        cls, area: str, world_data: WorldRoomData, all_doors: Iterable[DoorData], transports: dict[str, str]
     ):
         doors = (door for door in all_doors if door.destination == world_data.name)
 
@@ -1091,7 +1092,7 @@ class TrackerRoomData(NamedTuple):
 
 class AreaData(NamedTuple):
     name: str
-    rooms: List[TrackerRoomData]
+    rooms: list[TrackerRoomData]
     missile_doors: set[tuple[str, str]]
     mixitup_doors: dict[tuple[str, str], str | tuple[str, str]]
 
@@ -1101,7 +1102,7 @@ class AreaData(NamedTuple):
             raise ASTParseError(tree, "Tree is not a module")
         module: ast.Module = tree
 
-        class_def: Optional[ast.ClassDef] = None
+        class_def: ast.ClassDef | None = None
         for statement in module.body:
             if type(statement) is ast.ClassDef:
                 if class_def is None:
@@ -1111,7 +1112,7 @@ class AreaData(NamedTuple):
         if class_def is None:
             raise ASTParseError(module, "No class definition in module")
 
-        init_method: Optional[ast.FunctionDef] = None
+        init_method: ast.FunctionDef | None = None
         for statement in class_def.body:
             if type(statement) is ast.FunctionDef and statement.name == "__init__":
                 if init_method is None:
@@ -1121,9 +1122,9 @@ class AreaData(NamedTuple):
         if init_method is None:
             raise ASTParseError(class_def, "Class is missing __init__() method")
 
-        area_name_expr: Optional[ast.Expression] = None
-        area_name: Optional[str] = None
-        rooms_assign: Optional[ast.Dict] = None
+        area_name_expr: ast.Expression | None = None
+        area_name: str | None = None
+        rooms_assign: ast.Dict | None = None
         for statement in init_method.body:
             if type(statement) is ast.Expr and type(statement.value) is ast.Call:
                 call = statement.value
@@ -1162,7 +1163,7 @@ class AreaData(NamedTuple):
                 for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)
             )
         }
-        doors: List[DoorData] = []
+        doors: list[DoorData] = []
         for door in itertools.chain.from_iterable(room.doors.values() for room in world_rooms.values()):
             doors.append(door)
             if door.target_door_index:
@@ -1266,7 +1267,7 @@ except ASTParseError as e:
 except Exception as e:
     raise Exception(f"Could not parse tricks") from e
 
-tracker_tricks: Dict[str, TrackerTrickData] = {}
+tracker_tricks: dict[str, TrackerTrickData] = {}
 for trick in trick_list:
     if trick.name not in tracker_tricks:
         tracker_tricks[trick.name] = TrackerTrickData(trick.name, [])
