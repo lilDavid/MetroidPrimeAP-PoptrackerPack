@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "1.0.2",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.2/MetroidPrimeAP_PopTrackerPack.zip",
+            "sha256": "0356f3e499e2499b4e36ffaec578bb3a0f97a02ed8e9cba0465066f9f2e5a79f",
+            "changelog": [
+                "Hotfix for changed item IDs from the AP world (no support for new items)",
+                "Fixed some misplaced blast shields"
+            ]
+        },
+        {
             "package_version": "1.0.1",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.1/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "e3d2d9405589b167976366951242ffca00a44732fc57e3d37a204d5000c6b6e4",
