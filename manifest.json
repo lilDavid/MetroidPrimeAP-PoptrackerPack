@@ -1,20 +1,26 @@
 {
-    "name": "Metroid Prime - Archipelago",
-    "author": "lil David",
-    "game_name": "Metroid Prime",
-    "package_uid": "MetroidPrime-Archipelago-lilDavid",
-    "package_version": "1.0.1",
-    "platform": "GameCube",
-    "variants": {
-      "standard": {
-        "display_name": "Standard - Map Tracker",
-        "flags": ["ap", "uat"]
-      },
-      "var_itemsonly": {
-        "display_name": "Standard - Items Only",
-        "flags": ["ap", "uat"]
-      }
+  "name": "Metroid Prime - Archipelago",
+  "author": "lil David",
+  "game_name": "Metroid Prime",
+  "package_uid": "MetroidPrime-Archipelago-lilDavid",
+  "package_version": "1.0.2",
+  "platform": "GameCube",
+  "variants": {
+    "standard": {
+      "display_name": "Standard - Map Tracker",
+      "flags": [
+        "ap",
+        "uat"
+      ]
     },
-    "versions_url": "https://raw.githubusercontent.com/lilDavid/MetroidPrimeAP-PoptrackerPack/main/versions.json",
-    "target_poptracker_version": "0.32.1"
-  }
+    "var_itemsonly": {
+      "display_name": "Standard - Items Only",
+      "flags": [
+        "ap",
+        "uat"
+      ]
+    }
+  },
+  "versions_url": "https://raw.githubusercontent.com/lilDavid/MetroidPrimeAP-PoptrackerPack/main/versions.json",
+  "target_poptracker_version": "0.32.1"
+}
