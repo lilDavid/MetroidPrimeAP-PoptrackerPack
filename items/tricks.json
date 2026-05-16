@@ -666,20 +666,20 @@
     ]
   },
   {
-    "codes": "furnace_spider_track_sj_bombs",
+    "codes": "furnace_spider_track_sj_bombs_spring_ball",
     "type": "progressive",
     "initial_stage_idx": 1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/tricks/furnace_spider_track_sj_bombs-red.png"
+        "img": "images/tricks/furnace_spider_track_sj_bombs_spring_ball-red.png"
       },
       {
-        "img": "images/tricks/furnace_spider_track_sj_bombs.png",
+        "img": "images/tricks/furnace_spider_track_sj_bombs_spring_ball.png",
         "img_mods": "@disabled"
       },
       {
-        "img": "images/tricks/furnace_spider_track_sj_bombs.png"
+        "img": "images/tricks/furnace_spider_track_sj_bombs_spring_ball.png"
       }
     ]
   },
@@ -1256,6 +1256,24 @@
       },
       {
         "img": "images/tricks/phendrana_courtyard_no_boost_spider.png"
+      }
+    ]
+  },
+  {
+    "codes": "research_lab_aether_item_dbj",
+    "type": "progressive",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/tricks/research_lab_aether_upper_item_with_dbj-red.png"
+      },
+      {
+        "img": "images/tricks/research_lab_aether_upper_item_with_dbj.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/tricks/research_lab_aether_upper_item_with_dbj.png"
       }
     ]
   },

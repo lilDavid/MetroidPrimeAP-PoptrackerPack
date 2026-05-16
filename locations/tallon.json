@@ -65,6 +65,7 @@
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,^$can_crashed_frigate",
           "@Tallon Overworld/Cargo Freight Lift to Deck Gamma,[$trick|frigate_no_gravity|1],$can_bomb,$can_space_jump,$can_wave_beam,^$can_thermal",
           "@Tallon Overworld/Hydro Access Tunnel,$can_bomb,$can_move_underwater,$can_space_jump",
+          "@Tallon Overworld/Hydro Access Tunnel,$can_ball_jump,$can_move_underwater,$can_space_jump",
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost"
         ]
       },
@@ -150,6 +151,7 @@
           "@Tallon Overworld/Hydro Access Tunnel,^$can_crashed_frigate,$can_boost",
           "@Tallon Overworld/Hydro Access Tunnel,[$trick|hydro_access_tunnel_no_gravity|3],$can_boost",
           "@Tallon Overworld/Life Grove Tunnel,@doors/Tallon Overworld/IceBeam,$can_power_bomb,$can_boost,$can_bomb",
+          "@Tallon Overworld/Life Grove Tunnel,@doors/Tallon Overworld/IceBeam,$can_power_bomb,$can_boost,$can_ball_jump",
           "@Tallon Overworld/Transport Tunnel D,$can_open|Tallon Overworld|Transport Tunnel D|Great Tree Hall",
           "@Tallon Overworld/Transport Tunnel E,$can_open|Tallon Overworld|Transport Tunnel E|Great Tree Hall,$can_boost,$can_space_jump"
         ]
@@ -160,7 +162,8 @@
           "NoLogic",
           "@Tallon Overworld/Landing Site,$can_space_jump",
           "@Tallon Overworld/Landing Site,[$trick|landing_site_scan_dash|1],$can_scan",
-          "@Tallon Overworld/Tallon Canyon,$can_boost,$can_bomb"
+          "@Tallon Overworld/Tallon Canyon,$can_boost,$can_bomb",
+          "@Tallon Overworld/Tallon Canyon,$can_boost,$can_power_bomb|3"
         ]
       },
       {
@@ -214,7 +217,8 @@
             "name": "Boost Ball loop",
             "access_rules": [
               "NoLogic",
-              "$can_power_bomb,$can_bomb,$can_boost"
+              "$can_power_bomb|2,$can_bomb,$can_boost",
+              "$can_power_bomb|2,$can_ball_jump,$can_boost"
             ]
           }
         ],
@@ -222,7 +226,7 @@
           "NoLogic",
           "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,$can_spider",
           "@Tallon Overworld/Great Tree Hall,@doors/Tallon Overworld/IceBeam,[$trick|great_tree_hall_no_spider_ball|1],$can_space_jump",
-          "@Tallon Overworld/Life Grove,$can_power_bomb,$can_space_jump,$can_morph_ball,$can_power_beam"
+          "@Tallon Overworld/Life Grove,$can_power_bomb|2,$can_space_jump,$can_morph_ball,[$can_combat_ghosts]"
         ]
       },
       {
@@ -244,7 +248,8 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost,$can_bomb"
+          "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost,$can_bomb",
+          "@Tallon Overworld/Life Grove Tunnel,$can_power_beam,[$can_combat_ghosts],$can_power_bomb,$can_boost,$can_ball_jump"
         ]
       },
       {

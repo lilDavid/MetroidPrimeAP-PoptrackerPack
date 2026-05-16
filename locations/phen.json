@@ -45,7 +45,9 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Phendrana Drifts/Chapel Tunnel,$can_bomb"
+          "@Phendrana Drifts/Chapel Tunnel,$can_bomb",
+          "@Phendrana Drifts/Chapel Tunnel,$can_power_bomb|2",
+          "@Phendrana Drifts/Chapel Tunnel,$can_ball_jump"
         ]
       },
       {
@@ -55,6 +57,8 @@
           "@Phendrana Drifts/Chapel of the Elders,$can_defeat_sheegoth,$can_space_jump,$can_wave_beam",
           "@Phendrana Drifts/Chapel of the Elders,[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam",
           "@Phendrana Drifts/Chozo Ice Temple,$can_bomb,$can_space_jump,$can_missile",
+          "@Phendrana Drifts/Chozo Ice Temple,$can_power_bomb|2,$can_space_jump,$can_missile",
+          "@Phendrana Drifts/Chozo Ice Temple,$can_ball_jump,$can_space_jump,$can_missile",
           "@Phendrana Drifts/Chozo Ice Temple,[$trick|ice_temple_to_chapel_no_sj|2],$can_bomb,$can_missile"
         ]
       },
@@ -72,6 +76,8 @@
         "access_rules": [
           "NoLogic",
           "@Phendrana Drifts/Chapel Tunnel,$can_bomb",
+          "@Phendrana Drifts/Chapel Tunnel,$can_power_bomb|2",
+          "@Phendrana Drifts/Chapel Tunnel,$can_ball_jump",
           "@Phendrana Drifts/Temple Entryway,$can_missile",
           "@Phendrana Drifts/Temple Entryway,$can_charge_beam",
           "@Phendrana Drifts/Temple Entryway,$can_plasma_beam"
@@ -86,7 +92,9 @@
             "access_rules": [
               "NoLogic",
               "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_bomb",
+              "[$can_combat_labs],$can_space_jump,$can_missile,$can_melt_ice,$can_ball_jump",
               "[$trick|control_tower_item_no_plasma|1],$can_bomb,$can_missile,$can_space_jump",
+              "[$trick|control_tower_item_no_plasma|1],$can_ball_jump,$can_missile,$can_space_jump",
               "Softlocks,SpaceJump,$can_missile,[]"
             ]
           }
@@ -139,7 +147,7 @@
         ],
         "access_rules": [
           "NoLogic",
-          "@Phendrana Drifts/Frost Cave Access,@doors/Phendrana Drifts/WaveBeam,$can_bomb",
+          "@Phendrana Drifts/Frost Cave Access,@doors/Phendrana Drifts/WaveBeam,$can_morph_ball",
           "@Phendrana Drifts/Save Station C,@doors/Phendrana Drifts/WaveBeam",
           "@Phendrana Drifts/Upper Edge Tunnel,$can_open|Phendrana Drifts|Upper Edge Tunnel|Frost Cave,$can_morph_ball"
         ]
@@ -148,7 +156,7 @@
         "name": "Frozen Pike",
         "access_rules": [
           "NoLogic",
-          "@Phendrana Drifts/Frost Cave Access,$can_open|Phendrana Drifts|Frost Cave Access|Frozen Pike,$can_bomb",
+          "@Phendrana Drifts/Frost Cave Access,$can_open|Phendrana Drifts|Frost Cave Access|Frozen Pike,$can_morph_ball",
           "@Phendrana Drifts/Hunter Cave Access,@doors/Phendrana Drifts/WaveBeam",
           "@Phendrana Drifts/Pike Access,@doors/Phendrana Drifts/WaveBeam",
           "@Phendrana Drifts/Transport Access,@doors/Phendrana Drifts/WaveBeam"
@@ -353,7 +361,7 @@
             "name": "Spider Track",
             "access_rules": [
               "NoLogic",
-              "$can_bomb,$can_spider,$can_super_missile,$can_scan,$can_space_jump",
+              "$can_spider,$can_super_missile,$can_scan,$can_space_jump",
               "[$trick|shorelines_spider_track_no_sj|2],$can_bomb,$can_spider,$can_super_missile,$can_scan",
               "{}"
             ]
@@ -426,7 +434,7 @@
           "NoLogic",
           "@Phendrana Drifts/North Quarantine Tunnel,@doors/Phendrana Drifts/WaveBeam,$can_morph_ball",
           "@Phendrana Drifts/Quarantine Monitor,$can_morph_ball",
-          "@Phendrana Drifts/South Quarantine Tunnel,$can_open|Phendrana Drifts|South Quarantine Tunnel|Quarantine Cave"
+          "@Phendrana Drifts/South Quarantine Tunnel,$can_open|Phendrana Drifts|South Quarantine Tunnel|Quarantine Cave,$can_morph_ball"
         ]
       },
       {
@@ -495,7 +503,8 @@
             "name": "Morph Track",
             "access_rules": [
               "NoLogic",
-              "[$can_combat_labs],$can_bomb,$can_space_jump",
+              "[$can_combat_labs],$can_space_jump",
+              "[$trick|research_lab_aether_item_dbj|1],$can_bomb",
               "SpaceJump,[]",
               "{}"
             ]
@@ -665,6 +674,7 @@
         "access_rules": [
           "NoLogic",
           "@Phendrana Drifts/Frozen Pike,@doors/Phendrana Drifts/WaveBeam,$can_bomb,$can_space_jump",
+          "@Phendrana Drifts/Frozen Pike,@doors/Phendrana Drifts/WaveBeam,$can_ball_jump,$can_space_jump",
           "@Phendrana Drifts/Frozen Pike,@doors/Phendrana Drifts/WaveBeam,[$trick|frozen_pike_no_bombs|2],$can_space_jump",
           "@Phendrana Drifts/Transport to Magmoor Caverns South,$can_open|Phendrana Drifts|Transport to Magmoor Caverns South|Transport Access,$can_spider"
         ]
@@ -673,7 +683,7 @@
         "name": "Transport to Magmoor Caverns South",
         "access_rules": [
           "NoLogic",
-          "@Phendrana Drifts/South Quarantine Tunnel,@doors/Phendrana Drifts/WaveBeam",
+          "@Phendrana Drifts/South Quarantine Tunnel,@doors/Phendrana Drifts/WaveBeam,$can_morph_ball",
           "@Phendrana Drifts/Transport Access,$can_open|Phendrana Drifts|Transport Access|Transport to Magmoor Caverns South",
           "ElevatorsNormal,@Magmoor Caverns/Transport to Phendrana Drifts South,$can_access_elevators",
           "ElevatorsRandom,PhendranaDriftsTransportToMagmoorCavernsSouth"

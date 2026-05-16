@@ -4,6 +4,7 @@ import ast
 import importlib.util
 import itertools
 import json
+import re
 import sys
 import warnings
 from argparse import ArgumentParser
@@ -666,7 +667,7 @@ class TrickData(NamedTuple):
             raise ASTParseError(statement, "Assignment not from TrickInfo constructor")
 
         trick_name: str = ast.literal_eval(statement.value.args[0])
-        trick_name = trick_name.lower().replace(" ", "_").replace("'", "")
+        trick_name = "_".join(re.split(r"[ _/]", trick_name.lower())).replace("'", "")
 
         difficulty_expr = statement.value.args[2]
         if (
