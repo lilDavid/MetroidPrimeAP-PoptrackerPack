@@ -50,11 +50,14 @@ function trick(id, difficulty)
         end
         return false
     end
-    if trick_item.CurrentStage == 0 then return false end
-    if trick_item.CurrentStage == 2 then return true end
+    if trick_item.CurrentStage == 0 then
+        return false
+    end
+    if trick_item.CurrentStage == 2 then
+        return true
+    end
     return has("Tricks", tonumber(difficulty))
 end
-
 
 -- Logic
 
@@ -69,7 +72,11 @@ function can_boost()
 end
 
 function can_bomb()
-    return has_all({"MorphBall", "Bombs"})
+    return has("MorphBall") and has("Bombs", 2)
+end
+
+function can_ball_jump()
+    return has_all({"MorphBall", "SpringBall"})
 end
 
 function can_beam(beam)
@@ -93,7 +100,9 @@ end
 
 function can_missile(expansions)
     expansions = tonumber(expansions)
-    if expansions == nil or expansions < 1 then expansions = 1 end
+    if expansions == nil or expansions < 1 then
+        expansions = 1
+    end
     local count = 5 * expansions
     if has("MainMissile") then
         return has("MissileLauncher") and has("MissileExpansion", count - 1)
@@ -103,8 +112,11 @@ end
 
 function can_super_missile()
     local beam_requirement
-    if has("ProgressiveBeams") then beam_requirement = has("PowerBeam", 3)
-    else beam_requirement = has_all({"ChargeBeam", "SuperMissile"}) end
+    if has("ProgressiveBeams") then
+        beam_requirement = has("PowerBeam", 3)
+    else
+        beam_requirement = has_all({"ChargeBeam", "SuperMissile"})
+    end
     return can_power_beam() and can_missile() and beam_requirement
 end
 
@@ -143,9 +155,15 @@ function can_xray(requirement)
         requirement = tonumber(requirement)
     end
     local remove_xray_reqs = Tracker:FindObjectForCode("RemoveXRayRequirements").CurrentStage
-    if has("XRayVisor") then return AccessibilityLevel.Normal end
-    if requirement == 2 then return AccessibilityLevel.None end
-    if remove_xray_reqs > requirement then return AccessibilityLevel.Normal end
+    if has("XRayVisor") then
+        return AccessibilityLevel.Normal
+    end
+    if requirement == 2 then
+        return AccessibilityLevel.None
+    end
+    if remove_xray_reqs > requirement then
+        return AccessibilityLevel.Normal
+    end
     return AccessibilityLevel.SequenceBreak
 end
 
@@ -156,9 +174,15 @@ function can_thermal(requirement)
         requirement = tonumber(requirement)
     end
     local remove_thermal_reqs = Tracker:FindObjectForCode("RemoveThermalRequirements").CurrentStage
-    if has("ThermalVisor") then return AccessibilityLevel.Normal end
-    if requirement == 2 then return AccessibilityLevel.None end
-    if remove_thermal_reqs > requirement then return AccessibilityLevel.Normal end
+    if has("ThermalVisor") then
+        return AccessibilityLevel.Normal
+    end
+    if requirement == 2 then
+        return AccessibilityLevel.None
+    end
+    if remove_thermal_reqs > requirement then
+        return AccessibilityLevel.Normal
+    end
     return AccessibilityLevel.SequenceBreak
 end
 
@@ -168,14 +192,19 @@ end
 
 function can_charge_beam(required_beam)
     if required_beam then
-        if has("ProgressiveBeams") then return has(required_beam, 2)
-        else return has_all({"ChargeBeam", required_beam}) end
+        if has("ProgressiveBeams") then
+            return has(required_beam, 2)
+        else
+            return has_all({"ChargeBeam", required_beam})
+        end
     end
 
     -- If no beam is required, check for Charge Beam or 2 of any progressive beam
     if has("ProgressiveBeams") then
         for _, beam in ipairs({"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"}) do
-            if has(beam, 2) then return true end
+            if has(beam, 2) then
+                return true
+            end
         end
     end
     return has("ChargeBeam")
@@ -236,7 +265,6 @@ function has_power_bomb_count(required_count)
     return (count >= tonumber(required_count))
 end
 
-
 -- LogicCombat
 
 function can_combat_generic(normal_tanks, minimal_tanks, requires_charge_beam)
@@ -276,14 +304,17 @@ end
 
 function can_combat_omega_pirate()
     local accessibility = can_xray(2)
-    if accessibility == AccessibilityLevel.None then return AccessibilityLevel.None end
-    if can_combat_generic(6, 3) then return accessibility end
+    if accessibility == AccessibilityLevel.None then
+        return AccessibilityLevel.None
+    end
+    if can_combat_generic(6, 3) then
+        return accessibility
+    end
     return AccessibilityLevel.SequenceBreak
 end
 
 function can_combat_flaahgra()
-    return has("StartingRoomSunchamberLobby")
-        or can_combat_generic(2, 1, false)
+    return has("StartingRoomSunchamberLobby") or can_combat_generic(2, 1, false)
 end
 
 function can_combat_ridley()
@@ -300,8 +331,7 @@ function can_combat_ghosts()
     elseif has("CombatLogic", 1) then
         return can_power_beam()
     else
-        return can_charge_beam("PowerBeam") and can_power_beam()
-            and can_xray(1) == AccessibilityLevel.Normal
+        return can_charge_beam("PowerBeam") and can_power_beam() and can_xray(1) == AccessibilityLevel.Normal
     end
 end
 
@@ -312,7 +342,6 @@ function can_combat_beam_pirates(beam)
     return has(beam)
 end
 
-
 -- Regions
 
 function can_access_elevators()
@@ -321,7 +350,6 @@ function can_access_elevators()
     end
     return can_scan()
 end
-
 
 -- Data/ChozoRuins
 
@@ -332,7 +360,6 @@ end
 function can_climb_tower_of_light()
     return (can_missile() and has("MissileExpansion", 8) and can_space_jump())
 end
-
 
 -- Data/TallonOverworld
 
@@ -353,7 +380,6 @@ end
 function can_crashed_frigate_backwards()
     return (can_space_jump() and can_move_underwater() and can_bomb())
 end
-
 
 -- Data/PhendranaDrifts
 

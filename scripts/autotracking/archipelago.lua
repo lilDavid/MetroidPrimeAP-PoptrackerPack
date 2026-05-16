@@ -15,7 +15,7 @@ if Highlight then
         [40] = Highlight.None,
         [10] = Highlight.NoPriority,
         [0] = Highlight.Unspecified,
-        [30] = Highlight.Priority,
+        [30] = Highlight.Priority
     }
 else
     HINT_STATUS_MAPPING = {}
@@ -35,10 +35,10 @@ function getDataStorageKey(key)
     local player = Archipelago.PlayerNumber
     local team = Archipelago.TeamNumber
 
-    if AutoTracker:GetConnectionState("AP") ~= AUTOTRACKER_CONNECTED
-        or team == nil or team == AP_TEAM_NONE
-        or player == nil
-    then
+    if
+        AutoTracker:GetConnectionState("AP") ~= AUTOTRACKER_CONNECTED or team == nil or team == AP_TEAM_NONE or
+            player == nil
+     then
         print("Tried to call getDataStorageKey while not connected to AP server")
         return nil
     end
@@ -83,7 +83,7 @@ function onClear(slot_data)
             if obj then
                 if v[2] == "toggle" then
                     obj.Active = false
-                elseif v[2] == "progressive" or v[2] == "togglebeam" or v[2] == "progressivebeam" then
+                elseif v[2] == "progressive" or v[2] == "togglebeam" or v[2] == "progressivebeam" or v[2] == "bombs" then
                     obj.CurrentStage = 0
                     obj.Active = false
                 elseif v[2] == "consumable" then
@@ -134,9 +134,11 @@ function onClear(slot_data)
         print(string.format("onClear: setting trick %s to default", v))
     end
 
-    if SLOT_DATA == nil then return end
+    if SLOT_DATA == nil then
+        return
+    end
 
-    local data_storage_keys = { getDataStorageKey("_read_hints"), getDataStorageKey("metroidprime_level") }
+    local data_storage_keys = {getDataStorageKey("_read_hints"), getDataStorageKey("metroidprime_level")}
     Archipelago:SetNotify(data_storage_keys)
     Archipelago:Get(data_storage_keys)
 
@@ -144,7 +146,11 @@ function onClear(slot_data)
     for k, v in pairs(SLOT_DATA) do
         local option = AP_SLOT_DATA_MAPPING[k]
         if type(v) == "boolean" then
-            if v then v = 1 else v = 0 end
+            if v then
+                v = 1
+            else
+                v = 0
+            end
         end
         local key, value
         if type(option) == "string" then
@@ -224,7 +230,7 @@ function onItem(index, item_id, item_name, player_number)
         return
     end
     local is_local = player_number == Archipelago.PlayerNumber
-    CUR_INDEX = index;
+    CUR_INDEX = index
     local v = AP_ITEM_MAPPING[item_id]
     if not v then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -247,6 +253,12 @@ function onItem(index, item_id, item_name, player_number)
                 obj.CurrentStage = obj.CurrentStage + 1
             else
                 obj.Active = true
+            end
+        elseif v[2] == "bombs" then
+            if v[3] == nil then
+                obj.CurrentStage = obj.CurrentStage + 1
+            elseif obj.CurrentStage < v[3] then
+                obj.CurrentStage = v[3]
             end
         elseif v[2] == "consumable" then
             obj.AcquiredCount = obj.AcquiredCount + obj.Increment
@@ -327,14 +339,18 @@ function onDataStorageUpdate(key, value, old_value)
     if key == getDataStorageKey("_read_hints") then
         updateHints(value)
     elseif key == getDataStorageKey("metroidprime_level") then
-        if value == old_value and not ForceUpdateTab then return end
+        if value == old_value and not ForceUpdateTab then
+            return
+        end
         updateMap(value)
         ForceUpdateTab = false
     end
 end
 
 function updateHints(hints)
-    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then return end
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+        return
+    end
     for _, hint in ipairs(hints) do
         if hint.finding_player == Archipelago.PlayerNumber then
             updateHint(hint)
@@ -352,7 +368,13 @@ function updateHint(hint)
 
     if not highlight_code then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print(string.format("updateHint: unknown hint status %s for hint on location id %s", hint.status, hint.location))
+            print(
+                string.format(
+                    "updateHint: unknown hint status %s for hint on location id %s",
+                    hint.status,
+                    hint.location
+                )
+            )
         end
         -- try to "recover" by checking hint.found (older AP versions without hint.status)
         if hint.found == true then
@@ -381,16 +403,22 @@ function updateHint(hint)
             if obj and obj.Highlight then
                 obj.Highlight = highlight_code
             elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-                print(string.format("updateHint: could update section %s (obj doesn't support Highlight)", location_code))
+                print(
+                    string.format("updateHint: could update section %s (obj doesn't support Highlight)", location_code)
+                )
             end
         end
     end
 end
 
 function updateMap(value)
-    if not has("AutoTab") then return end
+    if not has("AutoTab") then
+        return
+    end
     local level = AP_LEVEL_MAPPING[value]
-    if not level then return end
+    if not level then
+        return
+    end
     Tracker:UiHint("ActivateTab", level)
 end
 
@@ -410,4 +438,10 @@ end
 -- Archipelago:AddScoutHandler("scout handler", onScout)
 -- Archipelago:AddBouncedHandler("bounce handler", onBounce)
 
-ScriptHost:AddWatchForCode("Auto tab update", "AutoTab", function() ForceUpdateTab = true end)
+ScriptHost:AddWatchForCode(
+    "Auto tab update",
+    "AutoTab",
+    function()
+        ForceUpdateTab = true
+    end
+)

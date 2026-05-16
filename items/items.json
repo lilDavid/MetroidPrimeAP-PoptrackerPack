@@ -24,36 +24,64 @@
     "name": "Power Beam",
     "type": "progressive",
     "stages": [
-      {"img": "images/items/powerbeam.png", "codes": "PowerBeam"},
-      {"img_mods": "overlay|images/items/cancharge.png"},
-      {"img_mods": "overlay|images/items/cancharge.png"}
+      {
+        "img": "images/items/powerbeam.png",
+        "codes": "PowerBeam"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      }
     ]
   },
   {
     "name": "Wave Beam",
     "type": "progressive",
     "stages": [
-      {"img": "images/items/wavebeam.png", "codes": "WaveBeam"},
-      {"img_mods": "overlay|images/items/cancharge.png"},
-      {"img_mods": "overlay|images/items/cancharge.png"}
+      {
+        "img": "images/items/wavebeam.png",
+        "codes": "WaveBeam"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      }
     ]
   },
   {
     "name": "Ice Beam",
     "type": "progressive",
     "stages": [
-      {"img": "images/items/icebeam.png", "codes": "IceBeam"},
-      {"img_mods": "overlay|images/items/cancharge.png"},
-      {"img_mods": "overlay|images/items/cancharge.png"}
+      {
+        "img": "images/items/icebeam.png",
+        "codes": "IceBeam"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      }
     ]
   },
   {
     "name": "Plasma Beam",
     "type": "progressive",
     "stages": [
-      {"img": "images/items/plasmabeam.png", "codes": "PlasmaBeam"},
-      {"img_mods": "overlay|images/items/cancharge.png"},
-      {"img_mods": "overlay|images/items/cancharge.png"}
+      {
+        "img": "images/items/plasmabeam.png",
+        "codes": "PlasmaBeam"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      },
+      {
+        "img_mods": "overlay|images/items/cancharge.png"
+      }
     ]
   },
   {
@@ -111,10 +139,28 @@
     "type": "toggle"
   },
   {
-    "name": "Morph Ball Bombs",
-    "codes": "Bombs",
-    "img": "images/items/bombs.png",
-    "type": "toggle"
+    "name": "Morph Ball Bomb",
+    "type": "progressive",
+    "initial_stage_idx": 0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "Morph Ball Bomb",
+        "img": "images/items/bombs.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "name": "Spring Ball",
+        "codes": "SpringBall",
+        "img": "images/items/springball.png",
+        "disabled_img": "images/items/bombs.png"
+      },
+      {
+        "name": "Morph Ball Bomb",
+        "codes": "Bombs",
+        "img": "images/items/bombs.png"
+      }
+    ]
   },
   {
     "name": "Power Bomb",
