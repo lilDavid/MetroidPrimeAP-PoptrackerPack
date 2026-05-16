@@ -7,7 +7,7 @@ import json
 import sys
 import warnings
 from argparse import ArgumentParser
-from collections.abc import Iterable
+from collections.abc import Iterable, Mapping, Sequence
 from enum import Enum, StrEnum
 from pathlib import Path
 from typing import TYPE_CHECKING, NamedTuple, cast
@@ -406,6 +406,7 @@ data_path: Path = args.path_to_apworld / "data"
 def import_file(path: Path):
     name = f"metroidprime.{path.stem}"
     spec = importlib.util.spec_from_file_location(name, path)
+    assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     sys.modules[name] = module
     spec.loader.exec_module(module)
@@ -415,8 +416,8 @@ import_file(data_path / "AreaNames.py")
 import_file(data_path / "RoomNames.py")
 
 if not TYPE_CHECKING:
-    from metroidprime.AreaNames import MetroidPrimeArea
-    from metroidprime.RoomNames import RoomName
+    from metroidprime.AreaNames import MetroidPrimeArea  # noqa: F401
+    from metroidprime.RoomNames import RoomName  # noqa: F401
 
 
 class SuitUpgrade(Enum):
@@ -427,7 +428,7 @@ class SuitUpgrade(Enum):
 
 
 # AST parsing
-JsonValue = str | int | float | list["JsonValue"] | dict[str, "JsonValue"] | None
+JsonValue = str | int | float | Sequence["JsonValue"] | Mapping[str, "JsonValue"] | None
 
 
 def omit_empty_lists_and_null(object: dict[str, JsonValue]) -> dict[str, JsonValue]:
@@ -468,16 +469,16 @@ class ASTParseError(ValueError):
 
 
 def validate_prime_world_node(world: ast.expr):
-    if type(world) != ast.Subscript:
+    if type(world) is not ast.Subscript:
         raise ASTParseError(world, "Expected subscript")
     worlds = world.value
-    if type(worlds) != ast.Attribute or worlds.attr != "worlds":
+    if type(worlds) is not ast.Attribute or worlds.attr != "worlds":
         raise ASTParseError(world, "Expected attribute 'worlds'")
     multiworld = worlds.value
-    if type(multiworld) != ast.Attribute or multiworld.attr != "multiworld":
+    if type(multiworld) is not ast.Attribute or multiworld.attr != "multiworld":
         raise ASTParseError(world, "Expected attribute 'multiworld'")
     state = multiworld.value
-    if type(state) != ast.Name:
+    if type(state) is not ast.Name:
         raise ASTParseError(world, "Expected name")
 
 
@@ -560,13 +561,13 @@ class RuleConverter(ast.NodeTransformer):
             rule = logic_function(function_name, "|".join((function_name, *args)))
 
         self.collected_rules[rule] = None
-        node = ast.Subscript(
+        new_node = ast.Subscript(
             value=ast.Name(id=self.rule_list_name, ctx=ast.Load()),
             slice=ast.Constant(value=rule),
             ctx=ast.Load(),
         )
-        ast.fix_missing_locations(node)
-        return node
+        ast.fix_missing_locations(new_node)
+        return new_node
 
 
 def bits(n, size):
@@ -579,74 +580,69 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
     if type(rule_func) is ast.Name:
         return [logic_function(rule_func.id)]
 
-    elif type(rule_func) is ast.Lambda:
-        if len(rule_func.args.args) != 2:
-            raise ASTParseError(rule_func, f"Lambda has {len(rule_func.args.args)} arguments")
-
-        if type(rule_func.body) is ast.Constant:
-            if ast.literal_eval(rule_func.body):
-                return None
-            else:
-                return ["False"]
-
-        if type(rule_func.body) is ast.Call:
-            if type(rule_func.body.func) is ast.Name:
-                return [logic_function(rule_func.body.func.id)]
-            raise NotImplementedError(ast.dump(rule_func.body.func))
-
-        if type(rule_func.body) is not ast.BoolOp:
-            raise ASTParseError(rule_func, f"Lambda body is not a boolean operation")
-
-        # PopTracker's access rules are expressed as a sum of products without negation. To convert
-        # the world's access rules to PopTracker's format, generate a truth table by testing each
-        # combination of conditions mentioned by the rule.
-
-        # The index is the combination of conditions. Combinations which satisfy the access rule are
-        # expressed in PopTracker's format; otherwise, the value at that index is None.
-        truth_table: list[str | None] = []
-
-        # To test the item combinations, first convert the AP function calls to dict[str, int]
-        # lookups for *this* code to run, recording conditions used on the way.
-        converter = RuleConverter("rule_functions", filename)
-        expression = ast.Expression(converter.visit(rule_func.body))
-
-        # Then test each combination by evaluating the converted conditions.
-        for i in range(1 << (len(converter.collected_rules))):
-            rule_functions = {
-                rule: bit for rule, bit in zip(converter.collected_rules, bits(i, len(converter.collected_rules)))
-            }
-            try:
-                if eval(compile(expression, __file__, "eval")):
-                    truth_table.append(",".join(rule for rule, value in rule_functions.items() if value))
-                else:
-                    truth_table.append(None)
-            except Exception as e:
-                raise ASTParseError(rule_func) from e
-
-        # Exclude rules that are implied by another rule: if an earlier combination with a subset of
-        # the conditions satisfies the access rule, this combination is redundant.
-        dnf: list[str] = []
-        for i, rule in enumerate(truth_table):
-            if rule is None:
-                continue
-            covering_rules = any(
-                True for j in range(i) if truth_table[j] is not None and truth_table[i & j] is not None
-            )
-            if not covering_rules:
-                dnf.append(rule)
-        return dnf
-
-    else:
+    if type(rule_func) is not ast.Lambda:
         raise ASTParseError(rule_func, "Could not parse access rule")
+
+    if len(rule_func.args.args) != 2:
+        raise ASTParseError(rule_func, f"Lambda has {len(rule_func.args.args)} arguments")
+
+    if type(rule_func.body) is ast.Constant:
+        if ast.literal_eval(rule_func.body):
+            return None
+        return ["False"]
+
+    if type(rule_func.body) is ast.Call:
+        if type(rule_func.body.func) is ast.Name:
+            return [logic_function(rule_func.body.func.id)]
+        raise NotImplementedError(ast.dump(rule_func.body.func))
+
+    if type(rule_func.body) is not ast.BoolOp:
+        raise ASTParseError(rule_func, "Lambda body is not a boolean operation")
+
+    # PopTracker's access rules are expressed as a sum of products without negation. To convert
+    # the world's access rules to PopTracker's format, generate a truth table by testing each
+    # combination of conditions mentioned by the rule.
+
+    # The index is the combination of conditions. Combinations which satisfy the access rule are
+    # expressed in PopTracker's format; otherwise, the value at that index is None.
+    truth_table: list[str | None] = []
+
+    # To test the item combinations, first convert the AP function calls to dict[str, int]
+    # lookups for *this* code to run, recording conditions used on the way.
+    converter = RuleConverter("rule_functions", filename)
+    expression = ast.Expression(converter.visit(rule_func.body))
+
+    # Then test each combination by evaluating the converted conditions.
+    for i in range(1 << (len(converter.collected_rules))):
+        rule_functions = dict(zip(converter.collected_rules, bits(i, len(converter.collected_rules)), strict=True))
+        try:
+            if eval(compile(expression, __file__, "eval")):
+                truth_table.append(",".join(rule for rule, value in rule_functions.items() if value))
+            else:
+                truth_table.append(None)
+        except Exception as e:
+            raise ASTParseError(rule_func) from e
+
+    # Exclude rules that are implied by another rule: if an earlier combination with a subset of
+    # the conditions satisfies the access rule, this combination is redundant.
+    dnf: list[str] = []
+    for i, rule in enumerate(truth_table):
+        if rule is None:
+            continue
+        covering_rules = any(True for j in range(i) if truth_table[j] is not None and truth_table[i & j] is not None)
+        if not covering_rules:
+            dnf.append(rule)
+    return dnf
+
+
+TRICK_DIFFICULTY_MAP = {
+    "Easy": 1,
+    "Medium": 2,
+    "Hard": 3,
+}
 
 
 class TrickData(NamedTuple):
-    DIFFICULTY_MAP = {
-        "Easy": 1,
-        "Medium": 2,
-        "Hard": 3,
-    }
-
     id: str
     name: str
     access_rule: list[str]
@@ -681,7 +677,7 @@ class TrickData(NamedTuple):
             or difficulty_expr.value.id != "TrickDifficulty"
         ):
             raise ASTParseError(difficulty_expr, "Difficulty assignment not from TrickDifficulty")
-        difficulty = cls.DIFFICULTY_MAP[difficulty_expr.attr]
+        difficulty = TRICK_DIFFICULTY_MAP[difficulty_expr.attr]
 
         if trick_id in manual_trick_rules:
             access_rule = manual_trick_rules[trick_id]
@@ -694,7 +690,7 @@ class TrickData(NamedTuple):
                 for keyword in statement.value.keywords:
                     if keyword.arg == "rule_func":
                         rule_expr = keyword.value
-                if rule_expr == None:
+                if rule_expr is None:
                     raise ASTParseError(statement.value, "Missing rule_func")
             try:
                 access_rule = parse_access_rule(rule_expr, filename)
@@ -733,7 +729,7 @@ class TrackerTrickData(NamedTuple):
         }
 
 
-def read_trick_data(tree: ast.AST, filename: str) -> list[TrickData]:
+def read_trick_data(tree: ast.AST, filename: str | Path) -> list[TrickData]:
     if type(tree) is not ast.Module:
         raise ASTParseError(tree, "Tree is not a module")
     module: ast.Module = tree
@@ -745,8 +741,7 @@ def read_trick_data(tree: ast.AST, filename: str) -> list[TrickData]:
     if class_def is None:
         raise ASTParseError(module, "Could not find Tricks class definition")
 
-    tricks = [TrickData.from_ast(statement, filename) for statement in class_def.body]
-    return tricks
+    return [TrickData.from_ast(statement, str(filename)) for statement in class_def.body]
 
 
 trick_list: list[TrickData]
@@ -754,7 +749,7 @@ tricks: dict[str, list[str]] | None = None
 
 
 def get_tricks(tree: ast.expr):
-    global tricks
+    global tricks  # noqa: PLW0603
     if tricks is None:
         tricks = {trick.id: trick.access_rule for trick in trick_list}
 
@@ -764,13 +759,13 @@ def get_tricks(tree: ast.expr):
     access_rules: list[str] = []
     for element in tree.elts:
         if type(element) is not ast.Attribute or type(element.value) is not ast.Name or element.value.id != "Tricks":
-            raise ASTParseError("Expected Tricks attribute access")
+            raise ASTParseError(element, "Expected Tricks attribute access")
         access_rules.extend(tricks[element.attr])
     return access_rules
 
 
 class PickupData(NamedTuple):
-    name: str
+    name: str | None
     image: ItemImage | None
     access_rules: list[str]
 
@@ -810,18 +805,18 @@ class PickupData(NamedTuple):
             if kwarg.arg == "tricks":
                 trick_access_rules.extend(get_tricks(kwarg.value))
 
-        ool_rules: list[str]
+        ool_rules: list[str] = []
         ool_rule = softlockable_locations.get(check_name)
-        if ool_rule == None:
+        if ool_rule is None:
             ool_rules = []
         if type(ool_rule) is str:
             ool_rules = [ool_rule]
         if type(ool_rule) is list:
             ool_rules = ool_rule
 
-        scout_rules: list[str]
+        scout_rules: list[str] = []
         scout_rule = scoutable_locations.get(check_name)
-        if scout_rule == None:
+        if scout_rule is None:
             scout_rules = []
         if type(scout_rule) is str:
             scout_rules = [scout_rule]
@@ -857,9 +852,9 @@ class BlastShieldAreaData(NamedTuple):
 
         name: str | None = None
         doors: dict[tuple[str, str], bool] = {}
-        for keyword in area.keywords:
-            value = keyword.value
-            if keyword.arg == "area":
+        for area_kw in area.keywords:
+            value = area_kw.value
+            if area_kw.arg == "area":
                 if (
                     type(value) is not ast.Attribute
                     or type(value.value) is not ast.Name
@@ -867,7 +862,7 @@ class BlastShieldAreaData(NamedTuple):
                 ):
                     raise ASTParseError(value, "Expected area name")
                 name = eval(compile(ast.Expression(value), filename, "eval")).value
-            if keyword.arg == "regions":
+            if area_kw.arg == "regions":
                 if type(value) is not ast.List:
                     raise ASTParseError(value, "Expected list")
                 for region in value.elts:
@@ -877,23 +872,24 @@ class BlastShieldAreaData(NamedTuple):
                         or region.func.id != "BlastShieldRegion"
                     ):
                         raise ASTParseError(region, "Expected BlastShieldRegion constructor")
-                    region_doors: Iterable[tuple[str, str]]
+                    region_doors: Iterable[tuple[str, str]] = ()
                     can_lock = False
-                    for keyword in region.keywords:
-                        if keyword.arg == "doors":
-                            if type(keyword.value) is not ast.Dict:
-                                raise ASTParseError(keyword.value, "Expected dictionary")
+                    for region_kw in region.keywords:
+                        if region_kw.arg == "doors":
+                            if type(region_kw.value) is not ast.Dict:
+                                raise ASTParseError(region_kw.value, "Expected dictionary")
                             sources = []
                             destinations = []
-                            for room in keyword.value.keys:
+                            for room in region_kw.value.keys:
                                 if (
                                     type(room) is not ast.Attribute
                                     or type(room.value) is not ast.Name
                                     or room.value.id != "RoomName"
                                 ):
+                                    assert room is not None
                                     raise ASTParseError(room, "Expected RoomName")
                                 sources.append(eval(compile(ast.Expression(room), filename, "eval")).value)
-                            for room in keyword.value.values:
+                            for room in region_kw.value.values:
                                 if (
                                     type(room) is not ast.Attribute
                                     or type(room.value) is not ast.Name
@@ -902,8 +898,8 @@ class BlastShieldAreaData(NamedTuple):
                                     raise ASTParseError(room, "Expected RoomName")
                                 destinations.append(eval(compile(ast.Expression(room), filename, "eval")).value)
                             region_doors = (tuple(sorted(ends)) for ends in zip(sources, destinations, strict=True))
-                        if keyword.arg == "can_be_locked":
-                            can_lock = ast.literal_eval(keyword.value)
+                        if region_kw.arg == "can_be_locked":
+                            can_lock = ast.literal_eval(region_kw.value)
                     for src, dst in region_doors:
                         ends = tuple(sorted((src, dst)))
                         if not doors.get(ends):
@@ -913,7 +909,7 @@ class BlastShieldAreaData(NamedTuple):
         return cls(name, doors)
 
 
-def read_blast_shield_data(tree: ast.AST, filename: str) -> list[BlastShieldAreaData]:
+def read_blast_shield_data(tree: ast.AST, filename: str | Path) -> list[BlastShieldAreaData]:
     if type(tree) is not ast.Module:
         raise ASTParseError(tree, "Tree is not a module")
     module: ast.Module = tree
@@ -925,17 +921,21 @@ def read_blast_shield_data(tree: ast.AST, filename: str) -> list[BlastShieldArea
         if type(statement.body[0]) is not ast.Return:
             raise ASTParseError(statement, "Expected return")
         return_value = statement.body[0].value
+        if return_value is None:
+            raise ASTParseError(statement.body[0], "Expected return value")
         areas.append(BlastShieldAreaData.from_ast(return_value, filename))
     return areas
 
 
 blast_shield_eligible_doors: dict[str, dict[tuple[str, str], bool]]
 
+DoorColor = str | None
+
 
 class DoorData(NamedTuple):
     source: str
     destination: str
-    color: str | None
+    color: DoorColor
     blast_shield: str | None
     open_rule: str
     access_rule: list[str]
@@ -997,7 +997,7 @@ class DoorData(NamedTuple):
                 target_door_access_override = parse_access_rule(kwarg.value, filename)
         door_type = lock or default_lock
         door_rule = []
-        src, dest = source.split("/")[-1], destination.value
+        src, dest = source.rsplit("/", maxsplit=1)[-1], destination.value
         ends = tuple(sorted((src, dest)))
         if exclude_from_rando and blast_shield == "Missile":
             door_rule = ["$can_missile"]
@@ -1006,12 +1006,12 @@ class DoorData(NamedTuple):
         elif door_type not in (None, "AnyBeam"):
             door_rule.append(f"@doors/{area}/{door_type}")
         if access_rule:
-            access_rules = [",".join(door_rule + [rule]) for rule in access_rule]
+            access_rules = [",".join([*door_rule, rule]) for rule in access_rule]
         elif door_rule:
             access_rules = [",".join(door_rule)]
         else:
             access_rules = []
-        access_rules.extend(",".join(door_rule + [rule]) for rule in trick_rules)
+        access_rules.extend(",".join([*door_rule, rule]) for rule in trick_rules)
         return cls(
             source,
             destination.value,
@@ -1046,12 +1046,12 @@ class WorldRoomData(NamedTuple):
             if keyword.arg == "pickups":
                 if type(keyword.value) is not ast.List:
                     raise ASTParseError(keyword.value, "Kwarg pickups is not a list")
-                for element in keyword.value.elts:
-                    pickups.append(PickupData.from_ast(element, filename))
+                pickups.extend(PickupData.from_ast(element, filename) for element in keyword.value.elts)
             if keyword.arg == "doors":
                 if type(keyword.value) is not ast.Dict:
                     raise ValueError("Kwarg doors is not a dict")
                 for key, value in zip(keyword.value.keys, keyword.value.values, strict=True):
+                    assert key is not None
                     doors[ast.literal_eval(key)] = DoorData.from_ast(value, area, f"{area}/{room_name}", filename)
 
         return cls(room_name, pickups, doors)
@@ -1145,8 +1145,7 @@ class AreaData(NamedTuple):
                         if area_name_expr is None:
                             area_name_expr = ast.Expression(arg)
                             break
-                        else:
-                            raise ASTParseError(statement.value, "Found multiple area name expressions")
+                        raise ASTParseError(statement.value, "Found multiple area name expressions")
             elif type(statement) is ast.Assign:
                 for target in statement.targets:
                     if type(target) is ast.Attribute:
@@ -1158,15 +1157,16 @@ class AreaData(NamedTuple):
                             else:
                                 raise ASTParseError(init_method, "Found multiple assignments to self.rooms")
         if area_name_expr is None:
-            ASTParseError(statement.value, "Missing area name")
+            raise ASTParseError(init_method, "Missing area name")
         if rooms_assign is None:
-            ASTParseError(init_method, "Missing assignment to self.rooms")
+            raise ASTParseError(init_method, "Missing assignment to self.rooms")
 
         area_name = eval(compile(area_name_expr, filename, "eval"))
+        assert area_name is not None
         world_rooms = {
             room.name: room
             for room in (
-                WorldRoomData.from_ast(area_name, key, value, filename)
+                WorldRoomData.from_ast(area_name, cast(ast.expr, key), value, filename)
                 for key, value in zip(rooms_assign.keys, rooms_assign.values, strict=True)
             )
         }
@@ -1212,14 +1212,16 @@ class AreaData(NamedTuple):
 
             source, destination = door.source.split("/")[-1], door.destination
             ends = tuple(sorted((source, destination)))
+            assert len(ends) == 2
             door_type = None
             if door.blast_shield == "Missile":
                 door_type = "Missile"
                 missile_doors.add(ends)
                 if door.color != "AnyBeam":
-                    warnings.warn(f"Door type conflict for {ends}: Missile, {door.color}")
+                    warnings.warn(f"Door type conflict for {ends}: Missile, {door.color}", stacklevel=1)
             else:
                 door_type = door.color
+            assert door_type is not None
 
             if ends not in blast_shield_eligible_doors[area_name]:
                 continue
@@ -1233,13 +1235,15 @@ class AreaData(NamedTuple):
                 if type(entry) is str:
                     sides = [entry, entry]
                     sides[(source, destination) != ends] = door_type
-                    blast_shield_rando_doors[ends] = tuple(sides)
+                    blast_shield_rando_doors[ends] = sides[0], sides[1]
                 else:
                     sides = list(entry)
                     idx = (source, destination) != ends
                     sides[idx] = door_type
                     if entry != sides:
-                        warnings.warn(f"Door type conflict for {(source, destination)}: {entry[idx]}, {sides[idx]}")
+                        warnings.warn(
+                            f"Door type conflict for {(source, destination)}: {entry[idx]}, {sides[idx]}", stacklevel=1
+                        )
 
         tracker_rooms = [
             TrackerRoomData.from_world_room_data(area_name, room, doors, transport_rules[area_name])
@@ -1272,7 +1276,7 @@ try:
 except ASTParseError as e:
     raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
 except Exception as e:
-    raise Exception(f"Could not parse tricks") from e
+    raise Exception("Could not parse tricks") from e
 
 tracker_tricks: dict[str, TrackerTrickData] = {}
 for trick in trick_list:
@@ -1293,7 +1297,7 @@ try:
 except ASTParseError as e:
     raise Exception(f"Could not parse tricks:\n{ast.dump(e.tree)}") from e
 except Exception as e:
-    raise Exception(f"Could not parse tricks") from e
+    raise Exception("Could not parse tricks") from e
 
 
 area_data: dict[str, AreaData] = {}
@@ -1326,14 +1330,14 @@ for short_name, area in area_data.items():
 doors_lua = Path(__file__).parents[1] / "scripts/logic/door_data.lua"
 with open(doors_lua, "w") as stream:
     print("MISSILE_DOORS = {", file=stream)
-    for short_name, area in area_data.items():
+    for area in area_data.values():
         print(f'    ["{area.name}"] = {{', file=stream)
         for door in sorted(area.missile_doors):
             print(f'        ["{door[0]}|{door[1]}"] = true,', file=stream)
-        print(f"    }},", file=stream)
+        print("    },", file=stream)
     print("}\n", file=stream)
     print("MIX_IT_UP_DOORS = {", file=stream)
-    for short_name, area in area_data.items():
+    for area in area_data.values():
         print(f'    ["{area.name}"] = {{', file=stream)
         for door, door_type in sorted(area.mixitup_doors.items()):
             if type(door_type) is str:
@@ -1341,5 +1345,5 @@ with open(doors_lua, "w") as stream:
             else:
                 door_record = f'{{"{door_type[0]}", "{door_type[1]}"}}'
             print(f'        ["{door[0]}|{door[1]}"] = {door_record},', file=stream)
-        print(f"    }},", file=stream)
+        print("    },", file=stream)
     print("}", file=stream)

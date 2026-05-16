@@ -305,7 +305,7 @@
             "access_rules": [
               "NoLogic",
               "$can_grapple,$can_heat,$can_power_bomb",
-              "[$trick|magma_pool_item_infinite_speed|2],$can_infinite_speed,$can_bomb",
+              "[$trick|magma_pool_item_infinite_speed|2],$can_infinite_speed,$can_bomb,$has_energy_tanks|8",
               "[$trick|magma_pool_item_scan_dash|2],$can_space_jump,$can_scan,$can_power_bomb",
               "[$trick|magma_pool_item_debris_jump|1],$can_space_jump,$can_move_underwater,$has_energy_tanks|2,$can_power_bomb",
               "{XRayVisor}"
