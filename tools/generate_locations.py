@@ -261,10 +261,14 @@ scoutable_locations: dict[str, str | list[str]] = {
 softlockable_locations: dict[str, str | list[str]] = {
     "Chozo Ruins: Ruined Shrine - Plated Beetle": "Softlocks",
     "Chozo Ruins: Burn Dome - Incinerator Drone": "Softlocks",
+    "Chozo Ruins: Sunchamber - Ghosts": [
+        # Early Wild: Catch yourself on an Oculus and use the corner to IBJ back up the shaft (Or use Spider Ball)
+        "[],EarlyWild,@rules/can_flaahgra,[$can_combat_ghosts],$can_bomb",
+        "[],EarlyWild,@rules/can_flaahgra,[$can_combat_ghosts],$can_spider",
+    ],
     "Phendrana Drifts: Quarantine Cave": "Softlocks",  # Escaping not actually required by world logic?
     "Phendrana Drifts: Control Tower": "Softlocks,SpaceJump,$can_missile",
     "Phendrana Drifts: Research Core": "Softlocks,ScanVisor",
-    "Phendrana Drifts: Research Lab Aether - Morph Track": "SpaceJump",  # Bombs shouldn't be required for this
     "Phendrana Drifts: Frost Cave": [
         "Softlocks,$can_grapple,$can_missile",
         "Softlocks,$trick|frost_cave_no_grapple|1,$can_missile,SpaceJump",

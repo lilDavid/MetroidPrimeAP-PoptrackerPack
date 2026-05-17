@@ -1,0 +1,17 @@
+[
+    {
+        "type": "progressive",
+        "initial_stage_idx": 1,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/tricks/early_artifact_of_wild-red.png"
+            },
+            {
+                "img": "images/tricks/early_artifact_of_wild.png",
+                "img_mods": "@disabled",
+                "codes": "EarlyWild"
+            }
+        ]
+    }
+]

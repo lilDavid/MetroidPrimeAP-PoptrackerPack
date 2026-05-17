@@ -657,8 +657,8 @@
             "access_rules": [
               "NoLogic",
               "@rules/can_flaahgra,[$can_combat_ghosts],$can_climb_sun_tower",
-              "@rules/can_flaahgra,[$can_combat_ghosts],$can_bomb,[]",
-              "@rules/can_flaahgra,[$can_combat_ghosts],$can_spider,[]"
+              "[],EarlyWild,@rules/can_flaahgra,[$can_combat_ghosts],$can_bomb,[]",
+              "[],EarlyWild,@rules/can_flaahgra,[$can_combat_ghosts],$can_spider,[]"
             ]
           }
         ],

@@ -194,6 +194,12 @@
                         "arboretum_scan_gate_skip"
                       ],
                       [
+                        "EarlyWild"
+                      ],
+                      [
+                        "EarlyWildSpider"
+                      ],
+                      [
                         "gathering_hall_without_space_jump"
                       ],
                       [

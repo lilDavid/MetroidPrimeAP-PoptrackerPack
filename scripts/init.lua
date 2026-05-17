@@ -5,6 +5,7 @@ IS_ITEMS_ONLY = Tracker.ActiveVariantUID == "var_itemsonly"
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/options.json")
 Tracker:AddItems("items/tricks.json")
+Tracker:AddItems("items/extra_tricks.json")
 Tracker:AddItems("items/elevators.json")
 Tracker:AddItems("items/doors.json")
 Tracker:AddItems("items/tracker_options.json")

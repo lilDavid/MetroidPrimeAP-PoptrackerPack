@@ -503,7 +503,6 @@
               "NoLogic",
               "[$can_combat_labs],$can_space_jump",
               "[$trick|research_lab_aether_item_dbj|1],$can_bomb",
-              "SpaceJump,[]",
               "{}"
             ]
           }
