@@ -354,7 +354,7 @@ end
 -- Data/ChozoRuins
 
 function can_climb_sun_tower()
-    return can_spider() and can_super_missile() and can_bomb()
+    return can_scan() and can_spider() and can_super_missile() and can_bomb()
 end
 
 function can_climb_tower_of_light()

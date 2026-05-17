@@ -6,14 +6,17 @@
                 "name": "can_flaahgra",
                 "access_rules": [
                     "StartingRoomSunchamberLobby,$can_bomb",
-                    "StartingRoomSunchamberLobby,$can_power_bomb,$has_power_bomb_count|4",
+                    "StartingRoomSunchamberLobby,FlaahgraPowerBombs,$can_power_bomb,$has_power_bomb_count|4",
                     "@Chozo Ruins/Sunchamber,[$can_combat_flaahgra],$can_missile,$can_scan,$can_bomb",
-                    "@Chozo Ruins/Sunchamber,[$can_combat_flaahgra],$can_missile,$can_scan,$can_power_bomb,$has_power_bomb_count|4"
+                    "@Chozo Ruins/Sunchamber,[$can_combat_flaahgra],$can_missile,$can_scan,FlaahgraPowerBombs,$can_power_bomb,$has_power_bomb_count|5"
                 ]
             },
             {
                 "name": "can_exit_ruined_shrine",
-                "access_rules": [ "[MorphBall]", "[SpaceJump]" ]
+                "access_rules": [
+                    "[MorphBall]",
+                    "[SpaceJump]"
+                ]
             },
             {
                 "name": "can_warp_to_start",

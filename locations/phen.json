@@ -57,8 +57,6 @@
           "@Phendrana Drifts/Chapel of the Elders,$can_defeat_sheegoth,$can_space_jump,$can_wave_beam",
           "@Phendrana Drifts/Chapel of the Elders,[$trick|chapel_of_elders_escape_no_sj|2],$can_defeat_sheegoth,$can_bomb,$can_wave_beam",
           "@Phendrana Drifts/Chozo Ice Temple,$can_bomb,$can_space_jump,$can_missile",
-          "@Phendrana Drifts/Chozo Ice Temple,$can_power_bomb|2,$can_space_jump,$can_missile",
-          "@Phendrana Drifts/Chozo Ice Temple,$can_ball_jump,$can_space_jump,$can_missile",
           "@Phendrana Drifts/Chozo Ice Temple,[$trick|ice_temple_to_chapel_no_sj|2],$can_bomb,$can_missile"
         ]
       },

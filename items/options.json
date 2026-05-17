@@ -4,18 +4,43 @@
     "allow_disabled": false,
     "initial_stage_idx": 11,
     "stages": [
-      { "img": "images/options/requiredartifacts-1.png", "codes": "RequiredArtifacts" },
-      { "img": "images/options/requiredartifacts-2.png" },
-      { "img": "images/options/requiredartifacts-3.png" },
-      { "img": "images/options/requiredartifacts-4.png" },
-      { "img": "images/options/requiredartifacts-5.png" },
-      { "img": "images/options/requiredartifacts-6.png" },
-      { "img": "images/options/requiredartifacts-7.png" },
-      { "img": "images/options/requiredartifacts-8.png" },
-      { "img": "images/options/requiredartifacts-9.png" },
-      { "img": "images/options/requiredartifacts-10.png" },
-      { "img": "images/options/requiredartifacts-11.png" },
-      { "img": "images/options/requiredartifacts-12.png" }
+      {
+        "img": "images/options/requiredartifacts-1.png",
+        "codes": "RequiredArtifacts"
+      },
+      {
+        "img": "images/options/requiredartifacts-2.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-3.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-4.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-5.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-6.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-7.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-8.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-9.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-10.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-11.png"
+      },
+      {
+        "img": "images/options/requiredartifacts-12.png"
+      }
     ]
   },
   {
@@ -23,10 +48,26 @@
     "allow_disabled": false,
     "loop": true,
     "stages": [
-      { "img": "images/options/goal-both.png", "codes": "FinalBoss,FinalBossRidley,FinalBossPrime", "inherit_codes": false },
-      { "img": "images/options/goal-ridley.png", "codes": "FinalBossRidley", "inherit_codes": false  },
-      { "img": "images/options/goal-prime.png", "codes": "FinalBossPrime", "inherit_codes": false  },
-      { "img": "images/options/goal-none.png", "codes": "FinalBossNone", "inherit_codes": false  }
+      {
+        "img": "images/options/goal-both.png",
+        "codes": "FinalBoss,FinalBossRidley,FinalBossPrime",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/goal-ridley.png",
+        "codes": "FinalBossRidley",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/goal-prime.png",
+        "codes": "FinalBossPrime",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/goal-none.png",
+        "codes": "FinalBossNone",
+        "inherit_codes": false
+      }
     ]
   },
   {
