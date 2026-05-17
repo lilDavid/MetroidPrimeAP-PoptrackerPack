@@ -618,7 +618,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Sun Tower,$can_climb_sun_tower",
-          "@Chozo Ruins/Sunchamber,@rules/can_flaahgra"
+          "@Chozo Ruins/Sunchamber,[]"
         ]
       },
       {
@@ -626,7 +626,7 @@
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Sunchamber Lobby",
-          "@Chozo Ruins/Sunchamber,$can_pass_flaagrah_vines"
+          "@Chozo Ruins/Sunchamber,False"
         ]
       },
       {
@@ -656,14 +656,16 @@
             "chest_unopened_img": "images/items/artifacts0.png",
             "access_rules": [
               "NoLogic",
-              "@rules/can_flaahgra,[$can_combat_ghosts],$can_climb_sun_tower"
+              "@rules/can_flaahgra,[$can_combat_ghosts],$can_climb_sun_tower",
+              "@rules/can_flaahgra,[$can_combat_ghosts],$can_bomb,[]",
+              "@rules/can_flaahgra,[$can_combat_ghosts],$can_spider,[]"
             ]
           }
         ],
         "access_rules": [
           "NoLogic",
           "@Chozo Ruins/Sun Tower Access",
-          "@Chozo Ruins/Sunchamber Access,$can_pass_flaagrah_vines"
+          "@Chozo Ruins/Sunchamber Access"
         ]
       },
       {

@@ -334,6 +334,16 @@ manual_door_rules = {
         "$has_energy_tanks|1,GravitySuit",
         "$has_energy_tanks|1,PhazonSuit",
     ],
+    # I suspect that the access rules as written in AP are unworkable. This is probably the intent:
+    # You should not be able to go through Sunchamber until you can kill both Flaahgra and the ghosts
+    # But you should be able to reach Sunchamber for specifically Flaahgra
+    # This makes Sunchamber a dead end from the Arboretum side so -> Sun Tower Access has no effect
+    # The reverse is obviously inaccessible after until you can come from the Sun Tower side
+    # So because you need access from both sides to use this room as an accessway, it is logically a dead end both ways
+    # You can use the one-way from Flaahgra to sequence break though
+    ("Chozo Ruins/Sunchamber Access", "Sunchamber"): [],
+    ("Chozo Ruins/Sunchamber", "Sunchamber Access"): ["False"],
+    ("Chozo Ruins/Sunchamber", "Sun Tower Access"): ["[]"],
 }
 
 manual_location_rules = {
