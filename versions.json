@@ -1,6 +1,16 @@
 {
     "versions": [
         {
+            "package_version": "1.0.3",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.3/MetroidPrime-Archipelago-lilDavid.zip",
+            "sha256": "3cffabf507a86525bda9e3070b51928bdcbf696fbd429a10e77fa848af1004b0",
+            "changelog": [
+                "Logic updates to AP world version 0.5.4",
+                "Added proper handling for Spring Ball",
+                "Added Early Artifact of Wild as a tracker-only sequence break"
+            ]
+        },
+        {
             "package_version": "1.0.2",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.2/MetroidPrimeAP_PopTrackerPack.zip",
             "sha256": "0356f3e499e2499b4e36ffaec578bb3a0f97a02ed8e9cba0465066f9f2e5a79f",
