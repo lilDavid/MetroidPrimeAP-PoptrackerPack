@@ -421,12 +421,10 @@ def import_file(path: Path):
     spec.loader.exec_module(module)
 
 
-import_file(data_path / "AreaNames.py")
-import_file(data_path / "RoomNames.py")
+import_file(args.path_to_apworld / "Enum.py")
 
 if not TYPE_CHECKING:
-    from metroidprime.AreaNames import MetroidPrimeArea  # noqa: F401
-    from metroidprime.RoomNames import RoomName  # noqa: F401
+    from metroidprime.Enum import MetroidPrimeArea, RoomName  # noqa: F401
 
 
 class SuitUpgrade(Enum):
