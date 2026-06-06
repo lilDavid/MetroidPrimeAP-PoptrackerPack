@@ -412,7 +412,7 @@
           "NoLogic",
           "@Phendrana Drifts/North Quarantine Tunnel,@doors/Phendrana Drifts/WaveBeam,$can_morph_ball",
           "@Phendrana Drifts/Ruined Courtyard,$can_open|Phendrana Drifts|Ruined Courtyard|Quarantine Access,$_can_reach_top_of_ruined_courtyard,$can_wave_beam,^$can_thermal,$can_super_missile",
-          "@Phendrana Drifts/Ruined Courtyard,$can_open|Phendrana Drifts|Ruined Courtyard|Quarantine Access,[$trick|phendrana_courtyard_no_boost_spider|1],$can_space_jump"
+          "@Phendrana Drifts/Ruined Courtyard,$can_open|Phendrana Drifts|Ruined Courtyard|Quarantine Access,[$trick|phendrana_courtyard_quarantine_access_no_boost_spider|1],$can_space_jump,$can_wave_beam,^$can_thermal,$can_super_missile"
         ]
       },
       {

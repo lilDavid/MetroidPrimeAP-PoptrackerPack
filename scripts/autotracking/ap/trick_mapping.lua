@@ -69,6 +69,7 @@ AP_TRICK_MAPPING = {
     ["Chapel of Elders Escape No SJ"] = "chapel_of_elders_escape_no_sj",
     ["Phendrana Canyon Escape No Items"] = "phendrana_canyon_escape_no_items",
     ["Phendrana Courtyard No Boost Spider"] = "phendrana_courtyard_no_boost_spider",
+    ["Phendrana Courtyard Quarantine Access No Boost Spider"] = "phendrana_courtyard_quarantine_access_no_boost_spider",
     ["Research Lab Aether Upper Item with DBJ"] = "research_lab_aether_item_dbj",
     ["Control Tower Item No Plasma"] = "control_tower_item_no_plasma",
     ["Monitor Cave No Grapple"] = "monitor_cave_no_grapple",

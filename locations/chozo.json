@@ -511,7 +511,6 @@
             "access_rules": [
               "NoLogic",
               "$can_bomb",
-              "$can_power_bomb|3,$can_ball_jump",
               "[$trick|ruined_nursery_no_bombs|3],$can_space_jump,$can_morph_ball",
               "{}"
             ]

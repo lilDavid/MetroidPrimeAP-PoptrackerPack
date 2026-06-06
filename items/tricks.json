@@ -1260,6 +1260,24 @@
     ]
   },
   {
+    "codes": "phendrana_courtyard_quarantine_access_no_boost_spider",
+    "type": "progressive",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/tricks/phendrana_courtyard_quarantine_access_no_boost_spider-red.png"
+      },
+      {
+        "img": "images/tricks/phendrana_courtyard_quarantine_access_no_boost_spider.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "img": "images/tricks/phendrana_courtyard_quarantine_access_no_boost_spider.png"
+      }
+    ]
+  },
+  {
     "codes": "research_lab_aether_item_dbj",
     "type": "progressive",
     "initial_stage_idx": 1,
