@@ -679,7 +679,6 @@ class TrickData(NamedTuple):
             raise ASTParseError(statement, "Assignment not from TrickInfo constructor")
 
         trick_name: str = ast.literal_eval(statement.value.args[0])
-        trick_name = "_".join(re.split(r"[ _/]", trick_name.lower())).replace("'", "")
 
         difficulty_expr = statement.value.args[2]
         if (
@@ -717,6 +716,7 @@ class TrickData(NamedTuple):
 
 class TrackerTrickData(NamedTuple):
     name: str
+    id: str
     codes: list[str]
 
     def json_item(self) -> dict[str, JsonValue]:
@@ -1292,7 +1292,8 @@ except Exception as e:
 tracker_tricks: dict[str, TrackerTrickData] = {}
 for trick in trick_list:
     if trick.name not in tracker_tricks:
-        tracker_tricks[trick.name] = TrackerTrickData(trick.name, [])
+        trick_name = "_".join(re.split(r"[ _/]", trick.name.lower())).replace("'", "")
+        tracker_tricks[trick.name] = TrackerTrickData(trick_name, trick.id, [])
     tracker_tricks[trick.name].codes.append(trick.id)
 
 
@@ -1332,6 +1333,12 @@ for short_name, data_name in areas:
 
 with open(items / "tricks.json", "w") as stream:
     json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
+
+with open(pack / "scripts/autotracking/ap/trick_mapping.lua", "w") as stream:
+    print("AP_TRICK_MAPPING = {", file=stream)
+    for trick_name, trick in tracker_tricks.items():
+        print(f'    ["{trick_name}"] = "{trick.id}",', file=stream)
+    print("}", file=stream)
 
 for short_name, area in area_data.items():
     output = (locations / short_name).with_suffix(".json")
