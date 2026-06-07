@@ -3,7 +3,7 @@
         {
             "package_version": "1.0.4",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.4/MetroidPrime-Archipelago-lilDavid.zip",
-            "sha256": "80dc071d98be846da16d85ad255c8886f804241ad62cc5341707ec92f1e820f8",
+            "sha256": "e4d1f401b1ceb7bd2d717c4a3bc32f74d29ab6d0332802fdb64b682db03a6468",
             "changelog": [
                 "Logic updates to AP world version 0.5.4-h1",
                 "Fixed tracker options not syncing with the AP server"
