@@ -452,7 +452,7 @@
         "access_rules": [
           "NoLogic",
           "@Phazon Mines/Main Quarry,$can_open|Phazon Mines|Main Quarry|Security Access A,$can_scan",
-          "@Phazon Mines/Mine Security Station,@doors/Phazon Mines/IceBeam,[$can_combat_beam_pirates]"
+          "@Phazon Mines/Mine Security Station,@doors/Phazon Mines/IceBeam,[$can_combat_beam_pirates|WaveBeam]"
         ]
       },
       {
@@ -460,7 +460,7 @@
         "access_rules": [
           "NoLogic",
           "@Phazon Mines/Elite Research,$can_open|Phazon Mines|Elite Research|Security Access B",
-          "@Phazon Mines/Mine Security Station,@doors/Phazon Mines/WaveBeam,[$can_combat_beam_pirates]"
+          "@Phazon Mines/Mine Security Station,@doors/Phazon Mines/WaveBeam,[$can_combat_beam_pirates|WaveBeam]"
         ]
       },
       {

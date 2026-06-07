@@ -493,17 +493,34 @@ def validate_prime_world_node(world: ast.expr):
         raise ASTParseError(world, "Expected name")
 
 
-def logic_function(function_name: str, full_rule: str | None = None):
+def logic_function(function_name: str, *args: str):
     override_type = override_functions.get(function_name)
     if override_type == FunctionOverride.LOCATION:
         return f"@rules/{function_name}"
-    if full_rule is None:
-        full_rule = function_name
+    full_rule = "|".join([function_name, *args])
     if override_type == FunctionOverride.ACCESSIBILITY:
         return f"^${full_rule}"
     if function_name.startswith("can_combat"):
         return f"[${full_rule}]"
     return f"${full_rule}"
+
+
+def transform_args(node: ast.Call, filename: str):
+    if len(node.args) < 2:
+        raise ASTParseError(node, f"Call with {len(node.args)} arguments")
+
+    for arg in node.args[2:]:
+        if type(arg) is ast.Constant:
+            value = ast.literal_eval(arg)
+        elif type(arg) is ast.Attribute:
+            value = eval(compile(ast.Expression(arg), filename, "eval")).value
+        else:
+            raise ASTParseError(arg)
+
+        if type(value) is str:
+            yield value
+        else:
+            yield str(value).lower()
 
 
 class RuleConverter(ast.NodeTransformer):
@@ -550,26 +567,14 @@ class RuleConverter(ast.NodeTransformer):
         elif function_name in ("can_thermal", "can_xray"):
             if any(keyword.arg == "hard_required" for keyword in node.keywords):
                 # Assume that if hard_required is specified, its value is always true
-                rule = logic_function(function_name, f"{function_name}|2")
+                rule = logic_function(function_name, "2")
             elif len(node.args) > 2:
                 # Assume that the only extra arg is True for usually_required
-                rule = logic_function(function_name, f"{function_name}|1")
+                rule = logic_function(function_name, "1")
             else:
                 rule = logic_function(function_name)
         else:
-            args: list[str] = []
-            for arg in node.args[2:]:
-                if type(arg) is ast.Constant:
-                    value = ast.literal_eval(arg)
-                elif type(arg) is ast.Attribute:
-                    value = eval(compile(ast.Expression(arg), self.filename, "eval")).value
-                else:
-                    raise ASTParseError(arg)
-                if type(value) is str:
-                    args.append(value)
-                else:
-                    args.append(str(value).lower())
-            rule = logic_function(function_name, "|".join((function_name, *args)))
+            rule = logic_function(function_name, *transform_args(node, self.filename))
 
         self.collected_rules[rule] = None
         new_node = ast.Subscript(
@@ -604,7 +609,7 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
 
     if type(rule_func.body) is ast.Call:
         if type(rule_func.body.func) is ast.Name:
-            return [logic_function(rule_func.body.func.id)]
+            return [logic_function(rule_func.body.func.id, *transform_args(rule_func.body, filename))]
         raise NotImplementedError(ast.dump(rule_func.body.func))
 
     if type(rule_func.body) is not ast.BoolOp:
