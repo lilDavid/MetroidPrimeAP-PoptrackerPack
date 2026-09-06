@@ -99,6 +99,36 @@
     "type": "toggle"
   },
   {
+    "name": "Charge Beam",
+    "codes": "ChargeBeamProgressive",
+    "type": "composite_toggle",
+    "item_left": "ChargeBeam",
+    "item_right": "ProgressiveBeams",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/items/chargebeam.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/items/chargebeam.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/items/chargeless.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/items/chargeless.png"
+      }
+    ]
+  },
+  {
     "name": "Super Missile",
     "codes": "SuperMissile",
     "img": "images/items/supermissile.png",

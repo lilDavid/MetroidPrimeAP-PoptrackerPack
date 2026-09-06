@@ -10,7 +10,7 @@
         "h_alignment": "stretch",
         "item_size": 50,
         "rows": [
-          [ "PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam", "ChargeBeam" ],
+          [ "PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam", "ChargeBeamProgressive" ],
           [ "SuperMissile", "Wavebuster", "IceSpreader", "Flamethrower", "MissileLauncher" ],
           [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
           [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
