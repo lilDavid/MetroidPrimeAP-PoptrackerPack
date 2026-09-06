@@ -1,7 +1,9 @@
 function ProgressiveBeamWatcher(code)
-	local progressive_beams = Tracker:FindObjectForCode("ProgressiveBeams")
-	local charge_beam = Tracker:FindObjectForCode("ChargeBeam")
-    if progressive_beams == nil or charge_beam == nil then return end
+    local progressive_beams = Tracker:FindObjectForCode("ProgressiveBeams")
+    local charge_beam = Tracker:FindObjectForCode("ChargeBeam")
+    if progressive_beams == nil or charge_beam == nil then
+        return
+    end
 
     if progressive_beams.CurrentStage == 1 then
         charge_beam.Icon = nil
@@ -18,12 +20,20 @@ function BeamWatcher(combo_code)
         local progressivebeams = Tracker:FindObjectForCode("ProgressiveBeams")
         local beam = Tracker:FindObjectForCode(code)
         local combo = Tracker:FindObjectForCode(combo_code)
-        if progressivebeams == nil then return end
-        if beam == nil then return end
-        if combo == nil then return end
+        if progressivebeams == nil then
+            return
+        end
+        if beam == nil then
+            return
+        end
+        if combo == nil then
+            return
+        end
 
         if progressivebeams.CurrentStage < 1 then
-            if beam.CurrentStage > 1 then beam.CurrentStage = 1 end
+            if beam.CurrentStage > 1 then
+                beam.CurrentStage = 1
+            end
         else
             combo.Active = beam.CurrentStage == 3
         end
@@ -35,9 +45,15 @@ function ChargeComboWatcher(beam_code)
         local progressivebeams = Tracker:FindObjectForCode("ProgressiveBeams")
         local beam = Tracker:FindObjectForCode(beam_code)
         local combo = Tracker:FindObjectForCode(code)
-        if progressivebeams == nil or progressivebeams.CurrentStage < 1 then return end
-        if beam == nil then return end
-        if combo == nil then return end
+        if progressivebeams == nil or progressivebeams.CurrentStage < 1 then
+            return
+        end
+        if beam == nil then
+            return
+        end
+        if combo == nil then
+            return
+        end
 
         if combo.Active and beam.CurrentStage < 3 then
             beam.CurrentStage = 3
