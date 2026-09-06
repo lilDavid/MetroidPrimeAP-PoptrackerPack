@@ -1,6 +1,10 @@
 -- Utils
 
 function has(item, n)
+    if n == nil then
+        return Tracker:ProviderCountForCode(item) > 0
+    end
+
     local obj = Tracker:FindObjectForCode(item)
     if obj == nil then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -8,9 +12,7 @@ function has(item, n)
         end
         return false
     end
-    if n == nil then
-        n = 1
-    end
+
     local count
     if obj.Type == "progressive" then
         count = obj.CurrentStage
@@ -24,8 +26,8 @@ function has(item, n)
     return (count >= tonumber(n))
 end
 
-function has_all(items)
-    for _, item in ipairs(items) do
+function has_all(...)
+    for _, item in ipairs({...}) do
         if not has(item) then
             return false
         end
@@ -33,8 +35,8 @@ function has_all(items)
     return true
 end
 
-function has_any(items)
-    for _, item in ipairs(items) do
+function has_any(...)
+    for _, item in ipairs({...}) do
         if has(item) then
             return true
         end
@@ -68,15 +70,15 @@ function has_required_artifact_count()
 end
 
 function can_boost()
-    return has_all({"MorphBall", "BoostBall"})
+    return has_all("MorphBall", "BoostBall")
 end
 
 function can_bomb()
-    return has("MorphBall") and has("Bombs", 2)
+    return has_all("MorphBall", "Bombs")
 end
 
 function can_ball_jump()
-    return has_all({"MorphBall", "SpringBall"})
+    return has_all("MorphBall", "SpringBall")
 end
 
 function can_beam(beam)
@@ -89,13 +91,13 @@ end
 
 function can_power_bomb()
     if has("MainPowerBomb") then
-        return has_all({"MorphBall", "PowerBomb"})
+        return has_all("MorphBall", "PowerBomb")
     end
-    return has_all({"MorphBall", "PowerBombExpansion"})
+    return has_all("MorphBall", "PowerBombExpansion")
 end
 
 function can_spider()
-    return has_all({"MorphBall", "SpiderBall"})
+    return has_all("MorphBall", "SpiderBall")
 end
 
 function can_missile(expansions)
@@ -113,9 +115,9 @@ end
 function can_super_missile()
     local beam_requirement
     if has("ProgressiveBeams") then
-        beam_requirement = has("PowerBeam", 3)
+        beam_requirement = has_all("ChargePower", "SuperMissile")
     else
-        beam_requirement = has_all({"ChargeBeam", "SuperMissile"})
+        beam_requirement = has_all("ChargeBeam", "SuperMissile")
     end
     return can_power_beam() and can_missile() and beam_requirement
 end
@@ -193,19 +195,15 @@ end
 function can_charge_beam(required_beam)
     if required_beam then
         if has("ProgressiveBeams") then
-            return has(required_beam, 2)
+            return has("Charge" .. required_beam)
         else
-            return has_all({"ChargeBeam", required_beam})
+            return has_all("ChargeBeam", required_beam)
         end
     end
 
     -- If no beam is required, check for Charge Beam or 2 of any progressive beam
     if has("ProgressiveBeams") then
-        for _, beam in ipairs({"PowerBeam", "WaveBeam", "IceBeam", "PlasmaBeam"}) do
-            if has(beam, 2) then
-                return true
-            end
-        end
+        return has_any("ChargePower", "ChargeWave", "ChargeIce", "ChargePlasma")
     end
     return has("ChargeBeam")
 end
@@ -234,7 +232,7 @@ function can_heat()
     if has("NonVariaHeatDamage") then
         return has("VariaSuit")
     end
-    return has_any({"VariaSuit", "GravitySuit", "PhazonSuit"})
+    return has_any("VariaSuit", "GravitySuit", "PhazonSuit")
 end
 
 function can_phazon()
@@ -271,9 +269,9 @@ function can_combat_generic(normal_tanks, minimal_tanks, requires_charge_beam)
     if requires_charge_beam == nil then
         requires_charge_beam = true
     end
-    if has("CombatLogic", 2) then
+    if has("CombatLogicNone") then
         return true
-    elseif has("CombatLogic", 1) then
+    elseif has("CombatLogicMinimal") then
         return has_energy_tanks(minimal_tanks) and (can_charge_beam() or not requires_charge_beam)
     else
         return has_energy_tanks(normal_tanks) and (can_charge_beam() or not requires_charge_beam)
@@ -285,17 +283,17 @@ function can_combat_mines()
 end
 
 function can_combat_labs()
-    return has_any({"StartingRoomEastTower", "StartingRoomSaveStationB"}) or can_combat_generic(1, 0, false)
+    return has_any("StartingRoomEastTower", "StartingRoomSaveStationB") or can_combat_generic(1, 0, false)
 end
 
 function can_combat_thardus()
     -- Require charge and plasma or power for thardus on normal
-    if has_any({"StartingRoomQuarantineMonitor", "StartingRoomSaveStationB"}) then
+    if has_any("StartingRoomQuarantineMonitor", "StartingRoomSaveStationB") then
         return can_plasma_beam() or can_power_beam() or can_wave_beam()
     end
-    if has("CombatLogic", 2) then
+    if has("CombatLogicNone") then
         return true
-    elseif has("CombatLogic", 1) then
+    elseif has("CombatLogicMinimal") then
         return can_plasma_beam() or can_power_beam() or can_wave_beam()
     else
         return has_energy_tanks(3) and (can_charge_beam() and (can_plasma_beam() or can_power_beam()))
@@ -326,9 +324,9 @@ function can_combat_prime()
 end
 
 function can_combat_ghosts()
-    if has("CombatLogic", 2) then
+    if has("CombatLogicNone") then
         return true
-    elseif has("CombatLogic", 1) then
+    elseif has("CombatLogicMinimal") then
         return can_power_beam()
     else
         return can_charge_beam("PowerBeam") and can_power_beam() and can_xray(1) == AccessibilityLevel.Normal
@@ -336,7 +334,7 @@ function can_combat_ghosts()
 end
 
 function can_combat_beam_pirates(beam)
-    if has("CombatLogic", 1) then
+    if has("CombatLogicMinimal") then
         return true
     end
     return has(beam)

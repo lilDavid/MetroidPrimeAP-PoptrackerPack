@@ -30,7 +30,8 @@
       },
       {
         "img": "images/items/powerbeam.png",
-        "img_mods": "overlay|images/items/cancharge.png"
+        "img_mods": "overlay|images/items/cancharge.png",
+        "codes": "ChargePower,ChargePowerBeam"
       },
       {
         "img": "images/items/powerbeam.png",
@@ -48,7 +49,8 @@
       },
       {
         "img": "images/items/wavebeam.png",
-        "img_mods": "overlay|images/items/cancharge.png"
+        "img_mods": "overlay|images/items/cancharge.png",
+        "codes": "ChargeWave,ChargeWaveBeam"
       },
       {
         "img": "images/items/wavebeam.png",
@@ -66,7 +68,8 @@
       },
       {
         "img": "images/items/icebeam.png",
-        "img_mods": "overlay|images/items/cancharge.png"
+        "img_mods": "overlay|images/items/cancharge.png",
+        "codes": "ChargeIce,ChargeIceBeam"
       },
       {
         "img": "images/items/icebeam.png",
@@ -84,7 +87,8 @@
       },
       {
         "img": "images/items/plasmabeam.png",
-        "img_mods": "overlay|images/items/cancharge.png"
+        "img_mods": "overlay|images/items/cancharge.png",
+        "codes": "ChargePlasma,ChargePlasmaBeam"
       },
       {
         "img": "images/items/plasmabeam.png",

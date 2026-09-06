@@ -227,7 +227,7 @@ function can_open(area, source, destination)
         return true
     end
 
-    if has("BlastShieldRando", 2) then
+    if has("BlastShieldsMixItUp") then
         if mixitup_door == nil then
             return true
         end
@@ -235,7 +235,7 @@ function can_open(area, source, destination)
         return can_open_door(code)
     end
 
-    if has("BlastShieldRando", 1) then
+    if has("BlastShieldsMissiles") then
         if missile_door == nil then
             return can_open_door_color(area, mixitup_door)
         end
