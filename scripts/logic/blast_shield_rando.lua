@@ -64,7 +64,8 @@ local BLAST_SHIELD_STATES = {
             return false
         end,
         disabled = true
-    }
+    },
+    UNKNOWN_STAGE = 1
 }
 
 local blast_shield_items = {}
@@ -95,7 +96,7 @@ local function create_blast_shield_item(area, source, destination, forward_type,
             return false
         end
         if code == scout_code or code == reverse_scout_code then
-            return self:Get("stage") == 1
+            return self:Get("stage") == BLAST_SHIELD_STATES.UNKNOWN_STAGE
         end
         if not BLAST_SHIELD_STATES[self:Get("stage")].can_open() then
             return false
@@ -141,7 +142,7 @@ local function create_blast_shield_item(area, source, destination, forward_type,
     item.LoadFunc = function(self, data)
         self:Set("stage", data)
     end
-    item:Set("stage", 1)
+    item:Set("stage", BLAST_SHIELD_STATES.UNKNOWN_STAGE)
 
     blast_shield_items[item_code] = item
     blast_shield_items[reverse_code] = item
@@ -175,6 +176,21 @@ for area, doors in sortedpairs(MIX_IT_UP_DOORS) do
         local _, _, source, destination = string.find(door, "([^|]+)|([^|]+)")
         create_blast_shield_item(area, source, destination, lock[1], lock[2])
     end
+end
+
+local function can_open_door(code)
+    local item = Tracker:FindObjectForCode(code)
+    if not item then
+        if ENABLE_DEBUG_LOG then
+            print("can_open: could not find door code " .. code)
+        end
+        return true
+    end
+    ---@cast item LuaItem
+    if item:Get("stage") == BLAST_SHIELD_STATES.UNKNOWN_STAGE then
+        return true
+    end
+    return item:ProvidesCodeFunc(code)
 end
 
 function can_open(area, source, destination)
@@ -216,7 +232,7 @@ function can_open(area, source, destination)
             return true
         end
         local code = "BlastShield|" .. area .. "|" .. source .. "|" .. destination
-        return Tracker:ProviderCountForCode(code) > 0
+        return can_open_door(code)
     end
 
     if has("BlastShieldRando", 1) then
@@ -224,7 +240,7 @@ function can_open(area, source, destination)
             return can_open_door_color(area, mixitup_door)
         end
         local code = "BlastShield|" .. area .. "|" .. source .. "|" .. destination
-        return Tracker:ProviderCountForCode(code) > 0
+        return can_open_door(code)
     end
 
     if missile_door then
