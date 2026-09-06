@@ -18,7 +18,7 @@ end
 local BLAST_SHIELD_STATES = {
     {
         name = "Unknown",
-        img = "missile",
+        img = "unknown",
         can_open = function()
             return false
         end,
