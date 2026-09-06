@@ -5,7 +5,7 @@ function ProgressiveBeamWatcher(code)
         return
     end
 
-    if progressive_beams.CurrentStage == 1 then
+    if progressive_beams.Active then
         charge_beam.Icon = nil
     elseif code == "ProgressiveBeams" then
         -- Force a state change to restore the icon
@@ -30,12 +30,12 @@ function BeamWatcher(combo_code)
             return
         end
 
-        if progressivebeams.CurrentStage < 1 then
+        if progressivebeams.Active then
+            combo.Active = beam.CurrentStage == 3
+        else
             if beam.CurrentStage > 1 then
                 beam.CurrentStage = 1
             end
-        else
-            combo.Active = beam.CurrentStage == 3
         end
     end
 end
@@ -45,7 +45,7 @@ function ChargeComboWatcher(beam_code)
         local progressivebeams = Tracker:FindObjectForCode("ProgressiveBeams")
         local beam = Tracker:FindObjectForCode(beam_code)
         local combo = Tracker:FindObjectForCode(code)
-        if progressivebeams == nil or progressivebeams.CurrentStage < 1 then
+        if progressivebeams == nil or not progressivebeams.Active then
             return
         end
         if beam == nil then

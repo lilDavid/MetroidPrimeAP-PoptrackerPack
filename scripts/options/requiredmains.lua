@@ -18,10 +18,15 @@ function AddRequiredMainWatcher(require_main_code, launcher_code, expansion_code
     local ammo_count = expansion.AcquiredCount
 
     local function launcher_watcher(_)
-        if launcher.Active == launcher_status then return end
+        if launcher.Active == launcher_status then
+            return
+        end
         launcher_status = launcher.Active
-        if launcher.Active then expansion.AcquiredCount = expansion.AcquiredCount + launcher_ammo
-        else expansion.AcquiredCount = expansion.AcquiredCount - launcher_ammo end
+        if launcher.Active then
+            expansion.AcquiredCount = expansion.AcquiredCount + launcher_ammo
+        else
+            expansion.AcquiredCount = expansion.AcquiredCount - launcher_ammo
+        end
     end
 
     local function expansion_watcher(_)
@@ -38,9 +43,11 @@ function AddRequiredMainWatcher(require_main_code, launcher_code, expansion_code
     end
 
     local function option_watcher(_)
-        if (require_launcher.CurrentStage > 0) == option_status then return end
-        option_status = require_launcher.CurrentStage > 0
-        if require_launcher.CurrentStage > 0 then
+        if require_launcher.Active == option_status then
+            return
+        end
+        option_status = require_launcher.Active
+        if require_launcher.Active then
             ScriptHost:RemoveWatchForCode(expansion_watcher_name)
             ScriptHost:AddWatchForCode(launcher_watcher_name, launcher_code, launcher_watcher)
         else

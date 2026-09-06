@@ -4,43 +4,18 @@
     "allow_disabled": false,
     "initial_stage_idx": 11,
     "stages": [
-      {
-        "img": "images/options/requiredartifacts-1.png",
-        "codes": "RequiredArtifacts"
-      },
-      {
-        "img": "images/options/requiredartifacts-2.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-3.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-4.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-5.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-6.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-7.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-8.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-9.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-10.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-11.png"
-      },
-      {
-        "img": "images/options/requiredartifacts-12.png"
-      }
+      { "img": "images/options/requiredartifacts-1.png", "codes": "RequiredArtifacts" },
+      { "img": "images/options/requiredartifacts-2.png" },
+      { "img": "images/options/requiredartifacts-3.png" },
+      { "img": "images/options/requiredartifacts-4.png" },
+      { "img": "images/options/requiredartifacts-5.png" },
+      { "img": "images/options/requiredartifacts-6.png" },
+      { "img": "images/options/requiredartifacts-7.png" },
+      { "img": "images/options/requiredartifacts-8.png" },
+      { "img": "images/options/requiredartifacts-9.png" },
+      { "img": "images/options/requiredartifacts-10.png" },
+      { "img": "images/options/requiredartifacts-11.png" },
+      { "img": "images/options/requiredartifacts-12.png" }
     ]
   },
   {
@@ -71,69 +46,32 @@
     ]
   },
   {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/missilelauncher-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/missilelauncher-on.png",
-        "codes": "RequiredMissileLauncher,MainMissile"
-      }
-    ]
+    "type": "toggle",
+    "disabled_img": "images/options/missilelauncher-off.png",
+    "img": "images/options/missilelauncher-on.png",
+    "codes": "RequiredMissileLauncher,MainMissile"
+  },
+  {
+    "type": "toggle",
+    "disabled_img": "images/options/mainpb-off.png",
+    "img": "images/options/mainpb-on.png",
+    "codes": "RequiredPBLauncher,MainPowerBomb"
+  },
+  {
+    "type": "toggle",
+    "disabled_img": "images/options/heatdamage-off.png",
+    "img": "images/options/heatdamage-on.png",
+    "codes": "NonVariaHeatDamage"
+  },
+  {
+    "type": "toggle",
+    "disabled_img": "images/options/hivemecha-off.png",
+    "img": "images/options/hivemecha-on.png",
+    "codes": "RemoveHiveMecha"
   },
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/mainpb-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/mainpb-on.png",
-        "codes": "RequiredPBLauncher,MainPowerBomb"
-      }
-    ]
-  },
-  {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/heatdamage-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/heatdamage-on.png",
-        "codes": "NonVariaHeatDamage"
-      }
-    ]
-  },
-  {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/hivemecha-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/hivemecha-on.png",
-        "codes": "RemoveHiveMecha"
-      }
-    ]
-  },
-  {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/tricks-none.png",
@@ -159,39 +97,20 @@
     ]
   },
   {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/lowermines-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/lowermines-on.png",
-        "codes": "BackwardsLowerMines"
-      }
-    ]
+    "type": "toggle",
+    "disabled_img": "images/options/lowermines-off.png",
+    "img": "images/options/lowermines-on.png",
+    "codes": "BackwardsLowerMines"
+  },
+  {
+    "type": "toggle",
+    "disabled_img": "images/options/flaahgrapbs-off.png",
+    "img": "images/options/flaahgrapbs-on.png",
+    "codes": "FlaahgraPowerBombs"
   },
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/flaahgrapbs-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/flaahgrapbs-on.png",
-        "codes": "FlaahgraPowerBombs"
-      }
-    ]
-  },
-  {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/xray-all.png",
@@ -209,7 +128,6 @@
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/thermal-all.png",
@@ -304,7 +222,6 @@
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/combat-normal.png",
@@ -324,7 +241,6 @@
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/elevators-normal.png",
@@ -342,7 +258,6 @@
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/doors-normal.png",
@@ -365,7 +280,6 @@
   {
     "type": "progressive",
     "allow_disabled": false,
-    "loop": true,
     "stages": [
       {
         "img": "images/options/blastshields-none.png",
@@ -386,33 +300,15 @@
     ]
   },
   {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/prescan-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/prescan-on.png",
-        "codes": "PreScanElevators"
-      }
-    ]
+    "type": "toggle",
+    "disabled_img": "images/options/prescan-off.png",
+    "img": "images/options/prescan-on.png",
+    "codes": "PreScanElevators"
   },
   {
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/options/progressivebeams-off.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/options/progressivebeams-on.png",
-        "codes": "ProgressiveBeams"
-      }
-    ]
+    "type": "toggle",
+    "disabled_img": "images/options/progressivebeams-off.png",
+    "img": "images/options/progressivebeams-on.png",
+    "codes": "ProgressiveBeams"
   }
 ]

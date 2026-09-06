@@ -169,7 +169,13 @@ function onClear(slot_data)
         if key ~= nil then
             local obj = Tracker:FindObjectForCode(key)
             if obj ~= nil and value ~= nil then
-                obj.CurrentStage = value
+                if obj.Type == "toggle" then
+                    obj.Active = value and value ~= 0
+                elseif obj.Type == "progressive" then
+                    obj.CurrentStage = value
+                elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("onClear: could not set option %s of type %s", key, obj.Type))
+                end
             end
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                 if obj == nil then
