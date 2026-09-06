@@ -356,7 +356,7 @@ function can_climb_sun_tower()
 end
 
 function can_climb_tower_of_light()
-    return (can_missile() and has("MissileExpansion", 8) and can_space_jump())
+    return (can_missile() and has("MissileExpansion", 36) and can_space_jump())
 end
 
 -- Data/TallonOverworld
