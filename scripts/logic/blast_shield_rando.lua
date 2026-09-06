@@ -17,53 +17,53 @@ end
 
 local BLAST_SHIELD_STATES = {
     {
-        ["name"] = "Unknown",
-        ["img"] = "missile",
-        ["can_open"] = function()
+        name = "Unknown",
+        img = "missile",
+        can_open = function()
             return false
         end,
-        ["disabled"] = true
+        disabled = true
     },
     {
-        ["name"] = "No blast shield",
-        ["img"] = "blue",
-        ["can_open"] = function()
+        name = "No blast shield",
+        img = "blue",
+        can_open = function()
             return true
         end
     },
-    {["name"] = "Bomb", ["img"] = "bombshield", ["can_open"] = can_bomb},
-    {["name"] = "Power Bomb", ["img"] = "powerbomb", ["can_open"] = can_power_bomb},
-    {["name"] = "Missile", ["img"] = "missile", ["can_open"] = can_missile},
-    {["name"] = "Charge Beam", ["img"] = "charge", ["can_open"] = can_charge_beam},
-    {["name"] = "Super Missile", ["img"] = "supers", ["can_open"] = can_super_missile},
+    {name = "Bomb", img = "bombshield", can_open = can_bomb},
+    {name = "Power Bomb", img = "powerbomb", can_open = can_power_bomb},
+    {name = "Missile", img = "missile", can_open = can_missile},
+    {name = "Charge Beam", img = "charge", can_open = can_charge_beam},
+    {name = "Super Missile", img = "supers", can_open = can_super_missile},
     {
-        ["name"] = "Wavebuster",
-        ["img"] = "wavebuster",
-        ["can_open"] = function()
+        name = "Wavebuster",
+        img = "wavebuster",
+        can_open = function()
             return can_charge_combo("WaveBeam")
         end
     },
     {
-        ["name"] = "Ice Spreader",
-        ["img"] = "spreader",
-        ["can_open"] = function()
+        name = "Ice Spreader",
+        img = "spreader",
+        can_open = function()
             return can_charge_combo("IceBeam")
         end
     },
     {
-        ["name"] = "Flamethrower",
-        ["img"] = "flamethrower",
-        ["can_open"] = function()
+        name = "Flamethrower",
+        img = "flamethrower",
+        can_open = function()
             return can_charge_combo("PlasmaBeam")
         end
     },
     {
-        ["name"] = "Disabled",
-        ["img"] = "blue",
-        ["can_open"] = function()
+        name = "Disabled",
+        img = "blue",
+        can_open = function()
             return false
         end,
-        ["disabled"] = true
+        disabled = true
     }
 }
 
@@ -97,7 +97,7 @@ local function create_blast_shield_item(area, source, destination, forward_type,
         if code == scout_code or code == reverse_scout_code then
             return self:Get("stage") == 1
         end
-        if not BLAST_SHIELD_STATES[self:Get("stage")]["can_open"]() then
+        if not BLAST_SHIELD_STATES[self:Get("stage")].can_open() then
             return false
         end
         if code == reverse_code then
@@ -116,11 +116,11 @@ local function create_blast_shield_item(area, source, destination, forward_type,
             value = value + #BLAST_SHIELD_STATES
         end
 
-        self.ItemState["stage"] = value
+        self.ItemState.stage = value
         local shield_entry = BLAST_SHIELD_STATES[value]
-        self.Name = shield_entry["name"]
-        self.Icon = ImageReference:FromPackRelativePath("images/doors/" .. shield_entry["img"] .. ".png")
-        if shield_entry["disabled"] then
+        self.Name = shield_entry.name
+        self.Icon = ImageReference:FromPackRelativePath("images/doors/" .. shield_entry.img .. ".png")
+        if shield_entry.disabled then
             self.IconMods = "@disabled"
         else
             self.IconMods = ""
