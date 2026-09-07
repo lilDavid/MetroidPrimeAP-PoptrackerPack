@@ -1,6 +1,18 @@
 {
     "versions": [
         {
+            "package_version": "1.1.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.1.0/MetroidPrime-Archipelago-lilDavid.zip",
+            "sha256": "c4fcfb5280e3b18f754c1537aa1ceaf74e94ce73b322d883a4adecaf96596df6",
+            "changelog": [
+                "Unknown blast shields are now considered as open by default, instead of closed",
+                "Added graphic for doors with unknown color/blast shield",
+                "Fixed charged beams having no grapic in Progressive Beam Upgrades",
+                "Fixed Burn Dome start",
+                "Fixed incorrect missile count requirement for Tower of Light"
+            ]
+        },
+        {
             "package_version": "1.0.4",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.0.4/MetroidPrime-Archipelago-lilDavid.zip",
             "sha256": "e4d1f401b1ceb7bd2d717c4a3bc32f74d29ab6d0332802fdb64b682db03a6468",
