@@ -278,7 +278,7 @@ function onItem(index, item_id, item_name, player_number)
         elseif v[2] == "progressivebeam" then
             local progbeams = Tracker:FindObjectForCode("ProgressiveBeams")
             -- If Progressive Beam Upgrades is off, ignore progressive versions
-            if progbeams and progbeams.CurrentStage == 1 then
+            if progbeams and progbeams.Active then
                 if obj.Active then
                     obj.CurrentStage = obj.CurrentStage + 1
                 else
