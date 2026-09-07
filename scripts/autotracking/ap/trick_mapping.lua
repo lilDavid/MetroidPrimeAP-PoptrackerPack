@@ -1,3 +1,9 @@
+TrickSetting = {
+    DENY = 0,
+    USE_GLOBAL = 1,
+    ALLOW = 2,
+}
+
 AP_TRICK_MAPPING = {
     ["Alcove Escape"] = "alcove_escape",
     ["Landing Site Scan Dash"] = "landing_site_scan_dash",

@@ -27,7 +27,7 @@ function has(item, n)
 end
 
 function has_all(...)
-    for _, item in ipairs({...}) do
+    for _, item in ipairs({ ... }) do
         if not has(item) then
             return false
         end
@@ -36,7 +36,7 @@ function has_all(...)
 end
 
 function has_any(...)
-    for _, item in ipairs({...}) do
+    for _, item in ipairs({ ... }) do
         if has(item) then
             return true
         end
@@ -52,10 +52,10 @@ function trick(id, difficulty)
         end
         return false
     end
-    if trick_item.CurrentStage == 0 then
+    if trick_item.CurrentStage == TrickSetting.DENY then
         return false
     end
-    if trick_item.CurrentStage == 2 then
+    if trick_item.CurrentStage == TrickSetting.ALLOW then
         return true
     end
     return has("Tricks", tonumber(difficulty))

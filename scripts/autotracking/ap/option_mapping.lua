@@ -1,8 +1,8 @@
 AP_SLOT_DATA_MAPPING = {
     ["required_artifacts"] = {
-        ["name"] = "RequiredArtifacts",
-        ["offset"] = -1,
-        ["default"] = 11
+        code = "RequiredArtifacts",
+        offset = -1,
+        default = 11
     },
     ["final_bosses"] = "FinalBoss",
     ["missile_launcher"] = "MainMissile",
@@ -10,16 +10,16 @@ AP_SLOT_DATA_MAPPING = {
     ["non_varia_heat_damage"] = "NonVariaHeatDamage",
     ["remove_hive_mecha"] = "RemoveHiveMecha",
     ["trick_difficulty"] = {
-        ["name"] = "Tricks",
-        ["offset"] = 1
+        code = "Tricks",
+        offset = 1
     },
     ["backwards_lower_mines"] = "BackwardsLowerMines",
     ["flaahgra_power_bombs"] = "FlaahgraPowerBombs",
     ["remove_xray_requirements"] = "RemoveXRayRequirements",
     ["remove_thermal_requirements"] = "RemoveThermalRequirements",
     ["starting_room_name"] = {
-        ["name"] = "StartingRoom",
-        ["mapping"] = {
+        code = "StartingRoom",
+        mapping = {
             ["Landing Site"] = 0,
             ["Arboretum"] = 1,
             ["Burn Dome"] = 2,
