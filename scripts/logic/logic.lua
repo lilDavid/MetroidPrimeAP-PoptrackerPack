@@ -146,42 +146,31 @@ function can_morph_ball()
     return has("MorphBall")
 end
 
-function can_xray(requirement)
+local VisorRequirement = {
+    ALL = 0,
+    FEW = 1,
+    OP_ONLY = 2,
+}
+
+local function can_visor(visor, requirement)
     if requirement == nil then
-        requirement = 0
+        requirement = VisorRequirement.ALL
     else
         requirement = tonumber(requirement)
     end
-    local remove_xray_reqs = Tracker:FindObjectForCode("RemoveXRayRequirements").CurrentStage
-    if has("XRayVisor") then
-        return AccessibilityLevel.Normal
-    end
-    if requirement == 2 then
-        return AccessibilityLevel.None
-    end
-    if remove_xray_reqs > requirement then
-        return AccessibilityLevel.Normal
-    end
+    local remove_reqs = Tracker:FindObjectForCode("Remove" .. visor .. "Requirements").CurrentStage
+    if has(visor .. "Visor") then return AccessibilityLevel.Normal end
+    if requirement == VisorRequirement.OP_ONLY then return AccessibilityLevel.None end
+    if remove_reqs > requirement then return AccessibilityLevel.Normal end
     return AccessibilityLevel.SequenceBreak
 end
 
+function can_xray(requirement)
+    return can_visor("XRay", requirement)
+end
+
 function can_thermal(requirement)
-    if requirement == nil then
-        requirement = 0
-    else
-        requirement = tonumber(requirement)
-    end
-    local remove_thermal_reqs = Tracker:FindObjectForCode("RemoveThermalRequirements").CurrentStage
-    if has("ThermalVisor") then
-        return AccessibilityLevel.Normal
-    end
-    if requirement == 2 then
-        return AccessibilityLevel.None
-    end
-    if remove_thermal_reqs > requirement then
-        return AccessibilityLevel.Normal
-    end
-    return AccessibilityLevel.SequenceBreak
+    return can_visor("Thermal", requirement)
 end
 
 function can_move_underwater()
@@ -297,13 +286,9 @@ function can_combat_thardus()
 end
 
 function can_combat_omega_pirate()
-    local accessibility = can_xray(2)
-    if accessibility == AccessibilityLevel.None then
-        return AccessibilityLevel.None
-    end
-    if can_combat_generic(6, 3) then
-        return accessibility
-    end
+    local accessibility = can_xray(VisorRequirement.OP_ONLY)
+    if accessibility == AccessibilityLevel.None then return AccessibilityLevel.None end
+    if can_combat_generic(6, 3) then return accessibility end
     return AccessibilityLevel.SequenceBreak
 end
 
@@ -325,7 +310,8 @@ function can_combat_ghosts()
     elseif has("CombatLogicMinimal") then
         return can_power_beam()
     else
-        return can_charge_beam("PowerBeam") and can_power_beam() and can_xray(1) == AccessibilityLevel.Normal
+        return can_charge_beam("PowerBeam") and can_power_beam() and
+        can_xray(VisorRequirement.FEW) == AccessibilityLevel.Normal
     end
 end
 
