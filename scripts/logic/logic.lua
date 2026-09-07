@@ -81,12 +81,8 @@ function can_ball_jump()
     return has_all("MorphBall", "SpringBall")
 end
 
-function can_beam(beam)
-    return has(beam)
-end
-
 function can_power_beam()
-    return can_beam("PowerBeam")
+    return has("PowerBeam")
 end
 
 function can_power_bomb()
@@ -123,15 +119,15 @@ function can_super_missile()
 end
 
 function can_wave_beam()
-    return can_beam("WaveBeam")
+    return has("WaveBeam")
 end
 
 function can_ice_beam()
-    return can_beam("IceBeam")
+    return has("IceBeam")
 end
 
 function can_plasma_beam()
-    return can_beam("PlasmaBeam")
+    return has("PlasmaBeam")
 end
 
 function can_melt_ice()
