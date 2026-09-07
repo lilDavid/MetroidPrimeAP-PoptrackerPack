@@ -22,7 +22,7 @@ AP_SLOT_DATA_MAPPING = {
         ["mapping"] = {
             ["Landing Site"] = 0,
             ["Arboretum"] = 1,
-            ["Burn Dome Access"] = 2,
+            ["Burn Dome"] = 2,
             ["Ruined Fountain"] = 3,
             ["Save Station 1"] = 4,
             ["Save Station 2"] = 5,
@@ -33,13 +33,13 @@ AP_SLOT_DATA_MAPPING = {
             ["Arbor Chamber"] = 10,
             ["Transport to Chozo Ruins East"] = 11,
             ["Quarantine Monitor"] = 12,
-            ["Sunchamber Lobby"] = 13,
-        },
+            ["Sunchamber Lobby"] = 13
+        }
     },
     ["progressive_beam_upgrades"] = "ProgressiveBeams",
     ["combat_logic_difficulty"] = "CombatLogic",
     ["elevator_randomization"] = "ElevatorsRandom",
     ["door_color_randomization"] = "DoorRando",
     ["blast_shield_randomization"] = "BlastShieldRando",
-    ["pre_scan_elevators"] = "PreScanElevators",
+    ["pre_scan_elevators"] = "PreScanElevators"
 }

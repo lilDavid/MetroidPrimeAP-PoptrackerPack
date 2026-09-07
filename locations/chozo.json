@@ -41,7 +41,6 @@
         "name": "Burn Dome Access",
         "access_rules": [
           "NoLogic",
-          "StartingRoomBurnDomeAccess",
           "@Chozo Ruins/Burn Dome,$can_open|Chozo Ruins|Burn Dome|Burn Dome Access",
           "@Chozo Ruins/Energy Core,$can_bomb",
           "@Chozo Ruins/Energy Core,$can_ball_jump"
@@ -65,6 +64,7 @@
         ],
         "access_rules": [
           "NoLogic",
+          "StartingRoomBurnDome",
           "@Chozo Ruins/Burn Dome Access,$can_open|Chozo Ruins|Burn Dome Access|Burn Dome,$can_bomb"
         ]
       },
