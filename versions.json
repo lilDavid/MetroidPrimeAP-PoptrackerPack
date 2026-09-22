@@ -3,7 +3,7 @@
         {
             "package_version": "1.1.1",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.1.1/MetroidPrime-Archipelago-lilDavid.zip",
-            "sha256": "c4fcfb5280e3b18f754c1537aa1ceaf74e94ce73b322d883a4adecaf96596df6",
+            "sha256": "c8e81c566448f80426a0ee7734f0f539a3c1ecb8adedc30551a0965858cd18f9",
             "changelog": [
                 "Fixed pack version being incorrect causing updates to fail"
             ]
