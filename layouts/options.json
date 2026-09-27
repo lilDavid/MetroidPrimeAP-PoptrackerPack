@@ -35,13 +35,7 @@
                             "type": "text",
                             "text": "Required Artifacts",
                             "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
+                          },
                           {
                             "type": "item",
                             "item": "FinalBoss",
@@ -81,77 +75,89 @@
                   "header": "Gameplay Tweaks",
                   "content": {
                     "type": "array",
-                    "orientation": "vertical",
+                    "orientation": "horizontal",
                     "content": [
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "ProgressiveBeams",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "MainMissile",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Missile Launcher",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Progressive Beam Upgrades",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "MainPowerBomb",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Main Power Bomb",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       },
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "MainMissile",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "ProgressiveBeams",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Progressive Beams",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Missile Launcher",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "MainPowerBomb",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Main Power Bomb",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "NonVariaHeatDamage",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Non-Varia Heat Damage",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "NonVariaHeatDamage",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Non-Varia Heat Damage",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       }
@@ -163,131 +169,143 @@
                   "header": "World",
                   "content": {
                     "type": "array",
-                    "orientation": "vertical",
+                    "orientation": "horizontal",
                     "content": [
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "ElevatorsRandom",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "RemoveHiveMecha",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Remove Hive Mecha",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Elevator Randomization",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "FlaahgraPowerBombs",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Flaahgra Power Bombs",
+                                "v_alignment": "center"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "BackwardsLowerMines",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Backwards Lower Mines",
+                                "v_alignment": "center"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "PreScanElevators",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Pre-scan Elevators",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       },
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "DoorRando",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "ElevatorsRandom",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Elevator Rando",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Door Color Randomization",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "BlastShieldRando",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "DoorRando",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Door Color Rando",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Blast Shield Randomization",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "PreScanElevators",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Pre-scan Elevators",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "RemoveHiveMecha",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Remove Hive Mecha",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "FlaahgraPowerBombs",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Flaahgra Power Bombs",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "BackwardsLowerMines",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Backwards Lower Mines",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "BlastShieldRando",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Blast Shield Rando",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       }
@@ -299,77 +317,89 @@
                   "header": "Logic",
                   "content": {
                     "type": "array",
-                    "orientation": "vertical",
+                    "orientation": "horizontal",
                     "content": [
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "Tricks",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "Tricks",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Trick Difficulty",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Trick Difficulty",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "CombatLogic",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Combat Logic",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       },
                       {
                         "type": "array",
-                        "orientation": "horizontal",
+                        "orientation": "vertical",
                         "content": [
                           {
-                            "type": "item",
-                            "item": "CombatLogic",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "RemoveThermalRequirements",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Remove Thermal Reqs",
+                                "v_alignment": "center"
+                              }
+                            ]
                           },
                           {
-                            "type": "text",
-                            "text": "Combat Logic",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "RemoveThermalRequirements",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Remove Thermal Requirements",
-                            "v_alignment": "center"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "array",
-                        "orientation": "horizontal",
-                        "content": [
-                          {
-                            "type": "item",
-                            "item": "RemoveXRayRequirements",
-                            "max_height": 32,
-                            "max_width": 32,
-                            "margin": 4
-                          },
-                          {
-                            "type": "text",
-                            "text": "Remove X-Ray Requirements",
-                            "v_alignment": "center"
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "content": [
+                              {
+                                "type": "item",
+                                "item": "RemoveXRayRequirements",
+                                "max_height": 32,
+                                "max_width": 32,
+                                "margin": 4
+                              },
+                              {
+                                "type": "text",
+                                "text": "Remove X-Ray Reqs",
+                                "v_alignment": "center"
+                              }
+                            ]
                           }
                         ]
                       }
