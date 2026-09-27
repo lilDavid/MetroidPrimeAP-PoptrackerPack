@@ -22,14 +22,22 @@ if not IS_ITEMS_ONLY then
     Tracker:AddLocations("locations/magmoor.json")
     Tracker:AddLocations("locations/maps.json")
     Tracker:AddLocations("locations/blast_shields.json")
+
+    ScriptHost:AddWatchForCode("SplitMapWatcher", "SplitMap", function(code)
+        if Tracker:ProviderCountForCode(code) > 0 then
+            Tracker:AddLayouts("layouts/maps_split.json")
+        else
+            Tracker:AddLayouts("layouts/maps.json")
+        end
+    end)
+    Tracker:AddLayouts("layouts/maps.json")
+    Tracker:AddLayouts("layouts/tracker_options.json")
 end
 
 Tracker:AddLayouts("layouts/items.json")
-Tracker:AddLayouts("layouts/maps.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 Tracker:AddLayouts("layouts/options.json")
-Tracker:AddLayouts("layouts/tracker_options.json")
 
 ScriptHost:LoadScript("scripts/utils.lua")
 

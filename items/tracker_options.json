@@ -7,7 +7,7 @@
   {
     "codes": "AutoTab",
     "type": "toggle",
-    "img": "images/items/scanvisor.png"
+    "img": "images/items/grapplebeam.png"
   },
   {
     "codes": "Softlocks",
@@ -19,5 +19,11 @@
     "type": "toggle",
     "initial_active_state": true,
     "img": "images/items/artifacts0.png"
+  },
+  {
+    "codes": "SplitMap",
+    "type": "toggle",
+    "initial_active_state": false,
+    "img": "images/items/scanvisor.png"
   }
 ]
