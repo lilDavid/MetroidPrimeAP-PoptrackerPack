@@ -14,8 +14,8 @@
           [ "SuperMissile", "Wavebuster", "IceSpreader", "Flamethrower", "MissileLauncher" ],
           [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
           [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
-          [ "PowerSuit", "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump" ],
-          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "Artifacts", "RequiredArtifacts" ]
+          [ "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump", "ArtifactProgress" ],
+          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion" ]
         ]
       }
     ]

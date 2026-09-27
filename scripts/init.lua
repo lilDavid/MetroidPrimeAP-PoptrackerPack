@@ -40,6 +40,7 @@ Tracker:AddLayouts("layouts/options.json")
 
 ScriptHost:LoadScript("scripts/utils.lua")
 
+ScriptHost:LoadScript("scripts/options/goal.lua")
 ScriptHost:LoadScript("scripts/options/requiredmains.lua")
 ScriptHost:LoadScript("scripts/options/progressivebeams.lua")
 
