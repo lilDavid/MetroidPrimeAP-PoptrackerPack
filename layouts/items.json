@@ -15,7 +15,7 @@
           [ "CombatVisor", "ScanVisor", "ThermalVisor", "XRayVisor", "GrappleBeam" ],
           [ "MorphBall", "BoostBall", "SpiderBall", "Bombs", "PowerBomb" ],
           [ "PowerSuit", "VariaSuit", "GravitySuit", "PhazonSuit", "SpaceJump" ],
-          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "", "Artifacts" ]
+          [ "EnergyTank", "MissileExpansion", "PowerBombExpansion", "Artifacts", "RequiredArtifacts" ]
         ]
       }
     ]

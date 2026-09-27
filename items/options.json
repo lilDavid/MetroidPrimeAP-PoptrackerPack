@@ -1,6 +1,7 @@
 [
   {
     "codes": "RequiredArtifacts",
+    "name": "Required Artifacts",
     "img": "images/items/artifacts12.png",
     "type": "consumable",
     "min_quantity": 1,
