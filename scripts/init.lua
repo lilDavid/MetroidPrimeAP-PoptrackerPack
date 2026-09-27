@@ -4,8 +4,6 @@ IS_ITEMS_ONLY = Tracker.ActiveVariantUID == "var_itemsonly"
 
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/options.json")
-Tracker:AddItems("items/tricks.json")
-Tracker:AddItems("items/extra_tricks.json")
 Tracker:AddItems("items/elevators.json")
 Tracker:AddItems("items/doors.json")
 Tracker:AddItems("items/tracker_options.json")
@@ -31,6 +29,7 @@ if not IS_ITEMS_ONLY then
         end
     end)
     Tracker:AddLayouts("layouts/maps.json")
+    Tracker:AddLayouts("layouts/tricks.json")
     Tracker:AddLayouts("layouts/tracker_options.json")
 end
 
@@ -45,6 +44,8 @@ ScriptHost:LoadScript("scripts/options/requiredmains.lua")
 ScriptHost:LoadScript("scripts/options/progressivebeams.lua")
 
 if not IS_ITEMS_ONLY then
+    ScriptHost:LoadScript("scripts/options/tricks.lua")
+
     ScriptHost:LoadScript("scripts/logic/logic.lua")
     ScriptHost:LoadScript("scripts/logic/door_data.lua")
     ScriptHost:LoadScript("scripts/logic/blast_shield_rando.lua")

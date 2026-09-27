@@ -1,0 +1,1769 @@
+{
+  "tricks": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Tallon Overworld",
+        "content": {
+          "type": "array",
+          "orientation": "vertical",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "alcove_escape",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Alcove Escape",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "landing_site_scan_dash",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Landing Site Scan Dash",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frigate_no_gravity",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Frigate No Gravity",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hydro_access_tunnel_no_gravity",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hydro Access Tunnel No Gravity",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frigate_crash_site_scan_dash",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crashed Frigate Scan Dash",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frigate_crash_site_slope_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crashed Frigate Slope Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frigate_crash_site_slope_jump_no_sjb",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crashed Frigate Slope Jump No Space Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frigate_crash_site_climb_to_overgrown_cavern",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crashed Frigate Climb to Overgrown Cavern",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "great_tree_hall_skip_bars",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Great Tree Hall Skip Bars",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "great_tree_chamber_no_xray",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Great Tree Chamber No XRay",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "great_tree_chamber_nsj_no_xray",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Great Tree Chamber no Space Jump no XRay",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "great_tree_hall_no_spider_ball",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Great Tree Hall No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "root_cave_arbor_chamber_no_grapple_xray",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Root Cave Arbor Chamber No Grapple XRay",
+                  "v_alignment": "center"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Chozo Ruins",
+        "content": {
+          "type": "array",
+          "orientation": "vertical",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "vault_via_plaza",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Vault Via Plaza",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "plaza_half_pipe_no_boost",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Plaza Half Pipe No Boost",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "plaza_half_pipe_morph_only",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Plaza Half Pipe with only Morph Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "plaza_grapple_ledge_r_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Plaza Grapple Ledge R Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "plaza_grapple_ledge_tree_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Plaza Grapple Ledge Tree Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ruined_shrine_upper_door_no_spider_ball",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ruined Shrine Upper Door L Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ruined_shrine_upper_door_scan_dash",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ruined Shrine Upper Door Scan Dash",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ruined_shrine_scan_dash_escape",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ruined Shrine Scan Dash Escape",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "tower_of_light_climb_without_missiles",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Tower of Light Climb Without Missiles",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "tower_of_light_climb_nsj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Tower of Light Climb No Space Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "tower_chamber_no_gravity",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Tower Chamber No Gravity",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "tower_chamber_no_space_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Tower Chamber No Space Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ruined_nursery_no_bombs",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ruined Nursery No Bombs",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magma_pool_scan_dash",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Cross Magma Pool Suitless",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magma_pool_debris_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Cross Magma Pool With SJB and Gravity",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magma_pool_item_debris_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Magma Pool Debris Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magma_pool_item_scan_dash",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Magma Pool Item No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magma_pool_item_infinite_speed",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Magma Pool Item Infinite Speed",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "arboretum_scan_gate_skip",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Arboretum Scan Gate Skip",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "EarlyWild",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Early Artifact of Wild",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "gathering_hall_without_space_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Gathering Hall Without Space Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "watery_hall_no_gravity",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Watery Hall No Gravity",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "watery_hall_no_gravity_no_space_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Watery Hall No Gravity No Space Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "furnace_no_spider_ball",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Furnace No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "furnace_spider_track_hbj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Furnace Spider Track HBJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "furnace_spider_track_sj_bombs_spring_ball",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Furnace Spider Track SJ Bombs/Spring Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "crossway_item_fewer_reqs",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crossway Item Fewer Reqs",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "crossway_hpbj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Crossway Half pipe bomb jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hall_of_elders_bomb_slots_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hall of Elders No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hall_of_elders_reflecting_pool_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hall of Elders Reflecting Pool No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hall_of_elders_reflecting_pool_no_wave_beam",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hall of Elders Reflecting Pool No Wave Beam",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hall_of_elders_elder_chamber_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hall of Elders Elder Chamber No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hall_of_elders_item_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hall of Elders Item No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "reflecting_pool_space_jump_climb",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Reflecting Pool Space Jump Climb",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "reflecting_pool_nsj_climb",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Reflecting Pool No Space Jump Climb",
+                  "v_alignment": "center"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Magmoor Caverns",
+        "content": {
+          "type": "array",
+          "orientation": "vertical",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "lava_lake_item_suitless",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Lava Lake Item Suitless",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "lava_lake_item_missiles_only",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Lava Lake Item Missiles Only",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "triclops_pit_item_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Triclops Pit Item No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "triclops_pit_item_no_xray",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Triclops Pit Item No XRay",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "triclops_pit_item_no_sj_no_xray",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Triclops Pit Item No SJ No XRay",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "triclops_pit_item_no_missiles",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Triclops Pit Item No Missiles",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "warrior_shrine_no_boost",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Warrior Shrine No Boost",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "warrior_shrine_scan_only",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Warrior Shrine Scan Only",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "warrior_shrine_no_items",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Warrior Shrine No Items",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "shore_tunnel_escape_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Shore Tunnel Escape No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "fiery_shores_morphball_track_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Fiery Shores Morphball Track SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "transport_tunnel_b_damage_boost",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Transport Tunnel B Damage Boost",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "twin_fires_tunnel_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Twin Fires Tunnel No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "cross_twin_fires_suitless",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Cross Twin Fires Suitless",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "geothermal_core_no_grapple_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Geothermal Core No Grapple Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "magmoor_workstation_no_thermal",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Magmoor Workstation No Thermal",
+                  "v_alignment": "center"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Phendrana Drifts",
+        "content": {
+          "type": "array",
+          "orientation": "vertical",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ice_temple_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ice Temple No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ice_temple_to_chapel_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ice Temple to chapel No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "shorelines_spider_track_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Shorelines Spider Track No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ice_temple_item_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ice Temple Item No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "chapel_of_elders_escape_no_sj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Chapel of Elders Escape No SJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phendrana_canyon_escape_no_items",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phendrana Canyon Escape No Items",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phendrana_courtyard_no_boost_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phendrana Courtyard No Boost Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phendrana_courtyard_quarantine_access_no_boost_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phendrana Courtyard Quarantine Access No Boost Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "research_lab_aether_item_dbj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Research Lab Aether Upper Item with DBJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "control_tower_item_no_plasma",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Control Tower Item No Plasma",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "monitor_cave_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Monitor Cave No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "quarantine_to_north_courtyard_slope_jump",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Quarantine to North Courtyard Slope Jump",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "observatory_puzzle_skip",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Observatory Puzzle Skip",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frozen_pike_no_bombs",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Frozen Pike No Bombs",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frozen_pike_no_gravity_suit",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Frozen Pike No Gravity Suit",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "frost_cave_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Frost Cave No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phendranas_edge_storage_cavern_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phendrana's Edge Storage Cavern No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phendranas_edge_security_cavern_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phendrana's Edge Security Cavern No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "hunter_cave_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Hunter Cave No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "gravity_chamber_no_grapple_plasma",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Gravity Chamber No Grapple Plasma",
+                  "v_alignment": "center"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Phazon Mines",
+        "content": {
+          "type": "array",
+          "orientation": "vertical",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "main_quarry_item_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Main Quarry Item No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "main_quarry_to_waste_disposal_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Main Quarry to Waste Disposal No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ore_processing_to_storage_depot_b_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ore Processing Climb to Storage No Grapple Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ore_processing_climb_no_grapple_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ore Processing Climb No Grapple Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "mines_climb_shafts_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Mines Climb Shafts No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "elite_research_spinner_no_boost",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Elite Research laser No Boost",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "elite_research_backwards_wall_boost",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Elite Research Backwards Wall Boost",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "elite_research_backwards_wall_boost_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Elite Research Backwards Wall Boost No Spider",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "ventilation_shaft_hpbj",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Ventilation Shaft HPBJ",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "metroid_quarantine_a_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Metroid Quarantine A No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "fungal_hall_access_no_phazon_suit",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Fungal Hall Access No Phazon Suit",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "fungal_hall_a_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Fungal Hall A No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "fungal_hall_b_no_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Fungal Hall B No Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "metroid_quarantine_b_no_spider_grapple",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Metroid Quarantine B No Spider Grapple",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phazon_processing_center_item_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phazon Processing Center Item No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "phazon_processing_center_no_phazon_suit",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phazon Processing Center No Phazon Suit",
+                  "v_alignment": "center"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "horizontal",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "climb_phazon_processing_center_no_spider",
+                  "max_height": 20,
+                  "margin": "4,2"
+                },
+                {
+                  "type": "text",
+                  "text": "Phazon Processing Center No Spider Ball",
+                  "v_alignment": "center"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

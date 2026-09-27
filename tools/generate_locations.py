@@ -406,6 +406,120 @@ transport_rules = {
     },
 }
 
+trick_tabs = {
+    "Tallon Overworld": [
+        "alcove_escape",
+        "landing_site_scan_dash",
+        "frigate_no_gravity",
+        "hydro_access_tunnel_no_gravity",
+        "crashed_frigate_scan_dash",
+        "crashed_frigate_slope_jump",
+        "crashed_frigate_slope_jump_no_space_jump",
+        "crashed_frigate_climb_to_overgrown_cavern",
+        "great_tree_hall_skip_bars",
+        "great_tree_chamber_no_xray",
+        "great_tree_chamber_no_space_jump_no_xray",
+        "great_tree_hall_no_spider_ball",
+        "root_cave_arbor_chamber_no_grapple_xray",
+    ],
+    "Chozo Ruins": [
+        "vault_via_plaza",
+        "plaza_half_pipe_no_boost",
+        "plaza_half_pipe_with_only_morph_ball",
+        "plaza_grapple_ledge_r_jump",
+        "plaza_grapple_ledge_tree_grapple",
+        "ruined_shrine_upper_door_l_jump",
+        "ruined_shrine_upper_door_scan_dash",
+        "ruined_shrine_scan_dash_escape",
+        "tower_of_light_climb_without_missiles",
+        "tower_of_light_climb_no_space_jump",
+        "tower_chamber_no_gravity",
+        "tower_chamber_no_space_jump",
+        "ruined_nursery_no_bombs",
+        "cross_magma_pool_suitless",
+        "cross_magma_pool_with_sjb_and_gravity",
+        "magma_pool_debris_jump",
+        "magma_pool_item_no_grapple",
+        "magma_pool_item_infinite_speed",
+        "arboretum_scan_gate_skip",
+        "early_wild",
+        "gathering_hall_without_space_jump",
+        "watery_hall_no_gravity",
+        "watery_hall_no_gravity_no_space_jump",
+        "furnace_no_spider_ball",
+        "furnace_spider_track_hbj",
+        "furnace_spider_track_sj_bombs_spring_ball",
+        "crossway_item_fewer_reqs",
+        "crossway_half_pipe_bomb_jump",
+        "hall_of_elders_no_spider_ball",
+        "hall_of_elders_reflecting_pool_no_spider_ball",
+        "hall_of_elders_reflecting_pool_no_wave_beam",
+        "hall_of_elders_elder_chamber_no_spider_ball",
+        "hall_of_elders_item_no_spider_ball",
+        "reflecting_pool_space_jump_climb",
+        "reflecting_pool_no_space_jump_climb",
+    ],
+    "Magmoor Caverns": [
+        "lava_lake_item_suitless",
+        "lava_lake_item_missiles_only",
+        "triclops_pit_item_no_sj",
+        "triclops_pit_item_no_xray",
+        "triclops_pit_item_no_sj_no_xray",
+        "triclops_pit_item_no_missiles",
+        "warrior_shrine_no_boost",
+        "warrior_shrine_scan_only",
+        "warrior_shrine_no_items",
+        "shore_tunnel_escape_no_sj",
+        "fiery_shores_morphball_track_sj",
+        "transport_tunnel_b_damage_boost",
+        "twin_fires_tunnel_no_spider_ball",
+        "cross_twin_fires_suitless",
+        "geothermal_core_no_grapple_spider",
+        "magmoor_workstation_no_thermal",
+    ],
+    "Phendrana Drifts": [
+        "ice_temple_no_sj",
+        "ice_temple_to_chapel_no_sj",
+        "shorelines_spider_track_no_sj",
+        "ice_temple_item_no_sj",
+        "chapel_of_elders_escape_no_sj",
+        "phendrana_canyon_escape_no_items",
+        "phendrana_courtyard_no_boost_spider",
+        "phendrana_courtyard_quarantine_access_no_boost_spider",
+        "research_lab_aether_upper_item_with_dbj",
+        "control_tower_item_no_plasma",
+        "monitor_cave_no_grapple",
+        "quarantine_to_north_courtyard_slope_jump",
+        "observatory_puzzle_skip",
+        "frozen_pike_no_bombs",
+        "frozen_pike_no_gravity_suit",
+        "frost_cave_no_grapple",
+        "phendranas_edge_storage_cavern_no_grapple",
+        "phendranas_edge_security_cavern_no_grapple",
+        "hunter_cave_no_grapple",
+        "gravity_chamber_no_grapple_plasma",
+    ],
+    "Phazon Mines": [
+        "main_quarry_item_no_spider_ball",
+        "main_quarry_to_waste_disposal_no_grapple",
+        "ore_processing_climb_to_storage_no_grapple_spider",
+        "ore_processing_climb_no_grapple_spider",
+        "mines_climb_shafts_no_spider_ball",
+        "elite_research_laser_no_boost",
+        "elite_research_backwards_wall_boost",
+        "elite_research_backwards_wall_boost_no_spider",
+        "ventilation_shaft_hpbj",
+        "metroid_quarantine_a_no_spider_ball",
+        "fungal_hall_access_no_phazon_suit",
+        "fungal_hall_a_no_grapple",
+        "fungal_hall_b_no_grapple",
+        "metroid_quarantine_b_no_spider_grapple",
+        "phazon_processing_center_item_no_spider_ball",
+        "phazon_processing_center_no_phazon_suit",
+        "phazon_processing_center_no_spider_ball",
+    ],
+}
+
 
 # Parse args
 parser = ArgumentParser(description="Converts the logic rules from MetrodAPrime for use in this tracker.")
@@ -651,16 +765,10 @@ def parse_access_rule(rule_func: ast.expr, filename: str):
     return dnf
 
 
-TRICK_DIFFICULTY_MAP = {
-    "Easy": 1,
-    "Medium": 2,
-    "Hard": 3,
-}
-
-
 class TrickData(NamedTuple):
     id: str
     name: str
+    difficulty: str
     access_rule: list[str]
 
     @classmethod
@@ -692,7 +800,7 @@ class TrickData(NamedTuple):
             or difficulty_expr.value.id != "TrickDifficulty"
         ):
             raise ASTParseError(difficulty_expr, "Difficulty assignment not from TrickDifficulty")
-        difficulty = TRICK_DIFFICULTY_MAP[difficulty_expr.attr]
+        difficulty = difficulty_expr.attr.upper()
 
         if trick_id in manual_trick_rules:
             access_rule = manual_trick_rules[trick_id]
@@ -712,34 +820,34 @@ class TrickData(NamedTuple):
             except ASTParseError as e:
                 raise ASTParseError(statement) from e
         if access_rule:
-            access_rule = [f"[$trick|{trick_id}|{difficulty}],{rule}" for rule in access_rule]
+            access_rule = [f"[{trick_id}],{rule}" for rule in access_rule]
         else:
-            access_rule = [f"[$trick|{trick_id}|{difficulty}]"]
+            access_rule = [f"[{trick_id}]"]
 
-        return cls(trick_id, trick_name, access_rule)
+        return cls(trick_id, trick_name, difficulty, access_rule)
 
 
 class TrackerTrickData(NamedTuple):
     name: str
     id: str
+    difficulty: str | None
     codes: list[str]
 
-    def json_item(self) -> dict[str, JsonValue]:
+    def layout_json(self) -> dict[str, JsonValue]:
         return {
-            "codes": ",".join(self.codes),
-            "type": "progressive",
-            "initial_stage_idx": 1,
-            "allow_disabled": False,
-            "stages": [
+            "type": "array",
+            "orientation": "horizontal",
+            "content": [
                 {
-                    "img": f"images/tricks/{self.name}-red.png",
+                    "type": "item",
+                    "item": self.codes[0],
+                    "max_height": 20,
+                    "margin": "4,2",
                 },
                 {
-                    "img": f"images/tricks/{self.name}.png",
-                    "img_mods": "@disabled",
-                },
-                {
-                    "img": f"images/tricks/{self.name}.png",
+                    "type": "text",
+                    "text": self.name,
+                    "v_alignment": "center",
                 },
             ],
         }
@@ -1294,12 +1402,16 @@ except ASTParseError as e:
 except Exception as e:
     raise Exception("Could not parse tricks") from e
 
-tracker_tricks: dict[str, TrackerTrickData] = {}
+tracker_tricks: dict[str, TrackerTrickData] = {
+    "early_wild": TrackerTrickData("Early Artifact of Wild", "early_wild", None, ["EarlyWild"])
+}
 for trick in trick_list:
-    if trick.name not in tracker_tricks:
-        trick_name = "_".join(re.split(r"[ _/]", trick.name.lower())).replace("'", "")
-        tracker_tricks[trick.name] = TrackerTrickData(trick_name, trick.id, [])
-    tracker_tricks[trick.name].codes.append(trick.id)
+    trick_name = "_".join(re.split(r"[ _/]", trick.name.lower())).replace("'", "")
+    if trick_name in tracker_tricks:
+        assert tracker_tricks[trick_name].difficulty == trick.difficulty
+    else:
+        tracker_tricks[trick_name] = TrackerTrickData(trick.name, trick_name, trick.difficulty, [])
+    tracker_tricks[trick_name].codes.append(trick.id)
 
 
 blast_shield_file = data_path / "BlastShieldRegions.py"
@@ -1336,13 +1448,34 @@ for short_name, data_name in areas:
 
 # Handle data
 
-with open(items / "tricks.json", "w") as stream:
-    json.dump([trick.json_item() for trick in tracker_tricks.values()], stream, indent=2)
+with open(pack / "layouts/tricks.json", "w") as stream:
+    json.dump(
+        {
+            "tricks": {
+                "type": "tabbed",
+                "tabs": [
+                    {
+                        "title": tab,
+                        "content": {
+                            "type": "array",
+                            "orientation": "vertical",
+                            "content": [tracker_tricks[trick].layout_json() for trick in tricks],
+                        },
+                    }
+                    for tab, tricks in trick_tabs.items()
+                ],
+            }
+        },
+        stream,
+        indent=2,
+    )
 
 with open(pack / "scripts/autotracking/ap/trick_mapping.lua", "w") as stream:
-    print("AP_TRICK_MAPPING = {", file=stream)
-    for trick_name, trick in tracker_tricks.items():
-        print(f'    ["{trick_name}"] = "{trick.id}",', file=stream)
+    print("AP_TRICKS = {", file=stream)
+    for trick in tracker_tricks.values():
+        codes = f'{{ "{'", "'.join(trick.codes)}" }}'
+        difficulty = f"TrickDifficulty.{trick.difficulty}" if trick.difficulty else "nil"
+        print(f'    TrickItem("{trick.name}", {difficulty}, {codes}),', file=stream)
     print("}", file=stream)
 
 for short_name, area in area_data.items():

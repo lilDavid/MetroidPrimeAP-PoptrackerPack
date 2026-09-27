@@ -232,23 +232,15 @@ function applySlotData(slot_data)
     -- deduplicate unrecognized tricks
     local trick_settings = {}
     for trick_name, setting in pairs(trick_name_mapping) do
-        local item_code = AP_TRICK_MAPPING[trick_name]
-        if item_code then
-            trick_settings[item_code] = setting
-        elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-            print(string.format("applySlotData: unknown trick %s", trick_name))
-        end
+        trick_settings[trick_name] = setting
     end
-    for _, item_code in pairs(AP_TRICK_MAPPING) do
-        local obj = Tracker:FindObjectForCode(item_code)
-        if obj then
-            local setting = trick_settings[item_code] or TrickSetting.USE_GLOBAL
-            obj.CurrentStage = setting
+    for _, trick in ipairs(AP_TRICKS) do
+        local setting = trick_settings[trick.name]
+        if setting then
+            trick:SetState(setting)
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-                print(string.format("applySlotData: setting trick %s to %s", item_code, setting))
+                print(string.format("applySlotData: setting trick %s to %s", trick.name, setting))
             end
-        elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-            print(string.format("applySlotData: unknown trick code %s", item_code))
         end
     end
 end
