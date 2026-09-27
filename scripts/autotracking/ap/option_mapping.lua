@@ -1,9 +1,5 @@
 AP_SLOT_DATA_MAPPING = {
-    ["required_artifacts"] = {
-        code = "RequiredArtifacts",
-        offset = -1,
-        default = 11
-    },
+    ["required_artifacts"] = "RequiredArtifacts",
     ["final_bosses"] = "FinalBoss",
     ["missile_launcher"] = "MainMissile",
     ["main_power_bomb"] = "MainPowerBomb",

@@ -4,15 +4,99 @@
     "background": "#000000",
     "margin": "6, 6",
     "content": {
-      "type": "itemgrid",
-      "item_h_alignment": "left",
-      "item_size": "400, 20",
-      "rows": [
-        [ "RequiredArtifacts" ],
-        [ "FinalBoss" ],
-        [ "MainMissile" ],
-        [ "MainPowerBomb" ],
-        [ "ProgressiveBeams" ]
+      "type": "array",
+      "orientation": "vertical",
+      "content": [
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "item",
+              "item": "RequiredArtifacts",
+              "max_height": 32,
+              "max_width": 32,
+              "margin": 4
+            },
+            {
+              "type": "text",
+              "text": "Required Artifacts",
+              "v_alignment": "center"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "item",
+              "item": "FinalBoss",
+              "max_height": 32,
+              "max_width": 32,
+              "margin": 4
+            },
+            {
+              "type": "text",
+              "text": "Final Bosses",
+              "v_alignment": "center"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "item",
+              "item": "MainMissile",
+              "max_height": 32,
+              "max_width": 32,
+              "margin": 4
+            },
+            {
+              "type": "text",
+              "text": "Missile Launcher",
+              "v_alignment": "center"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "item",
+              "item": "MainPowerBomb",
+              "max_height": 32,
+              "max_width": 32,
+              "margin": 4
+            },
+            {
+              "type": "text",
+              "text": "Main Power Bomb",
+              "v_alignment": "center"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "item",
+              "item": "ProgressiveBeams",
+              "max_height": 32,
+              "max_width": 32,
+              "margin": 4
+            },
+            {
+              "type": "text",
+              "text": "Progressive Beams",
+              "v_alignment": "center"
+            }
+          ]
+        }
       ]
     }
   }

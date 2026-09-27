@@ -1,45 +1,40 @@
 [
   {
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 11,
-    "stages": [
-      { "img": "images/options/requiredartifacts-1.png", "codes": "RequiredArtifacts" },
-      { "img": "images/options/requiredartifacts-2.png" },
-      { "img": "images/options/requiredartifacts-3.png" },
-      { "img": "images/options/requiredartifacts-4.png" },
-      { "img": "images/options/requiredartifacts-5.png" },
-      { "img": "images/options/requiredartifacts-6.png" },
-      { "img": "images/options/requiredartifacts-7.png" },
-      { "img": "images/options/requiredartifacts-8.png" },
-      { "img": "images/options/requiredartifacts-9.png" },
-      { "img": "images/options/requiredartifacts-10.png" },
-      { "img": "images/options/requiredartifacts-11.png" },
-      { "img": "images/options/requiredartifacts-12.png" }
-    ]
+    "codes": "RequiredArtifacts",
+    "img": "images/items/artifacts12.png",
+    "type": "consumable",
+    "min_quantity": 1,
+    "max_quantity": 12,
+    "initial_quantity": 12,
+    "increment": -1
   },
   {
     "type": "progressive",
+    "name": "Final Boss",
     "allow_disabled": false,
     "loop": true,
     "stages": [
       {
-        "img": "images/options/goal-both.png",
+        "img": "images/bosses/finalbosses.png",
+        "name": "Both",
         "codes": "FinalBoss,FinalBossRidley,FinalBossPrime",
         "inherit_codes": false
       },
       {
-        "img": "images/options/goal-ridley.png",
+        "img": "images/bosses/ridley.png",
+        "name": "Ridley",
         "codes": "FinalBossRidley",
         "inherit_codes": false
       },
       {
-        "img": "images/options/goal-prime.png",
+        "img": "images/bosses/prime.png",
+        "name": "Prime",
         "codes": "FinalBossPrime",
         "inherit_codes": false
       },
       {
-        "img": "images/options/goal-none.png",
+        "img": "images/items/artifacts0.png",
+        "name": "None",
         "codes": "FinalBossNone",
         "inherit_codes": false
       }
@@ -47,98 +42,112 @@
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/missilelauncher-off.png",
-    "img": "images/options/missilelauncher-on.png",
+    "disabled_img": "images/items/missileexpansion.png",
+    "img": "images/items/missilelauncher.png",
     "codes": "RequiredMissileLauncher,MainMissile"
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/mainpb-off.png",
-    "img": "images/options/mainpb-on.png",
+    "disabled_img": "images/items/powerbombexpansion.png",
+    "img": "images/items/powerbomb.png",
     "codes": "RequiredPBLauncher,MainPowerBomb"
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/heatdamage-off.png",
-    "img": "images/options/heatdamage-on.png",
+    "img": "images/items/variasuit.png",
     "codes": "NonVariaHeatDamage"
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/hivemecha-off.png",
-    "img": "images/options/hivemecha-on.png",
+    "img": "images/bosses/hivemecha.png",
     "codes": "RemoveHiveMecha"
   },
   {
     "type": "progressive",
+    "name": "Tricks",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/tricks-none.png",
+        "img": "images/items/powersuit.png",
         "img_mods": "@disabled",
         "codes": "TricksNone",
+        "name": "No Tricks",
         "inherit_codes": false
       },
       {
-        "img": "images/options/tricks-easy.png",
+        "img": "images/items/variasuit.png",
+        "img_mods": "overlay|images/options/tricks-easy.png",
         "codes": "Tricks,TricksEasy",
+        "name": "Easy",
         "inherit_codes": false
       },
       {
-        "img": "images/options/tricks-medium.png",
+        "img": "images/items/gravitysuit.png",
+        "img_mods": "overlay|images/options/tricks-medium.png",
         "codes": "TricksMedium",
+        "name": "Medium",
         "inherit_codes": false
       },
       {
-        "img": "images/options/tricks-hard.png",
+        "img": "images/items/phazonsuit.png",
+        "img_mods": "overlay|images/options/tricks-hard.png",
         "codes": "TricksHard",
+        "name": "Hard",
         "inherit_codes": false
       }
     ]
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/lowermines-off.png",
-    "img": "images/options/lowermines-on.png",
+    "img": "images/options/lowermines.png",
     "codes": "BackwardsLowerMines"
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/flaahgrapbs-off.png",
-    "img": "images/options/flaahgrapbs-on.png",
+    "img": "images/bosses/flaahgra.png",
     "codes": "FlaahgraPowerBombs"
   },
   {
     "type": "progressive",
+    "name": "Remove X-Ray Requirements",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/xray-all.png",
+        "img": "images/items/xrayvisor.png",
         "img_mods": "@disabled",
+        "name": "Remove None",
         "codes": "RemoveXRayRequirements"
       },
       {
-        "img": "images/options/xray-few.png"
+        "img": "images/items/xrayvisor.png",
+        "name": "Remove Most"
       },
       {
-        "img": "images/options/xray-op.png"
+        "img": "images/items/xrayvisor.png",
+        "img_mods": "overlay|images/options/no.png",
+        "name": "Remove All But OP"
       }
     ]
   },
   {
     "type": "progressive",
+    "name": "Remove Thermal Requirements",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/thermal-all.png",
+        "img": "images/items/thermalvisor.png",
         "img_mods": "@disabled",
+        "name": "Remove None",
         "codes": "RemoveThermalRequirements"
       },
       {
-        "img": "images/options/thermal-few.png"
+        "img": "images/items/thermalvisor.png",
+        "name": "Remove Most"
       },
       {
-        "img": "images/options/thermal-none.png"
+        "img": "images/items/thermalvisor.png",
+        "img_mods": "overlay|images/options/no.png",
+        "name": "Remove All"
       }
     ]
   },
@@ -221,20 +230,25 @@
   },
   {
     "type": "progressive",
+    "name": "Combat Logic",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/combat-normal.png",
+        "img": "images/items/combatvisor.png",
+        "codes": "CombatLogic,CombatLogicNormal",
+        "name": "Normal"
+      },
+      {
+        "img": "images/items/combatvisor.png",
         "img_mods": "@disabled",
-        "codes": "CombatLogic,CombatLogicNormal"
+        "codes": "CombatLogicMinimal",
+        "name": "Minimal"
       },
       {
-        "img": "images/options/combat-minimal.png",
-        "codes": "CombatLogicMinimal"
-      },
-      {
-        "img": "images/options/combat-nologic.png",
-        "codes": "CombatLogicNone"
+        "img": "images/items/combatvisor.png",
+        "img_mods": "@disabled,overlay|images/options/no.png",
+        "codes": "CombatLogicNone",
+        "name": "No Logic"
       }
     ]
   },
@@ -243,13 +257,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/elevators-normal.png",
+        "img": "images/elevator.png",
         "img_mods": "@disabled",
         "codes": "ElevatorsNormal",
         "inherit_codes": false
       },
       {
-        "img": "images/options/elevators-random.png",
+        "img": "images/elevator.png",
         "codes": "ElevatorsRandom",
         "inherit_codes": false
       }
@@ -257,58 +271,64 @@
   },
   {
     "type": "progressive",
+    "name": "Door Color Randomization",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/doors-normal.png",
+        "img": "images/doors/blue.png",
         "img_mods": "@disabled",
         "codes": "DoorRandoNone",
+        "name": "None",
         "inherit_codes": false
       },
       {
-        "img": "images/options/doors-global.png",
+        "img": "images/doors/blue.png",
         "codes": "DoorRando,DoorRandoGlobal",
+        "name": "Global",
         "inherit_codes": false
       },
       {
         "img": "images/options/doors-regional.png",
         "codes": "DoorRando,DoorRandoRegional",
+        "name": "Regional",
         "inherit_codes": false
       }
     ]
   },
   {
     "type": "progressive",
+    "name": "Blast Shield Randomization",
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/blastshields-none.png",
+        "img": "images/doors/missile.png",
         "img_mods": "@disabled",
         "codes": "BlastShieldsNone",
+        "name": "None",
         "inherit_codes": false
       },
       {
-        "img": "images/options/blastshields-missiles.png",
+        "img": "images/doors/missile.png",
         "codes": "BlastShieldRando,BlastShieldsMissiles",
+        "name": "Replace Existing",
         "inherit_codes": false
       },
       {
-        "img": "images/options/blastshields-mixitup.png",
+        "img": "images/doors/unknown.png",
         "codes": "BlastShieldRando,BlastShieldsMixItUp",
+        "name": "Mix it Up",
         "inherit_codes": false
       }
     ]
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/prescan-off.png",
-    "img": "images/options/prescan-on.png",
+    "img": "images/items/scanvisor.png",
     "codes": "PreScanElevators"
   },
   {
     "type": "toggle",
-    "disabled_img": "images/options/progressivebeams-off.png",
-    "img": "images/options/progressivebeams-on.png",
+    "img": "images/items/powerbeam.png",
     "codes": "ProgressiveBeams"
   }
 ]

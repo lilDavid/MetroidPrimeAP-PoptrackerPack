@@ -183,6 +183,11 @@ function applySlotData(slot_data)
                         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                             print(string.format("applySlotData: setting option %s to %s", option.code, value))
                         end
+                    elseif obj.Type == "consumable" then
+                        obj.AcquiredCount = value
+                        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                            print(string.format("applySlotData: setting option %s to %s", option.code, value))
+                        end
                     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                         print(string.format("applySlotData: could not set option %s of type %s", option.code, obj.Type))
                     end
