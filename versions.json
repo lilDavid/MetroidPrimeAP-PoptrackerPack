@@ -1,6 +1,18 @@
 {
     "versions": [
         {
+            "package_version": "1.2.0",
+            "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.2.0/MetroidPrime-Archipelago-lilDavid.zip",
+            "sha256": "a2a6f107e0b53192e5d0c51897c267594fa5ec7e6bbc0ff16bbd8d1667b5856b",
+            "changelog": [
+                "Added a split map view, so you can read the map while you read the map",
+                "Items layout now shows the artifacts with the rest of the majors, displacing the Power Suit",
+                "Artifacts on item view now show the amount you have and what's required for goal",
+                "Overhauled the settings popup to look more like the tracker options pane",
+                "Same for tricks, so now each one shows what its difficulty is"
+            ]
+        },
+        {
             "package_version": "1.1.1",
             "download_url": "https://github.com/lilDavid/MetroidPrimeAP-PoptrackerPack/releases/download/1.1.1/MetroidPrime-Archipelago-lilDavid.zip",
             "sha256": "c8e81c566448f80426a0ee7734f0f539a3c1ecb8adedc30551a0965858cd18f9",
